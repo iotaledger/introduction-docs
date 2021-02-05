@@ -1,0 +1,8 @@
+[book]
+authors = ["huhn511"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Chrysalis Book"
+[output.html]
+theme = "src/theme"
