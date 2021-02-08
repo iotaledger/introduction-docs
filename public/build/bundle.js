@@ -46,11 +46,9 @@ var app = (function () {
     function space() {
         return text(' ');
     }
-    function attr(node, attribute, value) {
-        if (value == null)
-            node.removeAttribute(attribute);
-        else if (node.getAttribute(attribute) !== value)
-            node.setAttribute(attribute, value);
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
     }
     function children(element) {
         return Array.from(element.childNodes);
@@ -59,6 +57,13 @@ var app = (function () {
         const e = document.createEvent('CustomEvent');
         e.initCustomEvent(type, false, false, detail);
         return e;
+    }
+    function attribute_to_object(attributes) {
+        const result = {};
+        for (const attribute of attributes) {
+            result[attribute.name] = attribute.value;
+        }
+        return result;
     }
 
     let current_component;
@@ -136,6 +141,12 @@ var app = (function () {
             block.i(local);
         }
     }
+
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
     function mount_component(component, target, anchor) {
         const { fragment, on_mount, on_destroy, after_update } = component.$$;
         fragment && fragment.m(target, anchor);
@@ -231,30 +242,45 @@ var app = (function () {
         }
         set_current_component(parent_component);
     }
-    /**
-     * Base class for Svelte components. Used when dev=false.
-     */
-    class SvelteComponent {
-        $destroy() {
-            destroy_component(this, 1);
-            this.$destroy = noop;
-        }
-        $on(type, callback) {
-            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
-            callbacks.push(callback);
-            return () => {
-                const index = callbacks.indexOf(callback);
-                if (index !== -1)
-                    callbacks.splice(index, 1);
-            };
-        }
-        $set($$props) {
-            if (this.$$set && !is_empty($$props)) {
-                this.$$.skip_bound = true;
-                this.$$set($$props);
-                this.$$.skip_bound = false;
+    let SvelteElement;
+    if (typeof HTMLElement === 'function') {
+        SvelteElement = class extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
             }
-        }
+            connectedCallback() {
+                // @ts-ignore todo: improve typings
+                for (const key in this.$$.slotted) {
+                    // @ts-ignore todo: improve typings
+                    this.appendChild(this.$$.slotted[key]);
+                }
+            }
+            attributeChangedCallback(attr, _oldValue, newValue) {
+                this[attr] = newValue;
+            }
+            $destroy() {
+                destroy_component(this, 1);
+                this.$destroy = noop;
+            }
+            $on(type, callback) {
+                // TODO should this delegate to addEventListener?
+                const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+                callbacks.push(callback);
+                return () => {
+                    const index = callbacks.indexOf(callback);
+                    if (index !== -1)
+                        callbacks.splice(index, 1);
+                };
+            }
+            $set($$props) {
+                if (this.$$set && !is_empty($$props)) {
+                    this.$$.skip_bound = true;
+                    this.$$set($$props);
+                    this.$$.skip_bound = false;
+                }
+            }
+        };
     }
 
     function dispatch_dev(type, detail) {
@@ -272,19 +298,18 @@ var app = (function () {
         dispatch_dev('SvelteDOMRemove', { node });
         detach(node);
     }
-    function attr_dev(node, attribute, value) {
-        attr(node, attribute, value);
-        if (value == null)
-            dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
-        else
-            dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
-    }
-    function set_data_dev(text, data) {
-        data = '' + data;
-        if (text.wholeText === data)
-            return;
-        dispatch_dev('SvelteDOMSetData', { node: text, data });
-        text.data = data;
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
     }
     function validate_slots(name, slot, keys) {
         for (const slot_key of Object.keys(slot)) {
@@ -293,85 +318,147 @@ var app = (function () {
             }
         }
     }
-    /**
-     * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
-     */
-    class SvelteComponentDev extends SvelteComponent {
-        constructor(options) {
-            if (!options || (!options.target && !options.$$inline)) {
-                throw new Error("'target' is a required option");
-            }
-            super();
-        }
-        $destroy() {
-            super.$destroy();
-            this.$destroy = () => {
-                console.warn('Component was already destroyed'); // eslint-disable-line no-console
-            };
-        }
-        $capture_state() { }
-        $inject_state() { }
-    }
 
     /* src/App.svelte generated by Svelte v3.32.1 */
 
+    const { console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    function create_fragment(ctx) {
-    	let main;
-    	let h1;
-    	let t0;
-    	let t1;
-    	let t2;
-    	let t3;
-    	let p;
-    	let t4;
-    	let a;
-    	let t6;
+    // (43:2) {#if state.loading}
+    function create_if_block_1(ctx) {
+    	let button;
+    	let mounted;
+    	let dispose;
 
     	const block = {
     		c: function create() {
-    			main = element("main");
-    			h1 = element("h1");
-    			t0 = text("Hello ");
-    			t1 = text(/*name*/ ctx[0]);
-    			t2 = text("!");
-    			t3 = space();
-    			p = element("p");
-    			t4 = text("Visit the ");
-    			a = element("a");
-    			a.textContent = "Svelte tutorial";
-    			t6 = text(" to learn how to build Svelte apps.");
-    			attr_dev(h1, "class", "svelte-2x1evt");
-    			add_location(h1, file, 4, 1, 54);
-    			attr_dev(a, "href", "https://svelte.dev/tutorial");
-    			add_location(a, file, 5, 14, 91);
-    			add_location(p, file, 5, 1, 78);
-    			attr_dev(main, "class", "svelte-2x1evt");
-    			add_location(main, file, 3, 0, 46);
+    			button = element("button");
+    			button.textContent = "Log out";
+    			add_location(button, file, 43, 4, 1940);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*send*/ ctx[1], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(43:2) {#if state.loading}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (47:2) {#if !state.loading}
+    function create_if_block(ctx) {
+    	let button;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			button.textContent = "Log in";
+    			add_location(button, file, 47, 4, 2017);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(button, "click", /*send*/ ctx[1], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(47:2) {#if !state.loading}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	let div;
+    	let t;
+    	let if_block0 = /*state*/ ctx[0].loading && create_if_block_1(ctx);
+    	let if_block1 = !/*state*/ ctx[0].loading && create_if_block(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			if (if_block0) if_block0.c();
+    			t = space();
+    			if (if_block1) if_block1.c();
+    			this.c = noop;
+    			add_location(div, file, 41, 0, 1908);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, main, anchor);
-    			append_dev(main, h1);
-    			append_dev(h1, t0);
-    			append_dev(h1, t1);
-    			append_dev(h1, t2);
-    			append_dev(main, t3);
-    			append_dev(main, p);
-    			append_dev(p, t4);
-    			append_dev(p, a);
-    			append_dev(p, t6);
+    			insert_dev(target, div, anchor);
+    			if (if_block0) if_block0.m(div, null);
+    			append_dev(div, t);
+    			if (if_block1) if_block1.m(div, null);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*name*/ 1) set_data_dev(t1, /*name*/ ctx[0]);
+    			if (/*state*/ ctx[0].loading) {
+    				if (if_block0) {
+    					if_block0.p(ctx, dirty);
+    				} else {
+    					if_block0 = create_if_block_1(ctx);
+    					if_block0.c();
+    					if_block0.m(div, t);
+    				}
+    			} else if (if_block0) {
+    				if_block0.d(1);
+    				if_block0 = null;
+    			}
+
+    			if (!/*state*/ ctx[0].loading) {
+    				if (if_block1) {
+    					if_block1.p(ctx, dirty);
+    				} else {
+    					if_block1 = create_if_block(ctx);
+    					if_block1.c();
+    					if_block1.m(div, null);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(main);
+    			if (detaching) detach_dev(div);
+    			if (if_block0) if_block0.d();
+    			if (if_block1) if_block1.d();
     		}
     	};
 
@@ -388,59 +475,108 @@ var app = (function () {
 
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
-    	validate_slots("App", slots, []);
-    	let { name } = $$props;
-    	const writable_props = ["name"];
+    	validate_slots("send-message-demo", slots, []);
 
-    	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<App> was created with unknown prop '${key}'`);
-    	});
+    	var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
+    		function adopt(value) {
+    			return value instanceof P
+    			? value
+    			: new P(function (resolve) {
+    						resolve(value);
+    					});
+    		}
 
-    	$$self.$$set = $$props => {
-    		if ("name" in $$props) $$invalidate(0, name = $$props.name);
+    		return new (P || (P = Promise))(function (resolve, reject) {
+    				function fulfilled(value) {
+    					try {
+    						step(generator.next(value));
+    					} catch(e) {
+    						reject(e);
+    					}
+    				}
+
+    				function rejected(value) {
+    					try {
+    						step(generator["throw"](value));
+    					} catch(e) {
+    						reject(e);
+    					}
+    				}
+
+    				function step(result) {
+    					result.done
+    					? resolve(result.value)
+    					: adopt(result.value).then(fulfilled, rejected);
+    				}
+
+    				step((generator = generator.apply(thisArg, _arguments || [])).next());
+    			});
     	};
 
-    	$$self.$capture_state = () => ({ name });
+    	console.log("hello !!!");
+
+    	// Import Iota from '@iota/iota.js/dist/iota.browser.js';
+    	// import * as IOTA from 'iota/iota.js/dist/iota.browser.js'
+    	// import * as IOTA from '@iota/iot a.js'
+    	// import {SingleNodeClient} from '@iota/iota.js'
+    	let state = { loading: false };
+
+    	function send() {
+    		return __awaiter(this, void 0, void 0, function* () {
+    			$$invalidate(0, state.loading = !state.loading, state);
+    			console.log("sending...");
+    		}); // const client = new SingleNodeClient("http://localhost:14265");
+    		// const info = await client.info();
+    		// console.log("Node Info");
+    		// console.log("\tName:", info.name);
+    	} // console.log("\tVersion:", info.version);
+    	// console.log("\tIs Healthy:", info.isHealthy);
+
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<send-message-demo> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$capture_state = () => ({ __awaiter, state, send });
 
     	$$self.$inject_state = $$props => {
-    		if ("name" in $$props) $$invalidate(0, name = $$props.name);
+    		if ("__awaiter" in $$props) __awaiter = $$props.__awaiter;
+    		if ("state" in $$props) $$invalidate(0, state = $$props.state);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [name];
+    	return [state, send];
     }
 
-    class App extends SvelteComponentDev {
+    class App extends SvelteElement {
     	constructor(options) {
-    		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, { name: 0 });
+    		super();
 
-    		dispatch_dev("SvelteRegisterComponent", {
-    			component: this,
-    			tagName: "App",
-    			options,
-    			id: create_fragment.name
-    		});
+    		init(
+    			this,
+    			{
+    				target: this.shadowRoot,
+    				props: attribute_to_object(this.attributes)
+    			},
+    			instance,
+    			create_fragment,
+    			safe_not_equal,
+    			{}
+    		);
 
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-
-    		if (/*name*/ ctx[0] === undefined && !("name" in props)) {
-    			console.warn("<App> was created without expected prop 'name'");
+    		if (options) {
+    			if (options.target) {
+    				insert_dev(options.target, this, options.anchor);
+    			}
     		}
     	}
-
-    	get name() {
-    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set name(value) {
-    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
     }
+
+    customElements.define("send-message-demo", App);
 
     const app = new App({
         target: document.body,

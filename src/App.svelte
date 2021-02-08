@@ -1,28 +1,47 @@
+<svelte:options tag="send-message-demo" />
+
 <script lang="ts">
-	export let name: string;
+  console.log("hello !!!");
+  // Import Iota from '@iota/iota.js/dist/iota.browser.js';
+  // import * as IOTA from 'iota/iota.js/dist/iota.browser.js'
+  // import * as IOTA from '@iota/iot a.js'
+  // import {SingleNodeClient} from '@iota/iota.js'
+
+  let state = { loading: false };
+
+  async function send() {
+    state.loading = !state.loading;
+
+    console.log("sending...");
+
+
+    // const client = new SingleNodeClient("http://localhost:14265");
+
+    // const info = await client.info();
+    // console.log("Node Info");
+    // console.log("\tName:", info.name);
+    // console.log("\tVersion:", info.version);
+    // console.log("\tIs Healthy:", info.isHealthy);
+    // console.log("\tNetwork Id:", info.networkId);
+    // console.log("\tLatest Milestone Index:", info.latestMilestoneIndex);
+    // console.log("\tSolid Milestone Index:", info.solidMilestoneIndex);
+    // console.log("\tPruning Index:", info.pruningIndex);
+    // console.log("\tFeatures:", info.features);
+    // console.log("\tMin PoW Score:", info.minPowScore);
+
+  }
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+
 </style>
+
+<div>
+  {#if state.loading}
+    <button on:click={send}>Log out</button>
+  {/if}
+
+  {#if !state.loading}
+    <button on:click={send}>Log in</button>
+  {/if}
+</div>
