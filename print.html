@@ -1,0 +1,465 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chrysalis Documentation</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+
+        <script src='/public/build/bundle.js'></script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="docs/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="docs/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="docs/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="docs/testnet.html"><strong aria-hidden="true">4.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="docs/rfc.html"><strong aria-hidden="true">5.</strong> IOTA Protocol RFCs</a></li><li class="chapter-item expanded "><a href="docs/node-softwaree.html"><strong aria-hidden="true">6.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="docs/libraries.html"><strong aria-hidden="true">7.</strong> Libraries</a></li><li class="chapter-item expanded "><a href="docs/dev_guide.html"><strong aria-hidden="true">8.</strong> Developer Guide</a></li><li class="chapter-item expanded "><a href="docs/faq.html"><strong aria-hidden="true">9.</strong> FAQ</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Chrysalis Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<p>This page is about the fundamental changes in the protocol on the way to the Coordicide. IOTA Chrysalis is like the metamorphosis of the butterfly, from the pupa to the finished butterfly.</p>
+<p><img src="docs/../docs/assets/01_butterfly.png" alt="" /></p>
+<send-message-demo name="test" /><h1><a class="header" href="#what-is-chrysalis" id="what-is-chrysalis">What is Chrysalis</a></h1>
+<p>However, apart from Coordicide, the objective of the IOTA Foundation is to fully optimise the IOTA mainnet pre-Coordicide and offer an enterprise-ready solution to our ecosystem. We have therefore planned for an intermediate update called Chrysalis. This plan was first announced alongside our roadmap, but the scope has since been expanded. This post provides further information on what this upgrade to the IOTA Mainnet entails.</p>
+<p>A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis is the mainnet’s intermediate stage before coordicide is complete. To be clear, Chrysalis is separate to the coordicide efforts, and is aimed at improving usability of the current IOTA mainnet prior to coordicide.</p>
+<p><img src="docs/../docs/assets/02_path_to.png" alt="" /></p>
+<p>Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless DLTs? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives conflict with those of the users of the network. Better throughput and lower latencies can disrupt the fee market miners rely on, and therefore agreeing to upgrade the network may affect their own profitability.</p>
+<p>In IOTA, the validators and users are one and the same. There is no stubborn clash of incentives, meaning a much smoother path to network improvements. We will demonstrate this with the upcoming incremental upgrades to the network under Chrysalis.</p>
+<p>So what are these incremental upgrades?</p>
+<h2><a class="header" href="#white-flag-approach" id="white-flag-approach">White-flag approach</a></h2>
+<p><img src="docs/../docs/assets/what_is_chrysalis/01.png" alt="" />
+<a href="https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233">White-flag approach</a> for calculating balances. A simpler, conflict-ignoring approach (valid for the pre-coordicide era) that improves speed and efficiency of tip selection, eliminates certain attacks and significantly reduces the need for reattachments.</p>
+<h2><a class="header" href="#new-milestone-selection-algorithm" id="new-milestone-selection-algorithm">New milestone selection algorithm</a></h2>
+<p><img src="docs/../docs/assets/what_is_chrysalis/02.png" alt="" />
+<a href="https://iota.cafe/t/coordinator-improvements/310">New milestone selection algorithm for the coordinator</a>, focused on allowing the network to support as much CTPS as possible, with higher computational efficiency.</p>
+<h2><a class="header" href="#urts-tip-selection" id="urts-tip-selection">URTS tip selection</a></h2>
+<p><img src="docs/../docs/assets/what_is_chrysalis/03.png" alt="" />
+New <a href="https://iota.cafe/t/almost-urts-on-a-subset/234">URTS tip selection</a> in node software. Significantly faster and more efficient than the current approach.</p>
+<h2><a class="header" href="#support-for-a-new-signature-scheme" id="support-for-a-new-signature-scheme">Support for a new signature scheme</a></h2>
+<p><img src="docs/../docs/assets/what_is_chrysalis/04.png" alt="" />
+<a href="https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md">Support for a new signature scheme</a> in parallel to WOTS. The network will therefore allow for both quantum resistant one-time signatures and a more commonly used signature scheme allowing re-use of private keys. This will dramatically reduce transaction size, and consequently allow a significant increase in TPS. By introducing a new signature scheme we will also allow for reusable addresses, a very popular request from the community.</p>
+<h2><a class="header" href="#atomic-transactions" id="atomic-transactions">Atomic transactions</a></h2>
+<p><img src="docs/../docs/assets/what_is_chrysalis/05.png" alt="" />
+<a href="https://iota.cafe/t/atomic-transfers-transactions-instead-of-bundles/318">Atomic transactions</a>. Move from the current Bundle construct and use simpler atomic transactions instead. This will reduce network overhead, reduce signature verification burden, improve spam protection and congestion control, and reduce length of Merkle proofs (for future sharding). In addition, it will reduce implementation efforts and increase maintainability of our core node software.</p>
+<h2><a class="header" href="#switch-to-utxo-model" id="switch-to-utxo-model">Switch to UTXO Model</a></h2>
+<p><img src="docs/../docs/assets/what_is_chrysalis/06.png" alt="" />
+<a href="https://iota.cafe/t/switching-to-utxo-model-for-balances-colored-coins-easier-conflict-resolution/229">Switch to UTXO model</a> from the current balance model. Every coin on an address is then uniquely identifiable and every spend names the exact coins that it wants to move. This allows for faster and more exact conflict handling and improves resilience and security of the protocol. In addition, switching to UTXO will make colored coins on IOTA possible. Combined with Mana (Coordicide) in the near future, this makes for a very attractive tokenization model and will further boost the adoption of the IOTA token.</p>
+<h2><a class="header" href="#internal-binary-representation" id="internal-binary-representation">Internal Binary Representation</a></h2>
+<p><img src="docs/../docs/assets/what_is_chrysalis/07.png" alt="" />
+<a href="https://iota.cafe/t/binary-transaction-layout/324">Switch to an internal binary representation of the trinary transaction</a>. This allows us to work on binary data, for validation, IO and other processing without the need to have many binary-ternary conversions as in the current node software. The bundle hash can still be represented as 243 trits, such that the signing scheme stays the same and no transition of funds is necessary. This should lead to further improvements in performance.</p>
+<h1><a class="header" href="#path-to-chrysalis" id="path-to-chrysalis">Path to Chrysalis</a></h1>
+<p>One of the IOTA Foundation’s primary roles is to define and deliver on a development roadmap that moves IOTA towards production-readiness and adoption. In a complex and ever-changing ecosystem like DLT, having a clearly defined vision — and strategy on how to get there — is the key to success.</p>
+<p>The IOTA mainnet has been operational since 2016 and so defining a new engineering strategy involves adapting our assumptions to industry feedback and demands. It also involves making difficult decisions to discontinue or redefine certain projects that are no longer feasible or relevant. At the core of this new strategy is an exclusive focus on technologies that will see adoption within a 2-year timeframe.</p>
+<p>Research on Coordicide identified many new concepts that are incredibly valuable when implemented on the IOTA mainnet today. This led us to formalize our engineering strategy around Chrysalis (IOTA 1.5), a series of upgrades to the protocol that achieves enterprise-readiness before Coordicide.</p>
+<p>The benefit of this approach is that much of the heavy lifting and migration for token holders and developers will take place before the launch of Coordicide, making for a simpler transition between Chrysalis (IOTA 1.5) and Coordicide (IOTA 2.0) upgrades.</p>
+<p>The IOTA Foundation’s objective over the next two quarters is to successfully specify, implement, test and upgrade the IOTA mainnet (and adjacent technologies) to this new version of the protocol.</p>
+<p>The intended outcomes for Chrysalis are:</p>
+<ul>
+<li><strong>Simple transition to Coordicide</strong>: 
+With Coordicide making significant progress and the Alphanet launch coming soon, we want to ensure that all developers and companies building on Chrysalis will not see any major breaking changes with the later transition to Coordicide.</li>
+<li><strong>Substantial performance improvements</strong>: 
+With the changes introduced by Chrysalis, we will see a substantial improvement in the scalability and reliability of the IOTA Mainnet. The mainnet will be able to handle several hundred TPS.</li>
+<li><strong>Improved developer experience</strong>: 
+The new protocol features, new libraries, new modules and new wallet will make IOTA one of the best platforms to build on, removing the friction which developers experience today.</li>
+<li><strong>Accelerated adoption</strong>: 
+Chrysalis will make IOTA enterprise-ready, with stable and reliable technologies that will enable Startups, Corporations and Governments to develop and launch products powered by IOTA.</li>
+</ul>
+<h2><a class="header" href="#the-stages-to-chrysalis" id="the-stages-to-chrysalis">The Stages to Chrysalis</a></h2>
+<p><img src="docs/../docs/assets/path_to_chrysalis/01.png" alt="" /></p>
+<p>The Chrysalis upgrade is a complex undertaking. We have to coordinate a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. Apart from the core Node software, we also need to update our Wallet software, our Libraries, and the entireInfrastructure.</p>
+<p>Another important requirement is the ease of transition to the future Coordicide network. By carefully planning the breaking changes introduced along the way, and providing support in our developer tools, we will ensure that our growing ecosystem of developers, startups and corporations can reliably develop and launch new innovative products on IOTA.</p>
+<p>The plan for implementing Chrysalis is divided into two phases.</p>
+<p>The first phase consists of improved tip selection (URTS), Milestone selection,White flag and Autopeering. These will be implemented in the node software gradually, with estimated completion by early July. This phase will require an upgrade of all nodes, including the coordinator node, and will not require a snapshot.</p>
+<p>The outcome of the first phase of Chrysalis will be:</p>
+<ul>
+<li>Transaction confirmation times of around 10 seconds</li>
+<li>Transactions only very rarely need reattachment</li>
+<li>A substantial TPS increase on mainnet</li>
+<li>Performance and reliability improvements for nodes</li>
+<li>Reduced node setup times through autopeering</li>
+</ul>
+<p>The second phase consists of UTXO, Atomic Transactions, Reusable addresses (Ed25519) and the transition to a binary transaction layout. These represent significant changes to the core protocol and the way transactions are structured. Once everything has been tested, validated and audited, we will perform a global snapshot to allow the entire network, wallet users and exchanges to upgrade. We currently estimate this to happen around late October.</p>
+<p>The outcome of the second phase of Chrysalis will be:</p>
+<ul>
+<li>Reusable addresses and support for more standard cryptography (EdDSA), making hardware support for all major architectures possible</li>
+<li>Simplified transaction layout and a reduction in transaction size, further increasing performance</li>
+<li>Introduction of new features such as tokenized assets (colored coins)</li>
+<li>Significant improvements to the usability and reliability of IOTA</li>
+</ul>
+<p>Node operators and integration partners will need to upgrade their nodes to stay in sync with the network and update any software with IOTA integration. We will reach out directly to exchanges, our partners and the wider community to guide them through this process.</p>
+<p>The introduction of Reusable addresses is an important change for token holders. This will vastly improve IOTA’s usability and make integration into new exchanges, wallets and payment systems much simpler. We are building a new wallet that will allow token holders to transition from the current WOTS address scheme to the new EdDSA scheme.</p>
+<p>Our goal is to make this transition as seamless as possible for everyone in the IOTA ecosystem. This includes a variety of improvements and updates to our libraries and software, as well as training and educational sessions for our partners. We want to ensure that everyone is fully aware of how the future of the IOTA protocol will look and function, and what they need to do in order to upgrade.</p>
+<h3><a class="header" href="#from-plan-to-action" id="from-plan-to-action">From Plan to Action</a></h3>
+<p>Going into Chrysalis, we’ve had to make decisions on how to best implement these upcoming changes, ensuring a correct and timely implementation and seamless transition from our current state to Chrysalis and later to Coordicide. What follows is an overview of the various components we are working on to successfully implement this new future for IOTA.</p>
+<h3><a class="header" href="#specification-and-standardization" id="specification-and-standardization">Specification and Standardization</a></h3>
+<p>Specifications are a major part of our new development process. All our new software projects (Node software, Wallet, Identity, Access, Streams, etc.) will have full specifications. Specifications make it possible for external parties to follow a project’s intended functionality (e.g. for audits) or develop their own implementations in different languages. The specification process, which is also being followed by the Coordicide research team, is key to the standardization of IOTA and its related products.</p>
+<p>For all the upcoming Chrysalis changes, we have introduced Protocol RFCs. Many Chrysalis components have been fully specified, and we intend to have them all completed by the end of May. We welcome any input from the IOTA and broader community. The list of RFCs is:</p>
+<ul>
+<li><a href="https://github.com/luca-moser/protocol-rfcs/blob/rfc-urts-tip-sel/text/0008-weighted-uniform-random-tip-selection/0008-weighted-uniform-random-tip-selection.md">Improved tip selection(URTS)</a></li>
+<li><a href="https://github.com/Wollac/protocol-rfcs/blob/milestone-merkle-validation/text/0012-milestone-merkle-validation/0012-milestone-merkle-validation.md">Milestone selection</a></li>
+<li><a href="https://github.com/thibault-martinez/protocol-rfcs/blob/rfc-white-flag/text/0005-white-flag/0005-white-flag.md">White flag</a></li>
+<li><a href="https://github.com/hmoog/protocol-rfcs/blob/master/text/0011-utxo-model/0011-utxo-model.md">UTXO</a></li>
+<li><a href="https://github.com/Wollac/protocol-rfcs/blob/ed25519/text/0009-ed25519-signature-scheme/0009-ed25519-signature-scheme.md">Reusable addresses(Ed25519)</a></li>
+<li><a href="https://iota.cafe/t/binary-transaction-layout/324">Binary transaction layout</a></li>
+</ul>
+<h3><a class="header" href="#wallet-support" id="wallet-support">Wallet support</a></h3>
+<p>The Trinity wallet is the most popular wallet in IOTA today. With Chrysalis, there is also a new wallet, called <a href="https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/">Firefly</a>. The team has been working on a complete rethink of the wallet architecture, both for UX and UI but also from a security and functionality perspective. At its core will be a new Wallet library written in Rust, to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library, Stronghold, will enable ultra-secure secret handling and storage.</p>
+<h3><a class="header" href="#infrastructure" id="infrastructure">Infrastructure</a></h3>
+<p>Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can read more about the networks and how you can participate in our <a href="https://docs.iota.org/docs/getting-started/0.1/network/iota-networks?q=Devnet&amp;highlights=devnet">documentation</a>.</p>
+<p>We will be migrating both Devnet and Mainnet to operate on Hornet, and later on both Hornet and Bee nodes. This will make both networks easier to maintain, and improve their throughput.</p>
+<p><a href="https://comnet.thetangle.org/">Comnet</a>, a community network of Hornet nodes, operates at a stable rate of 40–100 TPS currently, and has already achieved 300 TPS in stress tests without any Chrysalis components yet.</p>
+<p>With these infrastructure upgrades and the transition to Chrysalis, we will continue to be in close contact with all of our exchange and integration partners and provide them with close assistance and advice.</p>
+<p><img src="docs/../docs/assets/path_to_chrysalis/02.png" alt="" />
+See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p>
+<h3><a class="header" href="#chrysalis-testnet" id="chrysalis-testnet">Chrysalis Testnet</a></h3>
+<p>Nodes deployed to the testnet can be queried using a load balancer at:</p>
+<ul>
+<li>api.lb-0.testnet.chrysalis2.com</li>
+</ul>
+<p>We recommend using the load balancer for most scenarios.</p>
+<p>Single node endpoints that expose native MQTT in case you need this are:</p>
+<ul>
+<li>api.hornet-0.testnet.chrysalis2.com</li>
+<li>api.hornet-1.testnet.chrysalis2.com</li>
+<li>api.hornet-2.testnet.chrysalis2.com</li>
+<li>api.hornet-3.testnet.chrysalis2.com</li>
+</ul>
+<h2><a class="header" href="#conclusion" id="conclusion">Conclusion</a></h2>
+<p>Chrysalis is the most promising series of upgrades made to IOTA yet. It is a major step for our enterprise-readiness, with increased transaction throughput, network stability, improved usability, and enables new features and use cases. The upcoming weeks and months are some of the most exciting in IOTA’s history. We are on a clear path towards IOTA’s adoption as an enabling technology for IoT and beyond.</p>
+<h1><a class="header" href="#testnet" id="testnet">Testnet</a></h1>
+<h2><a class="header" href="#infrastructure-1" id="infrastructure-1">Infrastructure</a></h2>
+<p>Nodes deployed to the testnet can be queried using a load balancer at:</p>
+<ul>
+<li>api.lb-0.testnet.chrysalis2.com</li>
+</ul>
+<p>We recommend using the load balancer for most scenarios.</p>
+<p>Single node endpoints that expose native MQTT in case you need this are:</p>
+<ul>
+<li>api.hornet-0.testnet.chrysalis2.com</li>
+<li>api.hornet-1.testnet.chrysalis2.com</li>
+<li>api.hornet-2.testnet.chrysalis2.com</li>
+<li>api.hornet-3.testnet.chrysalis2.com</li>
+</ul>
+<p>Node API is integrated according to the <a href="https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml">following specification</a></p>
+<h2><a class="header" href="#developer-tools" id="developer-tools">Developer Tools</a></h2>
+<ul>
+<li><a href="https://explorer.iota.org/chrysalis">Explorer</a></li>
+<li><a href="https://faucet.testnet.chrysalis2.com/">Online Faucet</a></li>
+<li><a href="https://github.com/iotaledger/cli-wallet">cli-wallet</a></li>
+<li><a href="https://github.com/iotaledger/chrysalis-faucet">chrysalis-faucet Code (nodejs + svelte)</a></li>
+</ul>
+<h1><a class="header" href="#iota-protocol-rfcs" id="iota-protocol-rfcs">IOTA Protocol RFCs</a></h1>
+<p>To propose changes to the IOTA protocol, we ask for these to go through a more organized design process --- an RFC (request for comments) process. The goal is to organize work between the different developers affiliated with the IOTA Foundation, and the wider open source community. We want to vet the ideas early on, get and give feedback, and only then start the implementation once the biggest questions are taken care of.</p>
+<ul>
+<li><a href="https://iotaledger.github.io/protocol-rfcs">Website with all RFC's</a></li>
+<li><a href="https://github.com/iotaledger/protocol-rfcs">Git Repo</a></li>
+</ul>
+<h1><a class="header" href="#node-software" id="node-software">Node Software</a></h1>
+<p>IRI has been the backbone of the IOTA network for a number of years. While the project has delivered significant improvements to the IOTA network throughout its time, the project has always suffered from significant technical debt. This made any changes to the protocol complex, costly, and difficult to debug.</p>
+<p>While the situation has improved significantly, the time has come to move on to newer, more flexible solutions.IRI v1.8.6, currently available as RC, will be the last major release of IRI. If you are using IRI, we encourage you to migrate your infrastructure to Hornet or Bee. We will be releasing a tool to migrate DBs from IRI in case you want to retain your data.</p>
+<p>Moving forward, the Hornet and Bee nodes has replaced IRI as IOTA’s core node software. Hornet is an EDF-supported community node written in Go and has already proven itself to be a stable and performant implementation. Hornet has recently been successfully audited. Bee is an IOTA Node implemented by the Foundation and written in Rust.</p>
+<h2><a class="header" href="#node-software-1" id="node-software-1">Node Software</a></h2>
+<ul>
+<li><a href="https://github.com/gohornet/hornet/tree/develop">hornet (branch: develop)</a></li>
+<li><a href="https://github.com/iotaledger/bee/tree/chrysalis-pt-2">bee (branch: chrysalis-pt-2)</a></li>
+</ul>
+<h2><a class="header" href="#node-api-specification" id="node-api-specification">Node API Specification</a></h2>
+<ul>
+<li><a href="https://github.comeditor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml">rest-api specification</a></li>
+</ul>
+<h1><a class="header" href="#libraries" id="libraries">Libraries</a></h1>
+<p><strong>The IOTA client libraries make it easy for you to integrate IOTA into your own applications. Choose a library to match your use case.</strong></p>
+<ul>
+<li><a href="https://github.com/iotaledger/iota.rs">iota.rs</a>
+<ul>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/node">Node.js</a></li>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python">Python</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/iotaledger/wallet.rs">wallet.rs</a>
+<ul>
+<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs">Node.js</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/iotaledger/iota.js">iota.js</a></li>
+<li><a href="https://github.com/iotaledger/iota.c">iota.c</a></li>
+</ul>
+<p>All libraries are in active development. The libraries targets the Chrysalis testnet and does not work with current IOTA mainnet.</p>
+<p>The client libraries with official support are maintained by the IOTA Foundation, and their source code can be found on the <a href="https://github.com/iotaledger">iotaledger GitHub repository</a>.</p>
+<h3><a class="header" href="#client-libraries" id="client-libraries">Client Libraries</a></h3>
+<ul>
+<li><a href="https://github.com/iotaledger/iota.rs">iota.rs</a>
+<ul>
+<li><a href="https://client-lib.docs.iota.org/">Docs</a></li>
+<li><a href="https://client-lib.docs.iota.org/libraries/rust/getting_started.html">Getting Started</a></li>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/examples">Examples</a></li>
+<li><a href="https://client-lib.docs.iota.org/docs/iota_client/">API Docs</a> </li>
+</ul>
+</li>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/nodejs">Node.js</a>
+<ul>
+<li><a href="https://client-lib.docs.iota.org/libraries/nodejs/getting_started.html">Getting Started</a></li>
+<li><a href="docs/">Examples</a></li>
+<li><a href="docs/">API Docs</a> </li>
+</ul>
+</li>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python">python</a></li>
+</ul>
+<hr />
+<h3><a class="header" href="#wallet-library" id="wallet-library">Wallet Library</a></h3>
+<p>The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions.</p>
+<ul>
+<li><a href="https://github.com/iotaledger/wallet.rs">wallet.rs</a>
+<ul>
+<li><a href="https://wallet-lib.docs.iota.org/">Docs</a></li>
+<li><a href="https://wallet-lib.docs.iota.org/libraries/rust/getting_started.html">Getting Started</a></li>
+<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/examples">Examples</a></li>
+<li><a href="https://wallet-lib.docs.iota.org/docs/iota_wallet">API Docs</a> </li>
+</ul>
+</li>
+<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs">Nodejs</a>
+<ul>
+<li><a href="https://wallet-lib.docs.iota.org/libraries/nodejs/getting_started.html">Getting Started</a></li>
+<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs/examples">Examples</a></li>
+<li><a href="https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html">API Docs</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2><a class="header" href="#utilities" id="utilities">Utilities</a></h2>
+<hr />
+<h4><a class="header" href="#developer-tools-1" id="developer-tools-1"><strong>Developer Tools</strong></a></h4>
+<ul>
+<li><a href="https://explorer.iota.org/chrysalis">Explorer</a></li>
+<li><a href="https://faucet.testnet.chrysalis2.com/">Online Faucet</a></li>
+<li><a href="https://github.com/iotaledger/cli-wallet">cli-wallet</a></li>
+<li><a href="https://github.com/iotaledger/chrysalis-faucet">chrysalis-faucet Code (nodejs + svelte)</a></li>
+</ul>
+<hr />
+<h1><a class="header" href="#developer-guide-to-chrysalis-iota-15" id="developer-guide-to-chrysalis-iota-15">Developer Guide to Chrysalis (IOTA 1.5)</a></h1>
+<p>A quick guide to see the changes you will face while developing with the new network.</p>
+<h2><a class="header" href="#a-note-about-seeds-and-addresses" id="a-note-about-seeds-and-addresses">A note about seeds and addresses</a></h2>
+<p>In Chrysalis all ternary conversions have been removed, which results in a better and faster developer experience.</p>
+<p>Also the WOTS-Signarure has beed chaged to the Ed25519 Signarure scheme. That means, you can use an address now multiple times to send and recive tokens. </p>
+<p>So all these changes results into a complete different view of addresses and seeds: </p>
+<p>IOTA 1.0 Address</p>
+<pre><code class="language-bash=">UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZRGJMIGPDW
+</code></pre>
+<p>Chrysalis (IOTA 1.5) Address</p>
+<pre><code class="language-bash=">atoi1qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs
+</code></pre>
+<p>With the new wallet library, developers dont need to usa a Seed anymore. The Seed is backed up with Stronghold, which is an software security box. It's not possible to get the seed out of this box. It uses encrypted snapshots that can be easily backed up and securely shared between devices. These snapshots are secured by an password.</p>
+<p>Read more about Stronghold on the <a href="https://stronghold.docs.iota.org">Stronghold docs page</a>.</p>
+<h2><a class="header" href="#deep-dive" id="deep-dive">Deep Dive</a></h2>
+<h3><a class="header" href="#dust-protection" id="dust-protection">Dust Protection</a></h3>
+<p>What is Dust? We define the spamming of low value transaction as dust. A low value transaction is a transaction with less than 1Mi value.</p>
+<blockquote>
+<p>In the UTXO model, each node in the network needs to keep track of all the currently unspent outputs. When the number of outputs gets too large, this can cause performance and memory issues. This RFC proposes a new protocol rule regarding the processing of outputs that transfer a very small amount of IOTA, so-called dust outputs: Dust outputs are only allowed when they are backed up by a certain deposit on the receiving address. This limits the amount of dust outputs, thus making it expensive to proliferate dust. Since a receiver must make a deposit, the protocol makes receiving dust an opt-in feature.</p>
+</blockquote>
+<p><a href="https://github.com/iotaledger/protocol-rfcs/pull/32">protocol-rfcs#0032</a></p>
+<h3><a class="header" href="#up-to-8-parentss" id="up-to-8-parentss">Up to 8 Parents.s</a></h3>
+<p>An message can be bind to minimal one parent and up to eight parents.</p>
+<h1><a class="header" href="#faq" id="faq">FAQ</a></h1>
+<h2><a class="header" href="#which-libraries-are-available-for-chrysalis" id="which-libraries-are-available-for-chrysalis">Which Libraries are available for Chrysalis?</a></h2>
+<p>There is a low level library iota.rs, which is a client library to connect with an IOTA Node for core interactions with the Tangle. It's written in Rust and there are currently to bindings for Node.js and Python. </p>
+<p>For Value Transactions there is the wallet.rs library, which provides helpful functionality to implement an IOTA Wallet into a application. It's also written in Rust and there are currently to bindings for Node.js and Python. </p>
+<p>Also there is a native C (<a href="https://github.com/iotaledger/iota.c">iota.c</a>) and a native javascript (<a href="https://github.com/iotaledger/iota.js/tree/chrysalis">iota.js</a>) client library. </p>
+<h2><a class="header" href="#what-is-dust-protection-and-does-it-works" id="what-is-dust-protection-and-does-it-works">What is Dust Protection and does it works?</a></h2>
+<p>Since IOTA is feeless and has to ability to send microntrasactions, attackers could use this to spam the network, which we called Dust. To avoid this, you need to have 1Mi amount of IOTA tokens
+on a address where you want to receive microtransactions.</p>
+<p>Read more about the Dust Protection <a href="docs/">in the RFC here</a>.</p>
+<h2><a class="header" href="#whats-happening-with-coordicide" id="whats-happening-with-coordicide">What's happening with Coordicide?</a></h2>
+<p>Chrysalis is a stage of the IOTA Network, which is still build on the Coordinator. With Coordicice, the IOTA Network get rid of the Coordinator and is a complete dezetralized Network. There are three stages to reach Cooridice, which resolves in three Test neworks: Pollen, Nectar and Honey. The Pollen Network runs in a research state on the goShimmer Node.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
