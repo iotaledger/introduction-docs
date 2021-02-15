@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>What is Chrysalis? - Chrysalis Documentation</title>
+        <title>Exchange - Chrysalis Documentation</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../docs/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../docs/what_is_chrysalis.html" class="active"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../docs/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../docs/testnet.html"><strong aria-hidden="true">4.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../docs/rfc.html"><strong aria-hidden="true">5.</strong> IOTA Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../docs/node-softwaree.html"><strong aria-hidden="true">6.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../docs/libraries.html"><strong aria-hidden="true">7.</strong> Libraries</a></li><li class="chapter-item expanded "><a href="../docs/dev_guide.html"><strong aria-hidden="true">8.</strong> Developer Guide</a></li><li class="chapter-item expanded "><a href="../docs/faq.html"><strong aria-hidden="true">9.</strong> FAQ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../node-software/node-software.html"><strong aria-hidden="true">4.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../libraries/overview.html"><strong aria-hidden="true">5.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../libraries/client.html"><strong aria-hidden="true">5.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="../libraries/wallet.html"><strong aria-hidden="true">5.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html"><strong aria-hidden="true">6.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guides/dev_guide.html"><strong aria-hidden="true">6.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="../guides/exchange_guide.html" class="active"><strong aria-hidden="true">6.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="../guides/hub_guide.html"><strong aria-hidden="true">6.3.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="../guides/backup_security.html"><strong aria-hidden="true">6.4.</strong> Backup and Security</a></li></ol></li><li class="chapter-item expanded "><a href="../testnet.html"><strong aria-hidden="true">7.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../rfc.html"><strong aria-hidden="true">8.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">9.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">10.</strong> FAQ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,47 +150,95 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#what-is-chrysalis" id="what-is-chrysalis">What is Chrysalis</a></h1>
-<p>However, apart from Coordicide, the objective of the IOTA Foundation is to fully optimise the IOTA mainnet pre-Coordicide and offer an enterprise-ready solution to our ecosystem. We have therefore planned for an intermediate update called Chrysalis. This plan was first announced alongside our roadmap, but the scope has since been expanded. This post provides further information on what this upgrade to the IOTA Mainnet entails.</p>
-<p>A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis is the mainnet’s intermediate stage before coordicide is complete. To be clear, Chrysalis is separate to the coordicide efforts, and is aimed at improving usability of the current IOTA mainnet prior to coordicide.</p>
-<p><img src="../docs/assets/02_path_to.png" alt="" /></p>
-<p>Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless DLTs? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives conflict with those of the users of the network. Better throughput and lower latencies can disrupt the fee market miners rely on, and therefore agreeing to upgrade the network may affect their own profitability.</p>
-<p>In IOTA, the validators and users are one and the same. There is no stubborn clash of incentives, meaning a much smoother path to network improvements. We will demonstrate this with the upcoming incremental upgrades to the network under Chrysalis.</p>
-<p>So what are these incremental upgrades?</p>
-<h2><a class="header" href="#white-flag-approach" id="white-flag-approach">White-flag approach</a></h2>
-<p><img src="../docs/assets/what_is_chrysalis/01.png" alt="" />
-<a href="https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233">White-flag approach</a> for calculating balances. A simpler, conflict-ignoring approach (valid for the pre-coordicide era) that improves speed and efficiency of tip selection, eliminates certain attacks, and significantly reduces the need for reattachments.</p>
-<h2><a class="header" href="#new-milestone-selection-algorithm" id="new-milestone-selection-algorithm">New milestone selection algorithm</a></h2>
-<p><img src="../docs/assets/what_is_chrysalis/02.png" alt="" />
-<a href="https://iota.cafe/t/coordinator-improvements/310">New milestone selection algorithm for the coordinator</a>, focused on allowing the network to support as much CTPS as possible, with higher computational efficiency.</p>
-<h2><a class="header" href="#urts-tip-selection" id="urts-tip-selection">URTS tip selection</a></h2>
-<p><img src="../docs/assets/what_is_chrysalis/03.png" alt="" />
-New <a href="https://iota.cafe/t/almost-urts-on-a-subset/234">URTS tip selection</a> in node software. Significantly faster and more efficient than the current approach.</p>
-<h2><a class="header" href="#support-for-a-new-signature-scheme" id="support-for-a-new-signature-scheme">Support for a new signature scheme</a></h2>
-<p><img src="../docs/assets/what_is_chrysalis/04.png" alt="" />
-<a href="https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md">Support for a new signature scheme</a> in parallel to WOTS. The network will therefore allow for both quantum resistant one-time signatures and a more commonly used signature scheme allowing re-use of private keys. This will dramatically reduce transaction size, and consequently allow a significant increase in TPS. By introducing a new signature scheme we will also allow for reusable addresses, a very popular request from the community.</p>
-<h2><a class="header" href="#atomic-transactions" id="atomic-transactions">Atomic transactions</a></h2>
-<p><img src="../docs/assets/what_is_chrysalis/05.png" alt="" />
-<a href="https://iota.cafe/t/atomic-transfers-transactions-instead-of-bundles/318">Atomic transactions</a>. Move from the current Bundle construct and use simpler atomic transactions instead. This will reduce network overhead, reduce signature verification burden, improve spam protection and congestion control, and reduce length of Merkle proofs (for future sharding). In addition, it will reduce implementation efforts and increase maintainability of our core node software.</p>
-<h2><a class="header" href="#switch-to-utxo-model" id="switch-to-utxo-model">Switch to UTXO Model</a></h2>
-<p><img src="../docs/assets/what_is_chrysalis/06.png" alt="" />
-<a href="https://iota.cafe/t/switching-to-utxo-model-for-balances-colored-coins-easier-conflict-resolution/229">Switch to UTXO model</a> from the current balance model. Every coin on an address is then uniquely identifiable and every spend names the exact coins that it wants to move. This allows for faster and more exact conflict handling and improves resilience and security of the protocol. In addition, switching to UTXO will make colored coins on IOTA possible. Combined with Mana (Coordicide) in the near future, this makes for a very attractive tokenization model and will further boost the adoption of the IOTA token.</p>
-<h2><a class="header" href="#internal-binary-representation" id="internal-binary-representation">Internal Binary Representation</a></h2>
-<p><img src="../docs/assets/what_is_chrysalis/07.png" alt="" />
-<a href="https://iota.cafe/t/binary-transaction-layout/324">Switch to an internal binary representation of the trinary transaction</a>. This allows us to work on binary data, for validation, IO and other processing without the need to have many binary-ternary conversions as in the current node software. The bundle hash can still be represented as 243 trits, such that the signing scheme stays the same and no transition of funds is necessary. This should lead to further improvements in performance.</p>
+                        <h1><a class="header" href="#exchange-guide" id="exchange-guide">Exchange Guide</a></h1>
+<h2><a class="header" href="#the-iota-wallet-library" id="the-iota-wallet-library">The IOTA Wallet Library</a></h2>
+<blockquote>
+<p>Easily Integrate IOTA With Your Exchange, Custody Solution, Or Product</p>
+</blockquote>
+<p>IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis Update, we also ship many Libraries to help developers implement IOTA into their applications.</p>
+<p>This guide explains, how to use the IOTA Library into an Exchange. IF you already implemented the IOTA Hub, please visit thee Hub Migration Guide.</p>
+<p>Features of the Wallet Library</p>
+<ul>
+<li>Secure Seed management</li>
+<li>Account Managemnt, with multiple accounts</li>
+<li>Confirmation monitoring</li>
+<li>Deposit address monitoring</li>
+<li>Backup and Restore functionality</li>
+</ul>
+<h2><a class="header" href="#how-does-it-work" id="how-does-it-work">How does it work?</a></h2>
+<p>The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the full specification here.</p>
+<p>We recommend to implement IOTA Deposits. That means, creating an account for every user to handle their tokens.</p>
+<ol>
+<li>Setup the Wallet Library</li>
+<li>Create an accont for each user</li>
+<li>Generate an User address for deposit funds.</li>
+<li>Listen to events</li>
+<li>Check the user balance</li>
+<li>Enable withdrawals</li>
+</ol>
+<p>If you looking for other languages, read the <a href="library/overview.html">library overview</a>.</p>
+<h3><a class="header" href="#1-setup-the-wallet-library" id="1-setup-the-wallet-library">1. Setup the Wallet Library</a></h3>
+<p>Install the Wallet Library and dotenv for passwort management. Read more about backup &amp; security <a href="backup_security.html">here</a>.</p>
+<pre><code class="language-bash">npm install @iota/Wallet dotenv
+touch .env
+</code></pre>
+<p>Input your password to the <code>.env</code> file like this:</p>
+<pre><code class="language-bash">SH_PASSWORD=&quot;here is your super sucure password&quot;
+</code></pre>
+<p>Import the Wallet Library and create a manager.</p>
+<pre><code class="language-javascript">const { AccountManager, SignerType } = require('@iota/wallet')
+const manager = new AccountManager({
+    storagePath: './iota-wallet-database',
+})
+manager.setStrongholdPassword(process.env.SH_PASSWORD)
+manager.storeMnemonic(SignerType.Stronghold)
+</code></pre>
+<h3><a class="header" href="#2-create-an-accont-for-each-user" id="2-create-an-accont-for-each-user">2. Create an accont for each user</a></h3>
+<p>Creating an account for every user and storing it as main scenario.
+<todo>add js example</todo></p>
+<h3><a class="header" href="#3-generat-an-user-address-for-deposit-funds" id="3-generat-an-user-address-for-deposit-funds">3. Generat an User address for deposit funds.</a></h3>
+<p><todo>add js example</todo></p>
+<h3><a class="header" href="#4-listen-to-events" id="4-listen-to-events">4. Listen to events</a></h3>
+<p>Fetching existing accounts and listening to transaction events coming into the account</p>
+<p><todo>add js example</todo></p>
+<p>addEventListener(event, cb)
+Adds a new event listener with a callback in the form of (err, data) =&gt; {}. Supported event names:</p>
+<p>ErrorThrown
+BalanceChange
+NewTransaction
+ConfirmationStateChange
+Reattachment
+Broadcast</p>
+<h3><a class="header" href="#5-check-the-user-balance" id="5-check-the-user-balance">5. Check the user balance</a></h3>
+<p><todo>add js example</todo></p>
+<h3><a class="header" href="#6-enable-withdrawals" id="6-enable-withdrawals">6. Enable withdrawals</a></h3>
+<p>Allowing withdrawals - checking if address is valid and sending to it
+<todo>add js example</todo></p>
+<h3><a class="header" href="#references-and-input" id="references-and-input">References and Input</a></h3>
+<p><todo>Remove this</todo></p>
+<ul>
+<li>Allowing withdrawals - checking if address is valid and sending to it</li>
+<li>Deposits (main way) - creating an account for every user and storing it as main scenario,</li>
+<li>Fetching existing accounts and listening to transaction events coming into the account</li>
+<li>Deposits (secondary) - creating a main account for all the users and keeping track which users belong to which addresses</li>
+<li>Consolidation will be available in wallet.rs later</li>
+</ul>
+<p>Here's the fake exchange repo I (Dave) made, 1 without implementation and a branch with implementation (so the master branch is just a fake exchange without any real implementation in it yet): https://github.com/fijter/fakexchange
+Here's the video where I do the actual implementation: https://www.youtube.com/watch?v=O2ukIXqJTls</p>
+<p>This uses Hub, but the principles are the same, creating addresses for users, monitoring those, sweeping the funds away from those addresses after arriving (and adding funds to the user account on the exchange platform) and sending funds on a withdrawal.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../docs/introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../guides/dev_guide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../docs/path_to_chrysalis.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../guides/hub_guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -202,13 +250,13 @@ New <a href="https://iota.cafe/t/almost-urts-on-a-subset/234">URTS tip selection
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../docs/introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../guides/dev_guide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../docs/path_to_chrysalis.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../guides/hub_guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

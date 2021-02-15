@@ -86,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="docs/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="docs/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="docs/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="docs/testnet.html"><strong aria-hidden="true">4.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="docs/rfc.html"><strong aria-hidden="true">5.</strong> IOTA Protocol RFCs</a></li><li class="chapter-item expanded "><a href="docs/node-softwaree.html"><strong aria-hidden="true">6.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="docs/libraries.html"><strong aria-hidden="true">7.</strong> Libraries</a></li><li class="chapter-item expanded "><a href="docs/dev_guide.html"><strong aria-hidden="true">8.</strong> Developer Guide</a></li><li class="chapter-item expanded "><a href="docs/faq.html"><strong aria-hidden="true">9.</strong> FAQ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="node-software/node-software.html"><strong aria-hidden="true">4.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="libraries/overview.html"><strong aria-hidden="true">5.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/client.html"><strong aria-hidden="true">5.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="libraries/wallet.html"><strong aria-hidden="true">5.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="guides/index.html"><strong aria-hidden="true">6.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guides/dev_guide.html"><strong aria-hidden="true">6.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="guides/exchange_guide.html"><strong aria-hidden="true">6.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="guides/hub_guide.html"><strong aria-hidden="true">6.3.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="guides/backup_security.html"><strong aria-hidden="true">6.4.</strong> Backup and Security</a></li></ol></li><li class="chapter-item expanded "><a href="testnet.html"><strong aria-hidden="true">7.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="rfc.html"><strong aria-hidden="true">8.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">9.</strong> Resources</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">10.</strong> FAQ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,36 +152,36 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+                        <h1><a class="header" href="#welcome" id="welcome">Welcome</a></h1>
 <p>This page is about the fundamental changes in the protocol on the way to the Coordicide. IOTA Chrysalis is like the metamorphosis of the butterfly, from the pupa to the finished butterfly.</p>
-<p><img src="docs/../docs/assets/01_butterfly.png" alt="" /></p>
+<p><img src="introduction/./assets/01_butterfly.png" alt="" /></p>
 <h1><a class="header" href="#what-is-chrysalis" id="what-is-chrysalis">What is Chrysalis</a></h1>
 <p>However, apart from Coordicide, the objective of the IOTA Foundation is to fully optimise the IOTA mainnet pre-Coordicide and offer an enterprise-ready solution to our ecosystem. We have therefore planned for an intermediate update called Chrysalis. This plan was first announced alongside our roadmap, but the scope has since been expanded. This post provides further information on what this upgrade to the IOTA Mainnet entails.</p>
 <p>A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis is the mainnet’s intermediate stage before coordicide is complete. To be clear, Chrysalis is separate to the coordicide efforts, and is aimed at improving usability of the current IOTA mainnet prior to coordicide.</p>
-<p><img src="docs/../docs/assets/02_path_to.png" alt="" /></p>
+<p><img src="introduction/./assets/02_path_to.png" alt="" /></p>
 <p>Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless DLTs? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives conflict with those of the users of the network. Better throughput and lower latencies can disrupt the fee market miners rely on, and therefore agreeing to upgrade the network may affect their own profitability.</p>
 <p>In IOTA, the validators and users are one and the same. There is no stubborn clash of incentives, meaning a much smoother path to network improvements. We will demonstrate this with the upcoming incremental upgrades to the network under Chrysalis.</p>
 <p>So what are these incremental upgrades?</p>
 <h2><a class="header" href="#white-flag-approach" id="white-flag-approach">White-flag approach</a></h2>
-<p><img src="docs/../docs/assets/what_is_chrysalis/01.png" alt="" />
+<p><img src="introduction/../docs/assets/what_is_chrysalis/01.png" alt="" />
 <a href="https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233">White-flag approach</a> for calculating balances. A simpler, conflict-ignoring approach (valid for the pre-coordicide era) that improves speed and efficiency of tip selection, eliminates certain attacks, and significantly reduces the need for reattachments.</p>
 <h2><a class="header" href="#new-milestone-selection-algorithm" id="new-milestone-selection-algorithm">New milestone selection algorithm</a></h2>
-<p><img src="docs/../docs/assets/what_is_chrysalis/02.png" alt="" />
+<p><img src="introduction/./assets/what_is_chrysalis/02.png" alt="" />
 <a href="https://iota.cafe/t/coordinator-improvements/310">New milestone selection algorithm for the coordinator</a>, focused on allowing the network to support as much CTPS as possible, with higher computational efficiency.</p>
 <h2><a class="header" href="#urts-tip-selection" id="urts-tip-selection">URTS tip selection</a></h2>
-<p><img src="docs/../docs/assets/what_is_chrysalis/03.png" alt="" />
+<p><img src="introduction/./assets/what_is_chrysalis/03.png" alt="" />
 New <a href="https://iota.cafe/t/almost-urts-on-a-subset/234">URTS tip selection</a> in node software. Significantly faster and more efficient than the current approach.</p>
 <h2><a class="header" href="#support-for-a-new-signature-scheme" id="support-for-a-new-signature-scheme">Support for a new signature scheme</a></h2>
-<p><img src="docs/../docs/assets/what_is_chrysalis/04.png" alt="" />
+<p><img src="introduction/./assets/what_is_chrysalis/04.png" alt="" />
 <a href="https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md">Support for a new signature scheme</a> in parallel to WOTS. The network will therefore allow for both quantum resistant one-time signatures and a more commonly used signature scheme allowing re-use of private keys. This will dramatically reduce transaction size, and consequently allow a significant increase in TPS. By introducing a new signature scheme we will also allow for reusable addresses, a very popular request from the community.</p>
 <h2><a class="header" href="#atomic-transactions" id="atomic-transactions">Atomic transactions</a></h2>
-<p><img src="docs/../docs/assets/what_is_chrysalis/05.png" alt="" />
+<p><img src="introduction/./assets/what_is_chrysalis/05.png" alt="" />
 <a href="https://iota.cafe/t/atomic-transfers-transactions-instead-of-bundles/318">Atomic transactions</a>. Move from the current Bundle construct and use simpler atomic transactions instead. This will reduce network overhead, reduce signature verification burden, improve spam protection and congestion control, and reduce length of Merkle proofs (for future sharding). In addition, it will reduce implementation efforts and increase maintainability of our core node software.</p>
 <h2><a class="header" href="#switch-to-utxo-model" id="switch-to-utxo-model">Switch to UTXO Model</a></h2>
-<p><img src="docs/../docs/assets/what_is_chrysalis/06.png" alt="" />
+<p><img src="introduction/./assets/what_is_chrysalis/06.png" alt="" />
 <a href="https://iota.cafe/t/switching-to-utxo-model-for-balances-colored-coins-easier-conflict-resolution/229">Switch to UTXO model</a> from the current balance model. Every coin on an address is then uniquely identifiable and every spend names the exact coins that it wants to move. This allows for faster and more exact conflict handling and improves resilience and security of the protocol. In addition, switching to UTXO will make colored coins on IOTA possible. Combined with Mana (Coordicide) in the near future, this makes for a very attractive tokenization model and will further boost the adoption of the IOTA token.</p>
 <h2><a class="header" href="#internal-binary-representation" id="internal-binary-representation">Internal Binary Representation</a></h2>
-<p><img src="docs/../docs/assets/what_is_chrysalis/07.png" alt="" />
+<p><img src="introduction/./assets/what_is_chrysalis/07.png" alt="" />
 <a href="https://iota.cafe/t/binary-transaction-layout/324">Switch to an internal binary representation of the trinary transaction</a>. This allows us to work on binary data, for validation, IO and other processing without the need to have many binary-ternary conversions as in the current node software. The bundle hash can still be represented as 243 trits, such that the signing scheme stays the same and no transition of funds is necessary. This should lead to further improvements in performance.</p>
 <h1><a class="header" href="#path-to-chrysalis" id="path-to-chrysalis">Path to Chrysalis</a></h1>
 <p>One of the IOTA Foundation’s primary roles is to define and deliver on a development roadmap that moves IOTA towards production-readiness and adoption. In a complex and ever-changing ecosystem like DLT, having a clearly defined vision — and strategy on how to get there — is the key to success.</p>
@@ -201,7 +201,7 @@ The new protocol features, new libraries, new modules and new wallet will make I
 Chrysalis will make IOTA enterprise-ready, with stable and reliable technologies that will enable Startups, Corporations, and Governments to develop and launch products powered by IOTA</li>
 </ul>
 <h2><a class="header" href="#the-stages-to-chrysalis" id="the-stages-to-chrysalis">The Stages to Chrysalis</a></h2>
-<p><img src="docs/../docs/assets/path_to_chrysalis/01.png" alt="" /></p>
+<p><img src="introduction/./assets/path_to_chrysalis/01.png" alt="" /></p>
 <p>The Chrysalis upgrade is a complex undertaking. We have to coordinate a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. Apart from the core Node software, we also need to update our Wallet software, our Libraries, and the entire Infrastructure.</p>
 <p>Another important requirement is the ease of transition to the future Coordicide network. By carefully planning the breaking changes introduced along the way, and providing support in our developer tools, we will ensure that our growing ecosystem of developers, startups, and corporations can reliably develop and launch new innovative products on IOTA.</p>
 <p>The plan for implementing Chrysalis is divided into two phases.</p>
@@ -241,11 +241,11 @@ Chrysalis will make IOTA enterprise-ready, with stable and reliable technologies
 <h3><a class="header" href="#wallet-support" id="wallet-support">Wallet support</a></h3>
 <p>The Trinity wallet is the most popular wallet in IOTA today. With Chrysalis, there is also a new wallet called <a href="https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/">Firefly</a>. The team has been working on a complete rethink of the wallet architecture, both for UX and UI but also from a security and functionality perspective. At its core will be a new wallet library written in Rust, to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library, Stronghold, will enable ultra-secure secret handling and storage.</p>
 <h3><a class="header" href="#infrastructure" id="infrastructure">Infrastructure</a></h3>
-<p>Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can read more about the networks and how you can participate in our <a href="https://docs.iota.org/docs/getting-started/0.1/network/iota-networks?q=Devnet&amp;highlights=devnet">documentation</a>.</p>
+<p>Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can read more about the networks and how you can participate in our <a href="https://docs.iota.org/getting-started/0.1/network/iota-networks?q=Devnet&amp;highlights=devnet">documentation</a>.</p>
 <p>We will be migrating both Devnet and Mainnet to operate on Hornet, and later on both Hornet and Bee nodes. This will make both networks easier to maintain, and improve their throughput.</p>
 <p><a href="https://comnet.thetangle.org/">Comnet</a>, a community network of Hornet nodes, operates at a stable rate of 40–100 TPS currently, and has already achieved 300 TPS in stress tests without any Chrysalis components yet.</p>
 <p>With these infrastructure upgrades and the transition to Chrysalis, we will continue to be in close contact with all of our exchange and integration partners and provide them with close assistance and advice.</p>
-<p><img src="docs/../docs/assets/path_to_chrysalis/02.png" alt="" />
+<p><img src="introduction/./assets/path_to_chrysalis/02.png" alt="" />
 See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p>
 <h3><a class="header" href="#chrysalis-testnet" id="chrysalis-testnet">Chrysalis Testnet</a></h3>
 <p>Nodes deployed to the testnet can be queried using a load balancer at:</p>
@@ -262,34 +262,6 @@ See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p
 </ul>
 <h2><a class="header" href="#conclusion" id="conclusion">Conclusion</a></h2>
 <p>Chrysalis is the most promising series of upgrades made to IOTA yet. It is a major step for our enterprise-readiness, with increased transaction throughput, network stability, improved usability, and enables new features and use cases. The upcoming weeks and months are some of the most exciting in IOTA’s history. We are on a clear path towards IOTA’s adoption as an enabling technology for IoT and beyond.</p>
-<h1><a class="header" href="#testnet" id="testnet">Testnet</a></h1>
-<h2><a class="header" href="#infrastructure-1" id="infrastructure-1">Infrastructure</a></h2>
-<p>Nodes deployed to the testnet can be queried using a load balancer at:</p>
-<ul>
-<li>api.lb-0.testnet.chrysalis2.com</li>
-</ul>
-<p>We recommend using the load balancer for most scenarios.</p>
-<p>Single node endpoints that expose native MQTT in case you need this are:</p>
-<ul>
-<li>api.hornet-0.testnet.chrysalis2.com</li>
-<li>api.hornet-1.testnet.chrysalis2.com</li>
-<li>api.hornet-2.testnet.chrysalis2.com</li>
-<li>api.hornet-3.testnet.chrysalis2.com</li>
-</ul>
-<p>Node API is integrated according to the <a href="https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml">following specification</a></p>
-<h2><a class="header" href="#developer-tools" id="developer-tools">Developer Tools</a></h2>
-<ul>
-<li><a href="https://explorer.iota.org/chrysalis">Explorer</a></li>
-<li><a href="https://faucet.testnet.chrysalis2.com/">Online Faucet</a></li>
-<li><a href="https://github.com/iotaledger/cli-wallet">cli-wallet</a></li>
-<li><a href="https://github.com/iotaledger/chrysalis-faucet">chrysalis-faucet Code (nodejs + svelte)</a></li>
-</ul>
-<h1><a class="header" href="#iota-protocol-rfcs" id="iota-protocol-rfcs">IOTA Protocol RFCs</a></h1>
-<p>To propose changes to the IOTA protocol, we ask for these to go through a more organized design process --- an RFC (request for comments) process. The goal is to organize work between the different developers affiliated with the IOTA Foundation, and the wider open source community. We want to vet the ideas early on, get and give feedback, and only then start the implementation once the biggest questions are taken care of.</p>
-<ul>
-<li><a href="https://iotaledger.github.io/protocol-rfcs">Website with all RFC's</a></li>
-<li><a href="https://github.com/iotaledger/protocol-rfcs">Git Repo</a></li>
-</ul>
 <h1><a class="header" href="#node-software" id="node-software">Node Software</a></h1>
 <p>We have been running the network exclusively on the Go powered Hornet node since the summer of 2020. For Chrysalis, you will have the choice to continue using a new version of Hornet or you can use our new Test-based Bee node.</p>
 <h3><a class="header" href="#hornet-and-bee" id="hornet-and-bee">Hornet and Bee</a></h3>
@@ -308,65 +280,17 @@ See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p
 <h1><a class="header" href="#libraries" id="libraries">Libraries</a></h1>
 <p><strong>The IOTA client libraries make it easy for you to integrate IOTA into your own applications. Choose a library to match your use case.</strong></p>
 <ul>
-<li><a href="https://github.com/iotaledger/iota.rs">iota.rs</a>
-<ul>
-<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/node">Node.js</a></li>
-<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python">Python</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/iotaledger/wallet.rs">wallet.rs</a>
-<ul>
-<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs">Node.js</a></li>
-</ul>
-</li>
+<li><a href="libraries/client.html">client-lib</a></li>
+<li><a href="libraries/wallet.html">wallet-lib</a></li>
 <li><a href="https://github.com/iotaledger/iota.js">iota.js</a></li>
 <li><a href="https://github.com/iotaledger/iota.c">iota.c</a></li>
+<li><a href="https://github.com/iotaledger/iota.go">iota.go</a></li>
 </ul>
 <p>All libraries are in active development. The libraries target the Chrysalis testnet and do not work with current IOTA mainnet.</p>
 <p>The client libraries with official support are maintained by the IOTA Foundation, their source code can be found on the <a href="https://github.com/iotaledger">iotaledger GitHub repository</a>.</p>
-<h3><a class="header" href="#client-libraries" id="client-libraries">Client Libraries</a></h3>
-<ul>
-<li><a href="https://github.com/iotaledger/iota.rs">iota.rs</a>
-<ul>
-<li><a href="https://client-lib.docs.iota.org/">Docs</a></li>
-<li><a href="https://client-lib.docs.iota.org/libraries/rust/getting_started.html">Getting Started</a></li>
-<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/examples">Examples</a></li>
-<li><a href="https://client-lib.docs.iota.org/docs/iota_client/">API Docs</a> </li>
-</ul>
-</li>
-<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/nodejs">Node.js</a>
-<ul>
-<li><a href="https://client-lib.docs.iota.org/libraries/nodejs/getting_started.html">Getting Started</a></li>
-<li><a href="docs/">Examples</a></li>
-<li><a href="docs/">API Docs</a> </li>
-</ul>
-</li>
-<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python">python</a></li>
-</ul>
-<hr />
-<h3><a class="header" href="#wallet-library" id="wallet-library">Wallet Library</a></h3>
-<p>The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions.</p>
-<ul>
-<li><a href="https://github.com/iotaledger/wallet.rs">wallet.rs</a>
-<ul>
-<li><a href="https://wallet-lib.docs.iota.org/">Docs</a></li>
-<li><a href="https://wallet-lib.docs.iota.org/libraries/rust/getting_started.html">Getting Started</a></li>
-<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/examples">Examples</a></li>
-<li><a href="https://wallet-lib.docs.iota.org/docs/iota_wallet">API Docs</a> </li>
-</ul>
-</li>
-<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs">Nodejs</a>
-<ul>
-<li><a href="https://wallet-lib.docs.iota.org/libraries/nodejs/getting_started.html">Getting Started</a></li>
-<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs/examples">Examples</a></li>
-<li><a href="https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html">API Docs</a></li>
-</ul>
-</li>
-</ul>
-<hr />
 <h2><a class="header" href="#utilities" id="utilities">Utilities</a></h2>
 <hr />
-<h4><a class="header" href="#developer-tools-1" id="developer-tools-1"><strong>Developer Tools</strong></a></h4>
+<h4><a class="header" href="#developer-tools" id="developer-tools"><strong>Developer Tools</strong></a></h4>
 <ul>
 <li><a href="https://explorer.iota.org/chrysalis">Explorer</a></li>
 <li><a href="https://faucet.testnet.chrysalis2.com/">Online Faucet</a></li>
@@ -374,6 +298,79 @@ See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p
 <li><a href="https://github.com/iotaledger/chrysalis-faucet">chrysalis-faucet Code (nodejs + svelte)</a></li>
 </ul>
 <hr />
+<h1><a class="header" href="#iota-client-library" id="iota-client-library">IOTA Client Library</a></h1>
+<p>The client library for interacting with the Tangle</p>
+<ul>
+<li>Create messages and transactions</li>
+<li>Sign transactions</li>
+<li>Generate addresses</li>
+<li>Interact with an IOTA node</li>
+</ul>
+<p>For value transfers we recommend you to use our stateful <a href="libraries/./wallet.html">wallet library</a>.</p>
+<h2><a class="header" href="#rust" id="rust">Rust</a></h2>
+<ul>
+<li><a href="https://client-lib.docs.iota.org/libraries/rust/getting_started.html">Getting Started</a>
+Getting Started with Rust and the IOTA Client Library.</li>
+<li><a href="https://client-lib.docs.iota.org/libraries/rust/examples.html">Examples</a>
+Find starting points or inspiration in the examples.</li>
+<li><a href="https://github.com/iotaledger/iota.rs">Repository</a>
+Browse trough the code and learn see what's happening behind the scenes. Pull requests are very welcome!</li>
+<li><a href="https://client-lib.docs.iota.org/docs/iota/index.html">API Documentation</a>
+The IOTA Client Library Rust API Documentation.</li>
+</ul>
+<h2><a class="header" href="#nodejs" id="nodejs">Node.js</a></h2>
+<ul>
+<li><a href="https://client-lib.docs.iota.org/libraries/nodejs/getting_started.html">Getting Started</a>
+Getting Started with Node.js and the IOTA Client Library.</li>
+<li><a href="https://client-lib.docs.iota.org/libraries/nodejs/examples.html">Examples</a>
+Find starting points or inspiration in the examples.</li>
+<li><a href="https://github.com/iotaledger/iota.rs">Repository</a>
+Browse trough the code and learn see what's happening behind the scenes. Pull requests are very welcome!</li>
+<li><a href="https://client-lib.docs.iota.org/libraries/nodejs/api_reference.html">API Documentation</a>
+The IOTA Client Library Node.js API Documentation.</li>
+</ul>
+<h2><a class="header" href="#python" id="python">Python</a></h2>
+<ul>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python">Repository</a></li>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python">Getting Started</a>
+Getting Started with Python and the IOTA Client Library.</li>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python/examples">Examples</a>
+Find starting points or inspiration in the examples.</li>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python">Repository</a> Browse trough the code and learn see what's happening behind the scenes. Pull requests are very welcome!</li>
+<li><a href="https://github.com/iotaledger/iota.rs/tree/dev/bindings/python">API Documentation</a> The IOTA Client Library Python API Documentation.</li>
+</ul>
+<h1><a class="header" href="#iota-wallet-library" id="iota-wallet-library">IOTA Wallet Library</a></h1>
+<p>The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It is recommended to use this library if it's your main goal to transfer IOTA tokens. This library supports handling and monitoring multiple account/addresses at the same time. </p>
+<h2><a class="header" href="#rust-1" id="rust-1">Rust</a></h2>
+<hr />
+<ul>
+<li><a href="https://wallet-lib.docs.iota.org/libraries/rust/getting_started.html">Getting Started</a>
+Getting Started with Rust and the IOTA Wallet Library.</li>
+<li><a href="https://wallet-lib.docs.iota.org/libraries/rust/examples.html">Examples</a>
+Find starting points or inspiration in the examples.</li>
+<li><a href="https://github.com/iotaledger/wallet.rs">Repository</a>
+Browse trough the code and learn see what's happening behind the scenes. Pull requests are very welcome!</li>
+<li><a href="https://wallet-lib.docs.iota.org/docs/iota_wallet/index.html">API Documentation</a>
+The IOTA Wallet Library Rust API Documentation.</li>
+</ul>
+<h2><a class="header" href="#nodejs-1" id="nodejs-1">Node.js</a></h2>
+<hr />
+<ul>
+<li><a href="https://wallet-lib.docs.iota.org/libraries/nodejs/getting_started.html">Getting Started</a>
+Getting Started with Node.js and the IOTA Wallet Library.</li>
+<li><a href="https://wallet-lib.docs.iota.org/libraries/nodejs/examples.html">Examples</a>
+Find starting points or inspiration in the examples.</li>
+<li><a href="https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs">Repository</a>
+Browse trough the code and learn see what's happening behind the scenes. Pull requests are very welcome!</li>
+<li><a href="https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html">API Documentation**</a>
+The IOTA Wallet Library Node.js API Documentation.</li>
+</ul>
+<h1><a class="header" href="#iota-chrysalis-guides" id="iota-chrysalis-guides">IOTA Chrysalis Guides</a></h1>
+<ul>
+<li><a href="guides/./dev_guide.html">Developer</a></li>
+<li><a href="guides/./exchange_guide.html">Exchange</a></li>
+<li><a href="guides/./hub_guide.html">Hub Migration</a></li>
+</ul>
 <h1><a class="header" href="#developer-guide-to-chrysalis-iota-15" id="developer-guide-to-chrysalis-iota-15">Developer Guide to Chrysalis (IOTA 1.5)</a></h1>
 <p>This is a quick guide meant to help you see the changes you will encounter while developing with the new network.</p>
 <h2><a class="header" href="#a-note-about-seeds-and-addresses" id="a-note-about-seeds-and-addresses">A note about seeds and addresses</a></h2>
@@ -397,6 +394,148 @@ See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p
 <p><a href="https://github.com/iotaledger/protocol-rfcs/pull/32">protocol-rfcs#0032</a></p>
 <h3><a class="header" href="#up-to-8-parents" id="up-to-8-parents">Up to 8 Parents</a></h3>
 <p>A message can be bound to minimum of one parent and up to eight parents.</p>
+<h1><a class="header" href="#exchange-guide" id="exchange-guide">Exchange Guide</a></h1>
+<h2><a class="header" href="#the-iota-wallet-library" id="the-iota-wallet-library">The IOTA Wallet Library</a></h2>
+<blockquote>
+<p>Easily Integrate IOTA With Your Exchange, Custody Solution, Or Product</p>
+</blockquote>
+<p>IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis Update, we also ship many Libraries to help developers implement IOTA into their applications.</p>
+<p>This guide explains, how to use the IOTA Library into an Exchange. IF you already implemented the IOTA Hub, please visit thee Hub Migration Guide.</p>
+<p>Features of the Wallet Library</p>
+<ul>
+<li>Secure Seed management</li>
+<li>Account Managemnt, with multiple accounts</li>
+<li>Confirmation monitoring</li>
+<li>Deposit address monitoring</li>
+<li>Backup and Restore functionality</li>
+</ul>
+<h2><a class="header" href="#how-does-it-work" id="how-does-it-work">How does it work?</a></h2>
+<p>The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the full specification here.</p>
+<p>We recommend to implement IOTA Deposits. That means, creating an account for every user to handle their tokens.</p>
+<ol>
+<li>Setup the Wallet Library</li>
+<li>Create an accont for each user</li>
+<li>Generate an User address for deposit funds.</li>
+<li>Listen to events</li>
+<li>Check the user balance</li>
+<li>Enable withdrawals</li>
+</ol>
+<p>If you looking for other languages, read the <a href="guides/library/overview.html">library overview</a>.</p>
+<h3><a class="header" href="#1-setup-the-wallet-library" id="1-setup-the-wallet-library">1. Setup the Wallet Library</a></h3>
+<p>Install the Wallet Library and dotenv for passwort management. Read more about backup &amp; security <a href="guides/backup_security.html">here</a>.</p>
+<pre><code class="language-bash">npm install @iota/Wallet dotenv
+touch .env
+</code></pre>
+<p>Input your password to the <code>.env</code> file like this:</p>
+<pre><code class="language-bash">SH_PASSWORD=&quot;here is your super sucure password&quot;
+</code></pre>
+<p>Import the Wallet Library and create a manager.</p>
+<pre><code class="language-javascript">const { AccountManager, SignerType } = require('@iota/wallet')
+const manager = new AccountManager({
+    storagePath: './iota-wallet-database',
+})
+manager.setStrongholdPassword(process.env.SH_PASSWORD)
+manager.storeMnemonic(SignerType.Stronghold)
+</code></pre>
+<h3><a class="header" href="#2-create-an-accont-for-each-user" id="2-create-an-accont-for-each-user">2. Create an accont for each user</a></h3>
+<p>Creating an account for every user and storing it as main scenario.
+<todo>add js example</todo></p>
+<h3><a class="header" href="#3-generat-an-user-address-for-deposit-funds" id="3-generat-an-user-address-for-deposit-funds">3. Generat an User address for deposit funds.</a></h3>
+<p><todo>add js example</todo></p>
+<h3><a class="header" href="#4-listen-to-events" id="4-listen-to-events">4. Listen to events</a></h3>
+<p>Fetching existing accounts and listening to transaction events coming into the account</p>
+<p><todo>add js example</todo></p>
+<p>addEventListener(event, cb)
+Adds a new event listener with a callback in the form of (err, data) =&gt; {}. Supported event names:</p>
+<p>ErrorThrown
+BalanceChange
+NewTransaction
+ConfirmationStateChange
+Reattachment
+Broadcast</p>
+<h3><a class="header" href="#5-check-the-user-balance" id="5-check-the-user-balance">5. Check the user balance</a></h3>
+<p><todo>add js example</todo></p>
+<h3><a class="header" href="#6-enable-withdrawals" id="6-enable-withdrawals">6. Enable withdrawals</a></h3>
+<p>Allowing withdrawals - checking if address is valid and sending to it
+<todo>add js example</todo></p>
+<h3><a class="header" href="#references-and-input" id="references-and-input">References and Input</a></h3>
+<p><todo>Remove this</todo></p>
+<ul>
+<li>Allowing withdrawals - checking if address is valid and sending to it</li>
+<li>Deposits (main way) - creating an account for every user and storing it as main scenario,</li>
+<li>Fetching existing accounts and listening to transaction events coming into the account</li>
+<li>Deposits (secondary) - creating a main account for all the users and keeping track which users belong to which addresses</li>
+<li>Consolidation will be available in wallet.rs later</li>
+</ul>
+<p>Here's the fake exchange repo I (Dave) made, 1 without implementation and a branch with implementation (so the master branch is just a fake exchange without any real implementation in it yet): https://github.com/fijter/fakexchange
+Here's the video where I do the actual implementation: https://www.youtube.com/watch?v=O2ukIXqJTls</p>
+<p>This uses Hub, but the principles are the same, creating addresses for users, monitoring those, sweeping the funds away from those addresses after arriving (and adding funds to the user account on the exchange platform) and sending funds on a withdrawal.</p>
+<h1><a class="header" href="#iota-hub-migration-guide" id="iota-hub-migration-guide">IOTA Hub Migration Guide</a></h1>
+<blockquote>
+<p>This guide will explain, how you can switch from the Hub to the Wallet Library. </p>
+</blockquote>
+<p>Because of the unique architecture of IOTA 1.0, it was very difficult to handle IOTA transactions. With the new Chrysalis Update, a lot of things changed in the architecutre. </p>
+<p>The hub will not be upgraded to Chrysalis, but we have a new Wallet library, where you can implement IOTA wallets very easy.</p>
+<ul>
+<li>Setup Library</li>
+<li>Copy exisitng users to accounts</li>
+<li>Move the funds</li>
+</ul>
+<h1><a class="header" href="#backup-and-securitymd" id="backup-and-securitymd">Backup and Security.md</a></h1>
+<h1><a class="header" href="#testnet" id="testnet">Testnet</a></h1>
+<p>IOTA 1.5 (also known as Chrysalis) is IOTA's intermediate stage before Coordicide is complete. You can read more about the strategy for releasing Chrysalis <a href="https://blog.iota.org/release-strategy-for-chrysalis-iota-1-5-4ea8741ea3a1/">here</a>.</p>
+<h2><a class="header" href="#infrastructure-1" id="infrastructure-1">Infrastructure</a></h2>
+<p>Nodes deployed to the testnet can be queried using a load balancer at:</p>
+<ul>
+<li>api.lb-0.testnet.chrysalis2.com</li>
+</ul>
+<p>We recommend using the load balancer for most scenarios.</p>
+<p>Single node endpoints that expose native MQTT in case you need this are:</p>
+<ul>
+<li>api.hornet-0.testnet.chrysalis2.com</li>
+<li>api.hornet-1.testnet.chrysalis2.com</li>
+<li>api.hornet-2.testnet.chrysalis2.com</li>
+<li>api.hornet-3.testnet.chrysalis2.com</li>
+</ul>
+<p>Node API is integrated according to the <a href="https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml">following specification</a></p>
+<h2><a class="header" href="#developer-tools-1" id="developer-tools-1">Developer Tools</a></h2>
+<ul>
+<li><a href="https://explorer.iota.org/chrysalis">Explorer</a></li>
+<li><a href="https://faucet.testnet.chrysalis2.com/">Online Faucet</a></li>
+<li><a href="https://github.com/iotaledger/cli-wallet">cli-wallet</a></li>
+<li><a href="https://github.com/iotaledger/chrysalis-faucet">chrysalis-faucet Code (nodejs + svelte)</a></li>
+</ul>
+<h1><a class="header" href="#iota-protocol-rfcs" id="iota-protocol-rfcs">IOTA Protocol RFCs</a></h1>
+<p>To propose changes to the IOTA protocol, we ask for these to go through a more organized design process --- an RFC (request for comments) process. The goal is to organize work between the different developers affiliated with the IOTA Foundation, and the wider open source community. We want to vet the ideas early on, get and give feedback, and only then start the implementation once the biggest questions are taken care of.</p>
+<ul>
+<li><a href="https://iotaledger.github.io/protocol-rfcs">Website with all RFC's</a></li>
+<li><a href="https://github.com/iotaledger/protocol-rfcs">Git Repo</a></li>
+</ul>
+<h1><a class="header" href="#resources" id="resources">Resources</a></h1>
+<h3><a class="header" href="#official-support" id="official-support"><strong>Official support</strong></a></h3>
+<hr />
+<h4><a class="header" href="#iota-explorer" id="iota-explorer"><strong>IOTA Explorer</strong></a></h4>
+<p><a href="https://explorer.iota.org/chrysalis">Link</a></p>
+<p>Official Tangle explorer with a lot of tools to browse through the Tangle.</p>
+<hr />
+<h4><a class="header" href="#discord" id="discord"><strong>Discord</strong></a></h4>
+<p><a href="https://discord.iota.org">Link</a></p>
+<p>The official Discord server where community members and the IOTA Foundation discuss projects and related subjects.</p>
+<hr />
+<h4><a class="header" href="#iota-stackexchange" id="iota-stackexchange"><strong>IOTA StackExchange</strong></a></h4>
+<p><a href="https://iota.stackexchange.com">Link</a></p>
+<p>The official forum where you can ask or answer technical questions about IOTA.</p>
+<hr />
+<h3><a class="header" href="#community-support" id="community-support"><strong>Community support</strong></a></h3>
+<hr />
+<h4><a class="header" href="#thetangleorg---iota-explorer" id="thetangleorg---iota-explorer">TheTangle.org - IOTA Explorer</a></h4>
+<p><a href="https://thetangle.org">Link</a></p>
+<p>A community tool for searching transactions in the Tangle.</p>
+<hr />
+<h4><a class="header" href="#tangleexplorer---iota-explorer" id="tangleexplorer---iota-explorer">TangleExplorer - IOTA Explorer</a></h4>
+<p><a href="https://tanglexplorer.com/mainnet">Link</a></p>
+<p>An community tool for searching transactions in the Tangle.</p>
+<hr />
 <h1><a class="header" href="#faq" id="faq">FAQ</a></h1>
 <h2><a class="header" href="#which-libraries-are-available-for-chrysalis" id="which-libraries-are-available-for-chrysalis">Which Libraries are available for Chrysalis?</a></h2>
 <p>At this time, there are a handful of libraries available for Chrysalis which can be found below:</p>
@@ -405,7 +544,7 @@ See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p
 <p>Additionally, there is also a native C (<a href="https://github.com/iotaledger/iota.c">iota.c</a>) and a native javascript (<a href="https://github.com/iotaledger/iota.js/tree/chrysalis">iota.js</a>) client library. </p>
 <h2><a class="header" href="#what-is-dust-protection-and-does-it-works" id="what-is-dust-protection-and-does-it-works">What is Dust Protection and does it works?</a></h2>
 <p>Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network, which we call Dust. To avoid this, you need to have a 1Mi amount of IOTA tokens on an address where you want to receive microtransactions.</p>
-<p>You can read more about Dust Protection <a href="docs/">in the RFC here</a>.</p>
+<p>You can read more about Dust Protection <a href="">in the RFC here</a>.</p>
 <h2><a class="header" href="#whats-happening-with-coordicide" id="whats-happening-with-coordicide">What's happening with Coordicide?</a></h2>
 <p>Chrysalis is a stage of the IOTA network that is still built on the Coordinator. With Coordicice, the IOTA Network will get rid of the Coordinator and become a completely decentralized network. There are three stages to reach Cooridice, which resolves in three Test neworks: Pollen, Nectar, and Honey. The Pollen Network runs in a research state on the goShimmer Node.</p>
 

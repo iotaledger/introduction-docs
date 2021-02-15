@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../docs/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../docs/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../docs/path_to_chrysalis.html" class="active"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../docs/testnet.html"><strong aria-hidden="true">4.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../docs/rfc.html"><strong aria-hidden="true">5.</strong> IOTA Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../docs/node-softwaree.html"><strong aria-hidden="true">6.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../docs/libraries.html"><strong aria-hidden="true">7.</strong> Libraries</a></li><li class="chapter-item expanded "><a href="../docs/dev_guide.html"><strong aria-hidden="true">8.</strong> Developer Guide</a></li><li class="chapter-item expanded "><a href="../docs/faq.html"><strong aria-hidden="true">9.</strong> FAQ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../introduction/path_to_chrysalis.html" class="active"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../node-software/node-software.html"><strong aria-hidden="true">4.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../libraries/overview.html"><strong aria-hidden="true">5.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../libraries/client.html"><strong aria-hidden="true">5.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="../libraries/wallet.html"><strong aria-hidden="true">5.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html"><strong aria-hidden="true">6.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guides/dev_guide.html"><strong aria-hidden="true">6.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="../guides/exchange_guide.html"><strong aria-hidden="true">6.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="../guides/hub_guide.html"><strong aria-hidden="true">6.3.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="../guides/backup_security.html"><strong aria-hidden="true">6.4.</strong> Backup and Security</a></li></ol></li><li class="chapter-item expanded "><a href="../testnet.html"><strong aria-hidden="true">7.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../rfc.html"><strong aria-hidden="true">8.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">9.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">10.</strong> FAQ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -168,7 +168,7 @@ The new protocol features, new libraries, new modules and new wallet will make I
 Chrysalis will make IOTA enterprise-ready, with stable and reliable technologies that will enable Startups, Corporations, and Governments to develop and launch products powered by IOTA</li>
 </ul>
 <h2><a class="header" href="#the-stages-to-chrysalis" id="the-stages-to-chrysalis">The Stages to Chrysalis</a></h2>
-<p><img src="../docs/assets/path_to_chrysalis/01.png" alt="" /></p>
+<p><img src="./assets/path_to_chrysalis/01.png" alt="" /></p>
 <p>The Chrysalis upgrade is a complex undertaking. We have to coordinate a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. Apart from the core Node software, we also need to update our Wallet software, our Libraries, and the entire Infrastructure.</p>
 <p>Another important requirement is the ease of transition to the future Coordicide network. By carefully planning the breaking changes introduced along the way, and providing support in our developer tools, we will ensure that our growing ecosystem of developers, startups, and corporations can reliably develop and launch new innovative products on IOTA.</p>
 <p>The plan for implementing Chrysalis is divided into two phases.</p>
@@ -208,11 +208,11 @@ Chrysalis will make IOTA enterprise-ready, with stable and reliable technologies
 <h3><a class="header" href="#wallet-support" id="wallet-support">Wallet support</a></h3>
 <p>The Trinity wallet is the most popular wallet in IOTA today. With Chrysalis, there is also a new wallet called <a href="https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/">Firefly</a>. The team has been working on a complete rethink of the wallet architecture, both for UX and UI but also from a security and functionality perspective. At its core will be a new wallet library written in Rust, to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library, Stronghold, will enable ultra-secure secret handling and storage.</p>
 <h3><a class="header" href="#infrastructure" id="infrastructure">Infrastructure</a></h3>
-<p>Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can read more about the networks and how you can participate in our <a href="https://docs.iota.org/docs/getting-started/0.1/network/iota-networks?q=Devnet&amp;highlights=devnet">documentation</a>.</p>
+<p>Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can read more about the networks and how you can participate in our <a href="https://docs.iota.org/getting-started/0.1/network/iota-networks?q=Devnet&amp;highlights=devnet">documentation</a>.</p>
 <p>We will be migrating both Devnet and Mainnet to operate on Hornet, and later on both Hornet and Bee nodes. This will make both networks easier to maintain, and improve their throughput.</p>
 <p><a href="https://comnet.thetangle.org/">Comnet</a>, a community network of Hornet nodes, operates at a stable rate of 40–100 TPS currently, and has already achieved 300 TPS in stress tests without any Chrysalis components yet.</p>
 <p>With these infrastructure upgrades and the transition to Chrysalis, we will continue to be in close contact with all of our exchange and integration partners and provide them with close assistance and advice.</p>
-<p><img src="../docs/assets/path_to_chrysalis/02.png" alt="" />
+<p><img src="./assets/path_to_chrysalis/02.png" alt="" />
 See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p>
 <h3><a class="header" href="#chrysalis-testnet" id="chrysalis-testnet">Chrysalis Testnet</a></h3>
 <p>Nodes deployed to the testnet can be queried using a load balancer at:</p>
@@ -235,13 +235,13 @@ See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../docs/what_is_chrysalis.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../introduction/what_is_chrysalis.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../docs/testnet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../node-software/node-software.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -253,13 +253,13 @@ See the live visualization of the Comnet: https://graph.comnet.manapotion.io/</p
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../docs/what_is_chrysalis.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../introduction/what_is_chrysalis.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../docs/testnet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../node-software/node-software.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

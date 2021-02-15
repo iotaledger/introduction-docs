@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>What is Chrysalis? - Chrysalis Documentation</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+
+        <script src='..//public/build/bundle.js'></script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../introduction/what_is_chrysalis.html" class="active"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../node-software/node-software.html"><strong aria-hidden="true">4.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../libraries/overview.html"><strong aria-hidden="true">5.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../libraries/client.html"><strong aria-hidden="true">5.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="../libraries/wallet.html"><strong aria-hidden="true">5.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html"><strong aria-hidden="true">6.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guides/dev_guide.html"><strong aria-hidden="true">6.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="../guides/exchange_guide.html"><strong aria-hidden="true">6.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="../guides/hub_guide.html"><strong aria-hidden="true">6.3.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="../guides/backup_security.html"><strong aria-hidden="true">6.4.</strong> Backup and Security</a></li></ol></li><li class="chapter-item expanded "><a href="../testnet.html"><strong aria-hidden="true">7.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../rfc.html"><strong aria-hidden="true">8.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">9.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">10.</strong> FAQ</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Chrysalis Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#what-is-chrysalis" id="what-is-chrysalis">What is Chrysalis</a></h1>
+<p>However, apart from Coordicide, the objective of the IOTA Foundation is to fully optimise the IOTA mainnet pre-Coordicide and offer an enterprise-ready solution to our ecosystem. We have therefore planned for an intermediate update called Chrysalis. This plan was first announced alongside our roadmap, but the scope has since been expanded. This post provides further information on what this upgrade to the IOTA Mainnet entails.</p>
+<p>A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis is the mainnet’s intermediate stage before coordicide is complete. To be clear, Chrysalis is separate to the coordicide efforts, and is aimed at improving usability of the current IOTA mainnet prior to coordicide.</p>
+<p><img src="./assets/02_path_to.png" alt="" /></p>
+<p>Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless DLTs? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives conflict with those of the users of the network. Better throughput and lower latencies can disrupt the fee market miners rely on, and therefore agreeing to upgrade the network may affect their own profitability.</p>
+<p>In IOTA, the validators and users are one and the same. There is no stubborn clash of incentives, meaning a much smoother path to network improvements. We will demonstrate this with the upcoming incremental upgrades to the network under Chrysalis.</p>
+<p>So what are these incremental upgrades?</p>
+<h2><a class="header" href="#white-flag-approach" id="white-flag-approach">White-flag approach</a></h2>
+<p><img src="../docs/assets/what_is_chrysalis/01.png" alt="" />
+<a href="https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233">White-flag approach</a> for calculating balances. A simpler, conflict-ignoring approach (valid for the pre-coordicide era) that improves speed and efficiency of tip selection, eliminates certain attacks, and significantly reduces the need for reattachments.</p>
+<h2><a class="header" href="#new-milestone-selection-algorithm" id="new-milestone-selection-algorithm">New milestone selection algorithm</a></h2>
+<p><img src="./assets/what_is_chrysalis/02.png" alt="" />
+<a href="https://iota.cafe/t/coordinator-improvements/310">New milestone selection algorithm for the coordinator</a>, focused on allowing the network to support as much CTPS as possible, with higher computational efficiency.</p>
+<h2><a class="header" href="#urts-tip-selection" id="urts-tip-selection">URTS tip selection</a></h2>
+<p><img src="./assets/what_is_chrysalis/03.png" alt="" />
+New <a href="https://iota.cafe/t/almost-urts-on-a-subset/234">URTS tip selection</a> in node software. Significantly faster and more efficient than the current approach.</p>
+<h2><a class="header" href="#support-for-a-new-signature-scheme" id="support-for-a-new-signature-scheme">Support for a new signature scheme</a></h2>
+<p><img src="./assets/what_is_chrysalis/04.png" alt="" />
+<a href="https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md">Support for a new signature scheme</a> in parallel to WOTS. The network will therefore allow for both quantum resistant one-time signatures and a more commonly used signature scheme allowing re-use of private keys. This will dramatically reduce transaction size, and consequently allow a significant increase in TPS. By introducing a new signature scheme we will also allow for reusable addresses, a very popular request from the community.</p>
+<h2><a class="header" href="#atomic-transactions" id="atomic-transactions">Atomic transactions</a></h2>
+<p><img src="./assets/what_is_chrysalis/05.png" alt="" />
+<a href="https://iota.cafe/t/atomic-transfers-transactions-instead-of-bundles/318">Atomic transactions</a>. Move from the current Bundle construct and use simpler atomic transactions instead. This will reduce network overhead, reduce signature verification burden, improve spam protection and congestion control, and reduce length of Merkle proofs (for future sharding). In addition, it will reduce implementation efforts and increase maintainability of our core node software.</p>
+<h2><a class="header" href="#switch-to-utxo-model" id="switch-to-utxo-model">Switch to UTXO Model</a></h2>
+<p><img src="./assets/what_is_chrysalis/06.png" alt="" />
+<a href="https://iota.cafe/t/switching-to-utxo-model-for-balances-colored-coins-easier-conflict-resolution/229">Switch to UTXO model</a> from the current balance model. Every coin on an address is then uniquely identifiable and every spend names the exact coins that it wants to move. This allows for faster and more exact conflict handling and improves resilience and security of the protocol. In addition, switching to UTXO will make colored coins on IOTA possible. Combined with Mana (Coordicide) in the near future, this makes for a very attractive tokenization model and will further boost the adoption of the IOTA token.</p>
+<h2><a class="header" href="#internal-binary-representation" id="internal-binary-representation">Internal Binary Representation</a></h2>
+<p><img src="./assets/what_is_chrysalis/07.png" alt="" />
+<a href="https://iota.cafe/t/binary-transaction-layout/324">Switch to an internal binary representation of the trinary transaction</a>. This allows us to work on binary data, for validation, IO and other processing without the need to have many binary-ternary conversions as in the current node software. The bundle hash can still be represented as 243 trits, such that the signing scheme stays the same and no transition of funds is necessary. This should lead to further improvements in performance.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../introduction/welcome.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../introduction/path_to_chrysalis.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../introduction/welcome.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../introduction/path_to_chrysalis.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
