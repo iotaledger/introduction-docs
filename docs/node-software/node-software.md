@@ -1,10 +1,14 @@
 # Node Software
 
-IRI has been the backbone of the IOTA network for a number of years. While the project has delivered significant improvements to the IOTA network throughout its time, the project has always suffered from significant technical debt. This made any changes to the protocol complex, costly, and difficult to debug.
+We have been running the network exclusively on the Go powered Hornet node since the summer of 2020. For Chrysalis, you will have the choice to continue using a new version of Hornet or you can use our new Test-based Bee node.
 
-While the situation has improved significantly, the time has come to move on to newer, more flexible solutions.IRI v1.8.6, currently available as RC, will be the last major release of IRI. If you are using IRI, we encourage you to migrate your infrastructure to Hornet or Bee. We will be releasing a tool to migrate DBs from IRI in case you want to retain your data.  
+### Hornet and Bee
 
-Moving forward, the Hornet and Bee nodes has replaced IRI as IOTA’s core node software. Hornet is an EDF-supported community node written in Go and has already proven itself to be a stable and performant implementation. Hornet has recently been successfully audited. Bee is an IOTA Node implemented by the Foundation and written in Rust.  
+Moving forward, the Hornet and Bee nodes have become IOTA’s core node software. 
+
+Hornet is an EDF-supported community node written in Go and has already proven itself to be a stable and performant implementation. It recently underwent a successful audit. 
+
+Bee is an IOTA Node implemented by the Foundation and written in Rust.  
 
 ## Node Software
 - [hornet (branch: develop)](https://github.com/gohornet/hornet/tree/develop)
