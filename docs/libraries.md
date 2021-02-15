@@ -11,9 +11,9 @@
 - [iota.c](https://github.com/iotaledger/iota.c)
 
 
-All libraries are in active development. The libraries targets the Chrysalis testnet and does not work with current IOTA mainnet.
+All libraries are in active development. The libraries target the Chrysalis testnet and do not work with current IOTA mainnet.
 
-The client libraries with official support are maintained by the IOTA Foundation, and their source code can be found on the [iotaledger GitHub repository](https://github.com/iotaledger).
+The client libraries with official support are maintained by the IOTA Foundation, their source code can be found on the [iotaledger GitHub repository](https://github.com/iotaledger).
 
 ### Client Libraries
 

@@ -2,17 +2,18 @@
 
 
 ## Which Libraries are available for Chrysalis?
-There is a low level library iota.rs, which is a client library to connect with an IOTA Node for core interactions with the Tangle. It's written in Rust and there are currently to bindings for Node.js and Python. 
+At this time, there are a handful of libraries available for Chrysalis which can be found below:
 
-For Value Transactions there is the wallet.rs library, which provides helpful functionality to implement an IOTA Wallet into a application. It's also written in Rust and there are currently to bindings for Node.js and Python. 
+A low level library called iota.rs is a client library meant to connect with an IOTA node for core interactions with the Tangle. It is written in Rust and there are currently two bindings for Node.js and Python. 
 
-Also there is a native C ([iota.c](https://github.com/iotaledger/iota.c)) and a native javascript ([iota.js](https://github.com/iotaledger/iota.js/tree/chrysalis)) client library. 
+For Value Transactions there is the wallet.rs library which provides helpful functionalities to implement a IOTA Wallet into an application. It is also written in Rust and there are currently two bindings for Node.js and Python. 
+
+Additionally, there is also a native C ([iota.c](https://github.com/iotaledger/iota.c)) and a native javascript ([iota.js](https://github.com/iotaledger/iota.js/tree/chrysalis)) client library. 
 
 ## What is Dust Protection and does it works?
-Since IOTA is feeless and has to ability to send microntrasactions, attackers could use this to spam the network, which we called Dust. To avoid this, you need to have 1Mi amount of IOTA tokens
-on a address where you want to receive microtransactions.
+Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network, which we call Dust. To avoid this, you need to have a 1Mi amount of IOTA tokens on an address where you want to receive microtransactions.
 
-Read more about the Dust Protection [in the RFC here]().
+You can read more about Dust Protection [in the RFC here]().
 
 ## What's happening with Coordicide?
-Chrysalis is a stage of the IOTA Network, which is still build on the Coordinator. With Coordicice, the IOTA Network get rid of the Coordinator and is a complete dezetralized Network. There are three stages to reach Cooridice, which resolves in three Test neworks: Pollen, Nectar and Honey. The Pollen Network runs in a research state on the goShimmer Node.
+Chrysalis is a stage of the IOTA network that is still built on the Coordinator. With Coordicice, the IOTA Network will get rid of the Coordinator and become a completely decentralized network. There are three stages to reach Cooridice, which resolves in three Test neworks: Pollen, Nectar, and Honey. The Pollen Network runs in a research state on the goShimmer Node.
