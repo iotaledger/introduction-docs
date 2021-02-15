@@ -3,6 +3,6 @@ title = "Chrysalis Documentation"
 authors = ["Sebastian Heusser <sebastian.heusser@iota.org>"]
 language = "en"
 multilingual = false
-src = "./"
+src = "docs"
 [output.html]
 theme = "theme"

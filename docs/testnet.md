@@ -1,5 +1,7 @@
 # Testnet
 
+IOTA 1.5 (also known as Chrysalis) is IOTA's intermediate stage before Coordicide is complete. You can read more about the strategy for releasing Chrysalis [here](https://blog.iota.org/release-strategy-for-chrysalis-iota-1-5-4ea8741ea3a1/).
+
 ## Infrastructure
 Nodes deployed to the testnet can be queried using a load balancer at:
 

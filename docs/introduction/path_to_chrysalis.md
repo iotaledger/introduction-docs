@@ -23,7 +23,7 @@ Chrysalis will make IOTA enterprise-ready, with stable and reliable technologies
 
 ## The Stages to Chrysalis
 
-![](../docs/assets/path_to_chrysalis/01.png)
+![](./assets/path_to_chrysalis/01.png)
 
 The Chrysalis upgrade is a complex undertaking. We have to coordinate a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. Apart from the core Node software, we also need to update our Wallet software, our Libraries, and the entire Infrastructure.  
 
@@ -82,7 +82,7 @@ The Trinity wallet is the most popular wallet in IOTA today. With Chrysalis, the
 
 ### Infrastructure
 
-Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can read more about the networks and how you can participate in our [documentation](https://docs.iota.org/docs/getting-started/0.1/network/iota-networks?q=Devnet&highlights=devnet).  
+Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can read more about the networks and how you can participate in our [documentation](https://docs.iota.org/getting-started/0.1/network/iota-networks?q=Devnet&highlights=devnet).  
 
 We will be migrating both Devnet and Mainnet to operate on Hornet, and later on both Hornet and Bee nodes. This will make both networks easier to maintain, and improve their throughput.
 
@@ -90,7 +90,7 @@ We will be migrating both Devnet and Mainnet to operate on Hornet, and later on 
 
 With these infrastructure upgrades and the transition to Chrysalis, we will continue to be in close contact with all of our exchange and integration partners and provide them with close assistance and advice.
 
-![](../docs/assets/path_to_chrysalis/02.png)
+![](./assets/path_to_chrysalis/02.png)
 See the live visualization of the Comnet: https://graph.comnet.manapotion.io/  
 
 
