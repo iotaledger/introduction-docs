@@ -15,7 +15,7 @@ So what are these incremental upgrades?
 
 ## White-flag approach
 ![](../docs/assets/what_is_chrysalis/01.png)
-[White-flag approach](https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233) for calculating balances. A simpler, conflict-ignoring approach (valid for the pre-coordicide era) that improves speed and efficiency of tip selection, eliminates certain attacks and significantly reduces the need for reattachments.
+[White-flag approach](https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233) for calculating balances. A simpler, conflict-ignoring approach (valid for the pre-coordicide era) that improves speed and efficiency of tip selection, eliminates certain attacks, and significantly reduces the need for reattachments.
 
 ## New milestone selection algorithm
 ![](../docs/assets/what_is_chrysalis/02.png)

@@ -8,32 +8,32 @@ Research on Coordicide identified many new concepts that are incredibly valuable
 
 The benefit of this approach is that much of the heavy lifting and migration for token holders and developers will take place before the launch of Coordicide, making for a simpler transition between Chrysalis (IOTA 1.5) and Coordicide (IOTA 2.0) upgrades.
 
-The IOTA Foundation’s objective over the next two quarters is to successfully specify, implement, test and upgrade the IOTA mainnet (and adjacent technologies) to this new version of the protocol.
+The IOTA Foundation’s objective over the next two quarters is to successfully specify, implement, test, and upgrade the IOTA mainnet (and adjacent technologies) to this new version of the protocol.
 
 The intended outcomes for Chrysalis are:
 
 - **Simple transition to Coordicide**: 
-With Coordicide making significant progress and the Alphanet launch coming soon, we want to ensure that all developers and companies building on Chrysalis will not see any major breaking changes with the later transition to Coordicide.
+With Coordicide making significant progress and the Alphanet launch coming soon, we want to ensure that all developers and companies building on Chrysalis will not see any major breaking changes with the later transition to Coordicide
 - **Substantial performance improvements**: 
-With the changes introduced by Chrysalis, we will see a substantial improvement in the scalability and reliability of the IOTA Mainnet. The mainnet will be able to handle several hundred TPS.
+With the changes introduced by Chrysalis, we will see a substantial improvement in the scalability and reliability of the IOTA Mainnet. The mainnet will be able to handle several hundred TPS
 - **Improved developer experience**: 
-The new protocol features, new libraries, new modules and new wallet will make IOTA one of the best platforms to build on, removing the friction which developers experience today.
+The new protocol features, new libraries, new modules and new wallet will make IOTA one of the best platforms to build on, removing the friction which developers experience today
 - **Accelerated adoption**: 
-Chrysalis will make IOTA enterprise-ready, with stable and reliable technologies that will enable Startups, Corporations and Governments to develop and launch products powered by IOTA.
+Chrysalis will make IOTA enterprise-ready, with stable and reliable technologies that will enable Startups, Corporations, and Governments to develop and launch products powered by IOTA
 
 ## The Stages to Chrysalis
 
 ![](../docs/assets/path_to_chrysalis/01.png)
 
-The Chrysalis upgrade is a complex undertaking. We have to coordinate a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. Apart from the core Node software, we also need to update our Wallet software, our Libraries, and the entireInfrastructure.  
+The Chrysalis upgrade is a complex undertaking. We have to coordinate a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. Apart from the core Node software, we also need to update our Wallet software, our Libraries, and the entire Infrastructure.  
 
-Another important requirement is the ease of transition to the future Coordicide network. By carefully planning the breaking changes introduced along the way, and providing support in our developer tools, we will ensure that our growing ecosystem of developers, startups and corporations can reliably develop and launch new innovative products on IOTA.  
+Another important requirement is the ease of transition to the future Coordicide network. By carefully planning the breaking changes introduced along the way, and providing support in our developer tools, we will ensure that our growing ecosystem of developers, startups, and corporations can reliably develop and launch new innovative products on IOTA.  
 
 The plan for implementing Chrysalis is divided into two phases.
 
-The first phase consists of improved tip selection (URTS), Milestone selection,White flag and Autopeering. These will be implemented in the node software gradually, with estimated completion by early July. This phase will require an upgrade of all nodes, including the coordinator node, and will not require a snapshot.  
+The first phase consisted of improved tip selection (URTS), Milestone selection, White flag, and Autopeering. These were implemented in the node software gradually. This phase required an upgrade of all nodes, including the coordinator node, and did not require a snapshot.  
 
-The outcome of the first phase of Chrysalis will be:
+The outcome of the first phase of Chrysalis included:
 
 - Transaction confirmation times of around 10 seconds
 - Transactions only very rarely need reattachment
@@ -41,7 +41,7 @@ The outcome of the first phase of Chrysalis will be:
 - Performance and reliability improvements for nodes
 - Reduced node setup times through autopeering
 
-The second phase consists of UTXO, Atomic Transactions, Reusable addresses (Ed25519) and the transition to a binary transaction layout. These represent significant changes to the core protocol and the way transactions are structured. Once everything has been tested, validated and audited, we will perform a global snapshot to allow the entire network, wallet users and exchanges to upgrade. We currently estimate this to happen around late October.  
+The second phase consists of UTXO, Atomic Transactions, Reusable addresses (Ed25519) and the transition to a binary transaction layout. These represent significant changes to the core protocol and the way transactions are structured. Once everything has been tested, validated and audited, we will perform a global snapshot to allow the entire network, wallet users, and exchanges to upgrade. We currently estimate this to happen by the end of Q1 2021.  
 
 The outcome of the second phase of Chrysalis will be:
 
@@ -51,9 +51,9 @@ The outcome of the second phase of Chrysalis will be:
 - Significant improvements to the usability and reliability of IOTA
 
 
-Node operators and integration partners will need to upgrade their nodes to stay in sync with the network and update any software with IOTA integration. We will reach out directly to exchanges, our partners and the wider community to guide them through this process.
+Node operators and integration partners will need to upgrade their nodes to stay in sync with the network and update any software with IOTA integration. We will reach out directly to exchanges, our partners, and the wider community to guide them through this process.
 
-The introduction of Reusable addresses is an important change for token holders. This will vastly improve IOTA’s usability and make integration into new exchanges, wallets and payment systems much simpler. We are building a new wallet that will allow token holders to transition from the current WOTS address scheme to the new EdDSA scheme.  
+The introduction of reusable addresses is an important change for token holders. This will vastly improve IOTA’s usability and make integration into new exchanges, wallets, and payment systems much simpler. We are building a new wallet that will allow token holders to transition from the current WOTS address scheme to the new EdDSA scheme.  
 
 Our goal is to make this transition as seamless as possible for everyone in the IOTA ecosystem. This includes a variety of improvements and updates to our libraries and software, as well as training and educational sessions for our partners. We want to ensure that everyone is fully aware of how the future of the IOTA protocol will look and function, and what they need to do in order to upgrade.
 
@@ -66,7 +66,7 @@ Going into Chrysalis, we’ve had to make decisions on how to best implement the
 
 Specifications are a major part of our new development process. All our new software projects (Node software, Wallet, Identity, Access, Streams, etc.) will have full specifications. Specifications make it possible for external parties to follow a project’s intended functionality (e.g. for audits) or develop their own implementations in different languages. The specification process, which is also being followed by the Coordicide research team, is key to the standardization of IOTA and its related products.
 
-For all the upcoming Chrysalis changes, we have introduced Protocol RFCs. Many Chrysalis components have been fully specified, and we intend to have them all completed by the end of May. We welcome any input from the IOTA and broader community. The list of RFCs is:  
+For all the upcoming Chrysalis changes, we have introduced Protocol RFCs. Many Chrysalis components have been fully specified, and we intend to have them all completed by the end of May. We welcome any input from the IOTA and broader community. The list of RFCs includes:  
 
 - [Improved tip selection(URTS)](https://github.com/luca-moser/protocol-rfcs/blob/rfc-urts-tip-sel/text/0008-weighted-uniform-random-tip-selection/0008-weighted-uniform-random-tip-selection.md)
 - [Milestone selection](https://github.com/Wollac/protocol-rfcs/blob/milestone-merkle-validation/text/0012-milestone-merkle-validation/0012-milestone-merkle-validation.md)
@@ -78,7 +78,7 @@ For all the upcoming Chrysalis changes, we have introduced Protocol RFCs. Many C
 
 ### Wallet support
 
-The Trinity wallet is the most popular wallet in IOTA today. With Chrysalis, there is also a new wallet, called [Firefly](https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/). The team has been working on a complete rethink of the wallet architecture, both for UX and UI but also from a security and functionality perspective. At its core will be a new Wallet library written in Rust, to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library, Stronghold, will enable ultra-secure secret handling and storage.  
+The Trinity wallet is the most popular wallet in IOTA today. With Chrysalis, there is also a new wallet called [Firefly](https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/). The team has been working on a complete rethink of the wallet architecture, both for UX and UI but also from a security and functionality perspective. At its core will be a new wallet library written in Rust, to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library, Stronghold, will enable ultra-secure secret handling and storage.  
 
 ### Infrastructure
 
