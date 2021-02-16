@@ -11,7 +11,7 @@ This guide explains how to use the IOTA Library in an Exchange. If you already i
 Features of the Wallet Library:
 
 - Secure Seed management
-- Account managemnt, with multiple accounts
+- Account management, with multiple accounts
 - Confirmation monitoring
 - Deposit address monitoring
 - Backup and restore functionality
