@@ -5,16 +5,19 @@
 
 IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we also ship many Libraries to help developers implement IOTA into their applications.
 
-## Single account approach
-A "hot wallet" is an address used for receiving transactions which gets displayed for users. 
-
-The Single account approach is using an hotwallet address and store who owns which address in the database.
-
-## How do I create a hot wallet address?
+## How do I implement it to my exchange?
 In wallet.rs, we used an account model. So you can create an account for each of your users. The other approach would be to use one account and generaty many addresses, which you can link to your users in your database.
 
 - 1. Create an account for every user
 - 2. Create one account with many adresses
+
+## Single account approach
+The Single account approach is using one account with many addresses and store who owns which address in the database.
+For most exchanges the single sccount approach is easier to use/implement/backup and more familiar.
+
+## Multi Account approach
+With multi accounts you can store the account id in your own database if you wish.
+But a account for every user means you need to keep track and monitor all these accounts and back them up as well
 
 ## Implementation Guide
 This guide explains, how to use the IOTA Library into an Exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](./hub_guide.md).
@@ -31,7 +34,7 @@ Features of the Wallet Library:
 ## How does it work?
 The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the full specification here.
 
-This example covers the first approach:
+This example covers the multi account approach:
 -  Create an account for every user
 
 1. Setup the Wallet Library
