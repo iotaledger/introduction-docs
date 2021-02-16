@@ -1,22 +1,23 @@
 # Exchange Guide
 
-
 ## The IOTA Wallet Library
 > Easily integrate IOTA with your exchange, custody solution, or product
 
 IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we also ship many Libraries to help developers implement IOTA into their applications.
 
-
-## latter approach
+## Single account approach
 A "hot wallet" is an address used for receiving transactions which gets displayed for users. 
 
-The latter approach is using an hotwallet address and store who owns which address in the database.
+The Single account approach is using an hotwallet address and store who owns which address in the database.
 
 ## How create an hot wallet address?
 In wallet.rs, we used an account model. So you can create an account for each of your users. The other approach would be to use one account and generaty many addresses, which you can link to your users in your database.
 
+- 1. Create an account for every user
+- 2. Create one account with many adresses
+
 ## Implementation Guide
-This guide explains, how to use the IOTA Library into an Exchange. IF you already implemented the IOTA Hub, please visit the [Hub Migration Guide](./hub_guide.md).
+This guide explains, how to use the IOTA Library into an Exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](./hub_guide.md).
 
 Features of the Wallet Library:
 
@@ -29,7 +30,6 @@ Features of the Wallet Library:
 
 ## How does it work?
 The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the full specification here.
-
 
 We recommend to implement IOTA Deposits. This means creating an account for every user to handle their tokens.
 
@@ -139,6 +139,8 @@ data: {
   balance: 20000000
 }
 ```
+
+Read more about Events in the [API reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html#addeventlistenerevent-cb).
 
 ### 5. Check the user balance
 
