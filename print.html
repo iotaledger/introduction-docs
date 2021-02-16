@@ -397,36 +397,36 @@ The IOTA Wallet Library Node.js API Documentation.</li>
 <h1><a class="header" href="#exchange-guide" id="exchange-guide">Exchange Guide</a></h1>
 <h2><a class="header" href="#the-iota-wallet-library" id="the-iota-wallet-library">The IOTA Wallet Library</a></h2>
 <blockquote>
-<p>Easily Integrate IOTA With Your Exchange, Custody Solution, Or Product</p>
+<p>Easily integrate IOTA with your exchange, custody solution, or product</p>
 </blockquote>
-<p>IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis Update, we also ship many Libraries to help developers implement IOTA into their applications.</p>
-<p>This guide explains, how to use the IOTA Library into an Exchange. IF you already implemented the IOTA Hub, please visit thee Hub Migration Guide.</p>
-<p>Features of the Wallet Library</p>
+<p>IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we also ship many Libraries to help developers implement IOTA into their applications.</p>
+<p>This guide explains how to use the IOTA Library in an Exchange. If you already implemented the IOTA Hub, please visit the Hub Migration Guide.</p>
+<p>Features of the Wallet Library:</p>
 <ul>
 <li>Secure Seed management</li>
-<li>Account Managemnt, with multiple accounts</li>
+<li>Account management, with multiple accounts</li>
 <li>Confirmation monitoring</li>
 <li>Deposit address monitoring</li>
-<li>Backup and Restore functionality</li>
+<li>Backup and restore functionality</li>
 </ul>
 <h2><a class="header" href="#how-does-it-work" id="how-does-it-work">How does it work?</a></h2>
 <p>The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the full specification here.</p>
-<p>We recommend to implement IOTA Deposits. That means, creating an account for every user to handle their tokens.</p>
+<p>We recommend to implement IOTA Deposits. This means creating an account for every user to handle their tokens.</p>
 <ol>
 <li>Setup the Wallet Library</li>
 <li>Create an accont for each user</li>
-<li>Generate an User address for deposit funds.</li>
+<li>Generate an User address for deposit funds</li>
 <li>Listen to events</li>
 <li>Check the user balance</li>
 <li>Enable withdrawals</li>
 </ol>
 <p>If you looking for other languages, read the <a href="guides/library/overview.html">library overview</a>.</p>
 <h3><a class="header" href="#1-setup-the-wallet-library" id="1-setup-the-wallet-library">1. Setup the Wallet Library</a></h3>
-<p>Install the Wallet Library and dotenv for passwort management. Read more about backup &amp; security <a href="guides/backup_security.html">here</a>.</p>
+<p>Install the Wallet Library and dotenv for password management. Read more about backup &amp; security <a href="guides/backup_security.html">here</a>.</p>
 <pre><code class="language-bash">npm install @iota/Wallet dotenv
 touch .env
 </code></pre>
-<p>Input your password to the <code>.env</code> file like this:</p>
+<p>Input your password to the <code>.env</code> file like so:</p>
 <pre><code class="language-bash">SH_PASSWORD=&quot;here is your super sucure password&quot;
 </code></pre>
 <p>Import the Wallet Library and create a manager.</p>
@@ -438,13 +438,19 @@ manager.setStrongholdPassword(process.env.SH_PASSWORD)
 manager.storeMnemonic(SignerType.Stronghold)
 </code></pre>
 <h3><a class="header" href="#2-create-an-accont-for-each-user" id="2-create-an-accont-for-each-user">2. Create an accont for each user</a></h3>
-<p>Creating an account for every user and storing it as main scenario.
-<todo>add js example</todo></p>
-<h3><a class="header" href="#3-generat-an-user-address-for-deposit-funds" id="3-generat-an-user-address-for-deposit-funds">3. Generat an User address for deposit funds.</a></h3>
-<p><todo>add js example</todo></p>
+<p>Creating an account for every user and storing it as a main scenario.</p>
+<p>:::info:
+TODO: An implementation example will be input soon.
+:::</p>
+<h3><a class="header" href="#3-generate-a-user-address-for-deposit-funds" id="3-generate-a-user-address-for-deposit-funds">3. Generate a User address for deposit funds</a></h3>
+<p>:::info:
+TODO: An implementation example will be input soon.
+:::</p>
 <h3><a class="header" href="#4-listen-to-events" id="4-listen-to-events">4. Listen to events</a></h3>
-<p>Fetching existing accounts and listening to transaction events coming into the account</p>
-<p><todo>add js example</todo></p>
+<p>Fetching existing accounts and listening to transaction events coming into the account.</p>
+<p>:::info:
+TODO: An implementation example will be input soon.
+:::</p>
 <p>addEventListener(event, cb)
 Adds a new event listener with a callback in the form of (err, data) =&gt; {}. Supported event names:</p>
 <p>ErrorThrown
@@ -454,28 +460,20 @@ ConfirmationStateChange
 Reattachment
 Broadcast</p>
 <h3><a class="header" href="#5-check-the-user-balance" id="5-check-the-user-balance">5. Check the user balance</a></h3>
-<p><todo>add js example</todo></p>
+<p>:::info:
+TODO: An implementation example will be input soon.
+:::</p>
 <h3><a class="header" href="#6-enable-withdrawals" id="6-enable-withdrawals">6. Enable withdrawals</a></h3>
-<p>Allowing withdrawals - checking if address is valid and sending to it
-<todo>add js example</todo></p>
-<h3><a class="header" href="#references-and-input" id="references-and-input">References and Input</a></h3>
-<p><todo>Remove this</todo></p>
-<ul>
-<li>Allowing withdrawals - checking if address is valid and sending to it</li>
-<li>Deposits (main way) - creating an account for every user and storing it as main scenario,</li>
-<li>Fetching existing accounts and listening to transaction events coming into the account</li>
-<li>Deposits (secondary) - creating a main account for all the users and keeping track which users belong to which addresses</li>
-<li>Consolidation will be available in wallet.rs later</li>
-</ul>
-<p>Here's the fake exchange repo I (Dave) made, 1 without implementation and a branch with implementation (so the master branch is just a fake exchange without any real implementation in it yet): https://github.com/fijter/fakexchange
-Here's the video where I do the actual implementation: https://www.youtube.com/watch?v=O2ukIXqJTls</p>
-<p>This uses Hub, but the principles are the same, creating addresses for users, monitoring those, sweeping the funds away from those addresses after arriving (and adding funds to the user account on the exchange platform) and sending funds on a withdrawal.</p>
+<p>Allowing withdrawals - checking if address is valid and sending to it</p>
+<p>:::info:
+TODO: An implementation example will be input soon.
+:::</p>
 <h1><a class="header" href="#iota-hub-migration-guide" id="iota-hub-migration-guide">IOTA Hub Migration Guide</a></h1>
 <blockquote>
-<p>This guide will explain, how you can switch from the Hub to the Wallet Library. </p>
+<p>This guide will explain how you can switch from the Hub to the Wallet Library. </p>
 </blockquote>
-<p>Because of the unique architecture of IOTA 1.0, it was very difficult to handle IOTA transactions. With the new Chrysalis Update, a lot of things changed in the architecutre. </p>
-<p>The hub will not be upgraded to Chrysalis, but we have a new Wallet library, where you can implement IOTA wallets very easy.</p>
+<p>Because of the unique architecture of IOTA 1.0, it was very difficult to manage IOTA transactions. With the new Chrysalis update, a lot of things changed in the architecutre. </p>
+<p>The Hub will not be upgraded in Chrysalis, but we have a new Wallet library where you can implement IOTA wallets very easy.</p>
 <ul>
 <li>Setup Library</li>
 <li>Copy exisitng users to accounts</li>
