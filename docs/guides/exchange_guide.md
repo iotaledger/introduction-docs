@@ -2,9 +2,9 @@
 
 
 ## The IOTA Wallet Library
-> Easily Integrate IOTA With Your Exchange, Custody Solution, Or Product
+> Easily integrate IOTA with your exchange, custody solution, or product
 
-IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis Update, we also ship many Libraries to help developers implement IOTA into their applications.
+IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we also ship many Libraries to help developers implement IOTA into their applications.
 
 
 ## latter approach
@@ -18,24 +18,24 @@ In wallet.rs, we used an account model. So you can create an account for each of
 ## Implementation Guide
 This guide explains, how to use the IOTA Library into an Exchange. IF you already implemented the IOTA Hub, please visit the [Hub Migration Guide](./hub_guide.md).
 
-Features of the Wallet Library
+Features of the Wallet Library:
 
 - Secure Seed management
-- Account Managemnt, with multiple accounts
+- Account management, with multiple accounts
 - Confirmation monitoring
 - Deposit address monitoring
-- Backup and Restore functionality
+- Backup and restore functionality
 
 
 ## How does it work?
 The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the full specification here.
 
 
-We recommend to implement IOTA Deposits. That means, creating an account for every user to handle their tokens.
+We recommend to implement IOTA Deposits. This means creating an account for every user to handle their tokens.
 
 1. Setup the Wallet Library
 2. Create an accont for each user
-3. Generate an User address for deposit funds.
+3. Generate an User address for deposit funds
 4. Listen to events
 5. Check the user balance
 6. Enable withdrawals
@@ -44,13 +44,13 @@ If you looking for other languages, read the [library overview](library/overview
 
 ### 1. Setup the Wallet Library
 
-Install the Wallet Library and dotenv for passwort management. Read more about backup & security [here](backup_security.md).
+Install the Wallet Library and dotenv for password management. Read more about backup & security [here](backup_security.md).
 ```bash
 npm install @iota/Wallet dotenv
 touch .env
 ```
 
-Input your password to the `.env` file like this:
+Input your password to the `.env` file like so:
 
 ```bash
 SH_PASSWORD="here is your super sucure password"
@@ -100,7 +100,7 @@ Creating an account for every user and storing it as main scenario.
 ```
 
 ### 4. Listen to events
-Fetching existing accounts and listening to transaction events coming into the account
+Fetching existing accounts and listening to transaction events coming into the account.
 
 ```javascript
     const { addEventListener } = require('@iota/wallet')
