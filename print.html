@@ -400,7 +400,28 @@ The IOTA Wallet Library Node.js API Documentation.</li>
 <p>Easily integrate IOTA with your exchange, custody solution, or product</p>
 </blockquote>
 <p>IOTA is built on a architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we also ship many Libraries to help developers implement IOTA into their applications.</p>
-<p>This guide explains how to use the IOTA Library in an Exchange. If you already implemented the IOTA Hub, please visit the Hub Migration Guide.</p>
+<h2><a class="header" href="#how-do-i-implement-it-to-my-exchange" id="how-do-i-implement-it-to-my-exchange">How do I implement it to my exchange?</a></h2>
+<p>In wallet.rs, we used an account model. So you can create an account for each of your users. The other approach would be to use one account and generaty many addresses, which you can link to your users in your database.</p>
+<ul>
+<li>
+<ol>
+<li>Create an account for every user</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Create one account with many adresses</li>
+</ol>
+</li>
+</ul>
+<h2><a class="header" href="#single-account-approach" id="single-account-approach">Single account approach</a></h2>
+<p>The Single account approach is using one account with many addresses and store who owns which address in the database.
+For most exchanges the single sccount approach is easier to use/implement/backup and more familiar.</p>
+<h2><a class="header" href="#multi-account-approach" id="multi-account-approach">Multi Account approach</a></h2>
+<p>With multi accounts you can store the account id in your own database if you wish.
+But a account for every user means you need to keep track and monitor all these accounts and back them up as well</p>
+<h2><a class="header" href="#implementation-guide" id="implementation-guide">Implementation Guide</a></h2>
+<p>This guide explains, how to use the IOTA Library into an Exchange. If you already implemented the IOTA Hub, please visit the <a href="guides/./hub_guide.html">Hub Migration Guide</a>.</p>
 <p>Features of the Wallet Library:</p>
 <ul>
 <li>Secure Seed management</li>
@@ -411,7 +432,10 @@ The IOTA Wallet Library Node.js API Documentation.</li>
 </ul>
 <h2><a class="header" href="#how-does-it-work" id="how-does-it-work">How does it work?</a></h2>
 <p>The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the full specification here.</p>
-<p>We recommend to implement IOTA Deposits. This means creating an account for every user to handle their tokens.</p>
+<p>This example covers the multi account approach:</p>
+<ul>
+<li>Create an account for every user</li>
+</ul>
 <ol>
 <li>Setup the Wallet Library</li>
 <li>Create an accont for each user</li>
@@ -430,44 +454,104 @@ touch .env
 <pre><code class="language-bash">SH_PASSWORD=&quot;here is your super sucure password&quot;
 </code></pre>
 <p>Import the Wallet Library and create a manager.</p>
-<pre><code class="language-javascript">const { AccountManager, SignerType } = require('@iota/wallet')
-const manager = new AccountManager({
-    storagePath: './iota-wallet-database',
-})
-manager.setStrongholdPassword(process.env.SH_PASSWORD)
-manager.storeMnemonic(SignerType.Stronghold)
+<pre><code class="language-javascript">    const { AccountManager, SignerType } = require('@iota/wallet')
+
+    // Setup IOTA Wallet Library
+    const manager = new AccountManager({
+        storagePath: './storage'
+    })
+    manager.setStrongholdPassword(process.env.SH_PASSWORD)
+    manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())
+
 </code></pre>
-<h3><a class="header" href="#2-create-an-accont-for-each-user" id="2-create-an-accont-for-each-user">2. Create an accont for each user</a></h3>
-<p>Creating an account for every user and storing it as a main scenario.</p>
-<p>:::info:
-TODO: An implementation example will be input soon.
-:::</p>
-<h3><a class="header" href="#3-generate-a-user-address-for-deposit-funds" id="3-generate-a-user-address-for-deposit-funds">3. Generate a User address for deposit funds</a></h3>
-<p>:::info:
-TODO: An implementation example will be input soon.
-:::</p>
+<h3><a class="header" href="#2-create-an-accont-for-an-user" id="2-create-an-accont-for-an-user">2. Create an accont for an user</a></h3>
+<p>Creating an account for every user and storing it as main scenario.</p>
+<pre><code class="language-javascript">    let account = await manager.createAccount({
+        alias: user_id, // an unique id from your exisitng user
+        clientOptions: { node: 'http://api.lb-0.testnet.chrysalis2.com', localPow: false }
+    })
+</code></pre>
+<h3><a class="header" href="#3-generate-an-user-address-for-deposit-funds-how-wallet-address" id="3-generate-an-user-address-for-deposit-funds-how-wallet-address">3. Generate an User address for deposit funds (How Wallet Address).</a></h3>
+<pre><code class="language-javascript">    // Always sync before account interactions
+    console.log('syncing...')
+    const synced = await account.sync()
+    console.log('synced!')
+
+
+    const addresses = account.listAddresses(true) // true =  unspent addresses
+    let unspent_addr = '';
+    if (addresses.length == 0) {
+        unspent_addr = account.generateAddress().address
+    } else {
+        unspent_addr = addresses[0].address
+    }
+    console.log('Need a refill? Send it this address:', unspent_addr)
+</code></pre>
 <h3><a class="header" href="#4-listen-to-events" id="4-listen-to-events">4. Listen to events</a></h3>
 <p>Fetching existing accounts and listening to transaction events coming into the account.</p>
-<p>:::info:
-TODO: An implementation example will be input soon.
-:::</p>
-<p>addEventListener(event, cb)
-Adds a new event listener with a callback in the form of (err, data) =&gt; {}. Supported event names:</p>
-<p>ErrorThrown
-BalanceChange
-NewTransaction
-ConfirmationStateChange
-Reattachment
-Broadcast</p>
+<pre><code class="language-javascript">    const { addEventListener } = require('@iota/wallet')
+
+    const callback = function(err, data) {
+        if(err) console.log(&quot;err:&quot;, err)
+        console.log(&quot;data:&quot;, data)
+    }
+
+    //Adds a new event listener with a callback in the form of (err, data) =&gt; {}. Supported event names:
+    addEventListener(&quot;BalanceChange&quot;, callback)
+
+    // Possible Event Types:
+    //
+    // ErrorThrown
+    // BalanceChange
+    // NewTransaction
+    // ConfirmationStateChange
+    // Reattachment
+    // Broadcast
+
+</code></pre>
+<p>Example output:</p>
+<pre><code class="language-bash">data: {
+  accountId: 'wallet-account://1666fc60fc95534090728a345cc5a861301428f68a237bea2b5ba0c844988566',
+  address: {
+    address: 'atoi1q9c6r2ek5w2yz54en78m8dxwl4qmwd7gmh9u0krm45p8txxyhtfry6apvwj',
+    balance: 20000000,
+    keyIndex: 0,
+    internal: false,
+    outputs: [ [Object], [Object] ]
+  },
+  balance: 20000000
+}
+</code></pre>
+<p>Read more about Events in the <a href="https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html#addeventlistenerevent-cb">API reference</a>.</p>
 <h3><a class="header" href="#5-check-the-user-balance" id="5-check-the-user-balance">5. Check the user balance</a></h3>
-<p>:::info:
-TODO: An implementation example will be input soon.
-:::</p>
+<p>Get the available account balance</p>
+<pre><code class="language-javascript">    // Always sync before account interactions
+    console.log('syncing...')
+    const synced = await account.sync()
+    console.log('synced!')
+    let balance = account.balance().available
+    console.log('available balance', balance)
+</code></pre>
 <h3><a class="header" href="#6-enable-withdrawals" id="6-enable-withdrawals">6. Enable withdrawals</a></h3>
 <p>Allowing withdrawals - checking if address is valid and sending to it</p>
-<p>:::info:
-TODO: An implementation example will be input soon.
-:::</p>
+<pre><code class="language-javascript">
+    console.log('syncing...')
+    const synced = await account.sync()
+    console.log('available balance', account.balance().available)
+    
+    const address = 'atoi1qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs'
+
+    // TODO: Check if address is valid.
+
+    const amount = 1000000 // Amount in IOTA: 1000000 == 1 MIOTA
+
+    const node_response = await synced.send(
+        address,
+        amount
+    ) 
+
+    console.log(&quot;Check your message on https://explorer.iota.org/crysalis/message/&quot;, node_response.id)
+</code></pre>
 <h1><a class="header" href="#iota-hub-migration-guide" id="iota-hub-migration-guide">IOTA Hub Migration Guide</a></h1>
 <blockquote>
 <p>This guide will explain how you can switch from the Hub to the Wallet Library. </p>
@@ -480,6 +564,11 @@ TODO: An implementation example will be input soon.
 <li>Move the funds</li>
 </ul>
 <h1><a class="header" href="#backup-and-securitymd" id="backup-and-securitymd">Backup and Security.md</a></h1>
+<ul>
+<li>What do we recommend?</li>
+<li>&quot;Security Checklist&quot;</li>
+<li>Do's and Dont's</li>
+</ul>
 <h1><a class="header" href="#testnet" id="testnet">Testnet</a></h1>
 <p>IOTA 1.5 (also known as Chrysalis) is IOTA's intermediate stage before Coordicide is complete. You can read more about the strategy for releasing Chrysalis <a href="https://blog.iota.org/release-strategy-for-chrysalis-iota-1-5-4ea8741ea3a1/">here</a>.</p>
 <h2><a class="header" href="#infrastructure-1" id="infrastructure-1">Infrastructure</a></h2>
@@ -542,9 +631,13 @@ TODO: An implementation example will be input soon.
 <p>Additionally, there is also a native C (<a href="https://github.com/iotaledger/iota.c">iota.c</a>) and a native javascript (<a href="https://github.com/iotaledger/iota.js/tree/chrysalis">iota.js</a>) client library. </p>
 <h2><a class="header" href="#what-is-dust-protection-and-does-it-works" id="what-is-dust-protection-and-does-it-works">What is Dust Protection and does it works?</a></h2>
 <p>Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network, which we call Dust. To avoid this, you need to have a 1Mi amount of IOTA tokens on an address where you want to receive microtransactions.</p>
-<p>You can read more about Dust Protection <a href="">in the RFC here</a>.</p>
+<p>You can read more about Dust Protection <a href="https://github.com/iotaledger/protocol-rfcs/pull/32">in the RFC here</a>.</p>
 <h2><a class="header" href="#whats-happening-with-coordicide" id="whats-happening-with-coordicide">What's happening with Coordicide?</a></h2>
 <p>Chrysalis is a stage of the IOTA network that is still built on the Coordinator. With Coordicice, the IOTA Network will get rid of the Coordinator and become a completely decentralized network. There are three stages to reach Cooridice, which resolves in three Test neworks: Pollen, Nectar, and Honey. The Pollen Network runs in a research state on the goShimmer Node.</p>
+<h2><a class="header" href="#when-is-a-tx-on-the-chrysalis-network-irreversible" id="when-is-a-tx-on-the-chrysalis-network-irreversible">When is a tx on the Chrysalis network irreversible?</a></h2>
+<p>Confirmation times on the new network are great, average around 10 seconds to final. Once a transaction is set to confirmed it’s final instantly, you don’t have block confirmations like with blockchain.</p>
+<h2><a class="header" href="#hornet-or-bee-which-node-should-i-use" id="hornet-or-bee-which-node-should-i-use">Hornet or bee? Which node should I use?</a></h2>
+<p>You can pick Bee or Hornet, we currently recommend Hornet since it’s the more complete version of the node software, Bee is still missing some optional features you might want to have.</p>
 
                     </main>
 
