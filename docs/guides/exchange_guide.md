@@ -12,7 +12,7 @@ A "hot wallet" is an address used for receiving transactions which gets displaye
 
 The latter approach is using an hotwallet address and store who owns which address in the database.
 
-## How create an hot wallet address?
+## How do I create a hot wallet address?
 In wallet.rs, we used an account model. So you can create an account for each of your users. The other approach would be to use one account and generaty many addresses, which you can link to your users in your database.
 
 ## Implementation Guide
