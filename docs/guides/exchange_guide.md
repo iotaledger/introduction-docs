@@ -31,7 +31,8 @@ Features of the Wallet Library:
 ## How does it work?
 The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the full specification here.
 
-We recommend to implement IOTA Deposits. This means creating an account for every user to handle their tokens.
+This example covers the first approach:
+-  Create an account for every user
 
 1. Setup the Wallet Library
 2. Create an accont for each user
