@@ -3,13 +3,13 @@
 ## The IOTA Wallet Library
 > Easily integrate IOTA with your exchange, custody solution, or product
 
-IOTA is built on an architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future in mind. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we also ship many libraries to help developers implement IOTA into their applications.
+IOTA is built on an architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we ship many libraries to help developers implement IOTA into their applications.
 
 ## How do I implement it to my exchange?
 In wallet.rs, we use an account model. So you can create an account for each of your users. The other approach would be to use one account and generate many addresses, which you can link to your users in your database.
 
 - Create an account for every user -> Multi Account approach
-- Create one account with many adresses -> Single account approach
+- Create one account with many addresses -> Single account approach
 
 The library supports derivation for multiple accounts from a single seed. An account is simply a deterministic identifier from which multiple addresses can be further derived. The following illustrates the relationships between seed, accounts and addresses. The library allows consumers to assign a meaningful alias to each account. It also leaves the choice to users if they want to segregate their funds across multiple accounts or multiple addresses.
 
@@ -28,48 +28,41 @@ root --- Account 0 --- Address 1
 
 
 ## Multi Account approach
-Under multi account approach we say that With multi accounts you can store the account id in your own database if you wish. But a account for every user means you need to keep track and monitor all these accounts and back them up as well. This is incorrect and the consumers do not need to store account id in a separate database and do not need to keep track of these accounts. The library supports that inherently.
-
-Advantages:
-- clear differentiation of accounts 
-- You can set your internal user id as an account alias.
-
-Disadvantages:
-- you need to keep track and monitor all accounts
+The multi account approach is to create an account for each individual user. The therewith created accounts can then be linked to the internal user ids as an account alias and are clearly separated.
 
 ## Single account approach
-The Single account approach is using one account with many addresses and store who owns which address in the database.
-For most exchanges the single account approach is easier to use/implement/backup and more familiar.
+The single account approach is to just use one account and create addresses for each individual user. The associated addresses are then linked to the internal user ids as an account alias and store who owns which address in the database.
+Most exchanges are more familiar with the single account approach and find it easier to use, implement and backup.
 
 ## Implementation Guide
-This guide explains, how to use the IOTA Library into an Exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](./hub_guide.md).
+This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](./hub_guide.md).
 
 Features of the Wallet Library:
 
-- Secure Seed management
-- Account management, with multiple accounts
-- Confirmation monitoring
-- Deposit address monitoring
-- Backup and restore functionality
+- Secure seed management,
+- Account management (with multiple accounts),
+- Confirmation monitoring,
+- Deposit address monitoring,
+- Backup and restore functionality.
 
 
 ## How does it work?
-The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the [full documentation here](https://wallet-lib.docs.iota.org).
+The Wallet Library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the [full documentation here](https://wallet-lib.docs.iota.org).
 
-This example covers the multi account approach:
+This example covers the *multi account approach*:
 
 1. Setup the Wallet Library
-2. Create an accont for each user
-3. Generate an User address for deposit funds
+2. Create an account for each user
+3. Generate an user address for deposits
 4. Listen to events
 5. Check the user balance
 6. Enable withdrawals
 
-If you looking for other languages, read the [libraries overview](/libraries/overview.md).
+If you are looking for other languages, read the [libraries overview here](/libraries/overview.md).
 
 ### 1. Setup the Wallet Library
 
-Install the Wallet Library and dotenv for password management. Read more about backup & security [here](backup_security.md).
+Install the Wallet Library and dotenv for password management. Read more about [backup & security here](backup_security.md).
 ```bash
 npm install @iota/wallet dotenv
 touch .env
@@ -78,7 +71,7 @@ touch .env
 Input your password to the `.env` file like this:
 
 ```bash
-SH_PASSWORD="here is your super sucure password"
+SH_PASSWORD="here is your super secure password"
 ```
 
 
@@ -164,7 +157,7 @@ Read more about Events in the [API reference](https://wallet-lib.docs.iota.org/l
 
 ### 5. Check the user balance
 
-Get the available account balance
+Get the available account balance.
 
 ```javascript
     // Always sync before account interactions
@@ -176,14 +169,14 @@ Get the available account balance
 ```
 
 ### 6. Enable withdrawals
-Allowing withdrawals - checking if address is valid and sending to it
+Allowing withdrawals - checking if address is valid and sending the specified amount to it.
 
 ```javascript
 
     console.log('syncing...')
     const synced = await account.sync()
     console.log('available balance', account.balance().available)
-    
+
     const address = 'atoi1qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs'
 
     // TODO: Check if address is valid.
@@ -193,7 +186,7 @@ Allowing withdrawals - checking if address is valid and sending to it
     const node_response = await synced.send(
         address,
         amount
-    ) 
+    )
 
     console.log("Check your message on https://explorer.iota.org/crysalis/message/", node_response.id)
 ```
