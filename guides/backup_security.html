@@ -150,11 +150,47 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#backup-and-securitymd" id="backup-and-securitymd">Backup and Security.md</a></h1>
+                        <h1><a class="header" href="#backup-and-security" id="backup-and-security">Backup and Security</a></h1>
 <ul>
-<li>What do we recommend?</li>
-<li>&quot;Security Checklist&quot;</li>
-<li>Do's and Dont's</li>
+<li>Security Checklist</li>
+<li>How to Backup your account?</li>
+<li>How to Restore from a Backup?</li>
+<li>How to Export a User's Stronghold?</li>
+<li>How to Rekey a Stronghold / Password Rotation?</li>
+<li>Do's and Don'ts</li>
+</ul>
+<h2><a class="header" href="#security-checklist" id="security-checklist">Security Checklist</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+I used Stronghold</li>
+<li><input disabled="" type="checkbox"/>
+I use a strong password (32 character length, Shannon Entropy ~ 4.0) for encrypting the stronghold</li>
+<li><input disabled="" type="checkbox"/>
+I rotate the stronghold password on a regular basis</li>
+<li><input disabled="" type="checkbox"/>
+I create a daily backup of the stronghold.snapshot file</li>
+<li><input disabled="" type="checkbox"/>
+I keep a secure history of passwords used (for recovery)</li>
+<li><input disabled="" type="checkbox"/>
+I use a secure password management service that integrates with the server</li>
+<li><input disabled="" type="checkbox"/>
+I use a linux based server (best memory security)</li>
+<li><input disabled="" type="checkbox"/>
+My server is isolated behind a DMZ</li>
+</ul>
+<h2><a class="header" href="#how-to-backup-your-account" id="how-to-backup-your-account">How to Backup your account?</a></h2>
+<p>A simple copy of the stronghold.snapshot file suffices as a backup. (e.g. a daily cronjob rsync / scp with a datetime suffix for example).</p>
+<h2><a class="header" href="#how-to-restore-from-a-backup" id="how-to-restore-from-a-backup">How to Restore from a Backup?</a></h2>
+<p>Simply place a snapshot file in your directory that wallet.rs expects</p>
+<h2><a class="header" href="#how-to-export-a-users-stronghold" id="how-to-export-a-users-stronghold">How to Export a User's Stronghold?</a></h2>
+<p>You can create a new stronghold snapshot on the fly, in order to allow a user to leave your service and retain their key.</p>
+<h2><a class="header" href="#how-to-rekey-a-stronghold--password-rotation" id="how-to-rekey-a-stronghold--password-rotation">How to Rekey a Stronghold / Password Rotation?</a></h2>
+<p>The procedure for changing a stronghold password is &quot;simple&quot; in that you read a snapshot into a vault, and then write it out with a new encryption password. <a href="https://github.com/iotaledger/wallet.rs/blob/d1b8893d73aae35dfcf7c5c8006e2177988d25d0/src/stronghold.rs#L436-L451">See this code for the source.</a></p>
+<p>Please note: for obvious reasons, old snapshot backups will not be &quot;rekeyed&quot;, so you have to track your old passwords. </p>
+<h2><a class="header" href="#dos-and-donts" id="dos-and-donts">Do's and Don'ts</a></h2>
+<ul>
+<li>Don't use SQLite</li>
+<li>Don't store passwords and backups on the same device</li>
 </ul>
 
                     </main>
