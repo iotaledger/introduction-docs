@@ -1,7 +1,5 @@
 # IOTA Protocol RFCs
 
-To propose changes to the IOTA protocol, we ask for these to go through a more organized design process --- an RFC (request for comments) process. The goal is to organize work between the different developers affiliated with the IOTA Foundation, and the wider open source community. We want to vet the ideas early on, get and give feedback, and only then start the implementation once the biggest questions are taken care of.
+Changes to the IOTA protocol have to go through a proposal process first, where a proposal is posted as a "Request for comment" (RFC). The Chrysalis protocol changes are described in full detail in these RFC's which can be found below:
 
-
-- [Website with all RFC's](https://iotaledger.github.io/protocol-rfcs)
-- [Git Repo](https://github.com/iotaledger/protocol-rfcs)
+- [Git Repo](https://github.com/iotaledger/protocol-rfcs/pulls)

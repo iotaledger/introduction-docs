@@ -1,14 +1,14 @@
-# Developer Guide to Chrysalis (IOTA 1.5)
+# Developer Guide to Chrysalis
 
-This is a quick guide meant to help you see the changes you will encounter while developing with the new network.
+This is a quick guide meant to guide you through some of the differences you will encounter while migrating to IOTA Chrysalis.
 
 ## A note about seeds and addresses
 
 In Chrysalis, all ternary conversions have been removed which results in a better and faster developer experience.
 
-Additionally, the WOTS-Signature has been changed to the Ed25519 signature scheme. This means that you can now use an address multiple times to send and receive tokens. 
+Additionally, the WOTS-Signature has been replaced by a ed25519 signature scheme. This means that you can now use an address multiple times to send and receive coins if you wish. 
 
-And with all of these changes, the results encompass a completely different view of addresses and seeds:
+With these changes and the further adoption of industry standards both seeds and addresses will look completely different in IOTA Chrysalis:
 
 IOTA 1.0 Address
 
@@ -16,13 +16,13 @@ IOTA 1.0 Address
 UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZRGJMIGPDW
 ```
 
-Chrysalis (IOTA 1.5) Address
+Chrysalis address (bech32 standard)
 
 ```bash=
-atoi1qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs
+iota11qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs
 ```
 
-With the new wallet library, developers do not need to use a seed anymore. The seed is now backed up with Stronghold, a software security box. It is not possible to remove the seed from this box since it uses encrypted snapshots that can be easily backed up and securely shared between devices. These snapshots are further secured by a password.
+With the new wallet library, developers do not need to use a self generated seed anymore. By default the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are further secured with a password.
 
 You can read more about Stronghold on the [Stronghold docs page](https://stronghold.docs.iota.org).
 
@@ -30,12 +30,13 @@ You can read more about Stronghold on the [Stronghold docs page](https://strongh
 ## Deep Dive
 
 ### Dust Protection
-What is Dust? We define the spamming of a low value transaction as dust. A low value transaction in this case is a transaction with less than 1Mi value.
+Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network with very low value transactions, which we call dust. To avoid this we only allow microtransaction below 1Mi of IOTA tokens to another address if you already have at least 1Mi on that address.
 
 > In the UTXO model, each node in the network needs to keep track of all the currently unspent outputs. When the number of outputs becomes too large, it can cause performance and memory issues. The RFC found below proposes a new protocol rule regarding the processing of outputs where they transfer a very small amount of IOTA’s so-called dust outputs. Dust outputs are only allowed when they are backed up by a certain deposit on the receiving address. This limits the amount of dust outputs, thus making it expensive to proliferate dust. Since a receiver must make a deposit, the protocol makes receiving dust an opt-in feature.
 
 [protocol-rfcs#0032](https://github.com/iotaledger/protocol-rfcs/pull/32)
 
 ### Up to 8 Parents
-A message can be bound to minimum of one parent and up to eight parents.
+With IOTA 1.0 you always had to reference 2 parent transactions. With Chrysalis we introduce a more dynamic
+number of parent nodes where you can reference up to 8 parents. We recommend you to reference at least 2 unique parents at all times for the best possible results.
 
