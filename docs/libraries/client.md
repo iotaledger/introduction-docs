@@ -1,13 +1,13 @@
 # IOTA Client Library
 
-The client library for interacting with the Tangle
+The official client library for interacting with the IOTA Tangle allows you to:
 
 - Create messages and transactions
 - Sign transactions
 - Generate addresses
 - Interact with an IOTA node
 
-For value transfers we recommend you to use our stateful [wallet library](./wallet.md).
+If you mainly intend to process value transfers we recommend you to use our stateful [wallet library](./wallet.md) instead.
 
 ## Rust
 - [Getting Started](https://client-lib.docs.iota.org/libraries/rust/getting_started.html)
