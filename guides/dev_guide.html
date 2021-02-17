@@ -150,29 +150,30 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#developer-guide-to-chrysalis-iota-15" id="developer-guide-to-chrysalis-iota-15">Developer Guide to Chrysalis (IOTA 1.5)</a></h1>
-<p>This is a quick guide meant to help you see the changes you will encounter while developing with the new network.</p>
+                        <h1><a class="header" href="#developer-guide-to-chrysalis" id="developer-guide-to-chrysalis">Developer Guide to Chrysalis</a></h1>
+<p>This is a quick guide meant to guide you through some of the differences you will encounter while migrating to IOTA Chrysalis.</p>
 <h2><a class="header" href="#a-note-about-seeds-and-addresses" id="a-note-about-seeds-and-addresses">A note about seeds and addresses</a></h2>
 <p>In Chrysalis, all ternary conversions have been removed which results in a better and faster developer experience.</p>
-<p>Additionally, the WOTS-Signature has been changed to the Ed25519 signature scheme. This means that you can now use an address multiple times to send and receive tokens. </p>
-<p>And with all of these changes, the results encompass a completely different view of addresses and seeds:</p>
+<p>Additionally, the WOTS-Signature has been replaced by a ed25519 signature scheme. This means that you can now use an address multiple times to send and receive coins if you wish. </p>
+<p>With these changes and the further adoption of industry standards both seeds and addresses will look completely different in IOTA Chrysalis:</p>
 <p>IOTA 1.0 Address</p>
 <pre><code class="language-bash=">UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZRGJMIGPDW
 </code></pre>
-<p>Chrysalis (IOTA 1.5) Address</p>
-<pre><code class="language-bash=">atoi1qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs
+<p>Chrysalis address (bech32 standard)</p>
+<pre><code class="language-bash=">iota11qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs
 </code></pre>
-<p>With the new wallet library, developers do not need to use a seed anymore. The seed is now backed up with Stronghold, a software security box. It is not possible to remove the seed from this box since it uses encrypted snapshots that can be easily backed up and securely shared between devices. These snapshots are further secured by a password.</p>
+<p>With the new wallet library, developers do not need to use a self generated seed anymore. By default the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are further secured with a password.</p>
 <p>You can read more about Stronghold on the <a href="https://stronghold.docs.iota.org">Stronghold docs page</a>.</p>
 <h2><a class="header" href="#deep-dive" id="deep-dive">Deep Dive</a></h2>
 <h3><a class="header" href="#dust-protection" id="dust-protection">Dust Protection</a></h3>
-<p>What is Dust? We define the spamming of a low value transaction as dust. A low value transaction in this case is a transaction with less than 1Mi value.</p>
+<p>Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network with very low value transactions, which we call dust. To avoid this we only allow microtransaction below 1Mi of IOTA tokens to another address if you already have at least 1Mi on that address.</p>
 <blockquote>
 <p>In the UTXO model, each node in the network needs to keep track of all the currently unspent outputs. When the number of outputs becomes too large, it can cause performance and memory issues. The RFC found below proposes a new protocol rule regarding the processing of outputs where they transfer a very small amount of IOTA’s so-called dust outputs. Dust outputs are only allowed when they are backed up by a certain deposit on the receiving address. This limits the amount of dust outputs, thus making it expensive to proliferate dust. Since a receiver must make a deposit, the protocol makes receiving dust an opt-in feature.</p>
 </blockquote>
 <p><a href="https://github.com/iotaledger/protocol-rfcs/pull/32">protocol-rfcs#0032</a></p>
 <h3><a class="header" href="#up-to-8-parents" id="up-to-8-parents">Up to 8 Parents</a></h3>
-<p>A message can be bound to minimum of one parent and up to eight parents.</p>
+<p>With IOTA 1.0 you always had to reference 2 parent transactions. With Chrysalis we introduce a more dynamic
+number of parent nodes where you can reference up to 8 parents. We recommend you to reference at least 2 unique parents at all times for the best possible results.</p>
 
                     </main>
 

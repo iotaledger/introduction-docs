@@ -152,14 +152,17 @@
                     <main>
                         <h1><a class="header" href="#iota-hub-migration-guide" id="iota-hub-migration-guide">IOTA Hub Migration Guide</a></h1>
 <blockquote>
-<p>This guide will explain how you can switch from the Hub to the Wallet Library. </p>
+<p>This guide will explain how you can switch from IOTA Hub to using wallet.rs or its bindings instead.</p>
 </blockquote>
-<p>Because of the unique architecture of IOTA 1.0, it was very difficult to manage IOTA transactions. With the new Chrysalis update, a lot of things changed in the architecutre. </p>
-<p>The Hub will not be upgraded in Chrysalis, but we have a new Wallet library where you can implement IOTA wallets very easy.</p>
+<p>Because of the unique features of IOTA 1.0 it was difficult to manage IOTA transactions with just a library. With the new Chrysalis update the whole protocol was updated to be more accomodating to industry wide standards and developer friendliness. </p>
+<p>IOTA Hub will be deprecated with the Chrysalis upgrade and will not work with the new protocol changes. If you still use Hub we ask you to utilize our new wallet library (iota.rs or bindings) where you can easily manage IOTA addresses, deposits and withdrawals for user accounts.</p>
+<p>In order to upgrade from Hub to a Chrysalis implementation you need to:</p>
 <ul>
-<li>Setup Library</li>
-<li>Copy exisitng users to accounts</li>
-<li>Move the funds</li>
+<li>Integrate the Chrysalis network using wallet.rs as mentioned in the Exchange section</li>
+<li>Pause withdrawals/deposits</li>
+<li>Make sure all balances have been swept and all deposits have been processed</li>
+<li>Transfer all IOTA to a generated migration address (instructions to be provided)</li>
+<li>Once migrated transfer the IOTA coins to your hot wallet account on your wallet.rs implementation</li>
 </ul>
 
                     </main>
