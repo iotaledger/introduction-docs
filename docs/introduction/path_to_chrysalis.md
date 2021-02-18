@@ -11,17 +11,17 @@ The benefit of this approach is that many of the protocol properties will remain
 The intended outcomes for Chrysalis are:
 
 - **Simpler transition to Coordicide**:
-With Coordicide making significant progress, we want to ensure that all developers and companies that build and deploy on Chrysalis will have as smooth a transition to Coorcidide as possible.
+  With Coordicide making significant progress, we want to ensure that all developers and companies that build and deploy on Chrysalis will have as smooth a transition to Coorcidide as possible.
 - **Substantial performance improvements**:
-With the changes introduced by Chrysalis, we will see a substantial improvement in the scalability and reliability of the IOTA Mainnet.
+  With the changes introduced by Chrysalis, we will see a substantial improvement in the scalability and reliability of the IOTA Mainnet.
 - **Improved developer and user experience**:
-The new protocol features, new libraries, and the new wallet will make IOTA one of the best platforms to build on, removing the friction which developers experience today. While allowing solutions built on top of the protocol to provide better user experience.
+  The new protocol features, new libraries, and the new wallet will make IOTA one of the best platforms to build on, removing the friction which developers experience today. While allowing solutions built on top of the protocol to provide better user experience.
 - **Accelerated adoption**:
-Chrysalis will make IOTA production-ready. A stable protocol, with a reliable set of developer tools and frameworks that will enable Startups, Corporations, and Governments to develop and launch products powered by IOTA.
+  Chrysalis will make IOTA production-ready. A stable protocol, with a reliable set of developer tools and frameworks that will enable Startups, Corporations, and Governments to develop and launch products powered by IOTA.
 
 ## The Stages to Chrysalis
 
-![](./assets/path_to_chrysalis/01.png)
+![](/Users/charlesthompson/chrysalis-docs/docs/introduction/assets/path_to_chrysalis/01.png)
 
 The Chrysalis upgrade is a complex undertaking. We have to coordinate a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. In addition to the core Node software, we also need to update our Wallet software, our Libraries, and the entire Infrastructure.  
 
