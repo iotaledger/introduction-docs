@@ -17,7 +17,7 @@ Single node endpoints that expose native MQTT in case you need this are:
 - api.hornet-3.testnet.chrysalis2.com
 
 
-Node API is integrated according to the [following specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml)
+Node API is integrated according to the [following specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml).
 
 ## Developer Tools
 - [Explorer](https://explorer.iota.org/chrysalis)

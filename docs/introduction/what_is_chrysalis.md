@@ -1,12 +1,12 @@
 # What is Chrysalis
 
-The objective of the IOTA Foundation is to optimize the IOTA mainnet before Coordicide, and to offer an enterprise-ready solution for our ecosystem. This is achieved by an intermediate update called `Chrysalis`. This post explains what the Chrysalis upgrade entails.  
+The objective of the IOTA Foundation is to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. This is achieved by an intermediate update called `Chrysalis`. This post explains what the Chrysalis upgrade entails.  
 
 A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis is the mainnet’s intermediate stage before Coordicide is complete. The main purpose of Chrysalis is to improve the usability of the current IOTA mainnet, for users and developers alike.
 
 ![](./assets/02_path_to.png)
 
-Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless DLTs? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives differ from those of regular network users. Changes to throughput and network latencies can disrupt the fee market the miners rely on. Which in turn makes them likely to object to network upgrades as it affects their bottom line.
+Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless DLTs? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives differ from those of regular network users. Changes to throughput and network latencies can disrupt the fee market the miners rely on. This in turn makes them likely to object to network upgrades as it affects their bottom line.
 
 In IOTA, validators and users are one and the same. There is no conflict of interests between parties with different motivations, meaning a much smoother path to network improvements. This is why we are able to incrementally and smoothly upgrade the network before Coordicide.
 
@@ -18,7 +18,7 @@ What are the specific Chrysalis upgrades?
 
 ## New milestone selection algorithm
 ![](./assets/what_is_chrysalis/02.png)
-[New milestone selection algorithm for the coordinator](https://iota.cafe/t/coordinator-improvements/310), focused on allowing the network to support much more confirmed transaction per second (CTPS) than before with higher computational efficiency.
+[New milestone selection algorithm for the coordinator](https://iota.cafe/t/coordinator-improvements/310), focused on allowing the network to support much more confirmed transactions per second (CTPS) than before with higher computational efficiency.
 
 ## URTS tip selection
 ![](./assets/what_is_chrysalis/03.png)
@@ -26,11 +26,11 @@ New [Uniform random tip selection](https://github.com/iotaledger/protocol-rfcs/b
 
 ## Ed25519 signature scheme
 ![](./assets/what_is_chrysalis/04.png)
-[The ed25519 signature scheme](https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md) is added to the network, replacing the current Winternitz one time signature scheme (W-OTS) signature scheme. Using an EdDSA signature scheme allows the protocol and clients using the protocol to run more efficiently on established hardware. Unlike W-OTS, the scheme also allows for the re-use of private keys, and with that introduces reusable addresses to the protocol. This change also dramatically reduces the transaction size, saving network bandwidth and processing time.
+[The Ed25519 signature scheme](https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md) is added to the network, replacing the current Winternitz one time signature scheme (W-OTS) signature scheme. Using an EdDSA signature scheme allows the protocol and clients using the protocol to run more efficiently on established hardware. Unlike W-OTS, the scheme also allows for the re-use of private keys, and with that introduces reusable addresses to the protocol. This change also dramatically reduces the transaction size, saving network bandwidth and processing time.
 
 ## Atomic transactions
 ![](./assets/what_is_chrysalis/05.png)
-[Atomic transactions](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md) move the protocol from the current, complicated, bundle construct and use simpler atomic transactions instead. This results in much simpler development, and more adaptable and maintanble code of the core software. In addition, atomic transaction reduce network overhead, reduce transaction validation and signature verification load, and improve spam protection and congestion control.
+[Atomic transactions](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md) move the protocol from the current, complicated, bundle construct and use simpler atomic transactions instead. This results in much simpler development, and more adaptable and maintainable code of the core software. In addition, atomic transactions reduce network overhead, reduce transaction validation and signature verification load, and improve spam protection and congestion control.
 
 ## Switch to UTXO Model
 ![](./assets/what_is_chrysalis/06.png)
