@@ -150,14 +150,14 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#exchange-guide" id="exchange-guide">Exchange Guide</a></h1>
+                        <h1><a class="header" href="#exchange-guide" id="exchange-guide">Exchange guide</a></h1>
 <h2><a class="header" href="#the-iota-wallet-library" id="the-iota-wallet-library">The IOTA Wallet Library</a></h2>
 <blockquote>
 <p>Easily integrate IOTA with your exchange, custody solution, or product</p>
 </blockquote>
 <p>IOTA is built on an architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we ship many libraries to help developers implement IOTA into their applications.</p>
 <h2><a class="header" href="#how-do-i-implement-it-to-my-exchange" id="how-do-i-implement-it-to-my-exchange">How do I implement it to my exchange?</a></h2>
-<p>In wallet.rs, we use an account model. So you can create an account for each of your users. The other approach would be to use one account and generate many addresses, which you can link to your users in your database.</p>
+<p>In wallet.rs, we use an account model, so you can create an account for each of your users. The other approach would be to use one account and generate many addresses, which you can link to your users in your database.</p>
 <ul>
 <li>Create an account for every user -&gt; Multi Account approach</li>
 <li>Create one account with many addresses -&gt; Single account approach</li>
@@ -173,23 +173,22 @@ root --- Account 0 --- Address 1
                             \
                               Address 1    
 </code></pre>
-<h2><a class="header" href="#multi-account-approach" id="multi-account-approach">Multi Account approach</a></h2>
-<p>The multi account approach is to create an account for each individual user. The therewith created accounts can then be linked to the internal user ids as an account alias and are clearly separated.</p>
+<h2><a class="header" href="#multi-account-approach" id="multi-account-approach">Multi account approach</a></h2>
+<p>The multi account approach is to create an account for each individual user. The created accounts can then be linked to the internal user ids as an account alias and are clearly separated.</p>
 <h2><a class="header" href="#single-account-approach" id="single-account-approach">Single account approach</a></h2>
-<p>The single account approach is to just use one account and create addresses for each individual user. The associated addresses are then linked to the internal user ids as an account alias and store who owns which address in the database.
-Most exchanges are more familiar with the single account approach and find it easier to use, implement and backup.</p>
-<h2><a class="header" href="#implementation-guide" id="implementation-guide">Implementation Guide</a></h2>
+<p>The single account approach is to just use one account and create addresses for each individual user. The associated addresses are then linked to the internal user ids as an account alias and store who owns which address in the database. Most exchanges are more familiar with the single account approach and find it easier to use, implement, and backup.</p>
+<h2><a class="header" href="#implementation-guide" id="implementation-guide">Implementation guide</a></h2>
 <p>This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the <a href="./hub_guide.html">Hub Migration Guide</a>.</p>
 <p>Features of the Wallet Library:</p>
 <ul>
-<li>Secure seed management,</li>
-<li>Account management (with multiple accounts),</li>
-<li>Confirmation monitoring,</li>
-<li>Deposit address monitoring,</li>
-<li>Backup and restore functionality.</li>
+<li>Secure seed management</li>
+<li>Account management (with multiple accounts)</li>
+<li>Confirmation monitoring</li>
+<li>Deposit address monitoring</li>
+<li>Backup and restore functionality</li>
 </ul>
 <h2><a class="header" href="#how-does-it-work" id="how-does-it-work">How does it work?</a></h2>
-<p>The Wallet Library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage and state backup. Alternatively you can use a SQLite database. See the <a href="https://wallet-lib.docs.iota.org">full documentation here</a>.</p>
+<p>The Wallet Library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database. See the <a href="https://wallet-lib.docs.iota.org">full documentation here</a>.</p>
 <p>This example covers the <em>multi account approach</em>:</p>
 <ol>
 <li>Setup the Wallet Library</li>
@@ -220,13 +219,13 @@ touch .env
 
 </code></pre>
 <h3><a class="header" href="#2-create-an-account-for-an-user" id="2-create-an-account-for-an-user">2. Create an account for an user</a></h3>
-<p>Creating an account for every user and storing it as main scenario.</p>
+<p>Create an account for every user and store it as the main scenario.</p>
 <pre><code class="language-javascript">    let account = await manager.createAccount({
         alias: user_id, // an unique id from your exisitng user
         clientOptions: { node: 'http://api.lb-0.testnet.chrysalis2.com', localPow: false }
     })
 </code></pre>
-<h3><a class="header" href="#3-generate-an-user-address-to-deposit-funds" id="3-generate-an-user-address-to-deposit-funds">3. Generate an User address to deposit funds.</a></h3>
+<h3><a class="header" href="#3-generate-an-user-address-to-deposit-funds" id="3-generate-an-user-address-to-deposit-funds">3. Generate an user address to deposit funds</a></h3>
 <pre><code class="language-javascript">    // Always sync before account interactions
     console.log('syncing...')
     const synced = await account.sync()
@@ -238,7 +237,7 @@ touch .env
     console.log('Need a refill? Send it this address:', latestAddress)
 </code></pre>
 <h3><a class="header" href="#4-listen-to-events" id="4-listen-to-events">4. Listen to events</a></h3>
-<p>Fetching existing accounts and listening to transaction events coming into the account.</p>
+<p>Fetch existing accounts and listen to transaction events coming into the account.</p>
 <pre><code class="language-javascript">    const { addEventListener } = require('@iota/wallet')
 
     const callback = function(err, data) {
@@ -283,7 +282,6 @@ touch .env
     console.log('available balance', balance)
 </code></pre>
 <h3><a class="header" href="#6-enable-withdrawals" id="6-enable-withdrawals">6. Enable withdrawals</a></h3>
-<p>Allowing withdrawals - checking if address is valid and sending the specified amount to it.</p>
 <pre><code class="language-javascript">
     console.log('syncing...')
     const synced = await account.sync()
