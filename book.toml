@@ -6,3 +6,4 @@ multilingual = false
 src = "docs"
 [output.html]
 theme = "theme"
+additional-css = ["theme/css/custom.css"]
