@@ -119,8 +119,10 @@ Create an account for every user and store it as the main scenario.
     // By design, the last address of each account is an unused address which can be used as deposit address
     const latestAddress = account.latestAddress()
 
-    console.log('Need a refill? Send it this address:', latestAddress)
+    console.log('Need a refill? Send it to this address:', latestAddress)
 ```
+Fill the address with Testnet Tokens with the [IOTA Faucet](https://faucet.testnet.chrysalis2.com/).
+
 
 ### 4. Listen to events
 
