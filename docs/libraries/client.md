@@ -34,18 +34,11 @@ If you mainly intend to process value transfers we recommend you to use our stat
 
 ## Python
 
-- [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python)
-
 - [Getting Started](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python)
   Getting Started with Python and the IOTA Client Library.
-
 - [Examples](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python/examples)
   Find starting points or inspiration in the examples.
-
-- [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python) 
-
+- [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python)
   Browse through the code and learn what's happening behind the scenes. Pull requests are very welcome!
-
-- [API Documentation](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python) 
-
+- [API Documentation](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python)
   The IOTA Client Library Python API Documentation.
