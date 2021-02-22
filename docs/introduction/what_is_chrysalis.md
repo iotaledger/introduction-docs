@@ -2,6 +2,8 @@
 
 The objective of the IOTA Foundation is to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. This is achieved by an intermediate update called `Chrysalis`. This post explains what the Chrysalis upgrade entails.  
 
+![](./assets/what_is_chrysalis/00.gif)
+
 A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis is the mainnet’s intermediate stage before Coordicide is complete. The main purpose of Chrysalis is to improve the usability of the current IOTA mainnet, for users and developers alike.
 
 ![](./assets/02_path_to.png)
