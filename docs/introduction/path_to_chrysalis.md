@@ -11,7 +11,7 @@ The benefit of this approach is that many of the protocol properties will remain
 The intended outcomes for Chrysalis are:
 
 - **Simpler transition to Coordicide**:
-  With Coordicide making significant progress, we want to ensure that all developers and companies that build and deploy on Chrysalis will have as smooth a transition to Coorcidide as possible.
+  With Coordicide making significant progress, we want to ensure that all developers and companies that build and deploy on Chrysalis will have as smooth a transition to Coordicide as possible.
 - **Substantial performance improvements**:
   With the changes introduced by Chrysalis, we will see a substantial improvement in the scalability and reliability of the IOTA Mainnet.
 - **Improved developer and user experience**:
