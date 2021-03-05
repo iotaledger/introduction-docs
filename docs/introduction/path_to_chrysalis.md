@@ -6,7 +6,7 @@ The IOTA mainnet has been operational since 2016 and the overall engineering str
 
 Progress on Coordicide research resulted in identifying many concepts that could already be implemented on the current IOTA mainnet, and provide significant value to users of the protocol before Coordicide. This led to the formalization of our engineering strategy around Chrysalis, a series of upgrades to the protocol that achieves production-readiness before Coordicide.
 
-The benefit of this approach is that many of the protocol properties will remain the same, or almost the same for Coordicide. That, together with a better set of developer tools, will make the transaction to Coordicide much simpler.
+The benefit of this approach is that many of the protocol properties will remain the same, or almost the same for Coordicide. That, together with a better set of developer tools, will make the transition to Coordicide much simpler.
 
 The intended outcomes for Chrysalis are:
 
