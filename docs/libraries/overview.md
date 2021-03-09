@@ -2,6 +2,8 @@
 
 **The IOTA client libraries allow you to easily integrate IOTA into your own applications. Choose a library to match your use case.**
 
+Official IOTA libraries serve as `one-source-code-of-truth` to IOTA users and providing binding to other programming languages. You can read more about core principles behind IOTA client libraries in the following blog [post](https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/).
+
 - [client-lib](client.md)
 - [wallet-lib](wallet.md)
 - [iota.js](https://github.com/iotaledger/iota.js)
