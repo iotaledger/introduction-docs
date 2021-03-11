@@ -4,57 +4,50 @@
 
 > Easily integrate IOTA with your exchange, custody solution, or product
 
-IOTA is built on an architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we ship many libraries to help developers implement IOTA into their applications.
+IOTA is built on an architecture that was designed to be the Backbone of the Internet of Things (IoT) environment of the future. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchains. With the Chrysalis update, we ship many [client libraries](../libraries/overview.md) to help developers implement IOTA into their applications:
+![layers](assets/wallet_rs_layers.svg)
 
 ## How do I implement it to my exchange?
 
-In wallet.rs, we use an account model, so you can create an account for each of your users. The other approach would be to use one account and generate many addresses, which you can link to your users in your database.
+In [wallet.rs](../libraries/wallet.html), we use an account model, so you can create an account for each of your users. The other approach would be to use one account and generate many addresses, which you can link to your users in your database. Since IOTA addresses in Chrysalis network are perfectly reusable, addresses can be mapped to your users in a clear and concise way.
 
-- Create an account for every user -> Multi Account approach
-- Create one account with many addresses -> Single account approach
+- Create an account for every user -> `Multi Account` approach
+- Create one account with many addresses -> `Single account` approach
 
-The library supports derivation for multiple accounts from a single seed. An account is simply a deterministic identifier from which multiple addresses can be further derived. The following illustrates the relationships between seed, accounts and addresses. The library allows consumers to assign a meaningful alias to each account. It also leaves the choice to users if they want to segregate their funds across multiple accounts or multiple addresses.
+The library supports derivation for multiple accounts from a single seed. An account is simply a deterministic identifier from which multiple addresses can be further derived. 
 
-```bash
-                                  Address 0
-                                /
-root --- Account 0 --- Address 1
-        \                        \
-         \                         Address 2
-          \                         
-           Account 1 --- Address 0
-                            \
-                              Address 1    
-```
+The following illustrates the relationships between seed, accounts and addresses. The library allows consumers to assign a meaningful alias to each account. In addition to that, generated individual accounts can be also looked up via generated addresses and so does not matter whether one know alias or address, the searching for the related account is very straightforward with `wallet.rs` library.
 
+It also leaves the choice to users if they want to segregate their funds across multiple accounts or multiple addresses. 
 
+![accounts](assets/accounts.svg)
 
-## Multi account approach
+### Multi account approach
 
 The multi account approach is to create an account for each individual user. The created accounts can then be linked to the internal user ids as an account alias and are clearly separated.
 
-## Single account approach
+### Single account approach
 
-The single account approach is to just use one account and create addresses for each individual user. The associated addresses are then linked to the internal user ids as an account alias and store who owns which address in the database. Most exchanges are more familiar with the single account approach and find it easier to use, implement, and backup.
+The single account approach is to just use one account and create addresses for each individual user. The associated addresses are then linked to the internal user ids and store who owns which address in the database. Most exchanges are more familiar with the single account approach and find it easier to use, implement, and backup.
 
 ## Implementation guide
 
 This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](./hub_guide.md).
 
 Features of the Wallet Library:
-
 - Secure seed management
 - Account management (with multiple accounts)
 - Confirmation monitoring
 - Deposit address monitoring
 - Backup and restore functionality
 
-
 ## How does it work?
 
-The Wallet Library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database. See the [full documentation here](https://wallet-lib.docs.iota.org).
+The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database.
 
-This example covers the *multi account approach*:
+See the [full documentation here](https://wallet-lib.docs.iota.org).
+
+The following examples cover the *multi account approach* using `NodeJS`:
 
 1. Setup the Wallet Library
 2. Create an account for each user
@@ -63,7 +56,9 @@ This example covers the *multi account approach*:
 5. Check the user balance
 6. Enable withdrawals
 
-If you are looking for other languages, read the [libraries overview here](/libraries/overview.md).
+If you are looking for other languages, read the [wallet library overview](/libraries/wallet.md).
+
+Anyway, since all `wallet.rs` bindings are based on core `wallet.rs` library, the approach is quite standardized regardless a programming language of your choice.
 
 ### 1. Setup the Wallet Library
 
