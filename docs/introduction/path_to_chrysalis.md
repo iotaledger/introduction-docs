@@ -6,12 +6,12 @@ The IOTA mainnet has been operational since 2016 and the overall engineering str
 
 Progress on Coordicide research resulted in identifying many concepts that could already be implemented on the current IOTA mainnet, and provide significant value to users of the protocol before Coordicide. This led to the formalization of our engineering strategy around Chrysalis, a series of upgrades to the protocol that achieves production-readiness before Coordicide.
 
-The benefit of this approach is that many of the protocol properties will remain the same, or almost the same for Coordicide. That, together with a better set of developer tools, will make the transaction to Coordicide much simpler.
+The benefit of this approach is that many of the protocol properties will remain the same, or almost the same for Coordicide. That, together with a better set of developer tools, will make the transition to Coordicide much simpler.
 
 The intended outcomes for Chrysalis are:
 
 - **Simpler transition to Coordicide**:
-  With Coordicide making significant progress, we want to ensure that all developers and companies that build and deploy on Chrysalis will have as smooth a transition to Coorcidide as possible.
+  With Coordicide making significant progress, we want to ensure that all developers and companies that build and deploy on Chrysalis will have as smooth a transition to Coordicide as possible.
 - **Substantial performance improvements**:
   With the changes introduced by Chrysalis, we will see a substantial improvement in the scalability and reliability of the IOTA Mainnet.
 - **Improved developer and user experience**:
@@ -62,7 +62,7 @@ Specifications are a major part of our new development process. All our new soft
 The Chrysalis changes are specified in the form of RFCs. You can find all the RFCs in the [protocol-rfcs repository](https://github.com/iotaledger/protocol-rfcs). The list of Chrysalis RFCs is:  
 
 - [Improved tip selection(URTS)](https://github.com/luca-moser/protocol-rfcs/blob/rfc-urts-tip-sel/text/0008-weighted-uniform-random-tip-selection/0008-weighted-uniform-random-tip-selection.md)
-- [Milestone selection](https://github.com/Wollac/protocol-rfcs/blob/milestone-merkle-validation/text/0012-milestone-merkle-validation/0012-milestone-merkle-validation.md)
+- [Milestone selection](https://github.com/iotaledger/protocol-rfcs/blob/milestone-merkle-validation-chrysalis-pt-2/text/0012-milestone-merkle-validation/0012-milestone-merkle-validation.md)
 - [White flag](https://github.com/thibault-martinez/protocol-rfcs/blob/rfc-white-flag/text/0005-white-flag/0005-white-flag.md)
 - [UTXO](https://github.com/hmoog/protocol-rfcs/blob/master/text/0011-utxo-model/0011-utxo-model.md)
 - [Reusable addresses(Ed25519)](https://github.com/Wollac/protocol-rfcs/blob/ed25519/text/0009-ed25519-signature-scheme/0009-ed25519-signature-scheme.md)
