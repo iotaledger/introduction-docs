@@ -4,10 +4,10 @@ authors = ["Sebastian Heusser <sebastian.heusser@iota.org>"]
 language = "en"
 multilingual = false
 src = "docs"
+
 [output.html]
 theme = "theme"
-additional-css = ["theme/css/custom.css"]
+additional-css = ["./theme/css/custom.css", "./theme/css/custom/header.css"]
 default-theme = "iota"
-additional-css = ["./theme/css/custom/header.css"]
 git-repository-url = "https://github.com/iotaledger/chrysalis-docs"
 git-repository-icon = "fa-github"
