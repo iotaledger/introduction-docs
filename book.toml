@@ -6,6 +6,7 @@ multilingual = false
 src = "docs"
 [output.html]
 theme = "theme"
+additional-css = ["theme/css/custom.css"]
 default-theme = "iota"
 additional-css = ["./theme/css/custom/header.css"]
 git-repository-url = "https://github.com/iotaledger/chrysalis-docs"
