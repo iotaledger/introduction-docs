@@ -243,8 +243,9 @@ touch .env
     // By design, the last address of each account is an unused address which can be used as deposit address
     const latestAddress = account.latestAddress()
 
-    console.log('Need a refill? Send it this address:', latestAddress)
+    console.log('Need a refill? Send it to this address:', latestAddress)
 </code></pre>
+<p>Fill the address with Testnet Tokens with the <a href="https://faucet.testnet.chrysalis2.com/">IOTA Faucet</a>.</p>
 <h3 id="4-listen-to-events"><a class="header" href="#4-listen-to-events">4. Listen to events</a></h3>
 <p>Fetch existing accounts and listen to transaction events coming into the account.</p>
 <pre><code class="language-javascript">    const { addEventListener } = require('@iota/wallet')
