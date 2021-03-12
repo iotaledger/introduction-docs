@@ -4,23 +4,26 @@
 
 Official IOTA libraries serve as `one-source-code-of-truth` to IOTA users and providing binding to other programming languages. You can read more about core principles behind IOTA client libraries in the following blog [post](https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/).
 
-- [client-lib](client.md)
-- [wallet-lib](wallet.md)
-- [iota.js](https://github.com/iotaledger/iota.js)
-- [iota.c](https://github.com/iotaledger/iota.c)
-- [iota.go](https://github.com/iotaledger/iota.go)
+
+- [client-lib](client.md): a general purpose IOTA client library for interacting with IOTA network (Tangle)
+- [wallet-lib](wallet.md): a stateful library specifically designed to be used for IOTA value-based transfers 
+- [iota.c](https://github.com/iotaledger/iota.c): a special-purpose library in C for embedded devices (with microcontrollers) covering a basic features of `client-lib` or `wallet-lib`
+- [iota.js](https://github.com/iotaledger/iota.js): an initial IOTA client library in Typescript that can be used in a web browser
+- [iota.go](https://github.com/iotaledger/iota.go): an initial IOTA client library in Golang
+
 
 <div class="iframe-wrapper">
 <iframe src="https://www.youtube.com/embed/N2VW3zJQmso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div>
+</div>
+
 
 All libraries are in active development. The libraries target the Chrysalis testnet and do not work with current IOTA mainnet.
 
 The client libraries with official support are maintained by the IOTA Foundation, their source code can be found on the [Official GitHub repository](https://github.com/iotaledger).
 
+
 ## Utilities
 
----------------
 #### **Developer Tools** ####    
 - [Official explorer](https://explorer.iota.org/chrysalis)
 - [Testnet faucet](https://faucet.testnet.chrysalis2.com/)

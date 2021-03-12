@@ -9,14 +9,16 @@ IOTA is built on an architecture that was designed to be the Backbone of the Int
 
 ## How do I implement it to my exchange?
 
-In [wallet.rs](../libraries/wallet.html), we use an account model, so you can create an account for each of your users. The other approach would be to use one account and generate many addresses, which you can link to your users in your database. Since IOTA addresses in Chrysalis network are perfectly reusable, addresses can be mapped to your users in a clear and concise way.
+In [wallet.rs](../libraries/wallet.html), we use an account model, so you can create an account for each of your users. The other approach would be to use one account and generate many addresses, which you can link to your users in your database.
+
+Since IOTA addresses in Chrysalis network are perfectly reusable, addresses can be mapped to your users in a clear and concise way.
 
 - Create an account for every user -> `Multi Account` approach
 - Create one account with many addresses -> `Single account` approach
 
 The library supports derivation for multiple accounts from a single seed. An account is simply a deterministic identifier from which multiple addresses can be further derived. 
 
-The following illustrates the relationships between seed, accounts and addresses. The library allows consumers to assign a meaningful alias to each account. In addition to that, generated individual accounts can be also looked up via generated addresses and so does not matter whether one know alias or address, the searching for the related account is very straightforward with `wallet.rs` library.
+The following illustrates the relationships between seed, accounts and addresses. The library allows consumers to assign a meaningful alias to each account. In addition to that, generated individual accounts can be also looked up via generated addresses and so does not matter whether alias or address are known, the searching for the related account is very straightforward affair with `wallet.rs` library.
 
 It also leaves the choice to users if they want to segregate their funds across multiple accounts or multiple addresses. 
 
@@ -43,11 +45,11 @@ Features of the Wallet Library:
 
 ## How does it work?
 
-The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database.
+The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database, however using the Stronghold component is highly recommended due to the most advanced level of security applied.
 
 See the [full documentation here](https://wallet-lib.docs.iota.org).
 
-The following examples cover the *multi account approach* using `NodeJS`:
+The following examples cover the *multi account approach* using `NodeJS` binding:
 
 1. Setup the Wallet Library
 2. Create an account for each user
@@ -58,7 +60,7 @@ The following examples cover the *multi account approach* using `NodeJS`:
 
 If you are looking for other languages, read the [wallet library overview](/libraries/wallet.md).
 
-Anyway, since all `wallet.rs` bindings are based on core `wallet.rs` library, the approach is quite standardized regardless a programming language of your choice.
+Anyway, since all `wallet.rs` bindings are based on core principles provided by `wallet.rs` library, the outlined approach is applicable regardless a programming language of your choice.
 
 ### 1. Setup the Wallet Library
 
