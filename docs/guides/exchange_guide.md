@@ -99,7 +99,7 @@ Import the Wallet Library and create a manager:
         storagePath: './storage'
     })
     manager.setStrongholdPassword(process.env.SH_PASSWORD)
-    manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())            // seed generation
+    manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic()) // seed generation
 ```
 
 Needless to say, once the storage is created, it is not needed to generate the seed any more (`manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())`). It has been already saved in the storage together with all account information.
@@ -115,20 +115,26 @@ Once the backend storage is created, individual accounts for individual users ca
     })
 ```
 
-Each account is related to a specific IOTA network (mainnet / devnet) which is referenced by a node properties, such as node url (in this example, it is Chrysalis testnet node balancer).
+Each account is related to a specific IOTA network (mainnet / devnet) which is referenced by a node properties, such as node url (in this example, it is Chrysalis testnet node balancer). For more information about all possible `clientOptions`, please refer to [Wallet NodeJs API Reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html).
 
-For more information about all possible `clientOptions`, please refer to [Wallet NodeJs API Reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html).
+`Alias` can be whatever fits to the given use case and should be unique. The `alias` is usually used to identify the given account later on. Each account is also represented by `index` which is incremented (by 1) every time new account is created. Any account can be then referred to via `index`, `alias` or one of its generated `addresses`.
 
-`Alias` can be whatever fits to the given use case and should be unique. The `alias` is usually used to identify the given account later on.
+Once an account has been created you get an instance of it using the following methods: `AccountManager.getAccount(accountId)`, `AccountManager.getAccountByAlias(alias)` or `AccountManager.getAccounts()`.
 
-Once an account has been created you get an instance of it using the following methods: `AccountManager.getAccount(accountId)`, `AccountManager.getAccountByAlias(alias)` or `AccountManager.getAccounts()`. Any account can be then referred to via `index`, `alias` or one of its generated `addresses`.
+The most common methods of `account` instance:
+* `account.alias()`: returns an alias of the given account
+* `account.listAddresses()`: returns list of addresses related to the account
+* `account.getUnusedAddress()`: returns a first unused address
+* `account.generateAddress()`: generate a new address for the address index incremented by 1
+* `account.balance()`: returns the balance for the given account
+* `account.sync()`: sync the account information with the tangle
 
 ### 3. Generate an user address to deposit funds
-`Wallet.rs` is a stateful library which means it caches all relevant information in the storage to provide performance benefits while dealing with many accounts/addresses on network.
+`Wallet.rs` is a stateful library which means it caches all relevant information in the storage to provide performance benefits while dealing with potentially many accounts/addresses.
 
 > Please note: sync the account info with the network regularly to be sure the storage reflects an actual state of the ledger (network) 
 
-Every account can own multiple addresses.
+Every account can own multiple addresses. Addresses are represented by `index` which is incremented (by 1) every time new address is created. Latest address is accessible via `account.latestAddress()`: 
 
 ```javascript
     // Always sync before account interactions
@@ -143,10 +149,14 @@ Every account can own multiple addresses.
 ```
 Fill the address with Testnet Tokens with the [IOTA Faucet](https://faucet.testnet.chrysalis2.com/).
 
+Addresses are of two types: `internal` and `public` (external). Each set of addresses is independent from each other and has independent `index` id. Addresses that are created by `account.generateAddress()` are indicated as `internal=false` (public). Internal addresses (`internal=true`) are so called `change` addresses and are used to /send the excess funds to (if requested). This approach is also known as a *BIP32 Hierarchical Deterministic wallet (HD Wallet)*.
+
+_Note: You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in IOTA 1.5 (Chrysalis) network._
 
 ### 4. Listen to events
+`Wallet.rs` library supports several events to be listened to. As soon as the given even occurs, a provided callback is triggered.
 
-Fetch existing accounts and listen to transaction events coming into the account.
+Example of fetching existing accounts and listen to transaction events coming into the account:
 
 ```javascript
     const { addEventListener } = require('@iota/wallet')
@@ -186,11 +196,13 @@ data: {
 }
 ```
 
+`accountId` can then be used to identify the given account via `AccountManager.getAccount(accountId)`.
+
 Read more about Events in the [API reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html#addeventlistenerevent-cb).
 
-### 5. Check the user balance
+### 5. Check the account balance
 
-Get the available account balance.
+Get the available account balance across all addresses of the given account:
 
 ```javascript
     // Always sync before account interactions
@@ -202,6 +214,7 @@ Get the available account balance.
 ```
 
 ### 6. Enable withdrawals
+Sending tokens is performed via `SyncedAccount` instance that is a results of `account.sync()` function:
 
 ```javascript
 
@@ -223,3 +236,10 @@ Get the available account balance.
     console.log("Check your message on https://explorer.iota.org/crysalis/message/", node_response.id)
 ```
 
+The full function signature is `SyncedAccount.send(address, amount[, options])`. Default options are perfectly fine and do the job done, however additional options can be provided if needed, such as `remainderValueStrategy`:
+* changeAddress(): Send the remainder value to an internal address
+* reuseAddress(): Send the remainder value to its original address
+
+`SyncedAccount.send()` function returns a `wallet message` that fully describes the given transaction. Especially `messageId` can later be used for checking a confirmation status.
+
+Individual messages related to the given account can be obtained via `account.listMessages()` function. 
