@@ -77,7 +77,7 @@ The Chrysalis changes are specified in the form of RFCs. You can find all the RF
 
 ### Wallet support
 
-The Trinity wallet is a popular IOTA wallet. With Chrysalis, we will release a new wallet implementation, [Firefly](https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/). The team has been working on a complete rethink of the wallet architecture. With a compeltely redesigned user experience. At its core will be a new wallet library written in Rust. The wallet library is designed to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library utilized by Firefly is Stronghold. Stronghold enables ultra-secure secret handling and storage.  
+The Trinity wallet is a popular IOTA wallet. With Chrysalis, we will release a new wallet implementation, [Firefly](https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/). The team has been working on a complete rethink of the wallet architecture. With a completely redesigned user experience. At its core will be a [new wallet library](../libraries/wallet.md) written in Rust. The wallet library is designed to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library utilized by Firefly is Stronghold. Stronghold enables ultra-secure secret handling and storage.  
 
 ### Infrastructure
 
