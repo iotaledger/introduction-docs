@@ -173,8 +173,9 @@
 <p>Chrysalis address (bech32 standard)</p>
 <pre><code class="language-bash=">iota11qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs
 </code></pre>
-<p>With the new wallet library, developers do not need to use a self-generated seed anymore. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are further secured with a password.</p>
-<p>You can read more about Stronghold on the <a href="https://stronghold.docs.iota.org">Stronghold docs page</a>.</p>
+<p>With the new <a href="../libraries/wallet.html">wallet library</a>, developers do not need to use a self-generated seed anymore. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are further secured with a password.</p>
+<p>More information about IOTA Wallet Library is available on <a href="https://wallet-lib.docs.iota.org">Wallet docs page</a> or in the <a href="exchange_guide.html">Exchange guide</a> that is mainly focused on value transactions.</p>
+<p>In addition to that, you can also read more about Stronghold on the <a href="https://stronghold.docs.iota.org">Stronghold docs page</a>.</p>
 <h2 id="deep-dive"><a class="header" href="#deep-dive">Deep dive</a></h2>
 <h3 id="dust-protection"><a class="header" href="#dust-protection">Dust protection</a></h3>
 <p>Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network with very low value transactions, which we call dust. To avoid this we only allow microtransaction below 1Mi (dust) of IOTA tokens to another address if you already have at least 1Mi as a dust allowance output on that address. The number of allowed dust outputs on an address is the amount of the dust allowance outputs divided by 100,000 and rounded down, i.e. 10 outputs for each 1 Mi deposited, with a maximum of 100 dust outputs in total.</p>
