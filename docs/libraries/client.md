@@ -9,6 +9,8 @@ The official client library for interacting with the IOTA Tangle allows you to:
 
 If you mainly intend to process value transfers we recommend you to use our stateful [wallet library](./wallet.md) instead.
 
+[IOTA Client Library full documentation](https://client-lib.docs.iota.org)
+
 ## Rust
 
 - [Getting Started](https://client-lib.docs.iota.org/libraries/rust/getting_started.html)

@@ -22,9 +22,11 @@ Chrysalis address (bech32 standard)
 iota11qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs
 ```
 
-With the new wallet library, developers do not need to use a self-generated seed anymore. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are further secured with a password.
+With the new [wallet library](../libraries/wallet.md), developers do not need to use a self-generated seed anymore. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are further secured with a password.
 
-You can read more about Stronghold on the [Stronghold docs page](https://stronghold.docs.iota.org).
+More information about IOTA Wallet Library is available on [Wallet docs page](https://wallet-lib.docs.iota.org) or in the [Exchange guide](exchange_guide.md) that is mainly focused on value transactions.
+
+In addition to that, you can also read more about Stronghold on the [Stronghold docs page](https://stronghold.docs.iota.org).
 
 
 ## Deep dive
