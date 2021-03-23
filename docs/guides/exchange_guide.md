@@ -162,7 +162,7 @@ Addresses are of two types: `internal` and `public` (external):
 _Note: You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in IOTA 1.5 (Chrysalis) network._
 
 ### 4. Listen to events
-`Wallet.rs` library supports several events to be listened to. As soon as the given even occurs, a provided callback is triggered.
+`Wallet.rs` library supports several events to be listened to. As soon as the given event occurs, a provided callback is triggered.
 
 Example of fetching existing accounts and listen to transaction events coming into the account:
 
