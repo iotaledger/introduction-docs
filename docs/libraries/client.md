@@ -7,7 +7,7 @@ The official client library for interacting with the IOTA Tangle allows you to:
 - Generate addresses
 - Interact with an IOTA node
 
-If you mainly intend to process value transfers we recommend you to use our stateful [wallet library](./wallet.md) instead.
+If you mainly intend to process value transfers, we recommend you use our stateful [wallet library](./wallet.md) instead.
 
 [IOTA Client Library full documentation](https://client-lib.docs.iota.org)
 

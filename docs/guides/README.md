@@ -6,13 +6,13 @@
 
 
 ## IOTA 1.5 (Chrysalis) in a nutshell
-* IOTA network uses a DAG (Directed Acyclic Graph) to store its transactions. Each transaction can reference up to 8 parent transactions
-* There is a breaking change moving from IOTA 1.0 to IOTA 1.5 (Chrysalis). IOTA address was originally based on WOTS signature scheme (81 trytes) and it has been replaced by a Ed25519 signature scheme
-* In contrast to IOTA 1.0, IOTA 1.5 addresses are perfectly reusable: so even if one spent funds from the given address it can be used again
+* IOTA network uses a DAG (Directed Acyclic Graph) to store its transactions. Each transaction can reference up to 8 parent transactions.
+* There is a breaking change moving from IOTA 1.0 to IOTA 1.5 (Chrysalis). IOTA address was originally based on WOTS signature scheme (81 trytes) and it has been replaced by a Ed25519 signature scheme.
+* In contrast to IOTA 1.0, IOTA 1.5 addresses are perfectly reusable;  even if one spends funds from the given address it can be used again
 * There are new [client libraries](../libraries/overview.md) developed that serve as `one-source-code-of-truth` to IOTA users and providing binding to other programming languages 
 
 ### IOTA 1.5 address anatomy
-IOTA address is based on Ed25519 signature scheme and it is usually represented by Bech32 (checksummed base32) format string of 64 characters:
+The IOTA address is based on the Ed25519 signature scheme and it is usually represented by Bech32 (checksummed base32) format string of 64 characters:
 
 <table>
     <thead>
@@ -48,4 +48,5 @@ IOTA address is based on Ed25519 signature scheme and it is usually represented 
     </tbody>
 </table>
 
-More details: [RFC - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md)
+For furthr details see the [RFC - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md).
+

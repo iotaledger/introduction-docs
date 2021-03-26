@@ -1,8 +1,8 @@
 # Libraries
 
-**The IOTA client libraries allow you to easily integrate IOTA into your own applications. Choose a library to match your use case.**
+**The IOTA client libraries allow you to easily integrate IOTA into your own applications. You can choose a library to match your use case.**
 
-Official IOTA libraries serve as `one-source-code-of-truth` to IOTA users and providing binding to other programming languages. You can read more about core principles behind IOTA client libraries in the following blog [post](https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/).
+Official IOTA libraries serve as `one-source-code-of-truth` to IOTA users and provide binding to other programming languages. You can read more about core principles behind IOTA client libraries in the following blog [post](https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/).
 
 
 - [client-lib](client.md): a general purpose IOTA client library for interacting with IOTA network (Tangle)
@@ -24,8 +24,9 @@ The client libraries with official support are maintained by the IOTA Foundation
 
 ## Utilities
 
-#### **Developer Tools** ####    
+#### **Developer tools** ####    
 - [Official explorer](https://explorer.iota.org/chrysalis)
 - [Testnet faucet](https://faucet.testnet.chrysalis2.com/)
 - [Commandline wallet](https://github.com/iotaledger/cli-wallet)
+
 ---------------
