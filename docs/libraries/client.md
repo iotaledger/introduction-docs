@@ -36,13 +36,13 @@ If you mainly intend to process value transfers, we recommend you use our statef
 
 ## Python
 
-- [Getting Started](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python)
+- [Getting Started](https://client-lib.docs.iota.org/libraries/python/getting_started.html)
   Getting Started with Python and the IOTA Client Library.
-- [Examples](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python/examples)
+- [Examples](https://client-lib.docs.iota.org/libraries/python/examples.html)
   Find starting points or inspiration in the examples.
 - [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python)
   Browse through the code and learn what's happening behind the scenes. Pull requests are very welcome!
-- [API Documentation](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python)
+- [API Documentation](https://client-lib.docs.iota.org/libraries/python/api_reference.html)
   The IOTA Client Library Python API Documentation.
 
 ## C
