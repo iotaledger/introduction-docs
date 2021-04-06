@@ -167,13 +167,13 @@
 <li>How to backup your account</li>
 <li>How to restore from a backup</li>
 <li>How to export a user's Stronghold</li>
-<li>How to rekey a Stronghold / password rotation?</li>
+<li>How to rekey a Stronghold/password rotation?</li>
 <li>Do's and don'ts</li>
 </ul>
 <h2 id="security-checklist"><a class="header" href="#security-checklist">Security checklist</a></h2>
 <ul>
 <li><input disabled="" type="checkbox"/>
-I used Stronghold</li>
+I use Stronghold</li>
 <li><input disabled="" type="checkbox"/>
 I use a strong password (32 character length, Shannon Entropy ~ 4.0) for encrypting the stronghold</li>
 <li><input disabled="" type="checkbox"/>
@@ -190,12 +190,12 @@ I use a linux based server (best memory security)</li>
 My server is isolated behind a DMZ</li>
 </ul>
 <h2 id="how-to-backup-your-account"><a class="header" href="#how-to-backup-your-account">How to backup your account</a></h2>
-<p>A simple copy of the stronghold.snapshot file works as a backup. (e.g. a daily cronjob rsync / scp with a datetime suffix for example).</p>
+<p>A simple copy of the stronghold.snapshot file works as a backup (e.g. a daily cronjob rsync / scp with a datetime suffix for example).</p>
 <h2 id="how-to-restore-from-a-backup"><a class="header" href="#how-to-restore-from-a-backup">How to restore from a backup</a></h2>
 <p>Simply place a snapshot file in your directory that wallet.rs expects.</p>
-<h2 id="how-to-export-a-users-stronghold"><a class="header" href="#how-to-export-a-users-stronghold">How to export a user's stronghold?</a></h2>
+<h2 id="how-to-export-a-users-stronghold"><a class="header" href="#how-to-export-a-users-stronghold">How to export a user's stronghold</a></h2>
 <p>You can create a new Stronghold snapshot on the fly to allow a user to leave your service and retain their key.</p>
-<h2 id="how-to-rekey-a-strongholdpassword-rotation"><a class="header" href="#how-to-rekey-a-strongholdpassword-rotation">How to rekey a Stronghold/password rotation?</a></h2>
+<h2 id="how-to-rekey-a-strongholdpassword-rotation"><a class="header" href="#how-to-rekey-a-strongholdpassword-rotation">How to rekey a Stronghold/password rotation</a></h2>
 <p>The procedure for changing a Stronghold password is &quot;simple&quot; in that you read a snapshot into a vault and then write it out with a new encryption password. <a href="https://github.com/iotaledger/wallet.rs/blob/d1b8893d73aae35dfcf7c5c8006e2177988d25d0/src/stronghold.rs#L436-L451">See this code for the source.</a></p>
 <p>Please note: for obvious reasons, old snapshot backups will not be &quot;rekeyed&quot;, so you have to track your old passwords. </p>
 <h2 id="dos-and-donts"><a class="header" href="#dos-and-donts">Do's and don'ts</a></h2>

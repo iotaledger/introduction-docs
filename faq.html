@@ -163,11 +163,11 @@
                     <main>
                         <h1 id="faq"><a class="header" href="#faq">FAQ</a></h1>
 <h2 id="which-libraries-are-available-for-chrysalis"><a class="header" href="#which-libraries-are-available-for-chrysalis">Which libraries are available for Chrysalis?</a></h2>
-<p>At this time, there are a handful of libraries available for Chrysalis which can be found below:</p>
+<p>At this time, there are a handful of libraries available for Chrysalis which are outlined below:</p>
 <p>A low level library called iota.rs which is a client library meant to connect to a IOTA node for core interactions with the Tangle. It is written in Rust and there are currently two bindings for Node.js and Python allowing you to use this library from those languages as well. </p>
 <p>For value transactions, there is the wallet.rs library which provides a stateful way to manage IOTA coins for one or multiple accounts. It is also written in Rust and there are currently two bindings for Node.js and Python. </p>
 <p>Additionally, there is also a native C (<a href="https://github.com/iotaledger/iota.c">iota.c</a>) and an alternative, native javascript (<a href="https://github.com/iotaledger/iota.js/tree/chrysalis">iota.js</a>) client library. </p>
-<h2 id="what-is-dust-protection-and-how-does-it-work"><a class="header" href="#what-is-dust-protection-and-how-does-it-work">What is Dust Protection and how does it work?</a></h2>
+<h2 id="what-is-dust-protection-and-how-does-it-work"><a class="header" href="#what-is-dust-protection-and-how-does-it-work">What is Dust protection and how does it work?</a></h2>
 <p>Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network with very low value transactions, which we call dust. To avoid this we only allow microtransaction below 1Mi of IOTA tokens to another address if you already have at least 1Mi on that address.</p>
 <p>You can read more about Dust Protection <a href="https://github.com/iotaledger/protocol-rfcs/pull/32">in the RFC here</a>.</p>
 <h2 id="whats-happening-with-coordicide"><a class="header" href="#whats-happening-with-coordicide">What's happening with Coordicide?</a></h2>
@@ -175,7 +175,7 @@
 <h2 id="when-is-a-transaction-on-the-network-considered-finalirreversible"><a class="header" href="#when-is-a-transaction-on-the-network-considered-finalirreversible">When is a transaction on the network considered final/irreversible?</a></h2>
 <p>Confirmation times on the new network are on average around 10 seconds. Once a transaction is set to confirm it’s final transaction, you don’t have block confirmations like with blockchain.</p>
 <h2 id="hornet-or-bee-which-node-software-should-i-use"><a class="header" href="#hornet-or-bee-which-node-software-should-i-use">Hornet or Bee? Which node software should I use?</a></h2>
-<p>You can pick either Bee (Rust based) or Hornet (Go based), we currently recommend Hornet since it’s the more complete version of the node software, Bee is still missing some optional features you might wish to use.</p>
+<p>You can pick either Bee (Rust based) or Hornet (Go based). We currently recommend Hornet since it’s the more complete version of the node software, Bee is still missing some optional features you might wish to use.</p>
 
                     </main>
 

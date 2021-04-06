@@ -164,90 +164,90 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="welcome"><a class="header" href="#welcome">Welcome</a></h1>
-<p>This page is about the fundamental changes to the IOTA protocol which will be deployed in 2021 in a release called Chrysalis.</p>
+<p>This page outlines the fundamental changes to the IOTA protocol which will be deployed in 2021 in a release called Chrysalis.</p>
 <p><img src="introduction/./assets/01_butterfly.png" alt="" /></p>
 <h1 id="what-is-chrysalis"><a class="header" href="#what-is-chrysalis">What is Chrysalis</a></h1>
-<p>The objective of the IOTA Foundation is to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. This is achieved by an intermediate update called <code>Chrysalis</code>. This post explains what the Chrysalis upgrade entails.</p>
+<p>The objective of the IOTA Foundation is to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. This will be achieved by an intermediate update called <code>Chrysalis</code>. This post explains what the Chrysalis upgrade entails.</p>
 <p><img src="introduction/./assets/what_is_chrysalis/00.gif" alt="" /></p>
 <p>A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis is the mainnet’s intermediate stage before Coordicide is complete. The main purpose of Chrysalis is to improve the usability of the current IOTA mainnet, for users and developers alike.</p>
 <p><img src="introduction/./assets/02_path_to.png" alt="" /></p>
 <p>Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless DLTs? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives differ from those of regular network users. Changes to throughput and network latencies can disrupt the fee market the miners rely on. This in turn makes them likely to object to network upgrades as it affects their bottom line.</p>
-<p>In IOTA, validators and users are one and the same. There is no conflict of interests between parties with different motivations, meaning a much smoother path to network improvements. This is why we are able to incrementally and smoothly upgrade the network before Coordicide.</p>
+<p>In IOTA, validators and users are one and the same. There is no conflict of interests between parties with different motivations, meaning there is a much smoother path to network improvements. This is why we are able to incrementally and smoothly upgrade the network before Coordicide.</p>
 <p>What are the specific Chrysalis upgrades?</p>
 <h2 id="white-flag-approach"><a class="header" href="#white-flag-approach">White-flag approach</a></h2>
 <p><img src="introduction/../docs/assets/what_is_chrysalis/01.png" alt="" />
-<a href="https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233">White-flag approach</a> for calculating balances. A simpler, conflict-ignoring approach that improves the speed and efficiency of tip selection, eliminates many network attacks, and significantly reduces the need for reattachments.</p>
+<a href="https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233">The White-flag approach</a> which is used for calculating balances. It is a simpler, conflict-ignoring approach that improves the speed and efficiency of tip selection, eliminates many network attacks, and significantly reduces the need for reattachments.</p>
 <h2 id="new-milestone-selection-algorithm"><a class="header" href="#new-milestone-selection-algorithm">New milestone selection algorithm</a></h2>
 <p><img src="introduction/./assets/what_is_chrysalis/02.png" alt="" />
-<a href="https://iota.cafe/t/coordinator-improvements/310">New milestone selection algorithm for the coordinator</a>, focused on allowing the network to support much more confirmed transactions per second (CTPS) than before with higher computational efficiency.</p>
+<a href="https://iota.cafe/t/coordinator-improvements/310">A new milestone selection algorithm for the coordinator</a>, that focuses on allowing the network to support much more confirmed transactions per second (CTPS) than before with higher computational efficiency.</p>
 <h2 id="urts-tip-selection"><a class="header" href="#urts-tip-selection">URTS tip selection</a></h2>
 <p><img src="introduction/./assets/what_is_chrysalis/03.png" alt="" />
-New <a href="https://github.com/iotaledger/protocol-rfcs/blob/master/text/0008-uniform-random-tip-selection/0008-uniform-random-tip-selection.md">Uniform random tip selection</a> in node software. Significantly faster and more efficient than the previous tip selection algorithm.</p>
+A new <a href="https://github.com/iotaledger/protocol-rfcs/blob/master/text/0008-uniform-random-tip-selection/0008-uniform-random-tip-selection.md">Uniform random tip selection</a> in node software. It is significantly faster and more efficient than the previous tip selection algorithm.</p>
 <h2 id="ed25519-signature-scheme"><a class="header" href="#ed25519-signature-scheme">Ed25519 signature scheme</a></h2>
 <p><img src="introduction/./assets/what_is_chrysalis/04.png" alt="" />
-<a href="https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md">The Ed25519 signature scheme</a> is added to the network, replacing the current Winternitz one time signature scheme (W-OTS) signature scheme. Using an EdDSA signature scheme allows the protocol and clients using the protocol to run more efficiently on established hardware. Unlike W-OTS, the scheme also allows for the re-use of private keys, and with that introduces reusable addresses to the protocol. This change also dramatically reduces the transaction size, saving network bandwidth and processing time.</p>
+<a href="https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md">The Ed25519 signature scheme</a> has been added to the network, replacing the current Winternitz one time signature scheme (W-OTS) signature scheme. Using an EdDSA signature scheme allows the protocol and clients using the protocol to run more efficiently on established hardware. Unlike W-OTS, the scheme also allows for the re-use of private keys, and, with that, introduces reusable addresses to the protocol. This change also dramatically reduces the transaction size, saving network bandwidth and processing time.</p>
 <h2 id="atomic-transactions"><a class="header" href="#atomic-transactions">Atomic transactions</a></h2>
 <p><img src="introduction/./assets/what_is_chrysalis/05.png" alt="" />
-<a href="https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md">Atomic transactions</a> move the protocol from the current, complicated, bundle construct and use simpler atomic transactions instead. This results in much simpler development, and more adaptable and maintainable code of the core software. In addition, atomic transactions reduce network overhead, reduce transaction validation and signature verification load, and improve spam protection and congestion control.</p>
+<a href="https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md">Atomic transactions</a> that move the protocol from the current, complicated, bundle construct and use simpler atomic transactions instead. This results in much simpler development and more adaptable and maintainable code of the core software. In addition, atomic transactions reduce network overhead, reduce transaction validation and signature verification load, and improve spam protection and congestion control.</p>
 <h2 id="switch-to-utxo-model"><a class="header" href="#switch-to-utxo-model">Switch to UTXO Model</a></h2>
 <p><img src="introduction/./assets/what_is_chrysalis/06.png" alt="" />
-<a href="https://iota.cafe/t/switching-to-utxo-model-for-balances-colored-coins-easier-conflict-resolution/229">Switch to UTXO model</a> from the current account model. Every coin on an address is then uniquely identifiable and every spend names the exact coins that it wants to move. This allows for faster and more exact conflict handling and improves resilience and security of the protocol. In addition, switching to UTXO makes other functionalities, such as colored tokens, on the protocol possible in the future.</p>
+<a href="https://iota.cafe/t/switching-to-utxo-model-for-balances-colored-coins-easier-conflict-resolution/229">A switch to the UTXO model</a> from the current account model. Every coin on an address becomes uniquely identifiable and every spend names the exact coins that it wants to move. This allows for faster and more exact conflict handling and improves resilience and security of the protocol. In addition, switching to UTXO makes other functionalities, such as colored tokens, on the protocol possible in the future.</p>
 <h2 id="internal-binary-representation"><a class="header" href="#internal-binary-representation">Internal Binary Representation</a></h2>
 <p><img src="introduction/./assets/what_is_chrysalis/07.png" alt="" />
-<a href="https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md">Switch to an internal binary representation of the trinary transaction</a>. This allows us to work on binary data, for validation, IO and other processing without the current reliance on binary-ternary conversions as in the pre-Chrysalis software node software. The switch to binary transactions further reduces the transaction size, saving network bandwidth and processing time.</p>
+<a href="https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md">A switch to an internal binary representation of the trinary transaction</a>. This allows us to work on binary data for validation, IO, and other processing without the current reliance on binary-ternary conversions as in the pre-Chrysalis software node software. The switch to binary transactions further reduces the transaction size, saving network bandwidth and processing time.</p>
 <h2 id="new-node-api-and-client-libraries"><a class="header" href="#new-node-api-and-client-libraries">New node API and client libraries</a></h2>
 <p>With Chrysalis, we wanted to offer a more standard API on both the node and client library level. Node implementations provide a completely redesigned <a href="https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml">RESTful</a> and <a href="https://playground.asyncapi.io/?load=https://raw.githubusercontent.com/luca-moser/protocol-rfcs/rfc/node-event-api/text/0033-node-event-api/0033-node-event-api.yml">eventful</a> API implementations.</p>
-<p>While our <a href="introduction/../libraries/overview.html">client libraries</a> provide high level abstractions that allow developers to build solutions that are easier to develop, and cheaper to maintain.</p>
+<p>Our <a href="introduction/../libraries/overview.html">client libraries</a> provide high level abstractions that allow developers to build solutions that are easier to develop and cheaper to maintain.</p>
 <h1 id="path-to-chrysalis"><a class="header" href="#path-to-chrysalis">Path to Chrysalis</a></h1>
 <p>One of the IOTA Foundation’s primary roles is defining and delivering on a development roadmap that aligns with the Foundation's strategy to reach production-readiness and adoption.</p>
 <p>The IOTA mainnet has been operational since 2016 and the overall engineering strategy evolved significantly based on industry demand and feedback.</p>
-<p>Progress on Coordicide research resulted in identifying many concepts that could already be implemented on the current IOTA mainnet, and provide significant value to users of the protocol before Coordicide. This led to the formalization of our engineering strategy around Chrysalis, a series of upgrades to the protocol that achieves production-readiness before Coordicide.</p>
-<p>The benefit of this approach is that many of the protocol properties will remain the same, or almost the same for Coordicide. That, together with a better set of developer tools, will make the transition to Coordicide much simpler.</p>
+<p>Progress in Coordicide research has resulted in identifying many concepts that could already be implemented on the current IOTA mainnet and provides significant value to users of the protocol before Coordicide. This led to the formalization of our engineering strategy around Chrysalis: a series of upgrades to the protocol that achieves production-readiness before Coordicide.</p>
+<p>The benefit of this approach is that many of the protocol properties will remain the same, or almost the same, for Coordicide. That, together with a better set of developer tools, will make the transition to Coordicide much simpler.</p>
 <p>The intended outcomes for Chrysalis are:</p>
 <ul>
-<li><strong>Simpler transition to Coordicide</strong>:
+<li><strong>Simpler transition to Coordicide</strong>
 With Coordicide making significant progress, we want to ensure that all developers and companies that build and deploy on Chrysalis will have as smooth a transition to Coordicide as possible.</li>
-<li><strong>Substantial performance improvements</strong>:
+<li><strong>Substantial performance improvements</strong>
 With the changes introduced by Chrysalis, we will see a substantial improvement in the scalability and reliability of the IOTA Mainnet.</li>
-<li><strong>Improved developer and user experience</strong>:
-The new protocol features, new libraries, and the new wallet will make IOTA one of the best platforms to build on, removing the friction which developers experience today. While allowing solutions built on top of the protocol to provide better user experience.</li>
-<li><strong>Accelerated adoption</strong>:
-Chrysalis will make IOTA production-ready. A stable protocol, with a reliable set of developer tools and frameworks that will enable Startups, Corporations, and Governments to develop and launch products powered by IOTA.</li>
+<li><strong>Improved developer and user experience</strong>
+The new protocol features, new libraries, and the new wallet will make IOTA one of the best platforms to build on, removing the friction which developers experience today while allowing solutions built on top of the protocol to provide better user experience.</li>
+<li><strong>Accelerated adoption</strong>
+Chrysalis will make IOTA production-ready; becoming a stable protocol, with a reliable set of developer tools and frameworks that will enable startups, corporations, and governments to develop and launch products powered by IOTA.</li>
 </ul>
-<h2 id="the-stages-to-chrysalis"><a class="header" href="#the-stages-to-chrysalis">The Stages to Chrysalis</a></h2>
+<h2 id="the-stages-to-chrysalis"><a class="header" href="#the-stages-to-chrysalis">The stages to Chrysalis</a></h2>
 <p><img src="introduction//Users/charlesthompson/chrysalis-docs/docs/introduction/assets/path_to_chrysalis/01.png" alt="" /></p>
-<p>The Chrysalis upgrade is a complex undertaking. We have to coordinate a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. In addition to the core Node software, we also need to update our Wallet software, our Libraries, and the entire Infrastructure.</p>
+<p>The Chrysalis upgrade is a complex undertaking. We are coordinating a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. In addition to the core node software, we also need to update our wallet software, our libraries, and the entire infrastructure.</p>
 <p>Another important requirement is the ease of transition to the future Coordicide network. By carefully planning the breaking changes introduced along the way, and providing support in our developer tools, we will ensure that our growing ecosystem of developers, startups, and corporations can reliably develop and launch new innovative products on IOTA.</p>
 <p>The plan for implementing Chrysalis is divided into two phases.</p>
-<p><strong>The first phase</strong> consisted of improved tip selection (URTS), Milestone selection, and White flag. These were implemented in the node software gradually. This phase required an upgrade of all nodes, including the coordinator node, and did not require a snapshot.</p>
+<p><strong>The first phase</strong> consisted of improved tip selection (URTS), milestone selection, and White flag. These were implemented in the node software gradually. This phase required an upgrade of all nodes, including the coordinator node, and did not require a snapshot.</p>
 <p>The first phase of Chrysalis resulted in:</p>
 <ul>
-<li>Transaction confirmation times of around 10 seconds.</li>
-<li>Transactions rarely needing reattachment.</li>
-<li>A substantial TPS increase.</li>
-<li>Performance and reliability improvements for nodes.</li>
+<li>Transaction confirmation times of around 10 seconds</li>
+<li>Transactions rarely needing reattachment</li>
+<li>A substantial TPS increase</li>
+<li>Performance and reliability improvements for nodes</li>
 </ul>
-<p><strong>The second phase</strong> of Chrysalis consists of UTXO, Atomic Transactions, Reusable addresses (Ed25519), transition to a binary transaction layout, and a new set of client libraries and developer tools. These represent significant changes to the core protocol and the way transactions are structured. Once everything has been tested, validated and audited, the Foundation will deploy a new Chrysalis network. The upgrade will consist of an extended period when the current, legacy network remains operations. This allows users, exchanges, and partners to migrate to the Chrysalis network at will. The migration is not time constrained. We currently estimate the Chrysalis upgrade to take place at the end of Q1 2021.</p>
+<p><strong>The second phase</strong> of Chrysalis consists of adopting and/or implementing UTXO, atomic transactions, reusable addresses (Ed25519), a transition to a binary transaction layout, and a new set of client libraries and developer tools. These represent significant changes to the core protocol and the way transactions are structured. Once everything has been tested, validated, and audited, the Foundation will deploy a new Chrysalis network. The upgrade will consist of an extended period when the current, legacy network remains operations. This allows users, exchanges, and partners to migrate to the Chrysalis network at will. The migration is not time constrained. We currently estimate the Chrysalis upgrade to take place at the end of Q1 2021.</p>
 <p>The second phase of Chrysalis consists of:</p>
 <ul>
-<li>Reusable addresses and support for more standard cryptography (EdDSA), making efficient hardware support for all major architectures possible.</li>
-<li>Simplified transaction layout and a reduction in transaction size, further increasing performance and efficiency.</li>
-<li>Significant improvements to the usability and reliability of IOTA.</li>
-<li>A switch to a UTXO based model from the current account model.</li>
+<li>Reusable addresses and support for more standard cryptography (EdDSA), making efficient hardware support for all major architectures possible</li>
+<li>A simplified transaction layout and a reduction in transaction size, further increasing performance and efficiency</li>
+<li>Significant improvements to the usability and reliability of IOTA</li>
+<li>A switch to a UTXO based model from the current account model</li>
 </ul>
-<p>The introduction of reusable addresses is an important change for token holders. This will vastly improve IOTA’s usability and make integration into new exchanges, wallets, and payment systems much simpler. A new wallet, called Firefly, will be released with Chrysalis. The wallet will allow token holders to transition from the current WOTS address scheme to the new EdDSA scheme.</p>
+<p>The introduction of reusable addresses is an important change for token holders. This will vastly improve IOTA’s usability and make integration into new exchanges, wallets, and payment systems much simpler. A new wallet, called Firefly, will be released with Chrysalis. This wallet will allow token holders to transition from the current WOTS address scheme to the new EdDSA scheme.</p>
 <p>Our goal is to make this transition as seamless as possible for everyone in the IOTA ecosystem. This includes a variety of improvements and updates to our libraries and software, as well as training and educational sessions for our partners.</p>
-<h3 id="from-plan-to-action"><a class="header" href="#from-plan-to-action">From Plan to Action</a></h3>
+<h3 id="from-plan-to-action"><a class="header" href="#from-plan-to-action">From plan to action</a></h3>
 <p>With Chrysalis, we had to make decisions on how to best implement all the upcoming changes, ensuring a correct and timely implementation. What follows is an overview of the various components we are working on to successfully implement this update.</p>
-<h3 id="specification-and-standardization"><a class="header" href="#specification-and-standardization">Specification and Standardization</a></h3>
-<p>Specifications are a major part of our new development process. All our new software projects (Node software, Wallet, Identity, Access, Streams, etc.) is based on vetted specifications. Specifications make it possible for external parties to follow a project’s intended functionality, for example for audit purposes, or develop their own implementations in different languages.</p>
-<p>The Chrysalis changes are specified in the form of RFCs. You can find all the RFCs in the <a href="https://github.com/iotaledger/protocol-rfcs">protocol-rfcs repository</a>. The list of Chrysalis RFCs is:</p>
+<h3 id="specification-and-standardization"><a class="header" href="#specification-and-standardization">Specification and standardization</a></h3>
+<p>Specifications are a major part of our new development process. All our new software projects (Node software, Wallet, Identity, Access, Streams, etc.) are based on vetted specifications. Specifications make it possible for external parties to follow a project’s intended functionality, for example for audit purposes, or develop their own implementations in different languages.</p>
+<p>The Chrysalis changes are specified in the form of RFCs. You can find all the RFCs in the <a href="https://github.com/iotaledger/protocol-rfcs">protocol-rfcs repository</a>. The list of Chrysalis RFCs includes:</p>
 <ul>
-<li><a href="https://github.com/luca-moser/protocol-rfcs/blob/rfc-urts-tip-sel/text/0008-weighted-uniform-random-tip-selection/0008-weighted-uniform-random-tip-selection.md">Improved tip selection(URTS)</a></li>
+<li><a href="https://github.com/luca-moser/protocol-rfcs/blob/rfc-urts-tip-sel/text/0008-weighted-uniform-random-tip-selection/0008-weighted-uniform-random-tip-selection.md">Improved tip selection (URTS)</a></li>
 <li><a href="https://github.com/iotaledger/protocol-rfcs/blob/milestone-merkle-validation-chrysalis-pt-2/text/0012-milestone-merkle-validation/0012-milestone-merkle-validation.md">Milestone selection</a></li>
 <li><a href="https://github.com/thibault-martinez/protocol-rfcs/blob/rfc-white-flag/text/0005-white-flag/0005-white-flag.md">White flag</a></li>
 <li><a href="https://github.com/hmoog/protocol-rfcs/blob/master/text/0011-utxo-model/0011-utxo-model.md">UTXO</a></li>
-<li><a href="https://github.com/Wollac/protocol-rfcs/blob/ed25519/text/0009-ed25519-signature-scheme/0009-ed25519-signature-scheme.md">Reusable addresses(Ed25519)</a></li>
+<li><a href="https://github.com/Wollac/protocol-rfcs/blob/ed25519/text/0009-ed25519-signature-scheme/0009-ed25519-signature-scheme.md">Reusable addresses (Ed25519)</a></li>
 <li><a href="https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md">Message object</a></li>
 <li><a href="https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md">Binary transaction layout</a></li>
 <li><a href="https://github.com/Wollac/protocol-rfcs/blob/message-pow/text/0024-message-pow/0024-message-pow.md">Message proof of work</a></li>
@@ -258,11 +258,11 @@ Chrysalis will make IOTA production-ready. A stable protocol, with a reliable se
 <li><a href="https://playground.asyncapi.io/?load=https://raw.githubusercontent.com/luca-moser/protocol-rfcs/rfc/node-event-api/text/0033-node-event-api/0033-node-event-api.yml">Eventful node API</a></li>
 </ul>
 <h3 id="wallet-support"><a class="header" href="#wallet-support">Wallet support</a></h3>
-<p>The Trinity wallet is a popular IOTA wallet. With Chrysalis, we will release a new wallet implementation, <a href="https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/">Firefly</a>. The team has been working on a complete rethink of the wallet architecture. With a completely redesigned user experience. At its core will be a <a href="introduction/../libraries/wallet.html">new wallet library</a> written in Rust. The wallet library is designed to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library utilized by Firefly is Stronghold. Stronghold enables ultra-secure secret handling and storage.</p>
+<p>The Trinity wallet is a popular IOTA wallet. With Chrysalis, we will release a new wallet implementation, <a href="https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/">Firefly</a>. The team has been working on a complete reevaluation of the wallet architecture. With a completely redesigned user experience. At its core will be a <a href="introduction/../libraries/wallet.html">new wallet library</a> written in Rust. The wallet library is designed to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library utilized by Firefly is Stronghold; Stronghold enables ultra-secure secret handling and storage.</p>
 <h3 id="infrastructure"><a class="header" href="#infrastructure">Infrastructure</a></h3>
 <p>Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can read more about the networks and how you can participate in our <a href="https://docs.iota.org/docs/getting-started/1.1/networks/overview">documentation</a>.</p>
-<p>While the current Mainnet will be replaced by a new network, it will remain operational for an extended period of time. For the purposes of non-time-constrained transition of projects deployed on Devnet, the Devnet will only be upgraded later after the Chrysalis release.</p>
-<p>The Chrysalis testnet has been operational since December. And we encourage everyone to use it to build and test their solutions before the official launch of Chrysalis.</p>
+<p>While the current Mainnet will be replaced by a new network, it will remain operational for an extended period of time. For the purposes of non-time-constrained transition of projects deployed on Devnet, the Devnet will only be upgraded after the Chrysalis release.</p>
+<p>The Chrysalis testnet has been operational since December and we encourage everyone to use it to build and test their solutions before the official launch of Chrysalis.</p>
 <h3 id="chrysalis-testnet"><a class="header" href="#chrysalis-testnet">Chrysalis Testnet</a></h3>
 <p>Nodes deployed to the testnet can be queried using a load balancer at:</p>
 <ul>
@@ -279,24 +279,24 @@ Chrysalis will make IOTA production-ready. A stable protocol, with a reliable se
 <h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
 <p>Chrysalis is the most promising series of upgrades made to IOTA yet. It is a major step for our production-readiness, with increased transaction throughput, network stability, improved usability, and enables new features and use cases. The upcoming weeks and months are some of the most exciting in IOTA’s history. We are on a clear path towards IOTA’s adoption as an enabling technology for IoT and beyond.</p>
 <h1 id="node-software"><a class="header" href="#node-software">Node software</a></h1>
-<p>We have been running the network exclusively on the Go powered Hornet node since the summer of 2020. For Chrysalis, you will have the choice to continue using a new version of Hornet or you can use our new Rust-based Bee node.</p>
+<p>We have been running the network exclusively on the Go powered Hornet node since the summer of 2020. For Chrysalis, you will have the choice to continue using a new version of Hornet or our new Rust-based Bee node.</p>
 <h3 id="hornet-and-bee"><a class="header" href="#hornet-and-bee">Hornet and Bee</a></h3>
 <p>Moving forward, both Hornet and Bee are the officially supported nodes for IOTA.</p>
 <p>Hornet is an EDF-supported community node written in Go and has already proven itself to be a stable and performant implementation. It recently underwent a successful audit. </p>
 <p>Bee is an IOTA Node implemented by the Foundation and written in Rust.</p>
 <p>At this stage, we recommend using Hornet since it has several optional features that are not implemented in Bee so far.</p>
-<h2 id="node-software-1"><a class="header" href="#node-software-1">Node Software</a></h2>
+<h2 id="node-software-1"><a class="header" href="#node-software-1">Node software</a></h2>
 <ul>
 <li><a href="https://github.com/gohornet/hornet/tree/develop">hornet (branch: develop)</a></li>
 <li><a href="https://github.com/iotaledger/bee/tree/chrysalis-pt-2">bee (branch: chrysalis-pt-2)</a></li>
 </ul>
-<h2 id="node-api-specification"><a class="header" href="#node-api-specification">Node API Specification</a></h2>
+<h2 id="node-api-specification"><a class="header" href="#node-api-specification">Node API specification</a></h2>
 <ul>
 <li><a href="https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml">rest-api specification</a></li>
 </ul>
 <h1 id="libraries"><a class="header" href="#libraries">Libraries</a></h1>
-<p><strong>The IOTA client libraries allow you to easily integrate IOTA into your own applications. Choose a library to match your use case.</strong></p>
-<p>Official IOTA libraries serve as <code>one-source-code-of-truth</code> to IOTA users and providing binding to other programming languages. You can read more about core principles behind IOTA client libraries in the following blog <a href="https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/">post</a>.</p>
+<p><strong>The IOTA client libraries allow you to easily integrate IOTA into your own applications. You can choose a library to match your use case.</strong></p>
+<p>Official IOTA libraries serve as <code>one-source-code-of-truth</code> to IOTA users and provide binding to other programming languages. You can read more about core principles behind IOTA client libraries in the following blog <a href="https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/">post</a>.</p>
 <ul>
 <li><a href="libraries/client.html">client-lib</a>: a general purpose IOTA client library for interacting with IOTA network (Tangle)</li>
 <li><a href="libraries/wallet.html">wallet-lib</a>: a stateful library specifically designed to be used for IOTA value-based transfers </li>
@@ -310,7 +310,7 @@ Chrysalis will make IOTA production-ready. A stable protocol, with a reliable se
 <p>All libraries are in active development. The libraries target the Chrysalis testnet and do not work with current IOTA mainnet.</p>
 <p>The client libraries with official support are maintained by the IOTA Foundation, their source code can be found on the <a href="https://github.com/iotaledger">Official GitHub repository</a>.</p>
 <h2 id="utilities"><a class="header" href="#utilities">Utilities</a></h2>
-<h4 id="developer-tools"><a class="header" href="#developer-tools"><strong>Developer Tools</strong></a></h4>
+<h4 id="developer-tools"><a class="header" href="#developer-tools"><strong>Developer tools</strong></a></h4>
 <ul>
 <li><a href="https://explorer.iota.org/chrysalis">Official explorer</a></li>
 <li><a href="https://faucet.testnet.chrysalis2.com/">Testnet faucet</a></li>
@@ -325,7 +325,7 @@ Chrysalis will make IOTA production-ready. A stable protocol, with a reliable se
 <li>Generate addresses</li>
 <li>Interact with an IOTA node</li>
 </ul>
-<p>If you mainly intend to process value transfers we recommend you to use our stateful <a href="libraries/./wallet.html">wallet library</a> instead.</p>
+<p>If you mainly intend to process value transfers, we recommend you use our stateful <a href="libraries/./wallet.html">wallet library</a> instead.</p>
 <p><a href="https://client-lib.docs.iota.org">IOTA Client Library full documentation</a></p>
 <h2 id="rust"><a class="header" href="#rust">Rust</a></h2>
 <ul>
@@ -372,8 +372,8 @@ Browse through the code and learn what's happening behind the scenes. Pull reque
 The IOTA Client Library C API Documentation.</li>
 </ul>
 <h1 id="iota-wallet-library"><a class="header" href="#iota-wallet-library">IOTA Wallet Library</a></h1>
-<p>The wallet library is a stateful library for developers, essentially it's a programmable wallet. It is recommended to use this library if you are mainly using IOTA for token transfers. This library supports handling and monitoring multiple account/addresses at the same time. Its stateful design allow a management of multiple accounts and addresses in a performance effective manner.</p>
-<p>In addition to that, it also supports <a href="https://github.com/iotaledger/stronghold.rs">Stronghold.rs</a> enclave incorporating the best security practices in one package.</p>
+<p>The wallet library is a stateful library for developers; essentially it's a programmable wallet. It is recommended you use this library if you are mainly using IOTA for token transfers. This library supports the handling and monitoring multiple account/addresses at the same time. Its stateful design allows a management of multiple accounts and addresses in an effective manner.</p>
+<p>In addition to this, it also supports the <a href="https://github.com/iotaledger/stronghold.rs">Stronghold.rs</a> enclave, incorporating the best security practices in one package:</p>
 <p><a href="https://wallet-lib.docs.iota.org">IOTA Wallet Library full documentation</a></p>
 <h2 id="rust-1"><a class="header" href="#rust-1">Rust</a></h2>
 <hr />
@@ -419,13 +419,13 @@ The IOTA Wallet Library Python API Documentation.</li>
 </ul>
 <h2 id="iota-15-chrysalis-in-a-nutshell"><a class="header" href="#iota-15-chrysalis-in-a-nutshell">IOTA 1.5 (Chrysalis) in a nutshell</a></h2>
 <ul>
-<li>IOTA network uses a DAG (Directed Acyclic Graph) to store its transactions. Each transaction can reference up to 8 parent transactions</li>
-<li>There is a breaking change moving from IOTA 1.0 to IOTA 1.5 (Chrysalis). IOTA address was originally based on WOTS signature scheme (81 trytes) and it has been replaced by a Ed25519 signature scheme</li>
-<li>In contrast to IOTA 1.0, IOTA 1.5 addresses are perfectly reusable: so even if one spent funds from the given address it can be used again</li>
+<li>IOTA network uses a DAG (Directed Acyclic Graph) to store its transactions. Each transaction can reference up to 8 parent transactions.</li>
+<li>There is a breaking change moving from IOTA 1.0 to IOTA 1.5 (Chrysalis). IOTA address was originally based on WOTS signature scheme (81 trytes) and it has been replaced by a Ed25519 signature scheme.</li>
+<li>In contrast to IOTA 1.0, IOTA 1.5 addresses are perfectly reusable;  even if one spends funds from the given address it can be used again</li>
 <li>There are new <a href="guides/../libraries/overview.html">client libraries</a> developed that serve as <code>one-source-code-of-truth</code> to IOTA users and providing binding to other programming languages </li>
 </ul>
 <h3 id="iota-15-address-anatomy"><a class="header" href="#iota-15-address-anatomy">IOTA 1.5 address anatomy</a></h3>
-<p>IOTA address is based on Ed25519 signature scheme and it is usually represented by Bech32 (checksummed base32) format string of 64 characters:</p>
+<p>The IOTA address is based on the Ed25519 signature scheme and it is usually represented by Bech32 (checksummed base32) format string of 64 characters:</p>
 <table>
     <thead>
         <tr>
@@ -459,11 +459,11 @@ The IOTA Wallet Library Python API Documentation.</li>
         </tr>
     </tbody>
 </table>
-<p>More details: <a href="https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md">RFC - Bech32 Address Format</a></p>
+<p>For furthr details see the <a href="https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md">RFC - Bech32 Address Format</a>.</p>
 <h1 id="developer-guide-to-chrysalis"><a class="header" href="#developer-guide-to-chrysalis">Developer guide to Chrysalis</a></h1>
 <p>This is a quick guide meant to help you navigate through some of the differences you will encounter while migrating to IOTA Chrysalis.</p>
 <h2 id="a-note-about-seeds-and-addresses"><a class="header" href="#a-note-about-seeds-and-addresses">A note about seeds and addresses</a></h2>
-<p>In Chrysalis, all ternary conversions apart from PoW have been removed which results in a better and faster developer experience.</p>
+<p>In Chrysalis, all ternary conversions apart from PoW have been removed which results in a better, faster developer experience.</p>
 <p>Additionally, the WOTS-Signature has been replaced by a Ed25519 signature scheme. This means that you can now use an address multiple times to send and receive coins if you wish. </p>
 <p>With these changes, and the further adoption of industry standards, both seeds and addresses will look completely different in IOTA Chrysalis:</p>
 <p>IOTA 1.0 Address</p>
@@ -476,41 +476,41 @@ The IOTA Wallet Library Python API Documentation.</li>
 <p>Testnet with <code>atoi</code></p>
 <pre><code class="language-bash=">atoi1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75zaxtpj
 </code></pre>
-<p>With the new <a href="guides/../libraries/wallet.html">wallet library</a>, developers do not need to use a self-generated seed anymore. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are further secured with a password.</p>
-<p>More information about IOTA Wallet Library is available on <a href="https://wallet-lib.docs.iota.org">Wallet docs page</a> or in the <a href="guides/exchange_guide.html">Exchange guide</a> that is mainly focused on value transactions.</p>
-<p>In addition to that, you can also read more about Stronghold on the <a href="https://stronghold.docs.iota.org">Stronghold docs page</a>.</p>
+<p>With the new <a href="guides/../libraries/wallet.html">wallet library</a>, developers do not need to use a self-generated seed anymore. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.</p>
+<p>More information about IOTA Wallet Library is available on <a href="https://wallet-lib.docs.iota.org">Wallet docs page</a> or in the <a href="guides/exchange_guide.html">Exchange guide</a>, which is mainly focused on value transactions.</p>
+<p>In addition to these resources, you can also read more about Stronghold on the <a href="https://stronghold.docs.iota.org">Stronghold docs page</a>.</p>
 <h2 id="deep-dive"><a class="header" href="#deep-dive">Deep dive</a></h2>
 <h3 id="dust-protection"><a class="header" href="#dust-protection">Dust protection</a></h3>
-<p>Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network with very low value transactions, which we call dust. To avoid this we only allow microtransaction below 1Mi (dust) of IOTA tokens to another address if you already have at least 1Mi as a dust allowance output on that address. The number of allowed dust outputs on an address is the amount of the dust allowance outputs divided by 100,000 and rounded down, i.e. 10 outputs for each 1 Mi deposited, with a maximum of 100 dust outputs in total.</p>
+<p>Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network with very low value transactions, which we call dust. To avoid this, we only allow microtransaction below 1Mi (dust) of IOTA tokens to another address if you already have at least 1Mi as a dust allowance output on that address. The number of allowed dust outputs on an address is the amount of the dust allowance outputs divided by 100,000 and rounded down, i.e. 10 outputs for each 1 Mi deposited, with a maximum of 100 dust outputs in total.</p>
 <blockquote>
 <p>In the UTXO model, each node in the network needs to keep track of all the currently unspent outputs. When the number of outputs becomes too large, it can cause performance and memory issues. The RFC found below proposes a new protocol rule regarding the processing of outputs where they transfer a very small amount of IOTA’s so-called dust outputs. Dust outputs are only allowed when they are backed up by a certain deposit on the receiving address. This limits the amount of dust outputs, thus making it expensive to proliferate dust. Since a receiver must make a deposit, the protocol makes receiving dust an opt-in feature.</p>
 </blockquote>
-<p><a href="https://github.com/iotaledger/protocol-rfcs/pull/32">protocol-rfcs#0032</a></p>
+<p><a href="https://github.com/iotaledger/protocol-rfcs/pull/32">Protocol-rfcs#0032</a></p>
 <h3 id="up-to-8-parents"><a class="header" href="#up-to-8-parents">Up to 8 Parents</a></h3>
-<p>With IOTA 1.0 you always had to reference 2 parent transactions. With Chrysalis, we introduce a more dynamic number of parent nodes where you can reference up to 8 parents. We recommend you reference at least 2 unique parents at all times for the best possible results.</p>
+<p>With IOTA 1.0, you always had to reference 2 parent transactions. With Chrysalis, we introduce a more dynamic number of parent nodes where you can reference up to 8 parents. We recommend you reference at least 2 unique parents at all times for the best possible results.</p>
 <h1 id="exchange-guide"><a class="header" href="#exchange-guide">Exchange guide</a></h1>
-<h2 id="the-iota-wallet-library"><a class="header" href="#the-iota-wallet-library">The IOTA Wallet Library</a></h2>
+<h2 id="the-iota-wallet-library"><a class="header" href="#the-iota-wallet-library">The IOTA wallet library</a></h2>
 <blockquote>
-<p>Easily integrate IOTA with your exchange, custody solution, or product</p>
+<p>Easily integrate IOTA with your exchange, custody solution, or product.</p>
 </blockquote>
-<p>IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. This architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.</p>
-<p>With the Chrysalis update (also know as IOTA 1.5), some building blocks have been changed to be more approachable and more aligned with existing standards being leveraged these days. We also ship many <a href="guides/../libraries/overview.html">client libraries</a> to help developers implement IOTA into their applications:
+<p>IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. But, this architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.</p>
+<p>Within the Chrysalis update (also known as IOTA 1.5), some building blocks have been changed to be more approachable and more aligned with currently leveraged standards. We also ship many <a href="guides/../libraries/overview.html">client libraries</a> to help developers implement IOTA into their applications:
 <img src="guides/assets/wallet_rs_layers.svg" alt="layers" /></p>
 <h2 id="how-do-i-implement-it-to-my-exchange"><a class="header" href="#how-do-i-implement-it-to-my-exchange">How do I implement it to my exchange?</a></h2>
-<p>In <a href="guides/../libraries/wallet.html">wallet.rs</a>, we use an account model, so you can create an account for each of your users. The other approach would be to use one account and generate many addresses, which you can link to your users in your database. The wallet library is designed to be as flexible as possible to back up any of your use cases.</p>
-<p>Since IOTA addresses in Chrysalis network are perfectly reusable, addresses can be mapped to your users in a clear and concise way.</p>
+<p>In <a href="guides/../libraries/wallet.html">wallet.rs</a>, we use an account model so you can create an account for each of your users. Another approach would be to use one account and generate multiple addresses, which you can then link to the users in your database. The wallet library is designed to be as flexible as possible to back up any of your use cases.</p>
+<p>Since IOTA addresses in the Chrysalis network are perfectly reusable, they can be mapped to your users in a clear and concise way:</p>
 <ul>
 <li>Create an account for every user -&gt; <code>Multi Account</code> approach</li>
 <li>Create one account with many addresses -&gt; <code>Single account</code> approach</li>
 </ul>
 <p>The library supports derivation for multiple accounts from a single seed. An account is simply a deterministic identifier from which multiple addresses can be further derived. </p>
-<p>The following illustrates the relationships between seed, accounts and addresses. The library allows consumers to assign a meaningful alias to each account. In addition to that, generated individual accounts can be also searched via generated addresses and so it does not matter whether alias or address are known, the searching for the related account is very straightforward affair with <code>wallet.rs</code> library.</p>
-<p>It also leaves the choice to users if they want to segregate their funds across multiple accounts or multiple addresses. </p>
+<p>The library also allows consumers to assign a meaningful alias to each account. In addition to this, generated individual accounts can be also searched via generated addresses. This means it does not matter whether aliases or addresses are known as the search for the related account is very straightforward using the <code>wallet.rs</code> library.</p>
+<p>It also leaves the choice to users if they want to segregate their funds across multiple accounts or multiple addresses. The following illustration outlines the relationships between seed, accounts, and addresses: </p>
 <p><img src="guides/assets/accounts.svg" alt="accounts" /></p>
 <h3 id="multi-account-approach"><a class="header" href="#multi-account-approach">Multi account approach</a></h3>
-<p>The multi account approach is to create an account for each individual user. The created accounts can then be linked to the internal user ids as an account alias and are clearly separated.</p>
+<p>The multi account approach is used to create an account for each individual user. The created accounts can then be linked to the internal user IDs as an account alias, which are distinctly separated.</p>
 <h3 id="single-account-approach"><a class="header" href="#single-account-approach">Single account approach</a></h3>
-<p>The single account approach is to just use one account and create addresses for each individual user. The associated addresses are then linked to the internal user ids and store who owns which address in the database. Most exchanges are more familiar with the single account approach and find it easier to use, implement, and backup.</p>
+<p>The single account approach allows for just one account and creates addresses for each individual user. The associated addresses are then linked to the internal user IDs and store who owns which address in the database. Most exchanges are more familiar with the single account approach and find it easier to use, implement, and backup.</p>
 <h2 id="implementation-guide"><a class="header" href="#implementation-guide">Implementation guide</a></h2>
 <p>This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the <a href="guides/./hub_guide.html">Hub Migration Guide</a>.</p>
 <p>Features of the Wallet Library:</p>
@@ -522,36 +522,34 @@ The IOTA Wallet Library Python API Documentation.</li>
 <li>Backup and restore functionality</li>
 </ul>
 <h2 id="how-does-it-work"><a class="header" href="#how-does-it-work">How does it work?</a></h2>
-<p>The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database, however using the Stronghold component is highly recommended due to the most advanced level of security applied.</p>
-<p>See the <a href="https://wallet-lib.docs.iota.org">full documentation here</a>.</p>
+<p>The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with the IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database; however, using the Stronghold component is highly recommended due to the most advanced level of security being applied.</p>
+<p>For reference, you can see the <a href="https://wallet-lib.docs.iota.org">full documentation here</a>.</p>
 <p>The following examples cover the <em>multi account approach</em> using <code>NodeJS</code> binding:</p>
 <ol>
 <li>Setup the Wallet Library</li>
 <li>Create an account for each user</li>
-<li>Generate an user address for deposits</li>
+<li>Generate a user address for deposits</li>
 <li>Listen to events</li>
 <li>Check the user balance</li>
 <li>Enable withdrawals</li>
 </ol>
-<p>If you are looking for other languages, please kindly read the <a href="guides//libraries/wallet.html">wallet library overview</a>.</p>
-<p>Anyway, since all <code>wallet.rs</code> bindings are based on core principles provided by <code>wallet.rs</code> library, the outlined approach is very similar regardless a programming language of your choice.</p>
-<h3 id="1-setup-the-wallet-library"><a class="header" href="#1-setup-the-wallet-library">1. Setup the Wallet Library</a></h3>
-<p>First of all, let's install components that are needed to use <code>wallet.rs</code> and its binding of your choice. It may vary a bit from language to language. In case of <code>NodeJs</code> binding, it is quite straightforward since it is distributed via <code>npm</code> package manager. We also recommend to use <code>dotenv</code> for password management.</p>
-<p>Read more about <a href="guides/backup_security.html">backup &amp; security here</a>.</p>
+<p><em>Note: If you are looking for other languages, please read the <a href="guides//libraries/wallet.html">wallet library overview</a>.</em></p>
+<p>Since all <code>wallet.rs</code> bindings are based on core principles provided by the <code>wallet.rs</code> library, the outlined approach is very similar regardless of the programming language of your choice.</p>
+<h3 id="1-setup-the-wallet-library"><a class="header" href="#1-setup-the-wallet-library">1. Setup the Wallet library</a></h3>
+<p>First off, let's install the components that are needed to use <code>wallet.rs</code> and the binding of your choice; it may vary a bit from language to language. In case of the <code>NodeJs</code> binding, it is quite straightforward since it is distributed via the <code>npm</code> package manager. We also recommend you use <code>dotenv</code> for password management.</p>
+<p>For reference, read more about <a href="guides/backup_security.html">backup and security here</a>.</p>
 <pre><code class="language-bash">npm install @iota/wallet dotenv
 touch .env
 </code></pre>
-<p>Input your password to the <code>.env</code> file like this:</p>
+<p>Then, input your password to the <code>.env</code> file like this:</p>
 <pre><code class="language-bash">SH_PASSWORD=&quot;here is your super secure password&quot;
 </code></pre>
-<p>Once you have everything needed to use the <code>wallet.rs</code> library, it is necessary to initialize the <code>AccountManager</code> instance that creates (open) a secure storage for individual accounts (backed up by <code>Stronghold</code> by default).</p>
-<p>The storage is encrypted at rest and so you need a strong password and location where to put your storage. </p>
-<blockquote>
-<p>Please note: deal with the password with utmost care</p>
-</blockquote>
-<p>Technically speaking, the storage means a single file called <code>wallet.stronghold</code>. It is also needed to generate a seed (mnemonic) that serves as a cryptographic key from which all accounts and related addresses are generated.</p>
-<p>One of the key principle behind the <code>stronghold</code>-based storage is that no one can get a seed from the storage. You deal with all accounts purely via <code>Account_Manager</code> instance and all complexities are hidden under the hood and are dealt with in a secure way. In case one would like to store a seed also somewhere else, there is a method <code>AccountManager.generateMnemonic()</code> that generates random seed and it can be leveraged before the actual account initialization.</p>
-<p>Please note, it is highly recommended to store <code>stronghold</code> password and <code>stronghold</code> database on separate devices. Please kindly refer to <a href="guides/backup_security.html">backup and security guide</a> for more information.</p>
+<p>Once you have everything needed to use the <code>wallet.rs</code> library, it is necessary to initialize the <code>AccountManager</code> instance which creates (opens) a secure storage for individual accounts (backed up by <code>Stronghold</code> by default).</p>
+<p>The storage is encrypted at rest, so you need a strong password and location where to put your storage. </p>
+<p><em>Please note: deal with the password with utmost care</em>.</p>
+<p>Technically speaking, &quot;storage&quot; means a single file called <code>wallet.stronghold</code>. It is also needed to generate a seed (mnemonic) that serves as a cryptographic key from which all accounts and related addresses are generated.</p>
+<p>One of the key principles behind the <code>stronghold</code>-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the <code>Account_Manager</code> instance where all complexities are hidden under the hood and are dealt with in a secure way. In case you would also like to store a seed somewhere else, there is another method, <code>AccountManager.generateMnemonic()</code>, that generates random seeds. This method can be leveraged before the actual account initialization.</p>
+<p>Note that it is highly recommended to store the <code>stronghold</code> password and the <code>stronghold</code> database on separate devices. Please refer to the <a href="guides/backup_security.html">backup and security guide</a> for more information.</p>
 <p>Import the Wallet Library and create an account manager:</p>
 <pre><code class="language-javascript">    const { AccountManager, SignerType } = require('@iota/wallet')
 
@@ -562,7 +560,7 @@ touch .env
     manager.setStrongholdPassword(process.env.SH_PASSWORD)
     manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic()) // seed generation
 </code></pre>
-<p>Needless to say, once the stronghold storage is created, it is not needed to generate the seed any more (<code>manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())</code>). It has been already saved in the storage together with all account information.</p>
+<p>Needless to say, once the stronghold storage is created, it is not needed to generate the seed any longer (<code>manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())</code>). It has been already saved in the storage together with all account information.</p>
 <h3 id="2-create-an-account-for-an-user"><a class="header" href="#2-create-an-account-for-an-user">2. Create an account for an user</a></h3>
 <p>Once the backend storage is created, individual accounts for individual users can be created:</p>
 <pre><code class="language-javascript">    let account = await manager.createAccount({
@@ -570,11 +568,11 @@ touch .env
         clientOptions: { node: 'http://api.lb-0.testnet.chrysalis2.com', localPow: false }
     })
 </code></pre>
-<p>Each account is related to a specific IOTA network (mainnet / devnet) which is referenced by a node properties, such as node url (in this example, Chrysalis testnet balancer).</p>
+<p>Each account is related to a specific IOTA network (mainnet/devnet) which is referenced by a node properties, such as node url (in this example, the Chrysalis testnet balancer).</p>
 <p>For more information about <code>clientOptions</code>, please refer to <a href="https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html">Wallet NodeJs API Reference</a>.</p>
-<p><code>Alias</code> can be whatever fits to the given use case and should be unique. The <code>alias</code> is usually used to identify the given account later on. Each account is also represented by <code>index</code> which is incremented (by 1) every time new account is created. Any account can be then referred to via <code>index</code>, <code>alias</code> or one of its generated <code>addresses</code>.</p>
+<p><code>Alias</code> can be whatever fits to the given use case and should be unique. The <code>alias</code> is usually used to identify the given account later on. Each account is also represented by <code>index</code> which is incremented (by 1) every time a new account is created. Any account can be then referred to via <code>index</code>, <code>alias</code>, or one of its generated <code>addresses</code>.</p>
 <p>Once an account has been created you get an instance of it using the following methods: <code>AccountManager.getAccount(accountId)</code>, <code>AccountManager.getAccountByAlias(alias)</code> or <code>AccountManager.getAccounts()</code>.</p>
-<p>The most common methods of <code>account</code> instance:</p>
+<p>The most common methods of <code>account</code> instance include:</p>
 <ul>
 <li><code>account.alias()</code>: returns an alias of the given account</li>
 <li><code>account.listAddresses()</code>: returns list of addresses related to the account</li>
@@ -583,12 +581,10 @@ touch .env
 <li><code>account.balance()</code>: returns the balance for the given account</li>
 <li><code>account.sync()</code>: sync the account information with the tangle</li>
 </ul>
-<h3 id="3-generate-an-user-address-to-deposit-funds"><a class="header" href="#3-generate-an-user-address-to-deposit-funds">3. Generate an user address to deposit funds</a></h3>
-<p><code>Wallet.rs</code> is a stateful library which means it caches all relevant information in the storage to provide performance benefits while dealing with potentially many accounts/addresses.</p>
-<blockquote>
-<p>Please note: sync the account info with the network during the wallet manipulation to be sure the storage reflects an actual state of the ledger (network) </p>
-</blockquote>
-<p>Every account can own multiple addresses. Addresses are represented by <code>index</code> which is incremented (by 1) every time new address is created. The latest address is accessible via <code>account.latestAddress()</code>: </p>
+<h3 id="3-generate-a-user-address-to-deposit-funds"><a class="header" href="#3-generate-a-user-address-to-deposit-funds">3. Generate a user address to deposit funds</a></h3>
+<p><code>Wallet.rs</code> is a stateful library which means it caches all relevant information in storage to provide performance benefits while dealing with, potentially, many accounts/addresses.</p>
+<p><em>Please note: sync the account info with the network during the wallet manipulation to be sure the storage reflects an actual state of the ledger (network)</em>. </p>
+<p>Every account can own multiple addresses. Addresses are represented by <code>index</code> which is incremented (by 1) every time a new address is created. The latest address is accessible via <code>account.latestAddress()</code>: </p>
 <pre><code class="language-javascript">    // Always sync before account interactions
     console.log('syncing...')
     const synced = await account.sync()
@@ -600,17 +596,17 @@ touch .env
     console.log('Need a refill? Send it to this address:', latestAddress)
 </code></pre>
 <p>Feel free to fill the address with Testnet Tokens with the <a href="https://faucet.testnet.chrysalis2.com/">IOTA Faucet</a> in order to test it.</p>
-<p>Addresses are of two types: <code>internal</code> and <code>public</code> (external):</p>
+<p>Addresses are of two types, <code>internal</code> and <code>public</code> (external):</p>
 <ul>
-<li>each set of addresses is independent from each other and has independent <code>index</code> id</li>
-<li>addresses that are created by <code>account.generateAddress()</code> are indicated as <code>internal=false</code> (public)</li>
-<li>internal addresses (<code>internal=true</code>) are so called <code>change</code> addresses and are used to send the excess funds to</li>
-<li>the approach is also known as a <em>BIP32 Hierarchical Deterministic wallet (HD Wallet)</em>.</li>
+<li>Each set of addresses are independent from each other and has an independent <code>index</code> id</li>
+<li>Addresses that are created by <code>account.generateAddress()</code> are indicated as <code>internal=false</code> (public)</li>
+<li>Internal addresses (<code>internal=true</code>) are called <code>change</code> addresses and are used to send the excess funds to them</li>
+<li>The approach is also known as a <em>BIP32 Hierarchical Deterministic wallet (HD Wallet)</em>.</li>
 </ul>
 <p><em>Note: You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in IOTA 1.5 (Chrysalis) network.</em></p>
 <h3 id="4-listen-to-events"><a class="header" href="#4-listen-to-events">4. Listen to events</a></h3>
-<p><code>Wallet.rs</code> library supports several events to be listened to. As soon as the given event occurs, a provided callback is triggered.</p>
-<p>Example of fetching existing accounts and listen to transaction events coming into the account:</p>
+<p>The <code>Wallet.rs</code> library supports several events for listening. As soon as the given event occurs, a provided callback is triggered.</p>
+<p>Below is an example of fetching existing accounts and listening to transaction events coming into the account:</p>
 <pre><code class="language-javascript">    const { addEventListener } = require('@iota/wallet')
 
     const callback = function(err, data) {
@@ -645,7 +641,7 @@ touch .env
 }
 </code></pre>
 <p><code>accountId</code> can then be used to identify the given account via <code>AccountManager.getAccount(accountId)</code>.</p>
-<p>Read more about Events in the <a href="https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html#addeventlistenerevent-cb">API reference</a>.</p>
+<p>For reference, you can read more about events in the <a href="https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html#addeventlistenerevent-cb">API reference</a>.</p>
 <h3 id="5-check-the-account-balance"><a class="header" href="#5-check-the-account-balance">5. Check the account balance</a></h3>
 <p>Get the available account balance across all addresses of the given account:</p>
 <pre><code class="language-javascript">    // Always sync before account interactions
@@ -656,7 +652,7 @@ touch .env
     console.log('available balance', balance)
 </code></pre>
 <h3 id="6-enable-withdrawals"><a class="header" href="#6-enable-withdrawals">6. Enable withdrawals</a></h3>
-<p>Sending tokens is performed via <code>SyncedAccount</code> instance that is a results of <code>account.sync()</code> function:</p>
+<p>Sending tokens is performed via the <code>SyncedAccount</code> instance that is a result of the <code>account.sync()</code> function:</p>
 <pre><code class="language-javascript">    console.log('syncing...')
     const synced = await account.sync()
     console.log('available balance', account.balance().available)
@@ -674,14 +670,14 @@ touch .env
 
     console.log(&quot;Check your message on https://explorer.iota.org/crysalis/message/&quot;, node_response.id)
 </code></pre>
-<p>The full function signature is <code>SyncedAccount.send(address, amount[, options])</code>.
-Default options are perfectly fine and do the job done, however additional options can be provided, such as <code>remainderValueStrategy</code>:</p>
+<p>The full function signature is <code>SyncedAccount.send(address, amount[, options])</code>.</p>
+<p>Default options are perfectly fine and get the job done; however, additional options can be provided, such as <code>remainderValueStrategy</code>:</p>
 <ul>
 <li><code>changeAddress</code>: Send the remainder value to an internal address</li>
 <li><code>reuseAddress</code>: Send the remainder value back to its original address</li>
 </ul>
-<p><code>SyncedAccount.send()</code> function returns a <code>wallet message</code> that fully describes the given transaction. Especially <code>messageId</code> can later be used for checking a confirmation status. Individual messages related to the given account can be obtained via <code>account.listMessages()</code> function.</p>
-<p>Please note, when sending tokens, a <a href="guides/dev_guide.html#dust-protection">dust protection</a> mechanism should be considered. </p>
+<p>The <code>SyncedAccount.send()</code> function returns a <code>wallet message</code> that fully describes the given transaction. <code>messageId</code> can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via <code>account.listMessages()</code> function.</p>
+<p>Please note that when sending tokens, a <a href="guides/dev_guide.html#dust-protection">dust protection</a> mechanism should be considered. </p>
 <h1 id="iota-hub-migration-guide"><a class="header" href="#iota-hub-migration-guide">IOTA Hub migration guide</a></h1>
 <blockquote>
 <p>This guide will explain how you can switch from IOTA Hub to using wallet.rs or its bindings instead.</p>
@@ -702,13 +698,13 @@ Default options are perfectly fine and do the job done, however additional optio
 <li>How to backup your account</li>
 <li>How to restore from a backup</li>
 <li>How to export a user's Stronghold</li>
-<li>How to rekey a Stronghold / password rotation?</li>
+<li>How to rekey a Stronghold/password rotation?</li>
 <li>Do's and don'ts</li>
 </ul>
 <h2 id="security-checklist"><a class="header" href="#security-checklist">Security checklist</a></h2>
 <ul>
 <li><input disabled="" type="checkbox"/>
-I used Stronghold</li>
+I use Stronghold</li>
 <li><input disabled="" type="checkbox"/>
 I use a strong password (32 character length, Shannon Entropy ~ 4.0) for encrypting the stronghold</li>
 <li><input disabled="" type="checkbox"/>
@@ -725,12 +721,12 @@ I use a linux based server (best memory security)</li>
 My server is isolated behind a DMZ</li>
 </ul>
 <h2 id="how-to-backup-your-account"><a class="header" href="#how-to-backup-your-account">How to backup your account</a></h2>
-<p>A simple copy of the stronghold.snapshot file works as a backup. (e.g. a daily cronjob rsync / scp with a datetime suffix for example).</p>
+<p>A simple copy of the stronghold.snapshot file works as a backup (e.g. a daily cronjob rsync / scp with a datetime suffix for example).</p>
 <h2 id="how-to-restore-from-a-backup"><a class="header" href="#how-to-restore-from-a-backup">How to restore from a backup</a></h2>
 <p>Simply place a snapshot file in your directory that wallet.rs expects.</p>
-<h2 id="how-to-export-a-users-stronghold"><a class="header" href="#how-to-export-a-users-stronghold">How to export a user's stronghold?</a></h2>
+<h2 id="how-to-export-a-users-stronghold"><a class="header" href="#how-to-export-a-users-stronghold">How to export a user's stronghold</a></h2>
 <p>You can create a new Stronghold snapshot on the fly to allow a user to leave your service and retain their key.</p>
-<h2 id="how-to-rekey-a-strongholdpassword-rotation"><a class="header" href="#how-to-rekey-a-strongholdpassword-rotation">How to rekey a Stronghold/password rotation?</a></h2>
+<h2 id="how-to-rekey-a-strongholdpassword-rotation"><a class="header" href="#how-to-rekey-a-strongholdpassword-rotation">How to rekey a Stronghold/password rotation</a></h2>
 <p>The procedure for changing a Stronghold password is &quot;simple&quot; in that you read a snapshot into a vault and then write it out with a new encryption password. <a href="https://github.com/iotaledger/wallet.rs/blob/d1b8893d73aae35dfcf7c5c8006e2177988d25d0/src/stronghold.rs#L436-L451">See this code for the source.</a></p>
 <p>Please note: for obvious reasons, old snapshot backups will not be &quot;rekeyed&quot;, so you have to track your old passwords. </p>
 <h2 id="dos-and-donts"><a class="header" href="#dos-and-donts">Do's and don'ts</a></h2>
@@ -746,15 +742,15 @@ My server is isolated behind a DMZ</li>
 <li>api.lb-0.testnet.chrysalis2.com</li>
 </ul>
 <p>We recommend using the load balancer for most scenarios.</p>
-<p>Single node endpoints that expose native MQTT in case you need this are:</p>
+<p>Single node endpoints that expose native MQTT, in case you need them, are:</p>
 <ul>
 <li>api.hornet-0.testnet.chrysalis2.com</li>
 <li>api.hornet-1.testnet.chrysalis2.com</li>
 <li>api.hornet-2.testnet.chrysalis2.com</li>
 <li>api.hornet-3.testnet.chrysalis2.com</li>
 </ul>
-<p>Node API is integrated according to the <a href="https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml">following specification</a>.</p>
-<h2 id="developer-tools-1"><a class="header" href="#developer-tools-1">Developer Tools</a></h2>
+<p>The Node API is integrated according to the <a href="https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml">following specification</a>.</p>
+<h2 id="developer-tools-1"><a class="header" href="#developer-tools-1">Developer tools</a></h2>
 <ul>
 <li><a href="https://explorer.iota.org/chrysalis">Explorer</a></li>
 <li><a href="https://faucet.testnet.chrysalis2.com/">Online Faucet</a></li>
@@ -793,11 +789,11 @@ My server is isolated behind a DMZ</li>
 <hr />
 <h1 id="faq"><a class="header" href="#faq">FAQ</a></h1>
 <h2 id="which-libraries-are-available-for-chrysalis"><a class="header" href="#which-libraries-are-available-for-chrysalis">Which libraries are available for Chrysalis?</a></h2>
-<p>At this time, there are a handful of libraries available for Chrysalis which can be found below:</p>
+<p>At this time, there are a handful of libraries available for Chrysalis which are outlined below:</p>
 <p>A low level library called iota.rs which is a client library meant to connect to a IOTA node for core interactions with the Tangle. It is written in Rust and there are currently two bindings for Node.js and Python allowing you to use this library from those languages as well. </p>
 <p>For value transactions, there is the wallet.rs library which provides a stateful way to manage IOTA coins for one or multiple accounts. It is also written in Rust and there are currently two bindings for Node.js and Python. </p>
 <p>Additionally, there is also a native C (<a href="https://github.com/iotaledger/iota.c">iota.c</a>) and an alternative, native javascript (<a href="https://github.com/iotaledger/iota.js/tree/chrysalis">iota.js</a>) client library. </p>
-<h2 id="what-is-dust-protection-and-how-does-it-work"><a class="header" href="#what-is-dust-protection-and-how-does-it-work">What is Dust Protection and how does it work?</a></h2>
+<h2 id="what-is-dust-protection-and-how-does-it-work"><a class="header" href="#what-is-dust-protection-and-how-does-it-work">What is Dust protection and how does it work?</a></h2>
 <p>Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network with very low value transactions, which we call dust. To avoid this we only allow microtransaction below 1Mi of IOTA tokens to another address if you already have at least 1Mi on that address.</p>
 <p>You can read more about Dust Protection <a href="https://github.com/iotaledger/protocol-rfcs/pull/32">in the RFC here</a>.</p>
 <h2 id="whats-happening-with-coordicide"><a class="header" href="#whats-happening-with-coordicide">What's happening with Coordicide?</a></h2>
@@ -805,7 +801,7 @@ My server is isolated behind a DMZ</li>
 <h2 id="when-is-a-transaction-on-the-network-considered-finalirreversible"><a class="header" href="#when-is-a-transaction-on-the-network-considered-finalirreversible">When is a transaction on the network considered final/irreversible?</a></h2>
 <p>Confirmation times on the new network are on average around 10 seconds. Once a transaction is set to confirm it’s final transaction, you don’t have block confirmations like with blockchain.</p>
 <h2 id="hornet-or-bee-which-node-software-should-i-use"><a class="header" href="#hornet-or-bee-which-node-software-should-i-use">Hornet or Bee? Which node software should I use?</a></h2>
-<p>You can pick either Bee (Rust based) or Hornet (Go based), we currently recommend Hornet since it’s the more complete version of the node software, Bee is still missing some optional features you might wish to use.</p>
+<p>You can pick either Bee (Rust based) or Hornet (Go based). We currently recommend Hornet since it’s the more complete version of the node software, Bee is still missing some optional features you might wish to use.</p>
 
                     </main>
 
