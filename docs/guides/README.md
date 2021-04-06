@@ -17,7 +17,7 @@ The IOTA address is based on the Ed25519 signature scheme and it is usually repr
 <table>
     <thead>
         <tr>
-            <th colspan=4><center>iota11qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs</center></th>
+            <th colspan=4><center>iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml</center></th>
         </tr>
     </thead>
     <tbody>
@@ -39,8 +39,8 @@ The IOTA address is based on the Ed25519 signature scheme and it is usually repr
         <tr>
             <td><center>iota</center></td>
             <td><center>1</center></td>
-            <td><center>1qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sks</center></td>
-            <td><center>u7n5cs</center></td>
+            <td><center>qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75</center></td>
+            <td><center>9nh2ml</center></td>
         </tr>
         <tr>
             <td colspan=4>iota = mainnet; atoi = testnet</td>
@@ -48,5 +48,5 @@ The IOTA address is based on the Ed25519 signature scheme and it is usually repr
     </tbody>
 </table>
 
-For furthr details see the [RFC - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md).
+For further details see the [RFC - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md).
 
