@@ -29,6 +29,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@iota/iota.js": "github:iotaledger/iota.js#chrysalis"
+    "@iota/iota.js": "github:iotaledger/iota.js#chrysalis",
+    "markdown-link-check": "^3.8.7",
+    "markdown-spellcheck": "^1.3.1",
+    "prettier": "^2.2.1"
   }
 }
