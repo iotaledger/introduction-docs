@@ -12,7 +12,7 @@ Do note that migrating is a continuous effort that can be done at any time but f
 
 # Token Migration
 
-Below is an overview of how the migration will take place. For the more technical explanation of how the migration will work, see our **wallet** and **client libraries**.  And for a step by step overview, please see our **blog post**.
+Below is an overview of how the migration will take place:
 
 
 
