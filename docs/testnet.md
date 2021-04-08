@@ -3,19 +3,26 @@
 IOTA 1.5 (also known as Chrysalis) is IOTA's intermediate stage before Coordicide is complete. You can read more about the strategy for releasing Chrysalis [here](https://blog.iota.org/release-strategy-for-chrysalis-iota-1-5-4ea8741ea3a1/).
 
 ## Infrastructure
-Nodes deployed to the testnet can be queried using a load balancer at:
+Nodes deployed to the testnet can be queried using a load balancer (lb) at:
 
-- api.lb-0.testnet.chrysalis2.com
+- api.**lb-0**.testnet.chrysalis2.com
 
 We recommend using the load balancer for most scenarios.
 
 Single node endpoints that expose native MQTT, in case you need them, are:
 
-- api.hornet-0.testnet.chrysalis2.com
-- api.hornet-1.testnet.chrysalis2.com
-- api.hornet-2.testnet.chrysalis2.com
-- api.hornet-3.testnet.chrysalis2.com
+- api.**hornet-0**.testnet.chrysalis2.com
+- api.**hornet-1**.testnet.chrysalis2.com
+- api.**hornet-2**.testnet.chrysalis2.com
+- api.**hornet-3**.testnet.chrysalis2.com
 
+```mermaid
+graph TD;
+    lb-0-->hornet-0
+    lb-0-->hornet-1
+    lb-0-->hornet-2
+    lb-0-->hornet-3
+```
 
 The Node API is integrated according to the [following specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml).
 
