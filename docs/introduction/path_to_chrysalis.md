@@ -21,7 +21,7 @@ The intended outcomes for Chrysalis are:
 
 ## The stages to Chrysalis
 
-![](/Users/charlesthompson/chrysalis-docs/docs/introduction/assets/path_to_chrysalis/01.png)
+![](./assets/path_to_chrysalis/01.png)
 
 The Chrysalis upgrade is a complex undertaking. We are coordinating a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. In addition to the core node software, we also need to update our wallet software, our libraries, and the entire infrastructure.  
 

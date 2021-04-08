@@ -60,7 +60,7 @@ The following examples cover the *multi account approach* using `NodeJS` binding
 5. Check the user balance
 6. Enable withdrawals
 
-*Note: If you are looking for other languages, please read the [wallet library overview](/libraries/wallet.md).*
+*Note: If you are looking for other languages, please read the [wallet library overview](../libraries/wallet.md).*
 
 Since all `wallet.rs` bindings are based on core principles provided by the `wallet.rs` library, the outlined approach is very similar regardless of the programming language of your choice.
 
