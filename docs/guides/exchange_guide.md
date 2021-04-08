@@ -240,7 +240,7 @@ Sending tokens is performed via the `SyncedAccount` instance that is a result of
         amount
     )
 
-    console.log("Check your message on https://explorer.iota.org/crysalis/message/", node_response.id)
+    console.log("Check your message on https://explorer.iota.org/chrysalis/message/", node_response.id)
 ```
 
 The full function signature is `SyncedAccount.send(address, amount[, options])`.
