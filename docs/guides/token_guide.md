@@ -25,6 +25,7 @@ Below is an overview of how the migration will take place. For the more technica
 - If you migrate before Chrysalis launch, your funds become available at Chrysalis launch. 
 - If you migrate after Chrysalis launch, your funds will become available shortly after you migrate.
 - The process will be the same for Ledger Nano users. 
+  - Note: The Ledger will not be supported pripor to the Chrysalis launch, but after
 - You simply connect your device and Firefly guides you through the process.
 - Firefly will initially only be available on Mac, Linux and Windows.
 - Your funds are successfully migrated.
