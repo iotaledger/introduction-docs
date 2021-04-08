@@ -2,7 +2,7 @@
 
 With the advent of the Chrysalis migration, a number of aspects at IOTA are changing for the better. With easier ways to manage and secure your experience, IOTA fully intends to seamlessly integrate these innovations with no service interruptions to you.
 
-With Chrysalis, we make a clear cut from the current IOTA protocol, and start anew with a much better, and more mature network. The new network will support many new use cases and create a foundation for IOTA’s upcoming Coordicide.
+With Chrysalis, we make a clear cut from the current IOTA protocol, and start a new with a much better, and more mature network. The new network will support many new use cases and create a foundation for IOTA’s upcoming Coordicide.
 
 This includes one of the innovations that directly impacts one of the most crucial aspects of your experience: funds.
 
