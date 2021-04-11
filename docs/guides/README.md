@@ -1,8 +1,9 @@
 # IOTA Chrysalis Guides
 
-- [Developer](./dev_guide.md)
-- [Exchange](./exchange_guide.md)
-- [Hub Migration](./hub_guide.md)
+- [Developer Guide](./dev_guide.md)
+- [Exchange Guide](./exchange_guide.md)
+- [Token Migration Guide](./token_guide.md)
+- [Hub Migration Guide](./hub_guide.md)
 
 
 ## IOTA 1.5 (Chrysalis) in a nutshell

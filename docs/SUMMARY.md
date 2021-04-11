@@ -10,6 +10,7 @@
 - [Guides](./guides/README.md)
     - [Developer](./guides/dev_guide.md)
     - [Exchange](./guides/exchange_guide.md)
+    - [Token Migration](./guides/token_guide.md)
     - [Hub Migration](./guides/hub_guide.md)
     - [Backup and Security](./guides/backup_security.md)
 - [Testnet](./testnet.md)
