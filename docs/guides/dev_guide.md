@@ -23,7 +23,7 @@ Testnet with `atoi`
 atoi1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75zaxtpj
 ```
 ### IOTA 1.5 address anatomy
-The IOTA address is based on the Ed25519 signature scheme and it is usually represented by Bech32 (checksummed base32) format string of 64 characters or hex format:
+The IOTA address is based on the Ed25519 signature scheme and it is usually represented by the Bech32 (checksummed base32) format string of 64 characters or hex format:
 
 <table>
     <thead>
