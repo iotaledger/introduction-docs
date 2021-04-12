@@ -6,48 +6,14 @@
 - [Hub Migration Guide](./hub_guide.md)
 
 
-## IOTA 1.5 (Chrysalis) in a nutshell
-* IOTA network uses a DAG (Directed Acyclic Graph) to store its transactions. Each transaction can reference up to 8 parent transactions.
-* There is a breaking change moving from IOTA 1.0 to IOTA 1.5 (Chrysalis). IOTA address was originally based on WOTS signature scheme (81 trytes) and it has been replaced by a Ed25519 signature scheme.
-* In contrast to IOTA 1.0, IOTA 1.5 addresses are perfectly reusable;  even if one spends funds from the given address it can be used again
-* There are new [client libraries](../libraries/overview.md) developed that serve as `one-source-code-of-truth` to IOTA users and providing binding to other programming languages 
-
-### IOTA 1.5 address anatomy
-The IOTA address is based on the Ed25519 signature scheme and it is usually represented by Bech32 (checksummed base32) format string of 64 characters:
-
-<table>
-    <thead>
-        <tr>
-            <th colspan=4><center>iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml</center></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan=4><center>three distinguished parts</center></td>
-        </tr>
-        <tr>
-            <td><center><strong>human-readable id</strong></center></td>
-            <td><center><strong>separator</strong></center></td>
-            <td><center><strong>data</strong></center></td>
-            <td><center><strong>checksum</strong></center></td>
-        </tr>
-        <tr>
-            <td><center>iota | atoi</center></td>
-            <td><center>1</center></td>
-            <td><center>48 bytes [0..9a..z]</center></td>
-            <td><center>6 characters [0..9a..z]</center></td>
-        </tr>
-        <tr>
-            <td><center>iota</center></td>
-            <td><center>1</center></td>
-            <td><center>qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75</center></td>
-            <td><center>9nh2ml</center></td>
-        </tr>
-        <tr>
-            <td colspan=4>iota = mainnet; atoi = testnet</td>
-        </tr>
-    </tbody>
-</table>
-
-For further details see the [RFC - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md).
-
+## Overall changes from IOTA 1.0 to 1.5 (Chrysalis) in a nutshell
+* The format of the address was changed and it is based on both `derivation path` and `bech32` standards. See [IOTA address anatomy](./dev_guide.md#iota-15-address-anatomy)
+* The concepts of `bundles` and `transactions` were replaced with the concepts of `messages` and `payloads`. The `message` is a data structure that is actually being broadcast in the network and represents a node (vertex) in the Tangle graph. See [messages, payload and transactions](./dev_guide.md#messages-payload-and-transactions) and [selected message payloads](./dev_guide.md#selected-message-payloads)
+* The IOTA network is based on a DAG (Directed Acyclic Graph) to store individual `messages` (and related `transactions`). However, each `message` can newly reference up to 8 parent messages. See [messages, payload and transactions](./dev_guide.md#messages-payload-and-transactions)
+* The signature scheme based on `WOTS` was replaced with with `Ed25519` signature scheme. See [seed and addresses](./dev_guide.md#seed-and-addresses)
+* In contrast to IOTA 1.0, IOTA 1.5 addresses are perfectly reusable; even if one spends funds from the given address, it can be used again. See [address/key space](./dev_guide.md#addresskey-space)
+* Originally, IOTA 1.0 used an `account-based model` for tracking individual iota tokens. Chrysalis embraced `Unspent Transaction Output` (also known as `UTXO`) model to track tokens and token holders. See [Unspent Transaction Output](./dev_guide.md#unspent-transaction-output-utxo)
+* The approach to client libraries was completely reengineered from the ground up. There are new official client libraries that serve as `one-source-code-of-truth` to IOTA users and can be combined in a modular fashion based on particular use cases. All libraries provide a binding to other programming languages. See [client libraries](../libraries/overview.md)
+* Our official iota tools, such as wallet software, use the same libraries under the hood and so any developer may taste the same [dog food](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) as we do
+* The official client libraries embraced `Hierarchical Deterministic Wallets` approach which is fully `BIP44` compatible. See [address/key space](./dev_guide.md#addresskey-space)
+* There is a new official wallet software called Firefly. See [firefly beta release](https://blog.iota.org/firefly-beta-release/)
