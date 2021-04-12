@@ -4,7 +4,7 @@
 
 > Easily integrate IOTA with your exchange, custody solution, or product.
 
-IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. But, this architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.
+IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. But this architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.
 
 Within the Chrysalis update (also known as IOTA 1.5), some building blocks have been changed to be more approachable and more aligned with currently leveraged standards. We also ship many [client libraries](../libraries/overview.md) to help developers implement IOTA into their applications:
 ![layers](assets/wallet_rs_layers.svg)
@@ -65,7 +65,7 @@ The following examples cover the *multi account approach* using `NodeJS` binding
 Since all `wallet.rs` bindings are based on core principles provided by the `wallet.rs` library, the outlined approach is very similar regardless of the programming language of your choice.
 
 ### 1. Setup the Wallet library
-First off, let's install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In case of the `NodeJs` binding, it is quite straightforward since it is distributed via the `npm` package manager. We also recommend you use `dotenv` for password management.
+First, let's install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the `NodeJs` binding, it is quite straightforward since it is distributed via the `npm` package manager. We also recommend you use `dotenv` for password management.
 
 For reference, read more about [backup and security here](backup_security.md).
 
@@ -84,7 +84,7 @@ Once you have everything needed to use the `wallet.rs` library, it is necessary 
 
 The storage is encrypted at rest, so you need a strong password and location where to put your storage. 
 
-*Please note: deal with the password with utmost care*.
+*Note: manage your password with the utmost care*.
 
 Technically speaking, "storage" means a single file called `wallet.stronghold`. It is also needed to generate a seed (mnemonic) that serves as a cryptographic key from which all accounts and related addresses are generated.
 
@@ -104,7 +104,7 @@ Import the Wallet Library and create an account manager:
     manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic()) // seed generation
 ```
 
-Needless to say, once the stronghold storage is created, it is not needed to generate the seed any longer (`manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())`). It has been already saved in the storage together with all account information.
+Once the stronghold storage is created, it is not needed to generate the seed any longer (`manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())`). It has been already saved in the storage together with all account information.
 
 ### 2. Create an account for an user
 
@@ -117,28 +117,28 @@ Once the backend storage is created, individual accounts for individual users ca
     })
 ```
 
-Each account is related to a specific IOTA network (mainnet/devnet) which is referenced by a node properties, such as node url (in this example, the Chrysalis testnet balancer).
+Each account is related to a specific IOTA network (mainnet/devnet) which is referenced by a node property, such as node url (in this example, the Chrysalis testnet balancer).
 
 For more information about `clientOptions`, please refer to [Wallet NodeJs API Reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html).
 
-`Alias` can be whatever fits to the given use case and should be unique. The `alias` is usually used to identify the given account later on. Each account is also represented by `index` which is incremented (by 1) every time a new account is created. Any account can be then referred to via `index`, `alias`, or one of its generated `addresses`.
+The `Alias` can be whatever fits to the given use case and should be unique. The `alias` is usually used to identify the given account later on. Each account is also represented by an `index` which is incremented (by 1) every time a new account is created. Any account can be then referred to via `index`, `alias`, or one of its generated `addresses`.
 
-Once an account has been created you get an instance of it using the following methods: `AccountManager.getAccount(accountId)`, `AccountManager.getAccountByAlias(alias)` or `AccountManager.getAccounts()`.
+Once an account has been created, you get an instance of it using the following methods: `AccountManager.getAccount(accountId)`, `AccountManager.getAccountByAlias(alias)` or `AccountManager.getAccounts()`.
 
 The most common methods of `account` instance include:
-* `account.alias()`: returns an alias of the given account
-* `account.listAddresses()`: returns list of addresses related to the account
-* `account.getUnusedAddress()`: returns a first unused address
-* `account.generateAddress()`: generate a new address for the address index incremented by 1
-* `account.balance()`: returns the balance for the given account
-* `account.sync()`: sync the account information with the tangle
+* `account.alias()` - returns an alias of the given account
+* `account.listAddresses()` - returns list of addresses related to the account
+* `account.getUnusedAddress()` - returns a first unused address
+* `account.generateAddress()` - generate a new address for the address index incremented by 1
+* `account.balance()` - returns the balance for the given account
+* `account.sync()` - sync the account information with the tangle
 
 ### 3. Generate a user address to deposit funds
 `Wallet.rs` is a stateful library which means it caches all relevant information in storage to provide performance benefits while dealing with, potentially, many accounts/addresses.
 
-*Please note: sync the account info with the network during the wallet manipulation to be sure the storage reflects an actual state of the ledger (network)*. 
+*Note: sync the account info with the network during the wallet manipulation to be sure the storage reflects an actual state of the ledger (network)*. 
 
-Every account can own multiple addresses. Addresses are represented by `index` which is incremented (by 1) every time a new address is created. The latest address is accessible via `account.latestAddress()`: 
+Every account can own multiple addresses. Addresses are represented by an `index` which is incremented (by 1) every time a new address is created. The latest address is accessible via `account.latestAddress()`: 
 
 ```javascript
     // Always sync before account interactions
@@ -151,13 +151,13 @@ Every account can own multiple addresses. Addresses are represented by `index` w
 
     console.log('Need a refill? Send it to this address:', latestAddress)
 ```
-Feel free to fill the address with Testnet Tokens with the [IOTA Faucet](https://faucet.testnet.chrysalis2.com/) in order to test it.
+Feel free to fill the address with Testnet Tokens with the [IOTA Faucet](https://faucet.testnet.chrysalis2.com/) to test it.
 
 Addresses are of two types, `internal` and `public` (external):
 * Each set of addresses are independent from each other and has an independent `index` id
 * Addresses that are created by `account.generateAddress()` are indicated as `internal=false` (public)
 * Internal addresses (`internal=true`) are called `change` addresses and are used to send the excess funds to them
-* The approach is also known as a *BIP32 Hierarchical Deterministic wallet (HD Wallet)*.
+* The approach is also known as a *BIP32 Hierarchical Deterministic wallet (HD Wallet)*
 
 _Note: You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in IOTA 1.5 (Chrysalis) network._
 
@@ -250,6 +250,6 @@ Default options are perfectly fine and get the job done; however, additional opt
 * `changeAddress`: Send the remainder value to an internal address
 * `reuseAddress`: Send the remainder value back to its original address
 
-The `SyncedAccount.send()` function returns a `wallet message` that fully describes the given transaction. `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via `account.listMessages()` function.
+The `SyncedAccount.send()` function returns a `wallet message` that fully describes the given transaction. The `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via `account.listMessages()` function.
 
 Please note that when sending tokens, a [dust protection](dev_guide.html#dust-protection) mechanism should be considered. 

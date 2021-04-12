@@ -5,7 +5,7 @@ Security Checklist
 - How to backup your account
 - How to restore from a backup
 - How to export a user's Stronghold
-- How to rekey a Stronghold/password rotation?
+- How to rekey a Stronghold/password rotation
 - Do's and don'ts
 
 ## Security checklist
@@ -21,7 +21,7 @@ Security Checklist
 
 ## How to backup your account
 
-A simple copy of the stronghold.snapshot file works as a backup (e.g. a daily cronjob rsync / scp with a datetime suffix for example).
+A simple copy of the stronghold.snapshot file works as a backup (e.g. a daily cronjob rsync/scp with a datetime suffix for example).
 
 ## How to restore from a backup
 
