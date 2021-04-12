@@ -1,5 +1,5 @@
 # Developer guide to Chrysalis
-This is a quick guide meant to help you navigate through some of the differences you will encounter while migrating from IOTA 1.0 to IOTA 1.5 also known as Chrysalis.
+This is a quick guide meant to help you navigate through some of the differences you will encounter while migrating from IOTA 1.0 to IOTA 1.5, also known as Chrysalis.
 
 ## Seed and addresses
 In Chrysalis, all ternary conversions apart from PoW have been removed which results in a better, faster developer experience. Additionally, the WOTS-Signature has been replaced by a `Ed25519` signature scheme. This means that you can now use an address multiple times to send and receive coins.
