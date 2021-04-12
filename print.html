@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="node-software/node-software.html"><strong aria-hidden="true">4.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="libraries/overview.html"><strong aria-hidden="true">5.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/client.html"><strong aria-hidden="true">5.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="libraries/wallet.html"><strong aria-hidden="true">5.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="guides/index.html"><strong aria-hidden="true">6.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guides/dev_guide.html"><strong aria-hidden="true">6.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="guides/exchange_guide.html"><strong aria-hidden="true">6.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="guides/hub_guide.html"><strong aria-hidden="true">6.3.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="guides/backup_security.html"><strong aria-hidden="true">6.4.</strong> Backup and Security</a></li></ol></li><li class="chapter-item expanded "><a href="testnet.html"><strong aria-hidden="true">7.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="rfc.html"><strong aria-hidden="true">8.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">9.</strong> Resources</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">10.</strong> FAQ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="node-software/node-software.html"><strong aria-hidden="true">4.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="libraries/overview.html"><strong aria-hidden="true">5.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/client.html"><strong aria-hidden="true">5.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="libraries/wallet.html"><strong aria-hidden="true">5.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="guides/index.html"><strong aria-hidden="true">6.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guides/dev_guide.html"><strong aria-hidden="true">6.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="guides/exchange_guide.html"><strong aria-hidden="true">6.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="guides/token_guide.html"><strong aria-hidden="true">6.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="guides/hub_guide.html"><strong aria-hidden="true">6.4.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="guides/backup_security.html"><strong aria-hidden="true">6.5.</strong> Backup and Security</a></li></ol></li><li class="chapter-item expanded "><a href="testnet.html"><strong aria-hidden="true">7.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="rfc.html"><strong aria-hidden="true">8.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">9.</strong> Resources</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">10.</strong> FAQ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -414,9 +414,10 @@ The IOTA Wallet Library Python API Documentation.</li>
 </ul>
 <h1 id="iota-chrysalis-guides"><a class="header" href="#iota-chrysalis-guides">IOTA Chrysalis Guides</a></h1>
 <ul>
-<li><a href="guides/./dev_guide.html">Developer</a></li>
-<li><a href="guides/./exchange_guide.html">Exchange</a></li>
-<li><a href="guides/./hub_guide.html">Hub Migration</a></li>
+<li><a href="guides/./dev_guide.html">Developer Guide</a></li>
+<li><a href="guides/./exchange_guide.html">Exchange Guide</a></li>
+<li><a href="guides/./token_guide.html">Token Migration Guide</a></li>
+<li><a href="guides/./hub_guide.html">Hub Migration Guide</a></li>
 </ul>
 <h2 id="iota-15-chrysalis-in-a-nutshell"><a class="header" href="#iota-15-chrysalis-in-a-nutshell">IOTA 1.5 (Chrysalis) in a nutshell</a></h2>
 <ul>
@@ -778,6 +779,31 @@ touch .env
 </ul>
 <p>The <code>SyncedAccount.send()</code> function returns a <code>wallet message</code> that fully describes the given transaction. <code>messageId</code> can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via <code>account.listMessages()</code> function.</p>
 <p>Please note that when sending tokens, a <a href="guides/dev_guide.html#dust-protection">dust protection</a> mechanism should be considered. </p>
+<h1 id="chrysalis-migration"><a class="header" href="#chrysalis-migration">Chrysalis Migration</a></h1>
+<p>With the advent of the Chrysalis migration, a number of aspects at IOTA are changing for the better. With easier ways to manage and secure your experience, IOTA fully intends to seamlessly integrate these innovations with no service interruptions to you.</p>
+<p>With Chrysalis, we make a clear cut from the current IOTA protocol, and start a new with a much better, and more mature network. The new network will support many new use cases and create a foundation for IOTA’s upcoming Coordicide.</p>
+<p>This includes one of the innovations that directly impacts one of the most crucial aspects of your experience: funds.</p>
+<p>Because of its complexity, the migration process for the next phase of Chrysalis consists of phases; we are currently in phase one where your funds will be migrated in one week and will be available on our new network upon launch.</p>
+<p>Do note that migrating is a continuous effort that can be done at any time but for your sake and expediency, we recommend migrating ahead of the launch to avoid any interruptions to your service.</p>
+<h1 id="token-migration"><a class="header" href="#token-migration">Token Migration</a></h1>
+<p>Below is an overview of how the migration will take place:</p>
+<h2 id="migration-overview"><a class="header" href="#migration-overview">Migration Overview</a></h2>
+<ul>
+<li>You enter your seed in Firefly.</li>
+<li>Firefly creates you a new seed and generates an EdDSA address for the new network.</li>
+<li>Firefly sends your funds to a predetermined migration address on the old network.</li>
+<li>Your funds become available on the network, in the EdDSA address Firefly created for you. </li>
+<li>If you migrate before Chrysalis launch, your funds become available at Chrysalis launch. </li>
+<li>If you migrate after Chrysalis launch, your funds will become available shortly after you migrate.</li>
+<li>The process will be the same for Ledger Nano users. 
+<ul>
+<li>Note: The Ledger will not be supported pripor to the Chrysalis launch, but after</li>
+</ul>
+</li>
+<li>You simply connect your device and Firefly guides you through the process.</li>
+<li>Firefly will initially only be available on Mac, Linux and Windows.</li>
+<li>Your funds are successfully migrated.</li>
+</ul>
 <h1 id="iota-hub-migration-guide"><a class="header" href="#iota-hub-migration-guide">IOTA Hub migration guide</a></h1>
 <blockquote>
 <p>This guide will explain how you can switch from IOTA Hub to using wallet.rs or its bindings instead.</p>
