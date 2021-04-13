@@ -16,7 +16,7 @@ What are the specific Chrysalis upgrades?
 
 ## White-flag approach
 ![](./assets/what_is_chrysalis/01.png)
-[The White-flag approach](https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233) for calculating balances. A simpler, conflict-ignoring approach that improves the speed and efficiency of tip selection, eliminates many network attacks, and significantly reduces the need for reattachments.
+[The White-flag approach](https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233) which is used for calculating balances. It is a simpler, conflict-ignoring approach that improves the speed and efficiency of tip selection, eliminates many network attacks, and significantly reduces the need for reattachments
 
 ## New milestone selection algorithm
 ![](./assets/what_is_chrysalis/02.png)
