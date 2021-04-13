@@ -15,7 +15,7 @@ In IOTA, validators and users are one and the same. There is no conflict of inte
 What are the specific Chrysalis upgrades?
 
 ## White-flag approach
-![](../docs/assets/what_is_chrysalis/01.png)
+![](./assets/what_is_chrysalis/01.png)
 [White-flag approach](https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233) for calculating balances. A simpler, conflict-ignoring approach that improves the speed and efficiency of tip selection, eliminates many network attacks, and significantly reduces the need for reattachments.
 
 ## New milestone selection algorithm
