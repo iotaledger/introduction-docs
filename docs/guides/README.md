@@ -12,7 +12,7 @@
 * The IOTA network is based on a DAG (Directed Acyclic Graph) to store individual `messages` (and related `transactions`). However, each `message` can newly reference up to 8 parent messages. See [messages, payload and transactions](./dev_guide.md#messages-payload-and-transactions)
 * The signature scheme based on `WOTS` was replaced with with `Ed25519` signature scheme. See [seed and addresses](./dev_guide.md#seed-and-addresses)
 * Due to the changed signature scheme, IOTA addresses are reusable without any negative security impact
-* In contrary to IOTA 1.0 that was based on ternary, IOTA 1.5 is based on binary and, thus, very efficient on all kinds of current hardware devices
+* In comparison to IOTA 1.0, which was based on ternary, IOTA 1.5 is based on binary and is thus very efficient on all kinds of current hardware devices
 * In contrast to IOTA 1.0, IOTA 1.5 addresses are perfectly reusable; even if one spends funds from the given address, it can be used again. See [address/key space](./dev_guide.md#addresskey-space)
 * Originally, IOTA 1.0 used an `account-based model` for tracking individual iota tokens. Chrysalis embraced `Unspent Transaction Output` (also known as `UTXO`) model to track tokens and token holders. See [Unspent Transaction Output](./dev_guide.md#unspent-transaction-output-utxo)
 * The approach to client libraries was completely reengineered from the ground up. There are new official client libraries that serve as `one-source-code-of-truth` to IOTA users and can be combined in a modular fashion based on particular use cases. All libraries provide a binding to other programming languages. See [client libraries](../libraries/overview.md)
