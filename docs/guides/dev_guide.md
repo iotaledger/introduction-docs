@@ -1,5 +1,5 @@
 # Developer guide to Chrysalis
-This is a quick guide meant to help you navigate through some of the differences you will encounter while migrating to IOTA Chrysalis.
+This is a quick guide meant to help you navigate through some of the differences you will encounter while migrating from IOTA 1.0 to IOTA 1.5, also known as Chrysalis.
 
 ## Seed and addresses
 In Chrysalis, all ternary conversions apart from PoW have been removed which results in a better, faster developer experience. Additionally, the WOTS-Signature has been replaced by a `Ed25519` signature scheme. This means that you can now use an address multiple times to send and receive coins.
@@ -22,7 +22,46 @@ Testnet with `atoi`
 ```bash=
 atoi1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75zaxtpj
 ```
-[Protocol-rfc#0020](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md)
+### IOTA 1.5 address anatomy
+The IOTA address is based on the Ed25519 signature scheme and it is usually represented by the Bech32 (checksummed base32) format string of 64 characters or hex format:
+
+<table>
+    <thead>
+        <tr>
+            <th colspan=4><center>iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml</center></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan=4><center>three distinguished parts</center></td>
+        </tr>
+        <tr>
+            <td><center><strong>human-readable id</strong></center></td>
+            <td><center><strong>separator</strong></center></td>
+            <td><center><strong>data</strong></center></td>
+            <td><center><strong>checksum</strong></center></td>
+        </tr>
+        <tr>
+            <td><center>iota | atoi</center></td>
+            <td><center>1</center></td>
+            <td><center>48 bytes [0..9a..z]</center></td>
+            <td><center>6 characters [0..9a..z]</center></td>
+        </tr>
+        <tr>
+            <td><center>iota</center></td>
+            <td><center>1</center></td>
+            <td><center>qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75</center></td>
+            <td><center>9nh2ml</center></td>
+        </tr>
+        <tr>
+            <td colspan=4>iota = mainnet; atoi = testnet</td>
+        </tr>
+    </tbody>
+</table>
+
+More information: [Protocol-rfc#0020](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md)
+
+### Seed
 
 With the new [wallet library](../libraries/wallet.md), developers do not need to use a self-generated seed anymore. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.
 

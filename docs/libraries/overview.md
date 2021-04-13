@@ -16,6 +16,7 @@ Official IOTA libraries serve as `one-source-code-of-truth` to IOTA users and pr
 <iframe src="https://www.youtube.com/embed/N2VW3zJQmso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+![overview-libs](../guides/assets/overview-libraries.svg)
 
 All libraries are in active development. The libraries target the Chrysalis testnet and do not work with current IOTA mainnet.
 
