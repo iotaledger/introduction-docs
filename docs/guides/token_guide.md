@@ -1,6 +1,6 @@
 # Chrysalis Migration
 
-With the advent of the Chrysalis migration, a number of aspects at IOTA are changing for the better. With easier ways to manage and secure your experience, IOTA will seamlessly integrate these innovations with no service interruptions to you.
+With the advent of the Chrysalis migration, a number of aspects at IOTA are changing for the better. With easier ways to manage and secure your experience, IOTA will seamlessly integrate these innovations with no service interruptions.
 
 With Chrysalis, we make a clear cut from the current IOTA protocol, and start a new with a much better, and more mature network. The new network will support many new use cases and create a foundation for IOTA’s upcoming Coordicide.
 
