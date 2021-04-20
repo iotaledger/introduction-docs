@@ -38,7 +38,7 @@ To transfer your user's tokens securely to the new Chrysalis (IOTA 1.5) network,
 There are potentially three ways with which you can migrate your funds from from old (legacy) to new (chrysalis) network:
 
 
-1. Via **Firefly**. This procedure is explained [in this blog entry](https://blog.iota.org/firefly-token-migration/). This guide will just cover the programaticly approach to migrate.
+1. Via **Firefly**. This procedure is explained [in this blog entry](https://blog.iota.org/firefly-token-migration/). This guide will just cover the programmatically approach to migrate.
 
 2. Via a **Migration Address** Use wallet library solely for migrating funds from old to new network (in this case, you will have to generate and manage your new seed and migration address);
 
