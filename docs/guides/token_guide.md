@@ -145,4 +145,7 @@ async function run() {
 
 run()
 ```
+
+After the migration only the stronghold file gives you access to the funds, so make sure to back it up properly. It's not possible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for [Backup and security](https://chrysalis.docs.iota.org/guides/backup_security.html#backup-and-security).
+
 If you are new to [wallet.rs](https://github.com/iotaledger/wallet.rs), please check out our [Wallet Library Documentation](https://chrysalis.docs.iota.org/libraries/wallet.html).
