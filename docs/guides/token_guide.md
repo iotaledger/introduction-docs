@@ -147,4 +147,4 @@ async function run() {
 
 run()
 ```
-If you are now to [wallet.rs](https://github.com/iotaledger/wallet.rs), please check out our [Wallet Library Documentation](https://chrysalis.docs.iota.org/libraries/wallet.html).
+If you are new to [wallet.rs](https://github.com/iotaledger/wallet.rs), please check out our [Wallet Library Documentation](https://chrysalis.docs.iota.org/libraries/wallet.html).
