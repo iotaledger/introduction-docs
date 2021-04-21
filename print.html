@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="node-software/node-software.html"><strong aria-hidden="true">4.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="libraries/overview.html"><strong aria-hidden="true">5.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/client.html"><strong aria-hidden="true">5.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="libraries/wallet.html"><strong aria-hidden="true">5.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="guides/index.html"><strong aria-hidden="true">6.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guides/dev_guide.html"><strong aria-hidden="true">6.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="guides/exchange_guide.html"><strong aria-hidden="true">6.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="guides/token_guide.html"><strong aria-hidden="true">6.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="guides/hub_guide.html"><strong aria-hidden="true">6.4.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="guides/backup_security.html"><strong aria-hidden="true">6.5.</strong> Backup and Security</a></li></ol></li><li class="chapter-item expanded "><a href="testnet.html"><strong aria-hidden="true">7.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="rfc.html"><strong aria-hidden="true">8.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">9.</strong> Resources</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">10.</strong> FAQ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="firefly/index.html"><strong aria-hidden="true">4.</strong> Firefly</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="firefly/verify_download.html"><strong aria-hidden="true">4.1.</strong> Verify Download</a></li></ol></li><li class="chapter-item expanded "><a href="node-software/node-software.html"><strong aria-hidden="true">5.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="libraries/overview.html"><strong aria-hidden="true">6.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/client.html"><strong aria-hidden="true">6.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="libraries/wallet.html"><strong aria-hidden="true">6.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="guides/index.html"><strong aria-hidden="true">7.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guides/dev_guide.html"><strong aria-hidden="true">7.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="guides/exchange_guide.html"><strong aria-hidden="true">7.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="guides/token_guide.html"><strong aria-hidden="true">7.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="guides/hub_guide.html"><strong aria-hidden="true">7.4.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="guides/backup_security.html"><strong aria-hidden="true">7.5.</strong> Backup and Security</a></li></ol></li><li class="chapter-item expanded "><a href="testnet.html"><strong aria-hidden="true">8.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="rfc.html"><strong aria-hidden="true">9.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">10.</strong> Resources</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">11.</strong> FAQ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -275,6 +275,158 @@ A new <a href="https://github.com/iotaledger/protocol-rfcs/blob/master/text/0008
 </ul>
 <h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
 <p>Chrysalis is the most promising series of upgrades made to IOTA yet. It is a major step for our production-readiness, with increased transaction throughput, network stability, improved usability, and enables new features and use cases. The upcoming weeks and months are some of the most exciting in IOTA’s history. We are on a clear path towards IOTA’s adoption as an enabling technology for IoT and beyond.</p>
+<h1 id="firefly"><a class="header" href="#firefly">Firefly</a></h1>
+<blockquote>
+<p>Firefly is IOTA's new official wallet for Chrysalis. </p>
+</blockquote>
+<p>GitHub: https://github.com/iotaledger/firefly</p>
+<h1 id="verify-your-firefly-desktop-download"><a class="header" href="#verify-your-firefly-desktop-download">Verify your Firefly desktop download</a></h1>
+<p><strong>When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this tutorial, you learn how to verify Firefly Desktop downloads.</strong></p>
+<p>To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and its code signature. Instructions for both of these steps differ, depending on your operating system.</p>
+<h2 id="windows-operating-system"><a class="header" href="#windows-operating-system">Windows operating system</a></h2>
+<h3 id="verify-the-sha256-hash"><a class="header" href="#verify-the-sha256-hash">Verify the SHA256 hash</a></h3>
+<ol>
+<li>
+<p>Open a command-line interface</p>
+</li>
+<li>
+<p>Create a SHA256 hash of the Firefly Desktop <code>.exe</code> file. Replace the path with the path to your Firefly <code>.exe</code> file.</p>
+<pre><code>certUtil -hashfile path\to\firefly-desktop-version.exe SHA256
+</code></pre>
+</li>
+</ol>
+<pre><code>For example, if the file is in the `C:\Users\yourname\Downloads` directory, do the following:
+
+```
+certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
+```
+</code></pre>
+<ol start="3">
+<li>Compare your SHA256 hash with the one in the <a href="https://github.com/iotaledger/firefly/releases">release notes</a> and make sure that they match</li>
+</ol>
+<h3 id="verify-the-code-signature"><a class="header" href="#verify-the-code-signature">Verify the code signature</a></h3>
+<ol>
+<li>
+<p>Right-click on <code>firefly-desktop-version.exe</code></p>
+</li>
+<li>
+<p>Go to <strong>Digital Signatures</strong> &gt; <strong>Details</strong> &gt; <strong>View Certificate</strong></p>
+</li>
+<li>
+<p>In the Certification Path tab, make sure that the the following information matches the path:</p>
+<p>DigiCert
+DigiCert SHA2 Assured Code Signing CA
+IOTA Stiftung</p>
+</li>
+<li>
+<p>Make sure that the Certificate status reads &quot;This certificate is OK.&quot;</p>
+</li>
+</ol>
+<h2 id="macos-operating-system"><a class="header" href="#macos-operating-system">MacOS operating system</a></h2>
+<h3 id="verify-the-sha256-hash-1"><a class="header" href="#verify-the-sha256-hash-1">Verify the SHA256 hash</a></h3>
+<ol>
+<li>
+<p>Open Terminal (in <code>/Applications/Utilities/Terminal</code>)</p>
+</li>
+<li>
+<p>Create a SHA256 hash of the Firefly Desktop <code>.dmg</code> file. Replace the path with the path to your Firefly <code>.dmg</code> file.</p>
+</li>
+</ol>
+<pre><code class="language-bash">shasum -a 256 /path/to/firefly-desktop-version.dmg
+</code></pre>
+<p>For example, if the file is in <code>~/Downloads</code>, do the following:</p>
+<pre><code class="language-bash">shasum -a 256 ~/Downloads/firefly-desktop-1.0.0.dmg
+</code></pre>
+<ol start="3">
+<li>Compare your SHA256 hash with the one in the <a href="https://github.com/iotaledger/firefly/releases">release notes</a> and make sure that they match</li>
+</ol>
+<h3 id="verify-the-code-signature-1"><a class="header" href="#verify-the-code-signature-1">Verify the code signature</a></h3>
+<h4 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h4>
+<p>To follow these instructions you need <a href="https://www.ics.uci.edu/%7Epattis/common/handouts/macmingweclipse/allexperimental/macxcodecommandlinetools.html">Xcode Command Line Tools</a>.</p>
+<ol>
+<li>
+<p>Open Terminal (in <code>/Applications/Utilities/Terminal</code>)</p>
+</li>
+<li>
+<p>Verify the <code>Firefly.app</code> file's signature. Replace the path with the path to your <code>Firefly.app</code> file. This command confirms whether the code binaries are actually signed, the signature is valid, all the sealed components are unaltered, and the signature passes some basic consistency checks.</p>
+<pre><code class="language-bash">codesign -d -vv /path/to/Firefly.app
+</code></pre>
+<p>For example, if the file is in the <code>/Applications</code> directory, do the following:</p>
+<pre><code class="language-bash">codesign -d -vv /Applications/Firefly.app
+</code></pre>
+</li>
+<li>
+<p>Make sure that the following information matches the output of the command:</p>
+<pre><code class="language-bash">Identifier=org.iota.firefly
+Authority=Developer ID Application: IOTA Stiftung (UG77RJKZHH)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+</code></pre>
+</li>
+<li>
+<p>Test the signature against system policies. Replace the path with the path to your <code>Firefly.app</code> file.</p>
+<pre><code class="language-bash">spctl -a -vv path/to/Firefly.app
+</code></pre>
+<p>For example, if the file is in the <code>/Applications</code> directory, do the following:</p>
+<pre><code class="language-bash">spctl -a -vv /Applications/Firefly.app
+</code></pre>
+</li>
+<li>
+<p>Make sure that the following information matches the output of the command (assuming Firefly is in the <code>/Applications</code> directory):</p>
+<p>/Applications/Firefly.app: accepted
+source=Developer ID
+origin=Developer ID Application: IOTA Stiftung (UG77RJKZHH)</p>
+</li>
+</ol>
+<h2 id="linux-operating-system"><a class="header" href="#linux-operating-system">Linux operating system</a></h2>
+<h3 id="verify-the-sha256-hash-2"><a class="header" href="#verify-the-sha256-hash-2">Verify the SHA256 hash</a></h3>
+<h4 id="prerequisites-1"><a class="header" href="#prerequisites-1">Prerequisites</a></h4>
+<p>To follow these instructions you need the <code>sha256sum</code> package, which is included with most Linux distributions.</p>
+<ol>
+<li>
+<p>Open Terminal</p>
+</li>
+<li>
+<p>Create a SHA256 hash of the Firefly Desktop executable file. Replace the path with the path to your Firefly executable file.</p>
+</li>
+</ol>
+<pre><code class="language-bash">`sha256sum path/to/firefly-desktop-version.AppImage`
+</code></pre>
+<p>For example, if the file is in <code>~/Downloads</code>, do the following:</p>
+<pre><code class="language-bash">sha256sum ~/Downloads/firefly-desktop-1.0.0.AppImage
+</code></pre>
+<ol start="3">
+<li>Compare your SHA256 hash with the one in the <a href="https://github.com/iotaledger/firefly/releases">release notes</a> and make sure that they match</li>
+</ol>
+<h3 id="verify-the-code-signature-2"><a class="header" href="#verify-the-code-signature-2">Verify the code signature</a></h3>
+<ol>
+<li>
+<p>Download the .asc and .gpg files in the Assets section of the <a href="https://github.com/iotaledger/firefly/releases">release notes</a></p>
+</li>
+<li>
+<p>Import the Firefly GPG key from keyserver.ubuntu.com</p>
+<pre><code class="language-bash">gpg --keyserver keyserver.ubuntu.com --recv 466385BD0B40D9550F93C04746A440CCE5664A64
+</code></pre>
+</li>
+<li>
+<p>Make sure that the following information matches the output of the command:</p>
+<pre><code class="language-bash">gpg: key 46A440CCE5664A64: public key &quot;IOTA Foundation (IOTA Foundation Identity) &lt;contact@iota.org&gt;&quot;
+</code></pre>
+</li>
+<li>
+<p>Verify the signature</p>
+<pre><code class="language-bash">gpg --verify path/to/firefly-desktop-version.AppImage.asc path/to/firefly-desktop-version.AppImage
+</code></pre>
+<p>For example, if the .asc and .AppImage files are both in <code>~/Downloads</code>, do the following:</p>
+<pre><code class="language-bash">gpg --verify ~/Downloads/firefly-desktop-1.0.0.AppImage.asc ~/Downloads/firefly-desktop-1.0.0.AppImage
+</code></pre>
+</li>
+<li>
+<p>Make sure that the following information matches the output of the command:</p>
+<pre><code class="language-bash">gpg: Good signature from &quot;IOTA Foundation (IOTA Foundation Identity) &lt;contact@iota.org&gt;&quot;
+</code></pre>
+</li>
+</ol>
 <h1 id="node-software"><a class="header" href="#node-software">Node software</a></h1>
 <p>We have been running the network exclusively on the Go powered Hornet node since the summer of 2020. For Chrysalis, you will have the choice to continue using a new version of Hornet or our new Rust-based Bee node.</p>
 <h3 id="hornet-and-bee"><a class="header" href="#hornet-and-bee">Hornet and Bee</a></h3>
