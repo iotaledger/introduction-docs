@@ -46,13 +46,12 @@ There are potentially three ways with which you can migrate your funds from from
 
 
 
-#### Migration Guide - Via an Migration Address
+#### Migration Guide - Via a Migration Address
 
 With this scenario, you generate your recovery phrase yourself. Then, you generate an address from it, generate the migration address (as in the example below), and then use the same steps performed in section 1 for migrating.
 
-Using this approach, it's very easy to migrate funds to the new Chrysalis network. You just generate a new Chrysalis address and convert it to the old Trinary format. 
-
-If you send funds to this migration address, it bridges the network and you will have the funds available in the Chrysalis network.
+With this approach, it's very easy to migrate funds to the new Chrysalis network. You just generate a new Chrysalis address and convert it to the old Trinary Format. 
+If you send Funds to this migration address, it bridges the network and you have the funds available in the Chrysalis network.
 
 #### generate migration address
 This is an example, how to create a Migration Address with Node.js:
@@ -74,11 +73,9 @@ Code: https://github.com/iotaledger/wallet.rs/blob/develop/bindings/nodejs/tests
 ### Be safe!
 
 Please take care that you...
-- ... dont create outputs that are lower that 1 Mi (to prevent Dust Protection).
-- ... use a limited amount of inputs (<10) and create small bundles (otherwise your PoW will just takes to long).
-- ... use the [bundle-miner](https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner) if the old bundle hashes include spent address. The bundle-miner will create bundles that reveal as few new parts of the private key as possible.
-
-If you have spent addresses (which can be checked via the wereAddressesSpentFrom endpoint in the legacy network), we recommend you get the bundle hashes from the previous outgoing transactions for these addresses and use the bundle miner to create a bundle that reveals as few new parts of the private key as possible.
+- ... don't create outputs that are lower than 1 Mi (to prevent Dust Protection).
+- ... use a limited amount of inputs (<10) and create small Bundles (otherwise your PoW will just takes to long).
+- ... use the [bundle-miner](https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner), if inputs include spent address. The bundle-miner will create bundles that reveal as few new parts of the private key as possible.
 
 More information about the migration bundle can be found in the [RFC-0035](https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md#migration-bundle).
 
