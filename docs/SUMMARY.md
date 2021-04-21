@@ -3,6 +3,8 @@
 - [Introduction](./introduction/welcome.md)
 - [What is Chrysalis?](./introduction/what_is_chrysalis.md)
 - [Path to Chrysalis](./introduction/path_to_chrysalis.md)
+- [Firefly](./firefly/README.md)
+    - [Verify Download](./firefly/verify_download.md)
 - [Node Software](./node-software/node-software.md)
 - [Libraries](./libraries/overview.md)
     - [Client Lib](./libraries/client.md)
