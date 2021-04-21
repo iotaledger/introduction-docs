@@ -75,10 +75,10 @@ Code: https://github.com/iotaledger/wallet.rs/blob/develop/bindings/nodejs/tests
 
 Please take care that you...
 - ... dont create outputs that are lower that 1 Mi (to prevent Dust Protection).
-- ... you use a limited amount of inputs (<10) and create small Bundles (otherwise your PoW will just takes to long).
-- ... use the [bundle-miner](https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner), if old bundle hashes include spent address. The bundle-miner will create bundles that reveal as few new parts of the private key as possible.
+- ... use a limited amount of inputs (<10) and create small bundles (otherwise your PoW will just takes to long).
+- ... use the [bundle-miner](https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner) if the old bundle hashes include spent address. The bundle-miner will create bundles that reveal as few new parts of the private key as possible.
 
-If you have spent addresses (which can be checked via the wereAddressesSpentFrom endpoint in the legacy network), we recommend to get the bundle hashes from the previous outgoing transactions for these addresses and use the bundle miner to create a bundle that reveals as few new parts of the private key as possible.
+If you have spent addresses (which can be checked via the wereAddressesSpentFrom endpoint in the legacy network), we recommend you get the bundle hashes from the previous outgoing transactions for these addresses and use the bundle miner to create a bundle that reveals as few new parts of the private key as possible.
 
 More information about the migration bundle can be found in the [RFC-0035](https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md#migration-bundle).
 
