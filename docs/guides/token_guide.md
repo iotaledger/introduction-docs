@@ -33,25 +33,26 @@ For further information on the migration process, see our [blog post](https://bl
 
 ## Exchanges Migration Guide 
 
-To transfer your user's tokens securely to the new Chrysalis (IOTA 1.5) network, we provide this helpful guide. 
+To help you successfully transfer your tokens securely to the new Chrysalis (IOTA 1.5) network, we created this guide as an overview of the migration process.
 
 There are potentially three ways with which you can migrate your funds from from old (legacy) to new (chrysalis) network:
 
 
-1. Via **Firefly**. This procedure is explained [in this blog entry](https://blog.iota.org/firefly-token-migration/). This guide will just cover the programmatically approach to migrate.
+1. Via **Firefly** - This procedure is explained [in this blog entry](https://blog.iota.org/firefly-token-migration/). This guide will cover **just** the programmatic approach to migrate.
 
-2. Via a **Migration Address** Use wallet library solely for migrating funds from old to new network (in this case, you will have to generate and manage your new seed and migration address);
+2. Via a **Migration Address** - This procedure uses the wallet library solely for migrating funds from the old to the new network (in this case, you will have to generate and manage your new seed and migration address);
 
-3. Via a **legacy Seed**. Use wallet library for generating, managing your new seed and migration process;
+3. Via a **legacy Seed** - This procedure uses wallet library for generating, managing your new seed, and migration process;
 
 
 
 #### Migration Guide - Via an Migration Address
 
-With this scenario, you generate your recovery phrase yourself. Then generate an address from it, generate migration address (as in the example below) and then use the same steps performed in section 1 for migrating.
+With this scenario, you generate your recovery phrase yourself. Then, you generate an address from it, generate the migration address (as in the example below), and then use the same steps performed in section 1 for migrating.
 
-With this approach, its very easy to migrate funds to the new Chrysalis network. You just generate a new Chrysalis address and convert it to the old Trinary Format. 
-If you send Funds to this migration address, it bridges the network and you have the funds available in the Chrysalis network.
+Using this approach, it's very easy to migrate funds to the new Chrysalis network. You just generate a new Chrysalis address and convert it to the old Trinary format. 
+
+If you send funds to this migration address, it bridges the network and you will have the funds available in the Chrysalis network.
 
 #### generate migration address
 This is an example, how to create a Migration Address with Node.js:
