@@ -121,13 +121,13 @@ async function run() {
     manager.storeMnemonic(SignerType.Stronghold)
 
     const account = await manager.createAccount({
-        clientOptions: { node: "https://api.lb-0.testnet.chrysalis2.com", localPow: true },
+        clientOptions: { node: "https://chrysalis-nodes.iota.org", localPow: true },
         alias: 'Migration',
     })
 
     console.log('Account created:', account.alias())
 
-    const nodes = ['https://nodes.devnet.iota.org']
+    const nodes = ['https://nodes.iota.org']
     const seed = process.env.MIGRATION_SEED
     const migrationData = await manager.getMigrationData(
       nodes,
