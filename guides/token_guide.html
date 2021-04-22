@@ -167,9 +167,8 @@
 <p>This includes one of the innovations that directly impacts one of the most crucial aspects of your experience: funds.</p>
 <p>Because of its complexity, the migration process for the next phase of Chrysalis consists of two phases; we are currently in phase one where you initiate the migration of your funds in one week and which will then be available on our new network upon launch.</p>
 <p>Do note that migrating is a continuous effort that can be done at any time after the initial migration start date.</p>
-<h1 id="token-migration"><a class="header" href="#token-migration">Token Migration</a></h1>
+<h2 id="token-migration-overview"><a class="header" href="#token-migration-overview">Token Migration Overview</a></h2>
 <p>Below is an overview of how the migration will take place:</p>
-<h2 id="migration-overview"><a class="header" href="#migration-overview">Migration Overview</a></h2>
 <ul>
 <li>You enter your seed in Firefly.</li>
 <li>Firefly creates you a new seed and generates an EdDSA address for the new network.</li>
@@ -187,6 +186,101 @@
 <li>Your funds are successfully migrated.</li>
 </ul>
 <p>For further information on the migration process, see our <a href="https://blog.iota.org/firefly-token-migration/">blog post</a>.</p>
+<h2 id="exchanges-migration-guide"><a class="header" href="#exchanges-migration-guide">Exchanges Migration Guide</a></h2>
+<p>To help you successfully transfer your tokens securely to the new Chrysalis (IOTA 1.5) network, we created this guide as an overview of the migration process.</p>
+<p>There are potentially three ways with which you can migrate your funds from from old (legacy) to new (chrysalis) network:</p>
+<ol>
+<li>
+<p>Via <strong>Firefly</strong> - This procedure is explained <a href="https://blog.iota.org/firefly-token-migration/">in this blog entry</a>. This guide will cover <strong>just</strong> the programmatic approach to migrate.</p>
+</li>
+<li>
+<p>Via a <strong>Migration Address</strong> - This procedure uses the wallet library solely for migrating funds from the old to the new network (in this case, you will have to generate and manage your new seed and migration address);</p>
+</li>
+<li>
+<p>Via a <strong>legacy Seed</strong> - This procedure uses wallet library for generating, managing your new seed, and migration process;</p>
+</li>
+</ol>
+<h4 id="migration-guide---via-a-migration-address"><a class="header" href="#migration-guide---via-a-migration-address">Migration Guide - Via a Migration Address</a></h4>
+<p>With this scenario, you generate your recovery phrase yourself. Then, you generate an address from it, generate the migration address (as in the example below), and then use the same steps performed in section 1 for migrating.</p>
+<p>With this approach, it's very easy to migrate funds to the new Chrysalis network. You just generate a new Chrysalis address and convert it to the old Trinary Format. 
+If you send Funds to this migration address, it bridges the network and you have the funds available in the Chrysalis network.</p>
+<h4 id="generate-migration-address"><a class="header" href="#generate-migration-address">generate migration address</a></h4>
+<p>This is an example, how to create a Migration Address with Node.js:</p>
+<pre><code class="language-javascript=">function run() {
+  const { AccountManager } = require('../lib')
+  const manager = new AccountManager()
+  let address = &quot;atoi1qpheapgshz9saf8mc6zdly96xyz5qdc2qspsv7ezem6fw8lv869ms3amw0g&quot;;
+  let migration_address = manager.generateMigrationAddress(address);
+  console.log(migration_address)
+}
+run()
+</code></pre>
+<p>Code: https://github.com/iotaledger/wallet.rs/blob/develop/bindings/nodejs/tests/migration.js</p>
+<h3 id="be-safe"><a class="header" href="#be-safe">Be safe!</a></h3>
+<p>Please take care that you...</p>
+<ul>
+<li>... don't create outputs that are lower than 1 Mi (to prevent Dust Protection).</li>
+<li>... use a limited amount of inputs (&lt;10) and create small Bundles (otherwise your PoW will just takes to long).</li>
+<li>... use the <a href="https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner">bundle-miner</a>, if inputs include spent address. The bundle-miner will create bundles that reveal as few new parts of the private key as possible.</li>
+</ul>
+<p>More information about the migration bundle can be found in the <a href="https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md#migration-bundle">RFC-0035</a>.</p>
+<h3 id="migration-guide-via-seed"><a class="header" href="#migration-guide-via-seed">Migration Guide via Seed</a></h3>
+<p>The new recovery phrase and the migration address will be handled by the wallet library.</p>
+<p>Our IOTA Wallet Firefly is basically using wallet rs for the migration. There are three main methods exposed from wallet.rs:</p>
+<ul>
+<li><a href="https://github.com/iotaledger/firefly/blob/develop/packages/backend/bindings/node/index.ts#L203">getMigrationData</a></li>
+<li><a href="https://github.com/iotaledger/firefly/blob/develop/packages/backend/bindings/node/index.ts#L215">createMigrationBundle</a></li>
+<li><a href="https://github.com/iotaledger/firefly/blob/develop/packages/backend/bindings/node/index.ts#L219">sendMigrationBundle</a></li>
+</ul>
+<h4 id="fetch-migration-data-by-a-seed"><a class="header" href="#fetch-migration-data-by-a-seed">Fetch migration data by a seed</a></h4>
+<p>First, with a user provided legacy seed, we fetch migration data using getMigrationData(). It returns to us with the addresses and it's balance. It also returns address metadata such as if an address is spent. To be precise, <a href="https://github.com/iotaledger/firefly/blob/develop/packages/shared/lib/typings/migration.ts#L12-L16">this</a> is what getMigrationData() returns.</p>
+<h4 id="create-a-migration-bundle"><a class="header" href="#create-a-migration-bundle">Create a Migration Bundle</a></h4>
+<p>Then, for the addresses we receive, we basically split them into chunks / bundles. We could create a single bundle for all addresses and migrate them, but we want to avoid that and cap the number of address a single bundle can contain, which happens <a href="https://github.com/iotaledger/firefly/blob/develop/packages/shared/lib/migration.ts#L279-L300">here</a>. Note that for spent addresses, we only have a single input per bundle.</p>
+<h4 id="check-for-spent-addresses"><a class="header" href="#check-for-spent-addresses">Check for spent addresses</a></h4>
+<p>The next step is to check if there are spent addresses on a user's seed. If there are, we bundle mine those addresses. This is done through createMigrationBundle by setting the third param mine to true. For the rest of the bundles, we will keep this param to false. createMigrationBundle will return us the migration bundle.</p>
+<h4 id="send-them-to-the-new-network"><a class="header" href="#send-them-to-the-new-network">Send them to the new network</a></h4>
+<p>The last step is to simply use sendMigrationBundle and broadcast them to the network.</p>
+<p>Another important point is how we select inputs. You can see how Firefly accomplishes this <a href="https://github.com/iotaledger/firefly/blob/develop/packages/shared/lib/migration.ts#L228-L277">here</a>.</p>
+<p>Basically, we need to make sure we create bundles that have accumulative balance &gt;= 1Mi.</p>
+<h4 id="migration-code-example-with-nodejs"><a class="header" href="#migration-code-example-with-nodejs">Migration Code Example with Node.js</a></h4>
+<p>This example creates a new database, account, and migrates funds from the legacy network to the chrysalis network.</p>
+<pre><code class="language-javascript=">require('dotenv').config()
+
+async function run() {
+    const { AccountManager, SignerType } = require('@iota/wallet')
+    const manager = new AccountManager({
+        storagePath: './migration-database',
+    })
+    manager.setStrongholdPassword(process.env.SH_PASSWORD)
+    manager.storeMnemonic(SignerType.Stronghold)
+
+    const account = await manager.createAccount({
+        clientOptions: { node: &quot;https://chrysalis-nodes.iota.org&quot;, localPow: true },
+        alias: 'Migration',
+    })
+
+    console.log('Account created:', account.alias())
+
+    const nodes = ['https://nodes.iota.org']
+    const seed = process.env.MIGRATION_SEED
+    const migrationData = await manager.getMigrationData(
+      nodes,
+      seed,
+      {
+        permanode: 'https://chronicle.iota.org/api'
+      }
+    )
+    console.log(migrationData)
+    const bundle = await manager.createMigrationBundle(seed, migrationData.inputs.map(input =&gt; input.index), {
+      logFileName: 'iota-migration.log'
+    })
+    await manager.sendMigrationBundle(nodes, bundle.bundleHash)
+}
+
+run()
+</code></pre>
+<p>After the migration only the stronghold file gives you access to the funds, so make sure to back it up properly. It's not possible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for <a href="https://chrysalis.docs.iota.org/guides/backup_security.html#backup-and-security">Backup and security</a>.</p>
+<p>If you are new to <a href="https://github.com/iotaledger/wallet.rs">wallet.rs</a>, please check out our <a href="https://chrysalis.docs.iota.org/libraries/wallet.html">Wallet Library Documentation</a>.</p>
 
                     </main>
 
