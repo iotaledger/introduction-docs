@@ -36,7 +36,7 @@ Note that:
 For further information on the migration process, see our [blog post](https://blog.iota.org/firefly-token-migration/).
 
 For a detailed explainer on how the migration process works technically,
-see [migration-in-depth](./migration-in-depth.md)
+see [migration-mechanism](./migration-mechanism.md)
 
 ## Exchanges Migration Guide
 
