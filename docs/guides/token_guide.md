@@ -48,7 +48,7 @@ There are potentially three ways with which you can migrate your funds from from
 
 #### Migration Guide - Via a Migration Address
 
-With this scenario, you generate your recovery phrase yourself. Then, you generate an address from it, generate the migration address (as in the example below), and then use the same steps performed in section 1 for migrating.
+With this scenario, you generate your recovery phrase yourself. Then, you generate an address from it, generate the migration address (as in the example below), and then use the same steps performed in the next section for migrating.
 
 With this approach, it's very easy to migrate funds to the new Chrysalis network. You just generate a new Chrysalis address and convert it to the old Trinary Format. 
 If you send Funds to this migration address, it bridges the network and you have the funds available in the Chrysalis network.
