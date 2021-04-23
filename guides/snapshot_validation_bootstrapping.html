@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Verify Download - Chrysalis Documentation</title>
+        <title>Chrysalis Snapshot Validation - Chrysalis Documentation</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../firefly/index.html"><strong aria-hidden="true">4.</strong> Firefly</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../firefly/verify_download.html" class="active"><strong aria-hidden="true">4.1.</strong> Verify Download</a></li></ol></li><li class="chapter-item expanded "><a href="../node-software/node-software.html"><strong aria-hidden="true">5.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../libraries/overview.html"><strong aria-hidden="true">6.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../libraries/client.html"><strong aria-hidden="true">6.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="../libraries/wallet.html"><strong aria-hidden="true">6.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html"><strong aria-hidden="true">7.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guides/dev_guide.html"><strong aria-hidden="true">7.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="../guides/exchange_guide.html"><strong aria-hidden="true">7.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="../guides/token_guide.html"><strong aria-hidden="true">7.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="../guides/hub_guide.html"><strong aria-hidden="true">7.4.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="../guides/backup_security.html"><strong aria-hidden="true">7.5.</strong> Backup and Security</a></li><li class="chapter-item expanded "><a href="../guides/snapshot_validation_bootstrapping.html"><strong aria-hidden="true">7.6.</strong> Chrysalis Snapshot Validation</a></li></ol></li><li class="chapter-item expanded "><a href="../testnet.html"><strong aria-hidden="true">8.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../rfc.html"><strong aria-hidden="true">9.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">10.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">11.</strong> FAQ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../firefly/index.html"><strong aria-hidden="true">4.</strong> Firefly</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../firefly/verify_download.html"><strong aria-hidden="true">4.1.</strong> Verify Download</a></li></ol></li><li class="chapter-item expanded "><a href="../node-software/node-software.html"><strong aria-hidden="true">5.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../libraries/overview.html"><strong aria-hidden="true">6.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../libraries/client.html"><strong aria-hidden="true">6.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="../libraries/wallet.html"><strong aria-hidden="true">6.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html"><strong aria-hidden="true">7.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guides/dev_guide.html"><strong aria-hidden="true">7.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="../guides/exchange_guide.html"><strong aria-hidden="true">7.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="../guides/token_guide.html"><strong aria-hidden="true">7.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="../guides/hub_guide.html"><strong aria-hidden="true">7.4.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="../guides/backup_security.html"><strong aria-hidden="true">7.5.</strong> Backup and Security</a></li><li class="chapter-item expanded "><a href="../guides/snapshot_validation_bootstrapping.html" class="active"><strong aria-hidden="true">7.6.</strong> Chrysalis Snapshot Validation</a></li></ol></li><li class="chapter-item expanded "><a href="../testnet.html"><strong aria-hidden="true">8.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../rfc.html"><strong aria-hidden="true">9.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">10.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">11.</strong> FAQ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -161,152 +161,60 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="verify-your-firefly-desktop-download"><a class="header" href="#verify-your-firefly-desktop-download">Verify your Firefly desktop download</a></h1>
-<p><strong>When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this tutorial, you learn how to verify Firefly Desktop downloads.</strong></p>
-<p>To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and its code signature. Instructions for both of these steps differ, depending on your operating system.</p>
-<h2 id="windows-operating-system"><a class="header" href="#windows-operating-system">Windows operating system</a></h2>
-<h3 id="verify-the-sha256-hash"><a class="header" href="#verify-the-sha256-hash">Verify the SHA256 hash</a></h3>
+                        <h1 id="chrysalis-snapshot-validationboostrapping"><a class="header" href="#chrysalis-snapshot-validationboostrapping">Chrysalis Snapshot Validation/Boostrapping</a></h1>
+<p>In this guide you will learn how to partake in the global snapshot, respectively genesis snapshot creation for the legacy and Chrysalis Phase 2 IOTA network. The goal is to generate a global snapshot for the legacy network which acts as a cut-off point for when only migration bundles/transactions are allowed and a genesis snapshot for the new network which contains the already burned/migrated funds from the 7-day-migration window.</p>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
+<ul>
+<li>A GitHub account and git</li>
+<li>A synchronized legacy Hornet node (running version &lt; 0.x.x)
+<ul>
+<li>The <code>getLedgerState</code> API command must be permitted. Add an entry to  <code>httpAPI.permitRemoteAccess</code> in case this API command is not added yet (restart your node afterwards).</li>
+<li>The API port must be accessible</li>
+</ul>
+</li>
+<li>Golang version 1.16.x (https://golang.org/)</li>
+</ul>
+<h2 id="steps"><a class="header" href="#steps">Steps</a></h2>
+<blockquote>
+<p>Make sure you've Go installed by issuing <code>go version</code> on your command line.</p>
+</blockquote>
 <ol>
-<li>
-<p>Open a command-line interface</p>
-</li>
-<li>
-<p>Create a SHA256 hash of the Firefly Desktop <code>.exe</code> file. Replace the path with the path to your Firefly <code>.exe</code> file.</p>
-<pre><code>certUtil -hashfile path\to\firefly-desktop-version.exe SHA256
-</code></pre>
-</li>
+<li><code>git clone https://github.com/iotaledger/chrysalis-tools.git</code></li>
+<li><code>cd chrysalis-tools/snapshot/verify</code></li>
+<li><code>go build</code> (this should generate a <code>verify</code>/<code>verify.exe</code> binary respectively)</li>
+<li><code>./verify -node=&quot;https://your-node-uri&quot; -genesis-snapshot-file-network-id=&quot;&lt;network-id-for-chrysalis-phase-2&gt;&quot;</code> (the network Id is communicated in the validation issue in the <a href="https://github.com/gohornet/hornet">Hornet repository</a>)</li>
+<li>The program will now fetch the current ledger state of your defined legacy Hornet node, compute its Blake2b-256 hash and generate the global snapshot for the legacy and genesis snapshot for the new network. Example output:</li>
 </ol>
-<pre><code>For example, if the file is in the `C:\Users\yourname\Downloads` directory, do the following:
+<pre><code>2021/04/20 11:10:56 querying legacy node for info...
+2021/04/20 11:10:57 legacy node state: lsmi/lsm 3636697/3636697
+2021/04/20 11:10:57 fetching ledger state at 3636697, this might take a while...go grab a coffee...
+2021/04/20 11:11:01 total ledger entries: 430699
+2021/04/20 11:11:02 ledger state integrity hash: 34ecf812f0547a685f6a826b518d9bad0ed1bcaab3fb8ea4c5e06106c5b5e01f
+2021/04/20 11:11:02 migration: addrs 1, tokens total 1629957
+2021/04/20 11:11:02 eligible for migration: addrs 317469, tokens total 2779523376246858
+</code></pre>
+<ol start="6">
+<li>Generate the sha256 hashes of the generated <code>global_snapshot.csv</code> and <code>genesis_snapshot.bin</code>: <code>sha256sum global_snapshot.csv genesis_snapshot.bin</code>; Example output:</li>
+</ol>
+<pre><code>$ sha256sum global_snapshot.csv genesis_snapshot.bin 
+f19a0976cc51b22d91018754a6cb41381fd737eb11b790a6db12a6d04a2bcddd  global_snapshot.csv
+ebc6ce9d8cd6f00dd6ff42dc72335367bc7b181ef1f2f76a63d6c2b75e74ff24  genesis_snapshot.bin
 
-```
-certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
-```
 </code></pre>
-<ol start="3">
-<li>Compare your SHA256 hash with the one in the <a href="https://github.com/iotaledger/firefly/releases">release notes</a> and make sure that they match</li>
+<ol start="8">
+<li>Copy the entire program output and the sha256 hashes to the corresponding issue on the <a href="https://github.com/gohornet/hornet">Hornet repository</a>.</li>
 </ol>
-<h3 id="verify-the-code-signature"><a class="header" href="#verify-the-code-signature">Verify the code signature</a></h3>
+<h2 id="bootstrapping-the-legacy-hornet-node-from-the-global-snapshot"><a class="header" href="#bootstrapping-the-legacy-hornet-node-from-the-global-snapshot">Bootstrapping the legacy Hornet node from the global snapshot</a></h2>
+<blockquote>
+<p>Loading the global snapshot ensures that your legacy Hornet node adds the genesis transaction (999...) as a solid entry point: this is important as the Coordinator will issue the next milestone after the global snapshot index on top of it. Your node will <strong>not</strong> lose the data it already has.</p>
+</blockquote>
 <ol>
-<li>
-<p>Right-click on <code>firefly-desktop-version.exe</code></p>
-</li>
-<li>
-<p>Go to <strong>Digital Signatures</strong> &gt; <strong>Details</strong> &gt; <strong>View Certificate</strong></p>
-</li>
-<li>
-<p>In the Certification Path tab, make sure that the the following information matches the path:</p>
-<p>DigiCert
-DigiCert SHA2 Assured Code Signing CA
-IOTA Stiftung</p>
-</li>
-<li>
-<p>Make sure that the Certificate status reads &quot;This certificate is OK.&quot;</p>
-</li>
-</ol>
-<h2 id="macos-operating-system"><a class="header" href="#macos-operating-system">MacOS operating system</a></h2>
-<h3 id="verify-the-sha256-hash-1"><a class="header" href="#verify-the-sha256-hash-1">Verify the SHA256 hash</a></h3>
-<ol>
-<li>
-<p>Open Terminal (in <code>/Applications/Utilities/Terminal</code>)</p>
-</li>
-<li>
-<p>Create a SHA256 hash of the Firefly Desktop <code>.dmg</code> file. Replace the path with the path to your Firefly <code>.dmg</code> file.</p>
-</li>
-</ol>
-<pre><code class="language-bash">shasum -a 256 /path/to/firefly-desktop-version.dmg
-</code></pre>
-<p>For example, if the file is in <code>~/Downloads</code>, do the following:</p>
-<pre><code class="language-bash">shasum -a 256 ~/Downloads/firefly-desktop-1.0.0.dmg
-</code></pre>
-<ol start="3">
-<li>Compare your SHA256 hash with the one in the <a href="https://github.com/iotaledger/firefly/releases">release notes</a> and make sure that they match</li>
-</ol>
-<h3 id="verify-the-code-signature-1"><a class="header" href="#verify-the-code-signature-1">Verify the code signature</a></h3>
-<h4 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h4>
-<p>To follow these instructions you need <a href="https://www.ics.uci.edu/%7Epattis/common/handouts/macmingweclipse/allexperimental/macxcodecommandlinetools.html">Xcode Command Line Tools</a>.</p>
-<ol>
-<li>
-<p>Open Terminal (in <code>/Applications/Utilities/Terminal</code>)</p>
-</li>
-<li>
-<p>Verify the <code>Firefly.app</code> file's signature. Replace the path with the path to your <code>Firefly.app</code> file. This command confirms whether the code binaries are actually signed, the signature is valid, all the sealed components are unaltered, and the signature passes some basic consistency checks.</p>
-<pre><code class="language-bash">codesign -d -vv /path/to/Firefly.app
-</code></pre>
-<p>For example, if the file is in the <code>/Applications</code> directory, do the following:</p>
-<pre><code class="language-bash">codesign -d -vv /Applications/Firefly.app
-</code></pre>
-</li>
-<li>
-<p>Make sure that the following information matches the output of the command:</p>
-<pre><code class="language-bash">Identifier=org.iota.firefly
-Authority=Developer ID Application: IOTA Stiftung (UG77RJKZHH)
-Authority=Developer ID Certification Authority
-Authority=Apple Root CA
-</code></pre>
-</li>
-<li>
-<p>Test the signature against system policies. Replace the path with the path to your <code>Firefly.app</code> file.</p>
-<pre><code class="language-bash">spctl -a -vv path/to/Firefly.app
-</code></pre>
-<p>For example, if the file is in the <code>/Applications</code> directory, do the following:</p>
-<pre><code class="language-bash">spctl -a -vv /Applications/Firefly.app
-</code></pre>
-</li>
-<li>
-<p>Make sure that the following information matches the output of the command (assuming Firefly is in the <code>/Applications</code> directory):</p>
-<p>/Applications/Firefly.app: accepted
-source=Developer ID
-origin=Developer ID Application: IOTA Stiftung (UG77RJKZHH)</p>
-</li>
-</ol>
-<h2 id="linux-operating-system"><a class="header" href="#linux-operating-system">Linux operating system</a></h2>
-<h3 id="verify-the-sha256-hash-2"><a class="header" href="#verify-the-sha256-hash-2">Verify the SHA256 hash</a></h3>
-<h4 id="prerequisites-1"><a class="header" href="#prerequisites-1">Prerequisites</a></h4>
-<p>To follow these instructions you need the <code>sha256sum</code> package, which is included with most Linux distributions.</p>
-<ol>
-<li>
-<p>Open Terminal</p>
-</li>
-<li>
-<p>Create a SHA256 hash of the Firefly Desktop executable file. Replace the path with the path to your Firefly executable file.</p>
-</li>
-</ol>
-<pre><code class="language-bash">`sha256sum path/to/firefly-desktop-version.AppImage`
-</code></pre>
-<p>For example, if the file is in <code>~/Downloads</code>, do the following:</p>
-<pre><code class="language-bash">sha256sum ~/Downloads/firefly-desktop-1.0.0.AppImage
-</code></pre>
-<ol start="3">
-<li>Compare your SHA256 hash with the one in the <a href="https://github.com/iotaledger/firefly/releases">release notes</a> and make sure that they match</li>
-</ol>
-<h3 id="verify-the-code-signature-2"><a class="header" href="#verify-the-code-signature-2">Verify the code signature</a></h3>
-<ol>
-<li>
-<p>Download the .asc and .gpg files in the Assets section of the <a href="https://github.com/iotaledger/firefly/releases">release notes</a></p>
-</li>
-<li>
-<p>Import the Firefly GPG key from keyserver.ubuntu.com</p>
-<pre><code class="language-bash">gpg --keyserver keyserver.ubuntu.com --recv 466385BD0B40D9550F93C04746A440CCE5664A64
-</code></pre>
-</li>
-<li>
-<p>Make sure that the following information matches the output of the command:</p>
-<pre><code class="language-bash">gpg: key 46A440CCE5664A64: public key &quot;IOTA Foundation (IOTA Foundation Identity) &lt;contact@iota.org&gt;&quot;
-</code></pre>
-</li>
-<li>
-<p>Verify the signature</p>
-<pre><code class="language-bash">gpg --verify path/to/firefly-desktop-version.AppImage.asc path/to/firefly-desktop-version.AppImage
-</code></pre>
-<p>For example, if the .asc and .AppImage files are both in <code>~/Downloads</code>, do the following:</p>
-<pre><code class="language-bash">gpg --verify ~/Downloads/firefly-desktop-1.0.0.AppImage.asc ~/Downloads/firefly-desktop-1.0.0.AppImage
-</code></pre>
-</li>
-<li>
-<p>Make sure that the following information matches the output of the command:</p>
-<pre><code class="language-bash">gpg: Good signature from &quot;IOTA Foundation (IOTA Foundation Identity) &lt;contact@iota.org&gt;&quot;
-</code></pre>
-</li>
+<li>Await for confirmation that the global snapshot was taken successfully by looking into the validation issue on the <a href="https://github.com/gohornet/hornet">Hornet repository</a> or Discord.</li>
+<li>Stop your legacy Hornet node and download the binary or docker image of the Hornet build which only supports migration-bundles. With this &quot;migration-bundles-only&quot; version, your Hornet node will also no longer peer to nodes which do not run the same version.</li>
+<li>Let <code>snapshots.global.path</code> point to the global snapshot file (i.e <code>global_snapshot.csv</code>).</li>
+<li>Under <code>snapshots.global.index</code> define the index of the milestone at which the global snapshot was taken. (this should correspond to what <code>legacy node state</code> was from the program output, i.e. <code>3636697</code> from the example output above).</li>
+<li>Change <code>snapshots.loadType</code> to <code>&quot;global&quot;</code> (note the quotes as the value is a string).</li>
+<li>Restart your legacy Hornet <strong>with the additional <code>--forceGlobalSnapshot</code> flag</strong> (this will instruct your Hornet node to load the global snapshot despite the fact that it already has a database).</li>
 </ol>
 
                     </main>
@@ -314,13 +222,13 @@ origin=Developer ID Application: IOTA Stiftung (UG77RJKZHH)</p>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../firefly/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../guides/backup_security.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../node-software/node-software.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../testnet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -332,13 +240,13 @@ origin=Developer ID Application: IOTA Stiftung (UG77RJKZHH)</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../firefly/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../guides/backup_security.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../node-software/node-software.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../testnet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
