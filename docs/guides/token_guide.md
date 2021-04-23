@@ -121,7 +121,7 @@ async function run() {
     manager.storeMnemonic(SignerType.Stronghold)
 
     const account = await manager.createAccount({
-        clientOptions: { node: "https://chrysalis-nodes.iota.org", localPow: true },
+        clientOptions: { node: "https://chrysalis-nodes.iota.org", localPow: true, network: "chrysalis-mainnet" },
         alias: 'Migration',
     })
 
