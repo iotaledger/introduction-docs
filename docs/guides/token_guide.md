@@ -60,7 +60,7 @@ This is an example, how to create a Migration Address with Node.js:
 function run() {
   const { AccountManager } = require('../lib')
   const manager = new AccountManager()
-  let address = "atoi1qpheapgshz9saf8mc6zdly96xyz5qdc2qspsv7ezem6fw8lv869ms3amw0g";
+  let address = "iota1qruzprxum2934lr3p77t96pzlecxv8pjzvtjrzdcgh2f5exa22n6g7c7phd";
   let migration_address = manager.generateMigrationAddress(address);
   console.log(migration_address)
 }
