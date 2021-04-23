@@ -9,6 +9,7 @@
 - [Libraries](./libraries/overview.md)
     - [Client Lib](./libraries/client.md)
     - [Wallet Lib](./libraries/wallet.md)
+- [Migration](./migration/README.md)
 - [Guides](./guides/README.md)
     - [Developer](./guides/dev_guide.md)
     - [Exchange](./guides/exchange_guide.md)
