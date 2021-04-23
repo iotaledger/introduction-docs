@@ -15,6 +15,7 @@
     - [Token Migration](./guides/token_guide.md)
     - [Hub Migration](./guides/hub_guide.md)
     - [Backup and Security](./guides/backup_security.md)
+    - [Chrysalis Snapshot Validation](./guides/snapshot_validation_bootstrapping.md)
 - [Testnet](./testnet.md)
 - [Protocol RFCs](./rfc.md)
 - [Resources](./resources.md)
