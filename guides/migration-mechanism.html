@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Guides - Chrysalis Documentation</title>
+        <title>Migration Mechanism - Chrysalis Documentation</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../firefly/index.html"><strong aria-hidden="true">4.</strong> Firefly</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../firefly/verify_download.html"><strong aria-hidden="true">4.1.</strong> Verify Download</a></li></ol></li><li class="chapter-item expanded "><a href="../node-software/node-software.html"><strong aria-hidden="true">5.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../libraries/overview.html"><strong aria-hidden="true">6.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../libraries/client.html"><strong aria-hidden="true">6.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="../libraries/wallet.html"><strong aria-hidden="true">6.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html" class="active"><strong aria-hidden="true">7.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guides/dev_guide.html"><strong aria-hidden="true">7.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="../guides/exchange_guide.html"><strong aria-hidden="true">7.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="../guides/token_guide.html"><strong aria-hidden="true">7.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="../guides/migration-mechanism.html"><strong aria-hidden="true">7.4.</strong> Migration Mechanism</a></li><li class="chapter-item expanded "><a href="../guides/hub_guide.html"><strong aria-hidden="true">7.5.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="../guides/backup_security.html"><strong aria-hidden="true">7.6.</strong> Backup and Security</a></li><li class="chapter-item expanded "><a href="../guides/snapshot_validation_bootstrapping.html"><strong aria-hidden="true">7.7.</strong> Chrysalis Snapshot Validation</a></li></ol></li><li class="chapter-item expanded "><a href="../testnet.html"><strong aria-hidden="true">8.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../rfc.html"><strong aria-hidden="true">9.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">10.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">11.</strong> FAQ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="../introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="../firefly/index.html"><strong aria-hidden="true">4.</strong> Firefly</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../firefly/verify_download.html"><strong aria-hidden="true">4.1.</strong> Verify Download</a></li></ol></li><li class="chapter-item expanded "><a href="../node-software/node-software.html"><strong aria-hidden="true">5.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="../libraries/overview.html"><strong aria-hidden="true">6.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../libraries/client.html"><strong aria-hidden="true">6.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="../libraries/wallet.html"><strong aria-hidden="true">6.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="../guides/index.html"><strong aria-hidden="true">7.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guides/dev_guide.html"><strong aria-hidden="true">7.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="../guides/exchange_guide.html"><strong aria-hidden="true">7.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="../guides/token_guide.html"><strong aria-hidden="true">7.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="../guides/migration-mechanism.html" class="active"><strong aria-hidden="true">7.4.</strong> Migration Mechanism</a></li><li class="chapter-item expanded "><a href="../guides/hub_guide.html"><strong aria-hidden="true">7.5.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="../guides/backup_security.html"><strong aria-hidden="true">7.6.</strong> Backup and Security</a></li><li class="chapter-item expanded "><a href="../guides/snapshot_validation_bootstrapping.html"><strong aria-hidden="true">7.7.</strong> Chrysalis Snapshot Validation</a></li></ol></li><li class="chapter-item expanded "><a href="../testnet.html"><strong aria-hidden="true">8.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="../rfc.html"><strong aria-hidden="true">9.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="../resources.html"><strong aria-hidden="true">10.</strong> Resources</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">11.</strong> FAQ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -161,41 +161,132 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="iota-chrysalis-guides"><a class="header" href="#iota-chrysalis-guides">IOTA Chrysalis Guides</a></h1>
+                        <h1 id="how-the-iota-chrysalis-phase-2-token-migration-works"><a class="header" href="#how-the-iota-chrysalis-phase-2-token-migration-works">How the IOTA Chrysalis Phase 2 Token Migration works</a></h1>
+<p>For the transition to Chrysalis Phase 2, the IOTA Foundation had to develop a way for funds to be migrated to this new
+network. The reason a migration mechanism needs to exist in the first place, is because the new network no longer
+supports WOTS addresses (currently all funds in the legacy network reside on these).</p>
+<p>The developed mechanism features following properties:</p>
 <ul>
-<li><a href="./dev_guide.html">Developer Guide</a></li>
-<li><a href="./exchange_guide.html">Exchange Guide</a></li>
-<li><a href="./token_guide.html">Token Migration Guide</a></li>
-<li><a href="./hub_guide.html">Hub Migration Guide</a></li>
+<li>It is trustless, meaning that everyone who's interested can verify that migrated funds are indeed legit and are not
+minted out of thin air.</li>
+<li>Migrated funds take less than 5 minutes until they become available in the new network.</li>
+<li>Migrations can take place any time for the foreseeable future.</li>
 </ul>
-<h2 id="overall-changes-from-iota-10-to-15-chrysalis-in-a-nutshell"><a class="header" href="#overall-changes-from-iota-10-to-15-chrysalis-in-a-nutshell">Overall changes from IOTA 1.0 to 1.5 (Chrysalis) in a nutshell</a></h2>
+<p>Before going into the actual developed mechanism, lets see why other mechanisms were not chosen:</p>
 <ul>
-<li>The format of the address was changed and it is based on both <code>derivation path</code> and <code>bech32</code> standards. See <a href="./dev_guide.html#iota-15-address-anatomy">IOTA address anatomy</a></li>
-<li>The concepts of <code>bundles</code> and <code>transactions</code> were replaced with the concepts of <code>messages</code> and <code>payloads</code>. The <code>message</code> is a data structure that is actually being broadcast in the network and represents a node (vertex) in the Tangle graph. See <a href="./dev_guide.html#messages-payload-and-transactions">messages, payload and transactions</a> and <a href="./dev_guide.html#selected-message-payloads">selected message payloads</a></li>
-<li>The IOTA network is based on a DAG (Directed Acyclic Graph) to store individual <code>messages</code> (and related <code>transactions</code>). However, each <code>message</code> can newly reference up to 8 parent messages. See <a href="./dev_guide.html#messages-payload-and-transactions">messages, payload and transactions</a></li>
-<li>The signature scheme based on <code>WOTS</code> was replaced with with <code>Ed25519</code> signature scheme. See <a href="./dev_guide.html#seed-and-addresses">seed and addresses</a></li>
-<li>Due to the changed signature scheme, IOTA addresses are reusable without any negative security impact</li>
-<li>In comparison to IOTA 1.0, which was based on ternary, IOTA 1.5 is based on binary and is thus very efficient on all kinds of current hardware devices</li>
-<li>In contrast to IOTA 1.0, IOTA 1.5 addresses are perfectly reusable; even if one spends funds from the given address, it can be used again. See <a href="./dev_guide.html#addresskey-space">address/key space</a></li>
-<li>Originally, IOTA 1.0 used an <code>account-based model</code> for tracking individual iota tokens. Chrysalis embraced <code>Unspent Transaction Output</code> (also known as <code>UTXO</code>) model to track tokens and token holders. See <a href="./dev_guide.html#unspent-transaction-output-utxo">Unspent Transaction Output</a></li>
-<li>The approach to client libraries was completely reengineered from the ground up. There are new official client libraries that serve as <code>one-source-code-of-truth</code> to IOTA users and can be combined in a modular fashion based on particular use cases. All libraries provide a binding to other programming languages. See <a href="../libraries/overview.html">client libraries</a></li>
-<li>Our official iota tools, such as wallet software, use the same libraries under the hood and so any developer may taste the same <a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">dog food</a> as we do</li>
-<li>The official client libraries embraced <code>Hierarchical Deterministic Wallets</code> approach which is fully <code>BIP44</code> compatible. See <a href="./dev_guide.html#addresskey-space">address/key space</a></li>
-<li>There is a new official wallet software called Firefly. See <a href="https://blog.iota.org/firefly-beta-release/">firefly beta release</a></li>
+<li><code>Migrating funds by performing periodic global snapshots on both networks</code>: While this approach certainly would have
+been the easiest to do, it would have blocked funds of people between the times of global snapshots. For example, if
+we would have taken global snapshots monthly (to carry over funds from burn/migration addresses), token holders would
+have been excluded from opportunities arising from the change in token price: i.e., perhaps you wanted to sell your
+tokens but were blocked by the fact that the next global snapshot would only be performed in 20 days and so you
+couldn't move your tokens to an exchange (which only supports Chrysalis Phase 2 IOTA).</li>
+<li><code>Supporting WOTS on Chrysalis Phase 2 (and only allowing to send to non WOTS addresses)</code>: While certainly also a
+viable option, we decided to not include support for WOTS as it brings a number of legacy problems we want to get rid
+of:
+<ul>
+<li>WOTS signatures are very large and make up a disproportional amount of data in a transaction (note that our PoW
+requirement in Chrysalis Phase 2 is dependent on the size of the message). Additionally, there were no real bounds
+on how big such signatures could grow to (even if per default we only supported 3 security levels in our
+libraries).</li>
+<li>We would have needed to pollute our new Chrysalis Phase 2 models with support for these addresses and signatures,
+adding unnecessary complexity to what should be a clean protocol.</li>
+<li>Chrysalis Phase 2 nodes would have needed to keep a spent address list to inform wallets that they had vulernable
+addresses.</li>
 </ul>
+</li>
+</ul>
+<h2 id="components"><a class="header" href="#components">Components</a></h2>
+<p>The developed migration mechanism is built from following components:</p>
+<ul>
+<li>Chrysalis phase 2 data types (
+see <a href="https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md">the RFC</a>
+for details):
+<ul>
+<li><code>Treasury Output</code>: an object which specifies an amount of tokens held in the treasury.</li>
+<li><code>Treasury Input</code>: an object which references a previous <code>Treasury Output</code>.</li>
+<li><code>Treasury Transaction</code>: an object which defines a <code>Treasury Input</code> referencing the last <code>Treasury Output</code> and a
+new <code>Treasury Output</code> holding the delta of what the <code>Treasury Transaction</code> is spending.</li>
+<li><code>Receipt</code>: an object which holds a pointer to a legacy milestone index, a list of funds to mint and
+a <code>Treasury Transaction</code>. A <code>Receipt</code> can only be an inner payload of a milestone.</li>
+</ul>
+</li>
+<li>Chrysalis Phase 2 nodes which validate receipts</li>
+<li>Legacy nodes which provide a special API command for the above Chrysalis Phase 2 nodes</li>
+<li><code>Treasury</code>: this is simply the last <code>Treasury Output</code> in the ledger. There exists only ever one at any point in time.
+When the Chrysalis Phase 2 network launches, the <code>Treasury</code> contains the total supply of tokens (2779530283277761) minus the funds which were already migrated during the &quot;7-day-migration-period&quot; prior to the network
+launch. This means that all funds which are not migrated from the legacy network, always will reside in the <code>Treasury</code>
+.</li>
+</ul>
+<p>Note, that again, a <code>Receipt</code> can only be contained within a milestone and that valid milestones can only be issued by
+the Coordinator, therefore, minting of migrated funds can only happen through milestones and not any other type of
+transactions. Likewise, a <code>Treasury Transaction</code> is only valid to be an inner payload of a <code>Receipt</code>.</p>
+<h2 id="how-it-actually-works"><a class="header" href="#how-it-actually-works">How it actually works</a></h2>
+<ol>
+<li>In essence, a <code>Receipt</code> carries the information about funds which were migrated or &quot;burned&quot; to a <code>migration address</code>
+on the legacy network. A <code>migration address</code> looks like any other normal address on the legacy network but it
+encapsulates actual information, such as:
+<ul>
+<li>The target Ed25519 address on the Chrysalis Phase 2 network from which the token holder wants their funds to be
+accessible from.</li>
+<li>A checksum of that Ed25519 address.</li>
+<li>A tryte prefix <code>TRANSFER</code>. (these addresses always start with this prefix)</li>
+</ul>
+</li>
+<li>As mentioned above, a <code>Receipt</code> can only be contained in a milestone and therefore the Coordinator on the Chrysalis
+Phase 2 network:
+<ol>
+<li>periodically polls data from a legacy node about what kind of newly confirmed burned/migrated funds there are (
+while also performing WOTS signature verification on these and the legacy milestone bundle).</li>
+<li>and then produces a milestone with a <code>Receipt</code> containing those funds, where within the <code>Receipt</code>,
+a <code>Treasury Transaction</code> is placed which deducts the sum of tokens migrated from the <code>Treasury</code>.</li>
+</ol>
+</li>
+<li>Chrysalis Phase 2 nodes then see receipts when applying milestones and automatically generate outputs for the Ed25519
+address as defined in the origin <code>migration address</code> in the legacy network. As an optional step (which is not turned
+on by default), every node can be configured to verify whether the funds in the receipt really were migrated in the
+old network using a legacy node and whether all funds for a given legacy milestone index were migrated. If this
+verification fails, the node will automatically panic as the integrity is no longer correct.</li>
+</ol>
+<p>This means that:</p>
+<ul>
+<li>The IOTA Foundation can not mint funds out of thin air, because nodes in the Chrysalis Phase 2 network verify that the
+funds were burned in the legacy network.</li>
+<li>All migration bundles, respectively transfers to <code>migration addresses</code> which were confirmed by a given legacy
+milestone, must be migrated fully to the new network, as otherwise the verification fails.</li>
+<li>Node operators are free to choose which legacy nodes they query with their Chrysalis Phase 2 nodes, so the
+verification of migrations/receipts is decentralized. For example, a node operator chooses to both operate their own
+legacy and Chrysalis Phase 2 nodes.</li>
+</ul>
+<p>Essentially then via the Firefly wallet, token holders will:</p>
+<ol>
+<li>Produce migration bundles which send funds to <code>migration addresses</code> controlled by the given owner.</li>
+<li>These bundles get confirmed on the legacy network.</li>
+<li>The Chrysalis Phase 2 Coordinator picks these confirmed legacy bundles up and generates receipts minting those funds
+to the target Ed25519 address.</li>
+<li>Verifier nodes verify the receipts and make sure that the funds originate from the legacy network.</li>
+</ol>
+<h3 id="verifier-node"><a class="header" href="#verifier-node">Verifier node</a></h3>
+<p>A verifier node is a Chrysalis Phase 2 node which up on seeing receipts:</p>
+<ol>
+<li>Queries a legacy node for the confirmation data for the specified milestone in the receipt.</li>
+<li>Then performs WOTS signature verification of the legacy milestone bundle and all confirmed bundles.</li>
+<li>Additionally it also checks that all confirmed funds on the legacy network for the given legacy milestone, are
+indeed minted with a given batch of receipts. (i.e. nothing is left out)</li>
+</ol>
+<p>See <a href="https://hornet.docs.iota.org/post_installation/run_as_verifier.html">Hornet as a verifier node</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../libraries/wallet.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../guides/token_guide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../guides/dev_guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../guides/hub_guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -207,13 +298,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../libraries/wallet.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../guides/token_guide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../guides/dev_guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../guides/hub_guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="firefly/index.html"><strong aria-hidden="true">4.</strong> Firefly</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="firefly/verify_download.html"><strong aria-hidden="true">4.1.</strong> Verify Download</a></li></ol></li><li class="chapter-item expanded "><a href="node-software/node-software.html"><strong aria-hidden="true">5.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="libraries/overview.html"><strong aria-hidden="true">6.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/client.html"><strong aria-hidden="true">6.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="libraries/wallet.html"><strong aria-hidden="true">6.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="guides/index.html"><strong aria-hidden="true">7.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guides/dev_guide.html"><strong aria-hidden="true">7.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="guides/exchange_guide.html"><strong aria-hidden="true">7.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="guides/token_guide.html"><strong aria-hidden="true">7.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="guides/hub_guide.html"><strong aria-hidden="true">7.4.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="guides/backup_security.html"><strong aria-hidden="true">7.5.</strong> Backup and Security</a></li><li class="chapter-item expanded "><a href="guides/snapshot_validation_bootstrapping.html"><strong aria-hidden="true">7.6.</strong> Chrysalis Snapshot Validation</a></li></ol></li><li class="chapter-item expanded "><a href="testnet.html"><strong aria-hidden="true">8.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="rfc.html"><strong aria-hidden="true">9.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">10.</strong> Resources</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">11.</strong> FAQ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/welcome.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="introduction/what_is_chrysalis.html"><strong aria-hidden="true">2.</strong> What is Chrysalis?</a></li><li class="chapter-item expanded "><a href="introduction/path_to_chrysalis.html"><strong aria-hidden="true">3.</strong> Path to Chrysalis</a></li><li class="chapter-item expanded "><a href="firefly/index.html"><strong aria-hidden="true">4.</strong> Firefly</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="firefly/verify_download.html"><strong aria-hidden="true">4.1.</strong> Verify Download</a></li></ol></li><li class="chapter-item expanded "><a href="node-software/node-software.html"><strong aria-hidden="true">5.</strong> Node Software</a></li><li class="chapter-item expanded "><a href="libraries/overview.html"><strong aria-hidden="true">6.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/client.html"><strong aria-hidden="true">6.1.</strong> Client Lib</a></li><li class="chapter-item expanded "><a href="libraries/wallet.html"><strong aria-hidden="true">6.2.</strong> Wallet Lib</a></li></ol></li><li class="chapter-item expanded "><a href="guides/index.html"><strong aria-hidden="true">7.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guides/dev_guide.html"><strong aria-hidden="true">7.1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="guides/exchange_guide.html"><strong aria-hidden="true">7.2.</strong> Exchange</a></li><li class="chapter-item expanded "><a href="guides/token_guide.html"><strong aria-hidden="true">7.3.</strong> Token Migration</a></li><li class="chapter-item expanded "><a href="guides/migration-mechanism.html"><strong aria-hidden="true">7.4.</strong> Migration Mechanism</a></li><li class="chapter-item expanded "><a href="guides/hub_guide.html"><strong aria-hidden="true">7.5.</strong> Hub Migration</a></li><li class="chapter-item expanded "><a href="guides/backup_security.html"><strong aria-hidden="true">7.6.</strong> Backup and Security</a></li><li class="chapter-item expanded "><a href="guides/snapshot_validation_bootstrapping.html"><strong aria-hidden="true">7.7.</strong> Chrysalis Snapshot Validation</a></li></ol></li><li class="chapter-item expanded "><a href="testnet.html"><strong aria-hidden="true">8.</strong> Testnet</a></li><li class="chapter-item expanded "><a href="rfc.html"><strong aria-hidden="true">9.</strong> Protocol RFCs</a></li><li class="chapter-item expanded "><a href="resources.html"><strong aria-hidden="true">10.</strong> Resources</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">11.</strong> FAQ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -908,125 +908,249 @@ touch .env
 <p>The <code>SyncedAccount.send()</code> function returns a <code>wallet message</code> that fully describes the given transaction. The <code>messageId</code> can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via <code>account.listMessages()</code> function.</p>
 <p>Please note that when sending tokens, a <a href="guides/dev_guide.html#dust-protection">dust protection</a> mechanism should be considered. </p>
 <h1 id="chrysalis-migration"><a class="header" href="#chrysalis-migration">Chrysalis Migration</a></h1>
-<p>With the advent of the Chrysalis migration, a number of aspects at IOTA are changing for the better. With easier ways to manage and secure your experience, IOTA will seamlessly integrate these innovations with no service interruptions.</p>
-<p>With Chrysalis, we make a clear cut from the current IOTA protocol, and start a new with a much better, and more mature network. The new network will support many new use cases and create a foundation for IOTA’s upcoming Coordicide.</p>
+<p>With the advent of the Chrysalis migration, a number of aspects at IOTA are changing for the better. With easier ways to
+manage and secure your experience, IOTA will seamlessly integrate these innovations with no service interruptions.</p>
+<p>With Chrysalis, we make a clear-cut from the current IOTA protocol, and start a new with a much better, and more mature
+network. The new network will support many new use cases and create a foundation for IOTA’s upcoming Coordicide.</p>
 <p>This includes one of the innovations that directly impacts one of the most crucial aspects of your experience: funds.</p>
-<p>Because of its complexity, the migration process for the next phase of Chrysalis consists of two phases; we are currently in phase one where you initiate the migration of your funds in one week and which will then be available on our new network upon launch.</p>
+<p>Because of its complexity, the migration process for the next phase of Chrysalis consists of two phases; we are
+currently in phase one where you initiate the migration of your funds in one week and which will then be available on
+our new network upon launch.</p>
 <p>Do note that migrating is a continuous effort that can be done at any time after the initial migration start date.</p>
 <h2 id="token-migration-overview"><a class="header" href="#token-migration-overview">Token Migration Overview</a></h2>
-<p>Below is an overview of how the migration will take place:</p>
+<p>Below is an overview of how the migration will take place for normal token holders:</p>
 <ul>
 <li>You enter your seed in Firefly.</li>
 <li>Firefly creates you a new seed and generates an EdDSA address for the new network.</li>
-<li>Firefly sends your funds to a predetermined migration address on the old network.</li>
-<li>Your funds become available on the network, in the EdDSA address Firefly created for you. </li>
-<li>If you migrate before Chrysalis launch, your funds become available at Chrysalis launch. </li>
-<li>If you migrate after Chrysalis launch, your funds will become available shortly after you migrate.</li>
-<li>The process will be the same for Ledger Nano users. 
-<ul>
-<li>Note: The Ledger will not be supported prior to the Chrysalis launch, but after</li>
-</ul>
-</li>
-<li>You simply connect your device and Firefly guides you through the process.</li>
-<li>Firefly will initially only be available on Mac, Linux and Windows.</li>
+<li>Firefly sends your funds to a specific migration address (which encapsulates your EdDSA address) on the old network.</li>
+<li>Your funds become available on the new network on the EdDSA address Firefly created for you.</li>
 <li>Your funds are successfully migrated.</li>
 </ul>
+<p>Note that:</p>
+<ul>
+<li>If you migrate before the Chrysalis launch, your funds become available at Chrysalis launch.</li>
+<li>If you migrate after the Chrysalis launch, your funds will become available shortly after you migrate (within less
+than 5 minutes).</li>
+</ul>
+<blockquote>
+<p>Firefly will initially only be available on desktop operating systems such as: macOS, Linux and Windows and not support
+migrations for Ledger devices or using a Ledger device.</p>
+</blockquote>
 <p>For further information on the migration process, see our <a href="https://blog.iota.org/firefly-token-migration/">blog post</a>.</p>
-<h2 id="exchanges-migration-guide"><a class="header" href="#exchanges-migration-guide">Exchanges Migration Guide</a></h2>
-<p>To help you successfully transfer your tokens securely to the new Chrysalis (IOTA 1.5) network, we created this guide as an overview of the migration process.</p>
-<p>There are potentially three ways with which you can migrate your funds from from old (legacy) to new (chrysalis) network:</p>
+<p>For a detailed explainer on how the migration process works technically,
+see <a href="guides/./migration-mechanism.html">migration-mechanism</a></p>
+<h2 id="exchange-token-migration-guide"><a class="header" href="#exchange-token-migration-guide">Exchange Token Migration Guide</a></h2>
+<p>To help you successfully transfer your tokens securely to the new Chrysalis (IOTA 1.5) network, we created this guide as
+an overview of the migration process and its intricacies.</p>
+<p>Following dates are important to be aware of:</p>
+<ul>
+<li>From 21st to 28th of April, token holders are able to pre-migrate their funds. During this period the network has no
+limitations and runs as it would normally. Migrating funds during this period effectively locks them up to become
+available immediately on the 28th of April after the Chrysalis Phase 2 release.</li>
+<li>On the 28th of April, Chrysalis Phase 2 gets released (with its corresponding node software, libraries and tooling).
+After that, the legacy network will only support migration transfers going further (this is accompanied by a legacy
+node release). This means that both a legacy (albeit only for migrations), and a new Chrysalis Phase 2 network will
+co-exist. We therefore suggest stopping withdrawals and deposits some time before the 28th of April, to ensure that no
+funds are being sent from/to the exchange (since any non migration transfers will no longer confirm).</li>
+</ul>
+<p>There are two ways with which you can migrate your funds from the old legacy to new Chrysalis Phase 2 network:</p>
 <ol>
-<li>
-<p>Via <strong>Firefly</strong> - This procedure is explained <a href="https://blog.iota.org/firefly-token-migration/">in this blog entry</a>. This guide will cover <strong>just</strong> the programmatic approach to migrate.</p>
-</li>
-<li>
-<p>Via a <strong>Migration Address</strong> - This procedure uses the wallet library solely for migrating funds from the old to the new network (in this case, you will have to generate and manage your new seed and migration address);</p>
-</li>
-<li>
-<p>Via a <strong>legacy Seed</strong> - This procedure uses wallet library for generating, managing your new seed, and migration process;</p>
-</li>
+<li>You can either use our Firefly wallet (which allows migrating from either an 81-tryte seed or seed vault file).
+(Check out this <a href="https://blog.iota.org/firefly-token-migration/">blog post</a> on how to do this).</li>
+<li>Or you can craft a migration bundle yourself which transfers your funds to a special migration address under your
+control (programmatic approach).</li>
 </ol>
-<h4 id="migration-guide---via-a-migration-address"><a class="header" href="#migration-guide---via-a-migration-address">Migration Guide - Via a Migration Address</a></h4>
-<p>With this scenario, you generate your recovery phrase yourself. Then, you generate an address from it, generate the migration address (as in the example below), and then use the same steps performed in section 1 for migrating.</p>
-<p>With this approach, it's very easy to migrate funds to the new Chrysalis network. You just generate a new Chrysalis address and convert it to the old Trinary Format. 
-If you send Funds to this migration address, it bridges the network and you have the funds available in the Chrysalis network.</p>
-<h4 id="generate-migration-address"><a class="header" href="#generate-migration-address">generate migration address</a></h4>
-<p>This is an example, how to create a Migration Address with Node.js:</p>
-<pre><code class="language-javascript=">function run() {
-  const { AccountManager } = require('../lib')
-  const manager = new AccountManager()
-  let address = &quot;iota1qruzprxum2934lr3p77t96pzlecxv8pjzvtjrzdcgh2f5exa22n6g7c7phd&quot;;
-  let migration_address = manager.generateMigrationAddress(address);
-  console.log(migration_address)
-}
-run()
-</code></pre>
-<p>Code: https://github.com/iotaledger/wallet.rs/blob/develop/bindings/nodejs/tests/migration.js</p>
-<h3 id="be-safe"><a class="header" href="#be-safe">Be safe!</a></h3>
-<p>Please take care that you...</p>
+<p>Note that if you migrate your funds after the 28th of April, they will become available on the new network within 5
+minutes. If you migrate prior to that, your funds will only become available starting on the 28th of April.</p>
+<p>This guide will further only explain how to create a migration bundle, and the rules imposed on it.</p>
+<h3 id="migrating-funds-by-issuing-migration-bundles"><a class="header" href="#migrating-funds-by-issuing-migration-bundles">Migrating funds by issuing migration bundles</a></h3>
+<p>Note that as mentioned above, there will be a special release for the legacy node software on the 28th of April, which
+will only further support migration bundles. In case you're operating a node yourself you must upgrade to that version,
+as otherwise you will no longer be synchronized with the network.</p>
+<h4 id="migration-bundle"><a class="header" href="#migration-bundle">Migration bundle</a></h4>
+<p>With this limited legacy network, only migration bundles will further confirm. A migration bundle is nothing else than a
+normal value bundle/transfer which has some additional restrictions. If you craft a bundle which obeys to the following
+rules, then it falls under what we define as a migration bundle:</p>
 <ul>
-<li>... don't create outputs that are lower than 1 Mi (to prevent Dust Protection).</li>
-<li>... use a limited amount of inputs (&lt;10) and create small Bundles (otherwise your PoW will just takes to long).</li>
-<li>... use the <a href="https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner">bundle-miner</a>, if inputs include spent address. The bundle-miner will create bundles that reveal as few new parts of the private key as possible.</li>
+<li>It contains exactly one output transaction of which the destination address is a valid migration address and is
+positioned as the tail transaction within the bundle (meaning <code>currentIndex</code> 0). <strong>The output transaction value is at
+least 1'000'000 tokens (1 Mi).</strong></li>
+<li>It does not contain any zero-value transactions which do not hold signature fragments. This means that transactions
+other than the tail transaction must always be part of an input.</li>
+<li>Input transactions must not use migration addresses.</li>
 </ul>
-<p>More information about the migration bundle can be found in the <a href="https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md#migration-bundle">RFC-0035</a>.</p>
-<h3 id="migration-guide-via-seed"><a class="header" href="#migration-guide-via-seed">Migration Guide via Seed</a></h3>
-<p>The new recovery phrase and the migration address will be handled by the wallet library.</p>
-<p>Our IOTA Wallet Firefly is basically using wallet rs for the migration. There are three main methods exposed from wallet.rs:</p>
+<p>If in doubt whether your bundle is an actual migration bundle, you can use
+<a href="https://github.com/iotaledger/iota.go/blob/2618d56d58105dfc2f3b7f1eb3481d9f89a1d6bc/bundle/bundle.go#L335">ValidBundle(bundle, true)</a>
+function of our iota.go library to validate this. In case you're not acquainted with Go, you can also contact us on
+Discord or Slack in order to get the assurance, that you're crafted bundles are valid migration bundles.</p>
+<p>Things to consider:</p>
 <ul>
-<li><a href="https://github.com/iotaledger/firefly/blob/develop/packages/backend/bindings/node/index.ts#L203">getMigrationData</a></li>
-<li><a href="https://github.com/iotaledger/firefly/blob/develop/packages/backend/bindings/node/index.ts#L215">createMigrationBundle</a></li>
-<li><a href="https://github.com/iotaledger/firefly/blob/develop/packages/backend/bindings/node/index.ts#L219">sendMigrationBundle</a></li>
+<li>You must not broadcast your own migration bundles unless you're 100% sure that they are indeed valid migration
+bundles.</li>
+<li>If one of your input transactions spends funds from an already used address (meaning it is subject to key re-use), we
+recommend that you use
+the <a href="guides/(https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner)">bundle miner tool</a>
+to craft a bundle with the most applicable security given the already exposed parts of the given address' private key.</li>
+<li>Do not use too many input transactions as this will increase the overall Proof-of-Work time needed for a single
+bundle. Rather, split your input addresses over multiple migration bundles.</li>
+<li>Your code must include logic to await for the migration bundle's confirmation. If you find that your migration bundle
+is not confirming, consider re-attaching it (re-attaching is not the same as re-signing the bundle!).</li>
+<li>If you submit a migration bundle for broadcasting via the <code>broadcastTransactions</code> API command and you're using the
+updated legacy node software (which you must on/after the 28th of April), then it will additionally check up on
+submission whether your submitted bundle really adheres to the rules outlined above as an additional safe guard.</li>
 </ul>
-<h4 id="fetch-migration-data-by-a-seed"><a class="header" href="#fetch-migration-data-by-a-seed">Fetch migration data by a seed</a></h4>
-<p>First, with a user provided legacy seed, we fetch migration data using getMigrationData(). It returns to us with the addresses and it's balance. It also returns address metadata such as if an address is spent. To be precise, <a href="https://github.com/iotaledger/firefly/blob/develop/packages/shared/lib/typings/migration.ts#L12-L16">this</a> is what getMigrationData() returns.</p>
-<h4 id="create-a-migration-bundle"><a class="header" href="#create-a-migration-bundle">Create a Migration Bundle</a></h4>
-<p>Then, for the addresses we receive, we basically split them into chunks / bundles. We could create a single bundle for all addresses and migrate them, but we want to avoid that and cap the number of address a single bundle can contain, which happens <a href="https://github.com/iotaledger/firefly/blob/develop/packages/shared/lib/migration.ts#L279-L300">here</a>. Note that for spent addresses, we only have a single input per bundle.</p>
-<h4 id="check-for-spent-addresses"><a class="header" href="#check-for-spent-addresses">Check for spent addresses</a></h4>
-<p>The next step is to check if there are spent addresses on a user's seed. If there are, we bundle mine those addresses. This is done through createMigrationBundle by setting the third param mine to true. For the rest of the bundles, we will keep this param to false. createMigrationBundle will return us the migration bundle.</p>
-<h4 id="send-them-to-the-new-network"><a class="header" href="#send-them-to-the-new-network">Send them to the new network</a></h4>
-<p>The last step is to simply use sendMigrationBundle and broadcast them to the network.</p>
-<p>Another important point is how we select inputs. You can see how Firefly accomplishes this <a href="https://github.com/iotaledger/firefly/blob/develop/packages/shared/lib/migration.ts#L228-L277">here</a>.</p>
-<p>Basically, we need to make sure we create bundles that have accumulative balance &gt;= 1Mi.</p>
-<h4 id="migration-code-example-with-nodejs"><a class="header" href="#migration-code-example-with-nodejs">Migration Code Example with Node.js</a></h4>
-<p>This example creates a new database, account, and migrates funds from the legacy network to the chrysalis network.</p>
-<pre><code class="language-javascript=">require('dotenv').config()
-
-async function run() {
-    const { AccountManager, SignerType } = require('@iota/wallet')
-    const manager = new AccountManager({
-        storagePath: './migration-database',
-    })
-    manager.setStrongholdPassword(process.env.SH_PASSWORD)
-    manager.storeMnemonic(SignerType.Stronghold)
-
-    const account = await manager.createAccount({
-        clientOptions: { node: &quot;https://chrysalis-nodes.iota.org&quot;, localPow: true, network: &quot;chrysalis-mainnet&quot; },
-        alias: 'Migration',
-    })
-
-    console.log('Account created:', account.alias())
-
-    const nodes = ['https://nodes.iota.org']
-    const seed = process.env.MIGRATION_SEED
-    const migrationData = await manager.getMigrationData(
-      nodes,
-      seed,
-      {
-        permanode: 'https://chronicle.iota.org/api'
-      }
-    )
-    console.log(migrationData)
-    const bundle = await manager.createMigrationBundle(seed, migrationData.inputs.map(input =&gt; input.index), {
-      logFileName: 'iota-migration.log'
-    })
-    await manager.sendMigrationBundle(nodes, bundle.bundleHash)
-}
-
-run()
-</code></pre>
-<p>After the migration only the stronghold file gives you access to the funds, so make sure to back it up properly. It's not possible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for <a href="https://chrysalis.docs.iota.org/guides/backup_security.html#backup-and-security">Backup and security</a>.</p>
-<p>If you are new to <a href="https://github.com/iotaledger/wallet.rs">wallet.rs</a>, please check out our <a href="https://chrysalis.docs.iota.org/libraries/wallet.html">Wallet Library Documentation</a>.</p>
+<p>For further information about the migration bundles, have a look
+at <a href="https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md#migration-bundle">RFC-0035</a>
+.</p>
+<p>As an
+example, <a href="https://explorer.iota.org/mainnet/bundle/ZRAFFSEPRKDYGGA9DJQBWCXG9CGODUNZUBOWHVFQY9DK9HCHJQTHHSYBQRGZHGXWAPXDTJPPFJ9XFUALW">this bundle</a>
+is a valid migration bundle. It spends 1 Mi</p>
+<ul>
+<li>from:
+<code>YVLQWMRUZ9RCQODQZFYDNRVXHERUFPSDVLDRQLHEWGJLRTMEAQNX9OHZJVTONDHMUJQECDCUAR9PUIGAZPAAEHTZXB</code></li>
+<li>to:
+<code>TRANSFERTBIXPEWWYZZWBWPWJCB9XYMC9AGYH9X9AYAYADVXTYGYB9G9J9PEF9O9KYZXS9D9MANWTZOD9B9HMRQFWZ</code>
+where the destination address encodes the target Bech32
+address <code>iota1qqhmslysuwfedz2mqtr4ux73pr7uhjmd4tpazqs8pf7qdax44muqgw0fz25</code> respectively the hex Ed25519
+address <code>2fb87c90e39396895b02c75e1bd108fdcbcb6daac3d102070a7c06f4d5aef804</code> on which the these funds will be made
+available in the new network.</li>
+</ul>
+<h5 id="migration-address"><a class="header" href="#migration-address">Migration Address</a></h5>
+<p>As mentioned above, a migration bundle must have as its single destination/output address a migration address. A
+migration address is in essence an EdDSA address (to which you hold the keys on the new network) encoded in a legacy
+tryte address. You can create such an address in the following way:</p>
+<ul>
+<li>Compute the <a href="https://tools.ietf.org/html/rfc7693">BLAKE2b-256</a> hash <code>H</code> of your Ed25519 address <code>A</code> (this address is
+the one you control in the new network; note that an Ed25519 address is the Blake2b-256 hash of your Ed25519 public
+key).</li>
+<li>Append the first 4 bytes of <code>H</code> to <code>A</code>, resulting in 36 bytes.</li>
+<li>Convert <code>A</code> to trytes using the <code>b1t6</code> encoding (as described
+in <a href="https://github.com/iotaledger/protocol-rfcs/blob/master/text/0015-binary-to-ternary-encoding/0015-binary-to-ternary-encoding.md">RFC-15</a>)
+. This results in <code>A</code><sub>tri</sub> consisting of 72 trytes.</li>
+<li>Prepend the 8-tryte prefix <code>TRANSFER</code> to <code>A</code><sub>tri</sub>.</li>
+<li>Finally, pad <code>A</code><sub>tri</sub> with the single tryte <code>9</code> to get a legacy 81-tryte address.</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>Ed25519 address (32-byte): <code>6f9e8510b88b0ea4fbc684df90ba310540370a0403067b22cef4971fec3e8bb8</code></li>
+<li>Migration address including 9-tryte checksum (
+90-tryte): <code>TRANSFERCDJWLVPAIXRWNAPXV9WYKVUZWWKXVBE9JBABJ9D9C9F9OEGADYO9CWDAGZHBRWIXLXG9MAJV9RJEOLXSJW</code></li>
+</ul>
+<p>Since nobody holds keys to such migration addresses, funds are effectively burned and can no longer be used in the
+legacy network.</p>
+<h1 id="how-the-iota-chrysalis-phase-2-token-migration-works"><a class="header" href="#how-the-iota-chrysalis-phase-2-token-migration-works">How the IOTA Chrysalis Phase 2 Token Migration works</a></h1>
+<p>For the transition to Chrysalis Phase 2, the IOTA Foundation had to develop a way for funds to be migrated to this new
+network. The reason a migration mechanism needs to exist in the first place, is because the new network no longer
+supports WOTS addresses (currently all funds in the legacy network reside on these).</p>
+<p>The developed mechanism features following properties:</p>
+<ul>
+<li>It is trustless, meaning that everyone who's interested can verify that migrated funds are indeed legit and are not
+minted out of thin air.</li>
+<li>Migrated funds take less than 5 minutes until they become available in the new network.</li>
+<li>Migrations can take place any time for the foreseeable future.</li>
+</ul>
+<p>Before going into the actual developed mechanism, lets see why other mechanisms were not chosen:</p>
+<ul>
+<li><code>Migrating funds by performing periodic global snapshots on both networks</code>: While this approach certainly would have
+been the easiest to do, it would have blocked funds of people between the times of global snapshots. For example, if
+we would have taken global snapshots monthly (to carry over funds from burn/migration addresses), token holders would
+have been excluded from opportunities arising from the change in token price: i.e., perhaps you wanted to sell your
+tokens but were blocked by the fact that the next global snapshot would only be performed in 20 days and so you
+couldn't move your tokens to an exchange (which only supports Chrysalis Phase 2 IOTA).</li>
+<li><code>Supporting WOTS on Chrysalis Phase 2 (and only allowing to send to non WOTS addresses)</code>: While certainly also a
+viable option, we decided to not include support for WOTS as it brings a number of legacy problems we want to get rid
+of:
+<ul>
+<li>WOTS signatures are very large and make up a disproportional amount of data in a transaction (note that our PoW
+requirement in Chrysalis Phase 2 is dependent on the size of the message). Additionally, there were no real bounds
+on how big such signatures could grow to (even if per default we only supported 3 security levels in our
+libraries).</li>
+<li>We would have needed to pollute our new Chrysalis Phase 2 models with support for these addresses and signatures,
+adding unnecessary complexity to what should be a clean protocol.</li>
+<li>Chrysalis Phase 2 nodes would have needed to keep a spent address list to inform wallets that they had vulernable
+addresses.</li>
+</ul>
+</li>
+</ul>
+<h2 id="components"><a class="header" href="#components">Components</a></h2>
+<p>The developed migration mechanism is built from following components:</p>
+<ul>
+<li>Chrysalis phase 2 data types (
+see <a href="https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md">the RFC</a>
+for details):
+<ul>
+<li><code>Treasury Output</code>: an object which specifies an amount of tokens held in the treasury.</li>
+<li><code>Treasury Input</code>: an object which references a previous <code>Treasury Output</code>.</li>
+<li><code>Treasury Transaction</code>: an object which defines a <code>Treasury Input</code> referencing the last <code>Treasury Output</code> and a
+new <code>Treasury Output</code> holding the delta of what the <code>Treasury Transaction</code> is spending.</li>
+<li><code>Receipt</code>: an object which holds a pointer to a legacy milestone index, a list of funds to mint and
+a <code>Treasury Transaction</code>. A <code>Receipt</code> can only be an inner payload of a milestone.</li>
+</ul>
+</li>
+<li>Chrysalis Phase 2 nodes which validate receipts</li>
+<li>Legacy nodes which provide a special API command for the above Chrysalis Phase 2 nodes</li>
+<li><code>Treasury</code>: this is simply the last <code>Treasury Output</code> in the ledger. There exists only ever one at any point in time.
+When the Chrysalis Phase 2 network launches, the <code>Treasury</code> contains the total supply of tokens (2779530283277761) minus the funds which were already migrated during the &quot;7-day-migration-period&quot; prior to the network
+launch. This means that all funds which are not migrated from the legacy network, always will reside in the <code>Treasury</code>
+.</li>
+</ul>
+<p>Note, that again, a <code>Receipt</code> can only be contained within a milestone and that valid milestones can only be issued by
+the Coordinator, therefore, minting of migrated funds can only happen through milestones and not any other type of
+transactions. Likewise, a <code>Treasury Transaction</code> is only valid to be an inner payload of a <code>Receipt</code>.</p>
+<h2 id="how-it-actually-works"><a class="header" href="#how-it-actually-works">How it actually works</a></h2>
+<ol>
+<li>In essence, a <code>Receipt</code> carries the information about funds which were migrated or &quot;burned&quot; to a <code>migration address</code>
+on the legacy network. A <code>migration address</code> looks like any other normal address on the legacy network but it
+encapsulates actual information, such as:
+<ul>
+<li>The target Ed25519 address on the Chrysalis Phase 2 network from which the token holder wants their funds to be
+accessible from.</li>
+<li>A checksum of that Ed25519 address.</li>
+<li>A tryte prefix <code>TRANSFER</code>. (these addresses always start with this prefix)</li>
+</ul>
+</li>
+<li>As mentioned above, a <code>Receipt</code> can only be contained in a milestone and therefore the Coordinator on the Chrysalis
+Phase 2 network:
+<ol>
+<li>periodically polls data from a legacy node about what kind of newly confirmed burned/migrated funds there are (
+while also performing WOTS signature verification on these and the legacy milestone bundle).</li>
+<li>and then produces a milestone with a <code>Receipt</code> containing those funds, where within the <code>Receipt</code>,
+a <code>Treasury Transaction</code> is placed which deducts the sum of tokens migrated from the <code>Treasury</code>.</li>
+</ol>
+</li>
+<li>Chrysalis Phase 2 nodes then see receipts when applying milestones and automatically generate outputs for the Ed25519
+address as defined in the origin <code>migration address</code> in the legacy network. As an optional step (which is not turned
+on by default), every node can be configured to verify whether the funds in the receipt really were migrated in the
+old network using a legacy node and whether all funds for a given legacy milestone index were migrated. If this
+verification fails, the node will automatically panic as the integrity is no longer correct.</li>
+</ol>
+<p>This means that:</p>
+<ul>
+<li>The IOTA Foundation can not mint funds out of thin air, because nodes in the Chrysalis Phase 2 network verify that the
+funds were burned in the legacy network.</li>
+<li>All migration bundles, respectively transfers to <code>migration addresses</code> which were confirmed by a given legacy
+milestone, must be migrated fully to the new network, as otherwise the verification fails.</li>
+<li>Node operators are free to choose which legacy nodes they query with their Chrysalis Phase 2 nodes, so the
+verification of migrations/receipts is decentralized. For example, a node operator chooses to both operate their own
+legacy and Chrysalis Phase 2 nodes.</li>
+</ul>
+<p>Essentially then via the Firefly wallet, token holders will:</p>
+<ol>
+<li>Produce migration bundles which send funds to <code>migration addresses</code> controlled by the given owner.</li>
+<li>These bundles get confirmed on the legacy network.</li>
+<li>The Chrysalis Phase 2 Coordinator picks these confirmed legacy bundles up and generates receipts minting those funds
+to the target Ed25519 address.</li>
+<li>Verifier nodes verify the receipts and make sure that the funds originate from the legacy network.</li>
+</ol>
+<h3 id="verifier-node"><a class="header" href="#verifier-node">Verifier node</a></h3>
+<p>A verifier node is a Chrysalis Phase 2 node which up on seeing receipts:</p>
+<ol>
+<li>Queries a legacy node for the confirmation data for the specified milestone in the receipt.</li>
+<li>Then performs WOTS signature verification of the legacy milestone bundle and all confirmed bundles.</li>
+<li>Additionally it also checks that all confirmed funds on the legacy network for the given legacy milestone, are
+indeed minted with a given batch of receipts. (i.e. nothing is left out)</li>
+</ol>
+<p>See <a href="https://hornet.docs.iota.org/post_installation/run_as_verifier.html">Hornet as a verifier node</a></p>
 <h1 id="iota-hub-migration-guide"><a class="header" href="#iota-hub-migration-guide">IOTA Hub migration guide</a></h1>
 <blockquote>
 <p>This guide will explain how you can switch from IOTA Hub to using wallet.rs or its bindings instead.</p>
