@@ -14,7 +14,7 @@ our new network upon launch.
 
 Do note that migrating is a continuous effort that can be done at any time after the initial migration start date.
 
-## User Token Migration
+## Token Migration Overview
 
 Below is an overview of how the migration will take place for normal token holders:
 
