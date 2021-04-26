@@ -13,6 +13,7 @@
     - [Developer](./guides/dev_guide.md)
     - [Exchange](./guides/exchange_guide.md)
     - [Token Migration](./guides/token_guide.md)
+    - [Migration Mechanism](./guides/migration-mechanism.md)
     - [Hub Migration](./guides/hub_guide.md)
     - [Backup and Security](./guides/backup_security.md)
     - [Chrysalis Snapshot Validation](./guides/snapshot_validation_bootstrapping.md)
