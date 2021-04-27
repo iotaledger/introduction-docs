@@ -1208,13 +1208,17 @@ My server is isolated behind a DMZ</li>
 <li>Don't store passwords and backups on the same device</li>
 </ul>
 <h1 id="chrysalis-snapshot-validationboostrapping"><a class="header" href="#chrysalis-snapshot-validationboostrapping">Chrysalis Snapshot Validation/Boostrapping</a></h1>
-<p>In this guide you will learn how to partake in the global snapshot, respectively genesis snapshot creation for the legacy and Chrysalis Phase 2 IOTA network. The goal is to generate a global snapshot for the legacy network which acts as a cut-off point for when only migration bundles/transactions are allowed and a genesis snapshot for the new network which contains the already burned/migrated funds from the 7-day-migration window.</p>
+<p>In this guide you will learn how to partake in the global snapshot, respectively genesis snapshot creation for the
+legacy and Chrysalis Phase 2 IOTA network. The goal is to generate a global snapshot for the legacy network which acts
+as a cut-off point for when only migration bundles/transactions are allowed, and a genesis snapshot for the new network
+which contains the already burned/migrated funds from the 7-day-migration window.</p>
 <h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <ul>
 <li>A GitHub account and git</li>
 <li>A synchronized legacy Hornet node (running version &lt; 0.x.x)
 <ul>
-<li>The <code>getLedgerState</code> API command must be permitted. Add an entry to  <code>httpAPI.permitRemoteAccess</code> in case this API command is not added yet (restart your node afterwards).</li>
+<li>The <code>getLedgerState</code> API command must be permitted. Add an entry to  <code>httpAPI.permitRemoteAccess</code> in case this API
+command is not added yet (restart your node afterwards).</li>
 <li>The API port must be accessible</li>
 </ul>
 </li>
@@ -1228,8 +1232,9 @@ My server is isolated behind a DMZ</li>
 <li><code>git clone https://github.com/iotaledger/chrysalis-tools.git</code></li>
 <li><code>cd chrysalis-tools/snapshot/verify</code></li>
 <li><code>go build</code> (this should generate a <code>verify</code>/<code>verify.exe</code> binary respectively)</li>
-<li><code>./verify -node=&quot;https://your-node-uri&quot; -genesis-snapshot-file-network-id=&quot;&lt;network-id-for-chrysalis-phase-2&gt;&quot;</code> (the network Id is communicated in the validation issue in the <a href="https://github.com/gohornet/hornet">Hornet repository</a>)</li>
-<li>The program will now fetch the current ledger state of your defined legacy Hornet node, compute its Blake2b-256 hash and generate the global snapshot for the legacy and genesis snapshot for the new network. Example output:</li>
+<li><code>./verify -node=&quot;https://your-node-uri&quot; -genesis-snapshot-file-network-id=&quot;c2-mainnet&quot;</code></li>
+<li>The program will now fetch the current ledger state of your defined legacy Hornet node, compute its Blake2b-256 hash
+and generate the global snapshot for the legacy and genesis snapshot for the new network. Example output:</li>
 </ol>
 <pre><code>2021/04/20 11:10:56 querying legacy node for info...
 2021/04/20 11:10:57 legacy node state: lsmi/lsm 3636697/3636697
@@ -1240,27 +1245,34 @@ My server is isolated behind a DMZ</li>
 2021/04/20 11:11:02 eligible for migration: addrs 317469, tokens total 2779523376246858
 </code></pre>
 <ol start="6">
-<li>Generate the sha256 hashes of the generated <code>global_snapshot.csv</code> and <code>genesis_snapshot.bin</code>: <code>sha256sum global_snapshot.csv genesis_snapshot.bin</code>; Example output:</li>
+<li>Generate the sha256 hashes of the generated <code>global_snapshot.csv</code>
+and <code>genesis_snapshot.bin</code>: <code>sha256sum global_snapshot.csv genesis_snapshot.bin</code>; Example output:</li>
 </ol>
 <pre><code>$ sha256sum global_snapshot.csv genesis_snapshot.bin 
 f19a0976cc51b22d91018754a6cb41381fd737eb11b790a6db12a6d04a2bcddd  global_snapshot.csv
 ebc6ce9d8cd6f00dd6ff42dc72335367bc7b181ef1f2f76a63d6c2b75e74ff24  genesis_snapshot.bin
-
 </code></pre>
 <ol start="8">
-<li>Copy the entire program output and the sha256 hashes to the corresponding issue on the <a href="https://github.com/gohornet/hornet">Hornet repository</a>.</li>
+<li>Copy the entire program output, and the sha256 hashes to the corresponding issue on
+the <a href="https://github.com/gohornet/hornet">Hornet repository</a>.</li>
 </ol>
 <h2 id="bootstrapping-the-legacy-hornet-node-from-the-global-snapshot"><a class="header" href="#bootstrapping-the-legacy-hornet-node-from-the-global-snapshot">Bootstrapping the legacy Hornet node from the global snapshot</a></h2>
 <blockquote>
-<p>Loading the global snapshot ensures that your legacy Hornet node adds the genesis transaction (999...) as a solid entry point: this is important as the Coordinator will issue the next milestone after the global snapshot index on top of it. Your node will <strong>not</strong> lose the data it already has.</p>
+<p>Loading the global snapshot ensures that your legacy Hornet node adds the genesis transaction (999...) as a solid entry point:
+this is important as the Coordinator will issue the next milestone after the global snapshot index on top of it. Your node will <strong>not</strong> lose the data it already has.</p>
 </blockquote>
 <ol>
-<li>Await for confirmation that the global snapshot was taken successfully by looking into the validation issue on the <a href="https://github.com/gohornet/hornet">Hornet repository</a> or Discord.</li>
-<li>Stop your legacy Hornet node and download the binary or docker image of the Hornet build which only supports migration-bundles. With this &quot;migration-bundles-only&quot; version, your Hornet node will also no longer peer to nodes which do not run the same version.</li>
+<li>Await for confirmation that the global snapshot was taken successfully by looking into the validation issue on
+the <a href="https://github.com/gohornet/hornet">Hornet repository</a> or Discord.</li>
+<li>Stop your legacy Hornet node and download the binary or docker image of the Hornet build which only supports
+migration-bundles. With this &quot;migration-bundles-only&quot; version, your Hornet node will also no longer peer to nodes
+which do not run the same version.</li>
 <li>Let <code>snapshots.global.path</code> point to the global snapshot file (i.e <code>global_snapshot.csv</code>).</li>
-<li>Under <code>snapshots.global.index</code> define the index of the milestone at which the global snapshot was taken. (this should correspond to what <code>legacy node state</code> was from the program output, i.e. <code>3636697</code> from the example output above).</li>
+<li>Under <code>snapshots.global.index</code> define the index of the milestone at which the global snapshot was taken. (this should
+correspond to what <code>legacy node state</code> was from the program output, i.e. <code>3636697</code> from the example output above).</li>
 <li>Change <code>snapshots.loadType</code> to <code>&quot;global&quot;</code> (note the quotes as the value is a string).</li>
-<li>Restart your legacy Hornet <strong>with the additional <code>--forceGlobalSnapshot</code> flag</strong> (this will instruct your Hornet node to load the global snapshot despite the fact that it already has a database).</li>
+<li>Restart your legacy Hornet <strong>with the additional <code>--forceGlobalSnapshot</code> flag</strong> (this will instruct your Hornet node
+to load the global snapshot despite the fact that it already has a database).</li>
 </ol>
 <h1 id="testnet"><a class="header" href="#testnet">Testnet</a></h1>
 <p>IOTA 1.5 (also known as Chrysalis) is IOTA's intermediate stage before Coordicide is complete. You can read more about the strategy for releasing Chrysalis <a href="https://blog.iota.org/release-strategy-for-chrysalis-iota-1-5-4ea8741ea3a1/">here</a>.</p>
