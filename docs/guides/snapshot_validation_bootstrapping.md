@@ -21,31 +21,37 @@ which contains the already burned/migrated funds from the 7-day-migration window
 1. `git clone https://github.com/iotaledger/chrysalis-tools.git`
 2. `cd chrysalis-tools/snapshot/verify`
 3. `go build` (this should generate a `verify`/`verify.exe` binary respectively)
-4. `./verify -node="https://your-node-uri" -genesis-snapshot-file-network-id="c2-mainnet"`
+4. `./verify -node="https://your-node-uri" -genesis-snapshot-file-network-id="chrysalis-mainnet" -genesis-snapshot-file-network-id-alt="as-network"`
 5. The program will now fetch the current ledger state of your defined legacy Hornet node, compute its Blake2b-256 hash
    and generate the global snapshot for the legacy and genesis snapshot for the new network. Example output:
 
 ```
-2021/04/20 11:10:56 querying legacy node for info...
-2021/04/20 11:10:57 legacy node state: lsmi/lsm 3636697/3636697
-2021/04/20 11:10:57 fetching ledger state at 3636697, this might take a while...go grab a coffee...
-2021/04/20 11:11:01 total ledger entries: 430699
-2021/04/20 11:11:02 ledger state integrity hash: 34ecf812f0547a685f6a826b518d9bad0ed1bcaab3fb8ea4c5e06106c5b5e01f
-2021/04/20 11:11:02 migration: addrs 1, tokens total 1629957
-2021/04/20 11:11:02 eligible for migration: addrs 317469, tokens total 2779523376246858
+2021/04/28 12:05:22 querying legacy node for info...
+2021/04/28 12:05:22 legacy node state: lsmi/lsm 3705194/3705194
+2021/04/28 12:05:22 fetching ledger state at 3705194, this might take a while...go grab a coffee...
+2021/04/28 12:05:27 total ledger entries: 340692
+2021/04/28 12:05:29 legacy ledger state integrity hash: 8900ac80edffe4eed9f6f55dfe32d775c18d789351c7dddfa4a4c815a0fa7116
+2021/04/28 12:05:29 migration: addrs count 7949, tokens total 661557732260355
+2021/04/28 12:05:29 migration (alternative): addrs count 7950, tokens total 724118708261378
+2021/04/28 12:05:29 generating genesis snapshot files...
+2021/04/28 12:05:29 treasury allocation with genesis_snapshot.bin: 2117972551017406 tokens
+2021/04/28 12:05:29 treasury allocation with genesis_snapshot_alt.bin: 2055411575016383 tokens
+2021/04/28 12:05:29 misc info:
+2021/04/28 12:05:29 eligible for migration: addrs 225329, tokens total 2055405216227457
 ```
 
-6. Generate the sha256 hashes of the generated `global_snapshot.csv`
-   and `genesis_snapshot.bin`: `sha256sum global_snapshot.csv genesis_snapshot.bin`; Example output:
+6. Generate the sha256 hashes of the generated snapshot
+   files: `sha256sum genesis_snapshot.bin genesis_snapshot_alt.bin global_snapshot.csv `; Example output:
 
 ```
-$ sha256sum global_snapshot.csv genesis_snapshot.bin 
-f19a0976cc51b22d91018754a6cb41381fd737eb11b790a6db12a6d04a2bcddd  global_snapshot.csv
-ebc6ce9d8cd6f00dd6ff42dc72335367bc7b181ef1f2f76a63d6c2b75e74ff24  genesis_snapshot.bin
+$ sha256sum genesis_snapshot.bin genesis_snapshot_alt.bin global_snapshot.csv 
+65be1a80a6895d17a492db3dd55babf1d57557dbaa40da6e1d0ed5937ceb6662  genesis_snapshot.bin
+39bd5308a1e9fb57503f6d15b90206ae434f581807ef0e29cf2e66de64165c5b  genesis_snapshot_alt.bin
+8f48388423cc706bf5f7707735fd99a5d89efbb966a8e2a0b82ff3529cf33f7f  global_snapshot.csv
 ```
 
 8. Copy the entire program output, and the sha256 hashes to the corresponding issue on
-   the [Hornet repository](https://github.com/gohornet/hornet).
+   the `iotaledger` [Hornet fork repository](https://github.com/iotaledger/hornet).
 
 ## Bootstrapping the legacy Hornet node from the global snapshot
 
@@ -59,7 +65,7 @@ ebc6ce9d8cd6f00dd6ff42dc72335367bc7b181ef1f2f76a63d6c2b75e74ff24  genesis_snapsh
    which do not run the same version.
 1. Let `snapshots.global.path` point to the global snapshot file (i.e `global_snapshot.csv`).
 1. Under `snapshots.global.index` define the index of the milestone at which the global snapshot was taken. (this should
-   correspond to what `legacy node state` was from the program output, i.e. `3636697` from the example output above).
+   correspond to what `legacy node state` was from the program output, i.e. `3705194` from the example output above).
 1. Change `snapshots.loadType` to `"global"` (note the quotes as the value is a string).
 1. Restart your legacy Hornet **with the additional `--forceGlobalSnapshot` flag** (this will instruct your Hornet node
    to load the global snapshot despite the fact that it already has a database).
