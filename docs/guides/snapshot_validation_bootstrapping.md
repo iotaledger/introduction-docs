@@ -50,8 +50,8 @@ $ sha256sum genesis_snapshot.bin genesis_snapshot_alt.bin global_snapshot.csv
 8f48388423cc706bf5f7707735fd99a5d89efbb966a8e2a0b82ff3529cf33f7f  global_snapshot.csv
 ```
 
-8. Copy the entire program output, and the sha256 hashes to the corresponding issue on
-   the `iotaledger` [Hornet fork repository](https://github.com/iotaledger/hornet).
+8. Copy the entire program output, and the sha256 hashes to the [corresponding issue](https://github.com/iotaledger/hornet/issues/16) on
+   the `iotaledger` Hornet fork repository.
 
 ## Bootstrapping the legacy Hornet node from the global snapshot
 
