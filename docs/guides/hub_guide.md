@@ -2,6 +2,16 @@
 
 > This guide will explain how you can switch from IOTA Hub to using the [IOTA Wallet Library](https://wallet-lib.docs.iota.org).
 
+> ⚠️ **Attention** ⚠️
+>
+> Before you start migrating with the IOTA Hub, please get in Contact with the responsible manager. 
+>
+> Manager: Dave de Fijter
+>
+> Email: [dave.defijter@iota.org](mailto:dave.defijter@iota.org)
+>
+> Discord: Dave [IF]#3333
+
 Because of the unique features of IOTA 1.0, it was difficult to manage IOTA transactions with just a library. With the new Chrysalis update (IOTA 1.5), the whole protocol was upgraded to be more accommodating to industry wide standards and developer friendliness. 
 
 IOTA Hub is deprecated with the Chrysalis update and will not work with the new protocol changes. If you still use Hub, we ask you to utilize our new [IOTA Wallet Library](https://wallet-lib.docs.iota.org) where you can easily manage IOTA addresses, deposits, and withdrawals for user accounts.
