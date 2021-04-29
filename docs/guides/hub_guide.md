@@ -4,9 +4,11 @@
 
 > ⚠️ **Attention** ⚠️
 >
-> Before you start migrating with the IOTA Hub, please get in Contact with the responsible manager. 
+> Before you start a migration from IOTA Hub get in contact with us so we can assist you in this process. 
 >
-> Manager: Dave de Fijter
+> **Contact details:**
+>
+> Dave de Fijter
 >
 > Email: [dave.defijter@iota.org](mailto:dave.defijter@iota.org)
 >
