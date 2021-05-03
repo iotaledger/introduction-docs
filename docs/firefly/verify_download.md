@@ -13,15 +13,15 @@ To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and
 
 2. Create a SHA256 hash of the Firefly Desktop `.exe` file. Replace the path with the path to your Firefly `.exe` file.
 
-    ```
-    certUtil -hashfile path\to\firefly-desktop-version.exe SHA256
-    ```
+```
+certUtil -hashfile path\to\firefly-desktop-version.exe SHA256
+```
   
-    For example, if the file is in the `C:\Users\yourname\Downloads` directory, do the following:
+For example, if the file is in the `C:\Users\yourname\Downloads` directory, do the following:
   
-    ```
-    certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
-    ```
+```
+certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
+```
 
 3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match
 
