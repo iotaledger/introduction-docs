@@ -13,15 +13,15 @@ To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and
 
 2. Create a SHA256 hash of the Firefly Desktop `.exe` file. Replace the path with the path to your Firefly `.exe` file.
 
-    ```
-    certUtil -hashfile path\to\firefly-desktop-version.exe SHA256
-    ```
+```
+certUtil -hashfile path\to\firefly-desktop-version.exe SHA256
+```
   
-    For example, if the file is in the `C:\Users\yourname\Downloads` directory, do the following:
+For example, if the file is in the `C:\Users\yourname\Downloads` directory, do the following:
   
-    ```
-    certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
-    ```
+```
+certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
+```
 
 3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match
 
@@ -31,11 +31,11 @@ To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and
 
 2. Go to **Digital Signatures** > **Details** > **View Certificate**
 
-3. In the Certification Path tab, make sure that the the following information matches the path:
+3. In the Certification Path tab, make sure that the path matches the following information:
 
-    DigiCert
-    DigiCert SHA2 Assured Code Signing CA
-   IOTA Stiftung
+    - DigiCert
+    - DigiCert SHA2 Assured Code Signing CA
+    - IOTA Stiftung
 
 4. Make sure that the Certificate status reads "This certificate is OK."
 
@@ -63,7 +63,7 @@ To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and
 
 #### Prerequisites
 
-To follow these instructions you need [Xcode Command Line Tools](https://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/allexperimental/macxcodecommandlinetools.html).
+To follow these instructions you need the [Xcode Command Line Tools](https://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/allexperimental/macxcodecommandlinetools.html).
 
 1. Open Terminal (in `/Applications/Utilities/Terminal`)
 
@@ -102,9 +102,11 @@ To follow these instructions you need [Xcode Command Line Tools](https://www.ics
 
 5. Make sure that the following information matches the output of the command (assuming Firefly is in the `/Applications` directory):
 
+    ```
     /Applications/Firefly.app: accepted
     source=Developer ID
     origin=Developer ID Application: IOTA Stiftung (UG77RJKZHH)
+    ```
     
     
 ## Linux operating system
@@ -120,7 +122,7 @@ To follow these instructions you need the `sha256sum` package, which is included
 2. Create a SHA256 hash of the Firefly Desktop executable file. Replace the path with the path to your Firefly executable file.
 
   ```bash
-  `sha256sum path/to/firefly-desktop-version.AppImage`
+  sha256sum path/to/firefly-desktop-version.AppImage
   ```
 
   For example, if the file is in `~/Downloads`, do the following:
