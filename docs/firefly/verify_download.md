@@ -31,7 +31,7 @@ certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
 
 2. Go to **Digital Signatures** > **Details** > **View Certificate**
 
-3. In the Certification Path tab, make sure that the the following information matches the following path:
+3. In the Certification Path tab, make sure that the path matches the following information:
 
     - DigiCert
     - DigiCert SHA2 Assured Code Signing CA
