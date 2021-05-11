@@ -1,7 +1,7 @@
 # Testnet
 
 ## Public Infrastructure
-The IOTA Foundation provides following loadbalanced public testnet endpoint:
+The IOTA Foundation provides the following loadbalanced public testnet endpoint:
 
 - api.lb-0.testnet.chrysalis2.com
 
