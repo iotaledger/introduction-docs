@@ -59,7 +59,7 @@ The IOTA address is based on the Ed25519 signature scheme and it is usually repr
     </tbody>
 </table>
 
-More information: [Protocol-rfc#0020](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md)
+More information: [Protocol-rfc#0020 - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md)
 
 ### Seed
 
@@ -83,7 +83,7 @@ e94346bce41402155ef120e2525fad2d0bf30b10a89e4b93fd8471df1e6a0981
 
 > In modern wallet implementations, such as our [wallet.rs library](https://chrysalis.docs.iota.org/libraries/wallet.html) and [firefly wallet](https://blog.iota.org/firefly-beta-release/), the seed is usually generated from a `seed mnemonic` (`seed phrase`), using [BIP39 standard](https://en.bitcoin.it/wiki/BIP_0039), to be better memorized/stored by humans. It is based on randomly generated list of english words and is later used to generate the seed. Either way, the seed is a root for all generated private keys and addresses
 
-[Protocol-rfc#0010](https://github.com/Wollac/protocol-rfcs/blob/mnemonic-seed/text/0010-mnemonic-ternary-seed/0010-mnemonic-ternary-seed.md)
+More information: [Protocol-rfc#0010 - Mnemonic Seed](https://github.com/Wollac/protocol-rfcs/blob/mnemonic-seed/text/0010-mnemonic-ternary-seed/0010-mnemonic-ternary-seed.md)
 
 ### Address/key space
 As mentioned above, IOTA 1.5 embraced some existing industry standards, which is obvious even during an address generation process. This includes the [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) standard that describes an approach to _Hierarchical Deterministic Wallets_. The standard was improved by [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) recently.
@@ -117,38 +117,40 @@ So in case of IOTA 1.5 (Chrysalis), the derivation path of address/key space is 
 * The levels `purpose` and `coin_type` are given
 * The rest levels are up to developers to integrate, specifically `seed`, `account`, `wallet_chain` and `address_index`
 
-[Protocol-rfc#0003](https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md)
+More information: [Protocol-rfc#0003 - Signature Scheme](https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md)
 
 ## Messages, payloads, and transactions
 In comparison to original the IOTA 1.0, IOTA 1.5 also introduced some fundamental changes to the underlying data structures. The original concept of `transactions` and `bundles` is gone, and has been replaced by a concept of `messages` and `payloads`.
 
 A `message` is a data structure that is actually being broadcast in the IOTA 1.5 network and represents a node (vertex) in the Tangle graph.
 
-It can refer to up to 8 previous messages and once a message is attached to the Tangle and approved by a milestone, the Tangle structure ensures the content of the message is unaltered. Every message is referenced by a `message_id` which is based on a hash algorithm (`Blake2b256`) of binary content of the message. It also includes previous Tangle messages as its `parents` which means it is not possible to alter the given message without altering previous messages in the Tangle.
+It refers to at least 2 and up to 8 previous messages and once a message is attached to the Tangle and approved by a milestone, the Tangle structure ensures the content of the message is unaltered. Every message is referenced by a `message_id` which is based on a hash algorithm (`Blake2b256`) of binary content of the message. It also includes previous Tangle messages as its `parents` which means it is not possible to alter the given message without altering previous messages in the Tangle.
 
 The `message` is an atomic unit that is confirmed by the network as a whole.
 
 > IOTA is no longer based on ternary. IOTA 1.5 uses binary to encode and broadcast all underlying data entities
 
-A `message` is arbitrary in size (up to 35 kB) and it can hold variable sets of information called `payloads`. The number of payloads a single message can encapsulate is not given. Even a message without a `payload` is completely valid and can be broadcast. The `Message` itself does not include any timestamp; a message timestamp is derived from an acceptance of the given message by the Tangle network.
+A `message` can be up to 32 kb in size and it can hold variable sets of information called `payloads`. The number of payloads a single message can encapsulate is not given. Even a message without a `payload` is completely valid and can be broadcast. The `Message` itself does not include any timestamp; a message timestamp is derived from an acceptance of the given message by the Tangle network.
 
-A`payload` represents a layer of concern. Some payloads may change a state of the ledger (ex. `SignedTransactions`) and some may provide extra features to some specific applications and business use cases (ex. `IndexationPayload`).
+More information: [Protocol-rfc#0017 - Message](https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md) 
+
+A`payload` represents a layer of concern. Some payloads may change the state of the ledger (ex. `SignedTransactions`) and some may provide extra features to some specific applications and business use cases (ex. `IndexationPayload`).
 
 There are already implemented core payloads, such as `SignedTransaction`, `MilestonePayload`, and `IndexationPayload` but the message and payload definition is generic enough to incorporate any future payload(s) the community agrees upon.
+
+More information: [Protocol-rfc#0018 - Transaction Payload](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md)
 
 Needless to say, the IOTA network ensures the outer structure of the message itself is valid and strictly complies with network consensus protocol. However, the inner structure is very flexible, future-proof, and offers an unmatched network extensibility.
 
 ![messages_in_tangle](assets/messages_in_tangle.svg)
 
 The current IOTA 1.5 network incorporates the following core payloads:
-* `SignedTransaction`: a payload that describes `UTXO` transactions that are the cornerstones of value-based transfers in IOTA network. Via this payload, a `message` can be also cryptographically signed
+* `SignedTransaction`: a payload that describes `UTXO` transactions that are the cornerstones of value-based transfers in the IOTA network. Via this payload, a `message` can be also cryptographically signed
 * `MilestonePayload`: a payload that is emitted by the Coordinator
 * `IndexationPayload`: a payload that enables the addition of an index to the encapsulating message, as well as some arbitrary data. The given index can be later used to search the message(s).
 
-In comparison to IOTA 1.0, a `message` itself is not directly related to the IOTA address while broadcasting to the IOTA 1.5 network. Such messages are referenced using `message_id`. Messages are indirectly related to IOTA addresses via `SignedTransaction` payload, specifically the `UTXO` section.
+In comparison to IOTA 1.0, a `message` itself is not directly related to the IOTA address while broadcasting to the IOTA 1.5 network. Such messages are referenced using the so-called `message_id`. Messages are indirectly related to IOTA addresses via `SignedTransaction` payload, specifically the `UTXO` section.
 
-[Protocol-rfc#0017](https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md); 
-[Protocol-rfc#0018](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md)
 
 ## Unspent Transaction Output (UTXO)
 Originally, IOTA 1.0 used an `account-based model` for tracking individual iota tokens: _each IOTA address held a number of tokens and the aggregated number of tokens from all iota addresses was equal to the total supply._
@@ -173,12 +175,11 @@ Every `output` also stores information about an IOTA address to which it is coup
 
 `Outputs` are being broadcasted encapsulated in a `message` as a part of `SignedTransaction` payload.
 
-[Protocol-rfc#0018](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md)
 
 ## Selected message payloads
 Currently, there are two commonly used message payloads, `IndexationPayload` and `SignedTransaction` which can be combined based as needed.
 
-[Protocol-rfc#0000](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md)
+More information: [Protocol-rfc#0018 - Transaction Payload](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md)
 
 ### IndexationPayload
 `IndexationPayload` is a payload type that can be used to attach an arbitrary `data` and key `index` to a message. When this particular payload is leveraged, then a message and related data entity can be searched via key `index` in addition to a `message_id`.
@@ -197,10 +198,10 @@ Since IOTA is feeless and has the ability to send microtransactions, attackers c
 
 > In the UTXO model, each node in the network needs to keep track of all the currently unspent outputs. When the number of outputs becomes too large, it can cause performance and memory issues. The RFC below proposes a new protocol rule regarding the processing of outputs where they transfer a very small amount of IOTA’s so-called dust outputs. Dust outputs are only allowed when they are backed up by a certain deposit on the receiving address. This limits the amount of dust outputs, thus making it expensive to proliferate dust. Since a receiver must make a deposit, the protocol makes receiving dust an opt-in feature.
 
-[Protocol-rfc#0032](https://github.com/GalRogozinski/protocol-rfcs/blob/dust/text/0032-dust-protection/0032-dust-protection.md)
+More information: [Protocol-rfc#0032 - Dust Protection](https://github.com/GalRogozinski/protocol-rfcs/blob/dust/text/0032-dust-protection/0032-dust-protection.md)
 
 ## Up to 8 Parents
 
 With IOTA 1.0, you always had to reference 2 parent transactions. With Chrysalis, we introduce a more dynamic number of parent nodes where you can reference up to 8 parents. We recommend you reference at least 2 unique parents at all times for the best possible results.
 
-[Protocol-rfc#0017](https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md)
+More information: [Protocol-rfc#0017 - Message](https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md) 
