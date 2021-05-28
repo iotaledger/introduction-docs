@@ -17,6 +17,7 @@
     - [Hub Migration](./guides/hub_guide.md)
     - [Backup and Security](./guides/backup_security.md)
     - [Chrysalis Snapshot Validation](./guides/snapshot_validation_bootstrapping.md)
+- [Tutorials](./tutorials/one-click-private-tangle.md)
 - [Mainnet](./mainnet.md)
 - [Testnet](./testnet.md)
 - [Protocol RFCs](./rfc.md)
