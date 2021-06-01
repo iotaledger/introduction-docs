@@ -77,7 +77,7 @@ The summary of services exposed to the outside is as follows:
 | Explorer Web App | `explorer-webapp` | `8082`        |
 
 
-The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Private Tangle can be achieved. IOTA Foundation intends to provide automatic, "one click" deployment of these kind of enhanced architectures in the next version of this software. 
+The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Private Tangle can be achieved. IOTA Foundation intends to provide automatic, "one click" deployment of these kind of enhanced architectures in a future version of this software. 
 
 To support the deployment of a Private Tangle, the IOTA Community has developed a set of shell scripts and configuration templates to make it easier to deploy a (Docker based) Private Tangle with the architecture described above. You can also customize the [default configuration files](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config) if, for instance, you want to enable extra [Hornet plugins](https://hornet.docs.iota.org/post_installation/config.html). 
 
@@ -92,6 +92,7 @@ Behind the scenes, the process will launch all the Docker containers (through do
 
 The Parameters of this "one click" installation are as follows (further details can be found at [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/config):
 
+* One Private Key for signing milestones and just one milestone signer (the Coordinator)
 * Coordinator Milestones Period: `60` seconds, check [this line of code](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config/config-coo.json#L120)
 * Spammer Settings, check [these lines of code](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config/config-spammer.json#L118).
 
@@ -181,7 +182,7 @@ You can find the Tangle database files at `db/private-tangle`.
 
 ### Operate your Private Tangle
 
-You operate your Private Tangle by issuing the following command:
+You operate your Private Tangle by issuing one of the following commands:
 
 ```console
 ./private-tangle.sh [start|stop|update]
@@ -211,4 +212,4 @@ Mac OS users should install GNU sed, for instance, using `brew install --default
 
 ## Next steps
 
-Try using one of the [client libraries](../libraries/client.md) to send transactions to the nodes in your Private Tangle
+Try using one of the [client libraries](../libraries/client.md) to send transactions to the nodes in your Private Tangle. 
