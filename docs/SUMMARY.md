@@ -19,6 +19,7 @@
     - [Chrysalis Snapshot Validation](./guides/snapshot_validation_bootstrapping.md)
 - [Mainnet](./mainnet.md)
 - [Testnet](./testnet.md)
+- [Private Tangle](./tutorials/one-click-private-tangle.md)
 - [Protocol RFCs](./rfc.md)
 - [Resources](./resources.md)
 - [FAQ](./faq.md)
