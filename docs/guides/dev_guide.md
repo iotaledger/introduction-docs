@@ -124,7 +124,7 @@ In comparison to original the IOTA 1.0, IOTA 1.5 also introduced some fundamenta
 
 A `message` is a data structure that is actually being broadcast in the IOTA 1.5 network and represents a node (vertex) in the Tangle graph.
 
-It refers to at least 2 and up to 8 previous messages and once a message is attached to the Tangle and approved by a milestone, the Tangle structure ensures the content of the message is unaltered. Every message is referenced by a `message_id` which is based on a hash algorithm (`Blake2b256`) of binary content of the message. It also includes previous Tangle messages as its `parents` which means it is not possible to alter the given message without altering previous messages in the Tangle.
+It refers to at least 1 (2 is recommended) and up to 8 previous messages and once a message is attached to the Tangle and approved by a milestone, the Tangle structure ensures the content of the message is unaltered. Every message is referenced by a `message_id` which is based on a hash algorithm (`Blake2b256`) of binary content of the message. It also includes previous Tangle messages as its `parents` which means it is not possible to alter the given message without altering previous messages in the Tangle.
 
 The `message` is an atomic unit that is confirmed by the network as a whole.
 
