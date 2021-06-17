@@ -14,11 +14,11 @@ The figure below depicts a minimum viable deployment architecture of a Private T
 
 There are three main nodes identified: 
 
-* The **Coordinator**. This node emits milestones periodically and has to be bootstrapped and set up appropriately. With the IOTA 2.0 update, the Coordinator will no longer be needed as explained [here](https://coordicide.iota.org/). 
+* The **Coordinator**: This node emits milestones periodically and has to be bootstrapped and set up appropriately. With the IOTA 2.0 update, the Coordinator will no longer be needed as explained [here](https://coordicide.iota.org/). 
 
-* The **Spammer**. A node that periodically sends messages to the Private Tangle, thus enabling a minimal message load to support transaction approval as per the IOTA protocol. 
+* The **Spammer**: A node that periodically sends messages to the Private Tangle, thus enabling a minimal message load to support transaction approval as per the IOTA protocol. 
 
-* The **Regular Hornet Node**. An initial node, it is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later join the same Private Tangle.  
+* The **Regular Hornet Node**: An initial node, it is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later join the same Private Tangle.  
 
 These three nodes are peered amongst each other as our architecture is based on Docker, so that each node runs within a Docker Container and all containers are attached to the same network named `private-tangle`. 
 
@@ -82,7 +82,7 @@ The deployment architecture described above can be easily transitioned to produc
 To support the deployment of a Private Tangle, the IOTA Community has developed a set of shell scripts and configuration templates to make it easier to deploy a (Docker based) Private Tangle with the architecture described above. You can also customize the [default configuration files](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config) if, for instance, you want to enable extra [Hornet plugins](https://hornet.docs.iota.org/post_installation/config.html). 
 
 But now let us see how we can launch our Private Tangle via a "single click". We have two options: through the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) or through any [Docker-enabled machine](#one-click-private-tangle-on-any-docker-enabled-vm). 
- 
+
 
 ## "One Click" Private Tangle on AWS
 
@@ -114,7 +114,7 @@ docker version
 Please ensure that you are using Docker version `18.03` or higher and Docker Compose `1.21` or higher and upgrade if
 necessary.
 
-### Clone the script Repository
+### Clone the Script Repository
 
 To start with, you need to clone the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository as follows:
 
@@ -210,6 +210,6 @@ You can now get access to the Tangle Explorer through `http://localhost:8082`.
 
 Mac OS users should install GNU sed, for instance, using `brew install --default-names gnu-sed`.  
 
-## Next steps
+## Next Steps
 
 Try using one of the [client libraries](../libraries/client.md) to send transactions to the nodes in your Private Tangle. 

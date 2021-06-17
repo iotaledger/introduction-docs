@@ -1,28 +1,28 @@
 # Chrysalis Snapshot Validation/Boostrapping
 
-In this guide you will learn how to partake in the global snapshot, respectively genesis snapshot creation for the
-legacy and Chrysalis Phase 2 IOTA network. The goal is to generate a global snapshot for the legacy network which acts
-as a cut-off point for when only migration bundles/transactions are allowed, and a genesis snapshot for the new network
-which contains the already burned/migrated funds from the 7-day-migration window.
+This guide outlined how to take part in the global snapshot, respectively genesis snapshot creation for the
+legacy, and Chrysalis Phase 2 IOTA network. The goal was to generate a global snapshot for the legacy network which acted
+as a cut-off point for when only migration bundles/transactions were allowed, and a genesis snapshot for the new network
+which contained the already burned/migrated funds from the 7-day-migration window.
 
 ## Requirements
 
-- A GitHub account and git
-- A synchronized legacy Hornet node (running version < 0.x.x)
+- A GitHub account and git.
+- A synchronized legacy Hornet node (running version < 0.x.x).
     - The `getLedgerState` API command must be permitted. Add an entry to  `httpAPI.permitRemoteAccess` in case this API
       command is not added yet (restart your node afterwards).
-    - The API port must be accessible
-- Golang version 1.16.x (https://golang.org/)
+    - The API port must be accessible.
+- Golang version 1.16.x (https://golang.org/).
 
 ## Steps
 
 > Make sure you've Go installed by issuing `go version` on your command line.
 
-1. `git clone https://github.com/iotaledger/chrysalis-tools.git`
-2. `cd chrysalis-tools/snapshot/verify`
-3. `go build` (this should generate a `verify`/`verify.exe` binary respectively)
-4. `./verify -node="https://your-node-uri" -genesis-snapshot-file-network-id="chrysalis-mainnet" -genesis-snapshot-file-network-id-alt="as-network"`
-5. The program will now fetch the current ledger state of your defined legacy Hornet node, compute its Blake2b-256 hash
+1. `git clone https://github.com/iotaledger/chrysalis-tools.git`.
+2. `cd chrysalis-tools/snapshot/verify`.
+3. `go build` (this should generate a `verify`/`verify.exe` binary respectively).
+4. `./verify -node="https://your-node-uri" -genesis-snapshot-file-network-id="chrysalis-mainnet" -genesis-snapshot-file-network-id-alt="as-network"`.
+5. The program would fetch the then current ledger state of your defined legacy Hornet node, compute its Blake2b-256 hash
    and generate the global snapshot for the legacy and genesis snapshot for the new network. Example output:
 
 ```
@@ -40,7 +40,7 @@ which contains the already burned/migrated funds from the 7-day-migration window
 2021/04/28 12:05:29 eligible for migration: addrs 225329, tokens total 2055405216227457
 ```
 
-6. Generate the sha256 hashes of the generated snapshot
+6. Generate the sha256 hashes of the generated snapshot.
    files: `sha256sum genesis_snapshot.bin genesis_snapshot_alt.bin global_snapshot.csv `; Example output:
 
 ```
@@ -53,10 +53,10 @@ $ sha256sum genesis_snapshot.bin genesis_snapshot_alt.bin global_snapshot.csv
 8. Copy the entire program output, and the sha256 hashes to the [corresponding issue](https://github.com/iotaledger/hornet/issues/16) on
    the `iotaledger` Hornet fork repository.
 
-## Bootstrapping the legacy Hornet node from the global snapshot
+## Bootstrapping the Legacy Hornet Node From The Global Snapshot
 
-> Loading the global snapshot ensures that your legacy Hornet node adds the genesis transaction (999...) as a solid entry point:
-> this is important as the Coordinator will issue the next milestone after the global snapshot index on top of it. Your node will **not** lose the data it already has.
+> Loading the global snapshot ensured that your legacy Hornet node added the genesis transaction (999...) as a solid entry point:
+> this was important as the Coordinator would issue the next milestone after the global snapshot index on top of it. Your node would **not** lose the data it already had.
 
 1. Await for confirmation that the global snapshot was taken successfully by looking into the validation issue on
    the [Hornet repository](https://github.com/gohornet/hornet) or Discord.
