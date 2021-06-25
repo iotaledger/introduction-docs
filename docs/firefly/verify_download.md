@@ -1,6 +1,6 @@
 # Verify your Firefly Desktop Download
 
-**When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this tutorial, you learn how to verify Firefly Desktop downloads.**
+When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this tutorial, you learn how to verify Firefly Desktop downloads.
 
 
 To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and its code signature. Instructions for both of these steps differ, depending on your operating system.

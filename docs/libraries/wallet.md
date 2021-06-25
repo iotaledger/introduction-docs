@@ -1,6 +1,6 @@
 # IOTA Wallet Library
 
-The wallet library is a stateful library for developers; essentially it's a programmable wallet. It is recommended that you use this library if you are mainly using IOTA for token transfers. This library also supports the handling and monitoring of multiple account/addresses at the same time where its stateful design helps with the management of them.
+The wallet library is a stateful library for developers; essentially it's a programmable wallet. We recommended that you use this library if you are mainly using IOTA for token transfers. This library stateful design add support for handling and monitoring of multiple account/addresses.
 
 Additionally, it also supports the [Stronghold.rs](https://github.com/iotaledger/stronghold.rs) enclave, incorporating the best security practices in one package:
 

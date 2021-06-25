@@ -1,6 +1,6 @@
 # Chrysalis Migration
 
-By the end of the Chrysalis migration, a number of aspects at IOTA changedfor the better. With easier ways to
+By the end of the Chrysalis migration, a number of aspects at IOTA changed for the better. With easier ways to
 manage and secure your experience, IOTA seamlessly integrated these innovations with no service interruptions.
 
 With Chrysalis, we made a clear-cut from the current IOTA protocol, and started a new with a much better, and more mature
@@ -12,11 +12,11 @@ This included one of the innovations that directly impacted one of the most cruc
 
 Below is an overview of how the migration will take place for normal token holders:
 
-- You enter your seed in Firefly.
-- Firefly creates you a new seed and generates an EdDSA address for the new network.
-- Firefly sends your funds to a specific migration address (which encapsulates your EdDSA address) on the old network.
-- Your funds become available on the new network on the EdDSA address Firefly created for you.
-- Your funds are successfully migrated.
+1. You enter your seed in Firefly.
+2. Firefly creates you a new seed and generates an EdDSA address for the new network.
+3. Firefly sends your funds to a specific migration address (which encapsulates your EdDSA address) on the old network.
+4. Your funds become available on the new network on the EdDSA address Firefly created for you.
+5. Your funds are successfully migrated.
 
 Note that:
 
@@ -28,7 +28,7 @@ Note that:
 
 For further information on the migration process, see our [blog post](https://blog.iota.org/firefly-token-migration/).
 
-For a detailed explainer on how the migration process works technically, see [migration-mechanism](./migration-mechanism.md)
+For a detailed explaination on how the migration process works technically, see [migration-mechanism](./migration-mechanism.md)
 
 ## Exchange Token Migration Guide
 

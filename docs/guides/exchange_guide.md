@@ -53,7 +53,7 @@ For further reference, you can see the [full documentation here](https://wallet-
 
 The following examples cover the *multi account approach* using `NodeJS` binding:
 
-1. Setup the Wallet Library.
+1. Set up the Wallet Library.
 2. Create an account for each user.
 3. Generate a user address for deposits.
 4. Listen to events.
@@ -67,7 +67,7 @@ If you are looking for other languages, please read the [wallet library overview
 
 Since all `wallet.rs` bindings are based on core principles provided by the `wallet.rs` library, the outlined approach is very similar regardless of the programming language of your choice.
 
-### 1. Setup the Wallet Library
+### 1. Set up the Wallet Library
 First, let's install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the `NodeJs` binding, it is quite straightforward since it is distributed via the `npm` package manager. We also recommend you use `dotenv` for password management.
 
 For further reference, read more about [backup and security here](backup_security.md).
@@ -94,7 +94,7 @@ Manage your password with the utmost care.
 
 Technically speaking, "storage" means a single file called `wallet.stronghold`. It is also needed to generate a seed (mnemonic) that serves as a cryptographic key from which all accounts and related addresses are generated.
 
-One of the key principles behind the `stronghold`-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the `Account_Manager` instance where all complexities are hidden under the hood and are dealt with in a secure way. In case you would also like to store a seed somewhere else, there is another method, `AccountManager.generateMnemonic()`, that generates random seeds. This method can be leveraged before the actual account initialization.
+One of the key principles behind the `stronghold`-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the `Account_Manager` instance where all complexities are hidden under the hood and are dealt with securely. In case you would also like to store a seed somewhere else, there is another method, `AccountManager.generateMnemonic()`, that generates random seeds. This method can be leveraged before the actual account initialization.
 
 :::Note
 It is highly recommended to store the `stronghold` password and the `stronghold` database on separate devices. For reference, see the [backup and security guide](backup_security.md) for more information
@@ -115,7 +115,7 @@ Import the Wallet Library and create an account manager:
 
 Once the stronghold storage is created, it is not needed to generate the seed any longer (`manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())`). It has been already saved in the storage together with all account information.
 
-### 2. Create an Account For an User
+### 2. Create an Account For a User
 
 Once the backend storage is created, individual accounts for individual users can be created:
 

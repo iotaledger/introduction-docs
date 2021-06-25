@@ -1,4 +1,4 @@
-# How the IOTA Chrysalis Phase 2 Token Migration Worked
+# How the IOTA Chrysalis Phase 2 Token Migration Works
 
 For the transition to Chrysalis Phase 2, the IOTA Foundation had to develop a way for funds to be migrated to the new
 network. The reason a migration mechanism was necessary was because the previous network no longer supported WOTS addresses.
