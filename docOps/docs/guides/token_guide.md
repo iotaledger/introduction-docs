@@ -77,7 +77,7 @@ Things to consider:
 - You must not broadcast your own migration bundles unless you're 100% sure that they are indeed valid migration
   bundles.
 - If one of your input transactions spends funds from an already used address (meaning it is subject to key re-use), we
-  recommend that you use the [bundle miner tool]((https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner)) to craft a bundle with the most applicable security given the already exposed parts of the given address' private key.
+  recommend that you use the [bundle miner tool](https://github.com/iotaledger/iota.rs/tree/migration/iota-bundle-miner) to craft a bundle with the most applicable security given the already exposed parts of the given address' private key.
 - Do not use too many input transactions as this will increase the overall Proof-of-Work time needed for a single
   bundle. Rather, split your input addresses over multiple migration bundles.
 - Your code must include logic to await for the migration bundle's confirmation. If you find that your migration bundle

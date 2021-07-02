@@ -1,3 +1,7 @@
+---
+slug: /one-click-private-tangle
+---
+
 # One Click Private Tangle Tutorial
 
 In this tutorial, you will learn how to use a set of Docker-based tools and pre-configured setups to deploy a ([hornet-based](https://github.com/gohornet/hornet)) Chrysalis Private Tangle in **"one click"** to cloud environments or platforms.
@@ -10,7 +14,7 @@ IOTA [mainnet](../mainnet.md) and [testnet](../testnet.md) are public IOTA Netwo
 
 The figure below depicts a minimum viable deployment architecture of a Private Tangle using [Docker](https://docker.io). 
 
-![Private Tangle Architecture](./images/one-click-private-tangle-architecture.png "Private Tangle Architecture")
+![Private Tangle Architecture](../../static/img/tutorials/one-click-private-tangle-architecture.png "Private Tangle Architecture")
 
 There are three main nodes identified: 
 

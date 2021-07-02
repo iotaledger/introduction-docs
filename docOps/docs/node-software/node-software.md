@@ -1,3 +1,7 @@
+---
+slug: /node_software
+---
+
 # Node Software
 
 We have been running the network exclusively on the Go powered Hornet node since the summer of 2020. For Chrysalis, we introduced the options of using an updated version of Hornet or our new Rust-based Bee node.

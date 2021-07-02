@@ -1,3 +1,7 @@
+---
+slug: /guides/
+---
+
 # IOTA Chrysalis Guides
 
 - [Developer Guide](./dev_guide.md).

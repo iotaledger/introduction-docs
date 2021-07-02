@@ -1,3 +1,6 @@
+---
+slug: /firefly/
+---
 # Firefly
 
 > Firefly is IOTA's new official wallet for Chrysalis. 

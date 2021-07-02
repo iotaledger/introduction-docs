@@ -25,40 +25,13 @@ atoi1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75zaxtpj
 ### IOTA 1.5 Address Anatomy
 The IOTA address is based on the Ed25519 signature scheme and it is usually represented by the Bech32 (checksummed base32) format string of 64 characters or hex format:
 
-<table>
-    <thead>
-        <tr>
-            <th colspan=4><center>iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml</center></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan=4><center>Three distinguished parts</center></td>
-        </tr>
-        <tr>
-            <td><center><strong>human-readable id</strong></center></td>
-            <td><center><strong>separator</strong></center></td>
-            <td><center><strong>data</strong></center></td>
-            <td><center><strong>checksum</strong></center></td>
-        </tr>
-        <tr>
-            <td><center>iota | atoi</center></td>
-            <td><center>1</center></td>
-            <td><center>48 bytes [0..9a..z]</center></td>
-            <td><center>6 characters [0..9a..z]</center></td>
-        </tr>
-        <tr>
-            <td><center>iota</center></td>
-            <td><center>1</center></td>
-            <td><center>qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75</center></td>
-            <td><center>9nh2ml</center></td>
-        </tr>
-        <tr>
-            <td colspan=4>iota = mainnet; atoi = testnet</td>
-        </tr>
-    </tbody>
-</table>
 
+We can break down the address `iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml` into three distinguishable parts:
+
+| human-readable id         | separator | data                                                  | checksum                |
+| ------------------------- | --------- | ----------------------------------------------------- | ----------------------- |
+| iota \| atoi              | 1         | 48 bytes [0..9a..z]                                   | 6 characters [0..9a..z] |
+| iota                      | 1         | qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75 | 9nh2ml                  |
 
 For further refefence, please see our [Protocol-rfc#0020 - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md).
 
@@ -118,7 +91,7 @@ Having many different accounts may have a negative impact on performance while [
 
 :::
 
-![address_generation](assets/address_generation.svg)
+![address_generation](../../static/img/guides/address_generation.svg)
 
 So in case of Chrysalis, the derivation path of address/key space is `[seed]/44/4218/{int}/{0,1}/{int}`:
 * The levels `purpose` and `coin_type` are given.
@@ -149,7 +122,7 @@ For further refefence, please see our: [Protocol-rfc#0018 - Transaction Payload]
 
 Needless to say, the IOTA network ensures the outer structure of the message itself is valid and strictly complies with network consensus protocol. However, the inner structure is very flexible, future-proof, and offers an unmatched network extensibility.
 
-![messages_in_tangle](assets/messages_in_tangle.svg)
+![messages_in_tangle](../../static/img/guides/messages_in_tangle.svg)
 
 The current Chrysalis network incorporates the following core payloads:
 * `SignedTransaction`: a payload that describes `UTXO` transactions that are the cornerstones of value-based transfers in the IOTA network. Via this payload, a `message` can be also cryptographically signed.
@@ -175,7 +148,7 @@ Below is a simplified analogy of how the UTXO works:
   *  `Output D` = 50 tokens.
 * The total supply remains the same, just number of outputs differs and some outputs were replaced by other outputs in the process.
 
-![utxo](assets/utxo.svg)
+![utxo](../../static/img/guides/utxo.svg)
 
 The key takeaway of the outlined process above is the fact that each unique `output` can be spent **only once**. Once the given `output` is spent, it cannot be used any more and is irrelevant in regards to the ledger state.
 
