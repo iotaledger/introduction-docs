@@ -4,28 +4,27 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Chrysalis',
-  tagline: '',
+  tagline: 'Official IOTA Chrysalis Software',
   url: 'https://chrysalis.docs.iota.org/',
-  baseUrl: '/',
+  baseUrl: '/chrysalis/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
-  favicon: 'img/logo/favicon.ico',
+  favicon: '/img/logo/favicon.ico',
   organizationName: 'iotaledger', // Usually your GitHub org/user name.
-  projectName: 'chrysalis', // Usually your repo name.
+  projectName: 'Chrysalis', // Usually your repo name.
   stylesheets: [
     'https://fonts.googleapis.com/css?family=Material+Icons',
-    'http://v2202102141633143571.bestsrv.de/assets/css/styles.c88dfa6b.css', //replace this URL
   ],
   themeConfig: {
     navbar: {
-      title: 'Chrysalis Documentation',
+      title: 'Chrysalis',
       logo: {
         alt: 'IOTA',
-        src: 'static/img/logo/Logo_Swirl_Dark.png',
+        src: 'img/logo/Logo_Swirl_Dark.png',
       },
       items: [{
           type: 'doc',
-          docId: 'introduction/welcome',
+          docId: 'welcome',
           position: 'left',
           label: 'Documentation',
         },
@@ -43,7 +42,7 @@ module.exports = {
           title: 'Documentation',
           items: [{
               label: 'Welcome',
-              to: '/',
+              to: '/welcome',
             },
             {
               to: 'introduction/what_is_chrysalis',
@@ -129,7 +128,7 @@ module.exports = {
           editUrl: 'https://github.com/iotaledger/chrysalis-docs/tree/main/docs',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/iota.css'),
         },
       },
     ],

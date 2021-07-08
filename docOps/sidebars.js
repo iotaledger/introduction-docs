@@ -12,8 +12,8 @@
 module.exports = {
   mySidebar: [{
       type: 'doc',
-      id: 'introduction/welcome',
-      label: 'Introduction'
+      id: 'welcome',
+      label: 'Welcome'
     }, {
       type: 'doc',
       id: 'introduction/what_is_chrysalis',
