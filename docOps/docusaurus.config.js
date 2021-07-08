@@ -7,8 +7,8 @@ module.exports = {
   tagline: 'Official IOTA Chrysalis Software',
   url: 'https://chrysalis.docs.iota.org/',
   baseUrl: '/chrysalis/',
-  onBrokenLinks: 'warning',
-  onBrokenMarkdownLinks: 'warning',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
   favicon: '/img/logo/favicon.ico',
   organizationName: 'iotaledger', // Usually your GitHub org/user name.
   projectName: 'Chrysalis', // Usually your repo name.
