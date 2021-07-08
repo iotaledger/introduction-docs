@@ -6,7 +6,7 @@ module.exports = {
   title: 'Chrysalis',
   tagline: 'Official IOTA Chrysalis Software',
   url: 'https://chrysalis.docs.iota.org/',
-  baseUrl: '/chrysalis/',
+  baseUrl: '/chrysalis-docs/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: '/img/logo/favicon.ico',
