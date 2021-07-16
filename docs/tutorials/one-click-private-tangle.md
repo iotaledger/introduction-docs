@@ -180,6 +180,11 @@ If you browse to `http://localhost:8081` you can test out the Hornet Dashboard.
 
 You can find the Tangle database files at `db/private-tangle`. 
 
+When a snapshot is created, `1000000000` tokens are sent to the treasury. `2779529283277761` out of the total number of tokens, which is `2779530283277761` are sent to the mint address. To change the amount that is allocated to the treasury, you can change the value 
+[here](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/private-tangle.sh#L191). 
+
+The total amount of tokens allocated to the treasury should not be equal to the total supply of tokens which is `2779530283277761`. Otherwise the mint address will have zero tokens. 
+
 ### Operate your Private Tangle
 
 You operate your Private Tangle by issuing one of the following commands:
