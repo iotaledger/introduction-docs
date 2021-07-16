@@ -25,41 +25,15 @@ atoi1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75zaxtpj
 ### IOTA 1.5 address anatomy
 The IOTA address is based on the Ed25519 signature scheme and it is usually represented by the Bech32 (checksummed base32) format string of 64 characters or hex format:
 
-<table>
-    <thead>
-        <tr>
-            <th colspan=4><center>iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml</center></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan=4><center>three distinguished parts</center></td>
-        </tr>
-        <tr>
-            <td><center><strong>human-readable id</strong></center></td>
-            <td><center><strong>separator</strong></center></td>
-            <td><center><strong>data</strong></center></td>
-            <td><center><strong>checksum</strong></center></td>
-        </tr>
-        <tr>
-            <td><center>iota | atoi</center></td>
-            <td><center>1</center></td>
-            <td><center>48 bytes [0..9a..z]</center></td>
-            <td><center>6 characters [0..9a..z]</center></td>
-        </tr>
-        <tr>
-            <td><center>iota</center></td>
-            <td><center>1</center></td>
-            <td><center>qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75</center></td>
-            <td><center>9nh2ml</center></td>
-        </tr>
-        <tr>
-            <td colspan=4>iota = mainnet; atoi = testnet</td>
-        </tr>
-    </tbody>
-</table>
 
-More information: [Protocol-rfc#0020 - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md)
+We can break down the address `iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml` into three distinguishable parts:
+
+| human-readable id | separator | data                                                  | checksum                |
+| ----------------- | --------- | ----------------------------------------------------- | ----------------------- |
+| iota \| atoi      | 1         | 48 bytes [0..9a..z]                                   | 6 characters [0..9a..z] |
+| iota              | 1         | qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75 | 9nh2ml                  |
+
+For further refefence, please see our [Protocol-rfc#0020 - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md).
 
 ### Seed
 
@@ -67,7 +41,11 @@ With the new [wallet library](../libraries/wallet.md), developers do not need to
 
 More information about IOTA Wallet Library is available on [Wallet docs page](https://wallet-lib.docs.iota.org) or in the [Exchange guide](exchange_guide.md), which is mainly focused on value transactions.
 
-> Please note, it is highly recommended to NOT use online seed generators at all. The seed is the only key to the given funds.
+:::Note
+
+It is highly recommended to NOT use online seed generators at all. The seed is the only key to the given funds.
+
+:::
 
 A root of the `Ed25519` signature scheme is basically a `32-byte (256-bit)` uniformly randomly generated seed based on which all private keys and corresponding addresses are generated. A seed may be represented by a string of 64 characters using `[0-9a-f]` alphabet (32 bytes encoded in hexadecimal).
 
@@ -109,7 +87,11 @@ And there are few additional things to note:
 * The standard was agreed upon different crypto communities, although not all `derivation path` components are always in active use. For example, `account` is not always actively leveraged across crypto space (if this is a case then there is usually `account=0` used)
 * Using different `accounts` may be useful to split addresses/key into some independent spaces and it is up to developers to implement.<br />
 
-_Please note, having many different accounts may have a negative impact on performance while [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://chrysalis.docs.iota.org/libraries/wallet.html) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](https://chrysalis.docs.iota.org/guides/exchange_guide.html) provides some useful tips how different accounts may be leveraged._
+:::Note 
+
+Having many different accounts may have a negative impact on performance while [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://chrysalis.docs.iota.org/libraries/wallet.html) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](https://chrysalis.docs.iota.org/guides/exchange_guide.html) provides some useful tips how different accounts may be leveraged.
+
+:::
 
 ![address_generation](assets/address_generation.svg)
 
