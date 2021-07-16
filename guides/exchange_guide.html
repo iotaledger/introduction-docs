@@ -194,7 +194,9 @@
 <li>Check the user balance</li>
 <li>Enable withdrawals</li>
 </ol>
-<p><em>Note: If you are looking for other languages, please read the <a href="/libraries/wallet.html">wallet library overview</a>.</em></p>
+<p>:::Note</p>
+<p>If you are looking for other languages, please read the <a href="../libraries/wallet.html">wallet library overview</a>.</p>
+<p>:::</p>
 <p>Since all <code>wallet.rs</code> bindings are based on core principles provided by the <code>wallet.rs</code> library, the outlined approach is very similar regardless of the programming language of your choice.</p>
 <h3 id="1-setup-the-wallet-library"><a class="header" href="#1-setup-the-wallet-library">1. Setup the Wallet library</a></h3>
 <p>First, let's install the components that are needed to use <code>wallet.rs</code> and the binding of your choice; it may vary a bit from language to language. In the case of the <code>NodeJs</code> binding, it is quite straightforward since it is distributed via the <code>npm</code> package manager. We also recommend you use <code>dotenv</code> for password management.</p>
@@ -207,9 +209,13 @@ touch .env
 </code></pre>
 <p>Once you have everything needed to use the <code>wallet.rs</code> library, it is necessary to initialize the <code>AccountManager</code> instance which creates (opens) a secure storage for individual accounts (backed up by <code>Stronghold</code> by default).</p>
 <p>The storage is encrypted at rest, so you need a strong password and location where to put your storage. </p>
-<p><em>Note: manage your password with the utmost care</em>.</p>
+<p>:::Note</p>
+<p>Manage your password with the utmost care.</p>
+<p>:::</p>
 <p>Technically speaking, &quot;storage&quot; means a single file called <code>wallet.stronghold</code>. It is also needed to generate a seed (mnemonic) that serves as a cryptographic key from which all accounts and related addresses are generated.</p>
-<p>One of the key principles behind the <code>stronghold</code>-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the <code>Account_Manager</code> instance where all complexities are hidden under the hood and are dealt with in a secure way. In case you would also like to store a seed somewhere else, there is another method, <code>AccountManager.generateMnemonic()</code>, that generates random seeds. This method can be leveraged before the actual account initialization.</p>
+<p>One of the key principles behind the <code>stronghold</code>-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the <code>Account_Manager</code> instance where all complexities are hidden under the hood and are dealt with securely. In case you would also like to store a seed somewhere else, there is another method, <code>AccountManager.generateMnemonic()</code>, that generates random seeds. This method can be leveraged before the actual account initialization.</p>
+<p>:::Note</p>
+<p>It is highly recommended to store the <code>stronghold</code> password and the <code>stronghold</code> database on separate devices. For reference, see the <a href="backup_security.html">backup and security guide</a> for more information</p>
 <p>Note that it is highly recommended to store the <code>stronghold</code> password and the <code>stronghold</code> database on separate devices. Please refer to the <a href="backup_security.html">backup and security guide</a> for more information.</p>
 <p>Import the Wallet Library and create an account manager:</p>
 <pre><code class="language-javascript">    const { AccountManager, SignerType } = require('@iota/wallet')
@@ -244,7 +250,9 @@ touch .env
 </ul>
 <h3 id="3-generate-a-user-address-to-deposit-funds"><a class="header" href="#3-generate-a-user-address-to-deposit-funds">3. Generate a user address to deposit funds</a></h3>
 <p><code>Wallet.rs</code> is a stateful library which means it caches all relevant information in storage to provide performance benefits while dealing with, potentially, many accounts/addresses.</p>
-<p><em>Note: sync the account info with the network during the wallet manipulation to be sure the storage reflects an actual state of the ledger (network)</em>. </p>
+<p>:::Note </p>
+<p>Sync the account info with the network during the wallet manipulation to be sure the storage reflects an actual state of the ledger (network).</p>
+<p>:::</p>
 <p>Every account can own multiple addresses. Addresses are represented by an <code>index</code> which is incremented (by 1) every time a new address is created. The latest address is accessible via <code>account.latestAddress()</code>: </p>
 <pre><code class="language-javascript">    // Always sync before account interactions
     console.log('syncing...')
@@ -259,12 +267,14 @@ touch .env
 <p>Feel free to fill the address with Testnet Tokens with the <a href="https://faucet.testnet.chrysalis2.com/">IOTA Faucet</a> to test it.</p>
 <p>Addresses are of two types, <code>internal</code> and <code>public</code> (external):</p>
 <ul>
-<li>Each set of addresses are independent from each other and has an independent <code>index</code> id</li>
-<li>Addresses that are created by <code>account.generateAddress()</code> are indicated as <code>internal=false</code> (public)</li>
-<li>Internal addresses (<code>internal=true</code>) are called <code>change</code> addresses and are used to send the excess funds to them</li>
-<li>The approach is also known as a <em>BIP32 Hierarchical Deterministic wallet (HD Wallet)</em></li>
+<li>Each set of addresses are independent from each other and has an independent <code>index</code> id.</li>
+<li>Addresses that are created by <code>account.generateAddress()</code> are indicated as <code>internal=false</code> (public).</li>
+<li>Internal addresses (<code>internal=true</code>) are called <code>change</code> addresses and are used to send the excess funds to them.</li>
+<li>The approach is also known as a <em>BIP32 Hierarchical Deterministic wallet (HD Wallet)</em>.</li>
 </ul>
-<p><em>Note: You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in IOTA 1.5 (Chrysalis) network.</em></p>
+<p>:::Note</p>
+<p>You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in the Chrysalis network.</p>
+<p>:::</p>
 <h3 id="4-listen-to-events"><a class="header" href="#4-listen-to-events">4. Listen to events</a></h3>
 <p>The <code>Wallet.rs</code> library supports several events for listening. As soon as the given event occurs, a provided callback is triggered.</p>
 <p>Below is an example of fetching existing accounts and listening to transaction events coming into the account:</p>
