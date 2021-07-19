@@ -19,7 +19,7 @@ These endpoints have MQTT (via WebSockets and raw TCP) exposed and offer the HTT
 over TLS.
 
 ## Developer tools
-- [Explorer](https://explorer.iota.org/chrysalis)
+- [Explorer](https://explorer.iota.org/testnet)
 - [Online Faucet](https://faucet.testnet.chrysalis2.com/)
 - [cli-wallet](https://github.com/iotaledger/cli-wallet)
 - [chrysalis-faucet Code (nodejs + svelte)](https://github.com/iotaledger/chrysalis-faucet)
