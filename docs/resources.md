@@ -5,7 +5,7 @@
 ---------------
 
 #### **IOTA Explorer** ####
-[Link](https://explorer.iota.org/chrysalis)
+[Link](https://explorer.iota.org/mainnet)
 
 Official Tangle explorer with a lot of tools to browse through the Tangle.
 
