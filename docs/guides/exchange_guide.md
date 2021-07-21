@@ -36,7 +36,7 @@ The single account approach allows for just one account and creates addresses fo
 
 ## Implementation Guide
 
-This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](./hub_guide.md).
+This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](hub_guide.md).
 
 Features of the Wallet Library:
 - Secure seed management.

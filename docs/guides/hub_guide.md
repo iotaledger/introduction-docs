@@ -8,7 +8,7 @@ IOTA Hub was deprecated with the Chrysalis upgrade and will not work with the ne
 
 To upgrade from Hub to a Chrysalis implementation you will need to:
 
- - Integrate the Chrysalis network using [Wallet.rs](https://wallet-lib.docs.iota.org/) as mentioned in the [Exchange section](./exchange_guide.md).
+ - Integrate the Chrysalis network using [Wallet.rs](https://wallet-lib.docs.iota.org/) as mentioned in the [Exchange section](exchange_guide.md).
  - Pause withdrawals/deposits.
  - Make sure all balances have been swept and all deposits have been processed.
  - Transfer all IOTA to a generated migration address (instructions to be provided).
