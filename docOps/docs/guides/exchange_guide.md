@@ -61,6 +61,7 @@ The following examples cover the *multi account approach* using `NodeJS` binding
 6. Enable withdrawals.
 
 :::Note
+
 If you are looking for other languages, please read the [wallet library overview](../libraries/wallet.md).
 
 :::
@@ -88,6 +89,7 @@ Once you have everything needed to use the `wallet.rs` library, it is necessary 
 The storage is encrypted at rest, so you need a strong password and location where to put your storage. 
 
 :::Note
+
 Manage your password with the utmost care.
 
 :::
@@ -95,6 +97,10 @@ Manage your password with the utmost care.
 Technically speaking, "storage" means a single file called `wallet.stronghold`. It is also needed to generate a seed (mnemonic) that serves as a cryptographic key from which all accounts and related addresses are generated.
 
 One of the key principles behind the `stronghold`-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the `Account_Manager` instance where all complexities are hidden under the hood and are dealt with securely. In case you would also like to store a seed somewhere else, there is another method, `AccountManager.generateMnemonic()`, that generates random seeds. This method can be leveraged before the actual account initialization.
+
+:::Note
+
+It is highly recommended to store the `stronghold` password and the `stronghold` database on separate devices. For reference, see the [backup and security guide](backup_security.md) for more information
 
 :::Note
 It is highly recommended to store the `stronghold` password and the `stronghold` database on separate devices. For reference, see the [backup and security guide](backup_security.md) for more information
@@ -146,6 +152,7 @@ The most common methods of `account` instance include:
 `Wallet.rs` is a stateful library which means it caches all relevant information in storage to provide performance benefits while dealing with, potentially, many accounts/addresses.
 
 :::Note 
+
 Sync the account info with the network during the wallet manipulation to be sure the storage reflects an actual state of the ledger (network).
 
 :::
@@ -172,7 +179,10 @@ Addresses are of two types, `internal` and `public` (external):
 * The approach is also known as a *BIP32 Hierarchical Deterministic wallet (HD Wallet)*.
 
 :::Note
+
 You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in the Chrysalis network.
+
+:::
 
 :::
 

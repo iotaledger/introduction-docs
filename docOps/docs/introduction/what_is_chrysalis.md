@@ -1,6 +1,6 @@
 # What is Chrysalis?
 
-The objective of the IOTA Foundation was to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. This was achieved by an intermediate update called `Chrysalis`. You can read more about how Chrysalis was strategically released Chrysalis here.
+The objective of the IOTA Foundation was to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. This was achieved by an intermediate update called `Chrysalis`. You can read more about how Chrysalis was strategically released here.
 
 ![](../../static/img/introduction/what_is_chrysalis/00.gif)
 
@@ -16,11 +16,11 @@ In IOTA, validators and users are one and the same. There is no conflict of inte
 
 ### White-flag Approach
 ![](../../static/img/introduction/what_is_chrysalis/01.png)
-[The White-flag approach](https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233) which is used for calculating balances. It is a simpler, conflict-ignoring approach that improved the speed and efficiency of tip selection, eliminated many network attacks, and significantly reduced the need for reattachments.
+[The White-flag approach](https://iota.cafe/t/conflict-white-flag-mitigate-conflict-spamming-by-ignoring-conflicts/233), which is used for calculating balances. It is a simpler, conflict-ignoring approach that improved the speed and efficiency of tip selection, eliminated many network attacks, and significantly reduced the need for reattachments.
 
 ### New Milestone Selection Algorithm
 ![](../../static/img/introduction/what_is_chrysalis/02.png)
-[A new milestone selection algorithm for the coordinator](https://iota.cafe/t/coordinator-improvements/310) that focuses on allowing the network to support many more confirmed transactions per second (CTPS) than before, with higher computational efficiency.
+[A new milestone selection algorithm for the Coordinator](https://iota.cafe/t/coordinator-improvements/310) that focuses on allowing the network to support many more confirmed transactions per second (CTPS) than before, with higher computational efficiency.
 
 ### URTS Tip Selection
 ![](../../static/img/introduction/what_is_chrysalis/03.png)

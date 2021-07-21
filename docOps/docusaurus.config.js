@@ -6,7 +6,7 @@ module.exports = {
   title: 'Chrysalis',
   tagline: 'Official IOTA Chrysalis Software',
   url: 'https://chrysalis.docs.iota.org/',
-  baseUrl: '/chrysalis-docs/',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: '/img/logo/favicon.ico',
@@ -16,6 +16,9 @@ module.exports = {
     'https://fonts.googleapis.com/css?family=Material+Icons',
   ],
   themeConfig: {
+    colorMode: {
+          defaultMode: "dark",
+          },
     navbar: {
       title: 'Chrysalis',
       logo: {

@@ -20,4 +20,4 @@ slug: /guides/
 * The approach to client libraries was completely reengineered from the ground up. There are new official client libraries that serve as `one-source-code-of-truth` to IOTA users and can be combined in a modular fashion based on particular use cases. All libraries provide a binding to other programming languages. For reference, see the [client libraries](../libraries/overview.md).
 * Our official iota tools, such as wallet software, use the same libraries under the hood and so any developer may work in the same environment as we do.
 * The official client libraries embraced an `Hierarchical Deterministic Wallets` approach which is fully `BIP44` compatible. For reference, see the [address/key space](./dev_guide.md#addresskey-space).
-* There is an official wallet software called Firefly. For reference, see [firefly beta release](https://blog.iota.org/firefly-beta-release/).
+* There is an official wallet software called Firefly. For reference, see [Firefly beta release](https://blog.iota.org/firefly-beta-release/).

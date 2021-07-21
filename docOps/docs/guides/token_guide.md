@@ -10,7 +10,7 @@ This included one of the innovations that directly impacted one of the most cruc
 
 ## Token Migration Overview
 
-Below is an overview of how the migration will take place for normal token holders:
+Below is an overview of how the migration is taking place for normal token holders:
 
 1. You enter your seed in Firefly.
 2. Firefly creates you a new seed and generates an EdDSA address for the new network.
@@ -18,10 +18,12 @@ Below is an overview of how the migration will take place for normal token holde
 4. Your funds become available on the new network on the EdDSA address Firefly created for you.
 5. Your funds are successfully migrated.
 
-Note that:
+:::Note
 
-- If you migrate after the Chrysalis launch, your funds will become available shortly after you migrate (within less
-  than 5 minutes).
+If you migrate after the Chrysalis launch, your funds will become available shortly after you migrate (within less
+than 5 minutes).
+
+:::
 
 > Firefly will initially only be available on desktop operating systems such as: macOS, Linux and Windows and not support
 > migrations for Ledger devices or using a Ledger device.

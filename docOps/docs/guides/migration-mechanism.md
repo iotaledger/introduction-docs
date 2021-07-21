@@ -3,11 +3,11 @@
 For the transition to Chrysalis Phase 2, the IOTA Foundation had to develop a way for funds to be migrated to the new
 network. The reason a migration mechanism was necessary was because the previous network no longer supported WOTS addresses.
 
-The developed mechanism featured the following properties:
+The developed mechanism features the following properties:
 
-- It was trustless, meaning that everyone who was interested could verify that migrated funds were legitimate.
-- Migrated funds took less than 5 minutes until they became available in the network.
-- Migrations took place at any time for the foreseeable future.
+- It is trustless, meaning that everyone who is interested can verify that migrated funds were legitimate.
+- Migrated funds take less than 5 minutes until they become available in the network.
+- Migrations take place at any time for the foreseeable future.
 
 Before we proceed into the developed mechanism, you can view why other mechanisms were not chosen:
 
@@ -93,6 +93,19 @@ A verifier node was a Chrysalis Phase 2 node which upon seeing receipts:
 1. Queried a legacy node for the confirmation data for the specified milestone in the receipt.
 1. Then performed WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
 1. Additionally it also checked that all confirmed funds on the legacy network for the given legacy milestone, were
+1. Produce migration bundles which sent funds to `migration addresses` controlled by the given owner.
+1. These bundles are confirmed on the legacy network.
+1. The Chrysalis Phase 2 Coordinator picks these confirmed legacy bundles up and generates receipts minting those funds
+   to the target Ed25519 address.
+1. Verifier nodes verify the receipts and make sure that the funds originate from the legacy network.
+
+### Verifier Node
+
+A verifier node is a Chrysalis Phase 2 node which upon seeing receipts:
+
+1. Queries a legacy node for the confirmation data for the specified milestone in the receipt.
+1. Then performs WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
+1. Additionally it also checks that all confirmed funds on the legacy network for the given legacy milestone, are
    indeed minted with a given batch of receipts (i.e. nothing is left out).
 
 See [Hornet as a verifier node](https://hornet.docs.iota.org/post_installation/run_as_verifier.html)
