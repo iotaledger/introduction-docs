@@ -5,7 +5,11 @@ The IOTA Foundation provides the following loadbalanced public testnet endpoint:
 
 - api.lb-0.testnet.chrysalis2.com
 
-> We recommend using the load balancer for most scenarios.
+:::info
+
+We recommend using the load balancer for most scenarios.
+
+:::
 
 Single node endpoints that expose native MQTT, in case you need them, are:
 

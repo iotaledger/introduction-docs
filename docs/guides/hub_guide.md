@@ -1,6 +1,10 @@
 # IOTA Hub Migration Guide
 
-> This guide outlines how to switch from IOTA Hub to using [Wallet.rs](https://wallet-lib.docs.iota.org/) or its [bindings](https://wallet-lib.docs.iota.org/libraries/index.html) instead.
+:::info
+
+This guide outlines how to switch from IOTA Hub to using [Wallet.rs](https://wallet-lib.docs.iota.org/) or its [bindings](https://wallet-lib.docs.iota.org/libraries/index.html) instead.
+
+:::
 
 Because of the unique features of IOTA 1.0, it was difficult to manage IOTA transactions with just a library. With the Chrysalis update, we have updated to be more accommodating to industry wide standards and developers. 
 

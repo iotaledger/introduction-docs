@@ -27,7 +27,7 @@ function HomepageHeader() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
-  const title = sitConfig.title;
+  const title = siteConfig.title;
   const tagline = siteConfig.tagline
   return (
     <Layout
