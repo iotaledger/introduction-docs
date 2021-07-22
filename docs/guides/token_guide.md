@@ -150,6 +150,8 @@ legacy network.
 
 #### Migration Code Example with Node.js
 
+[More detailed documentation for the following example](https://github.com/iotaledger/wallet.rs/blob/dev/bindings/nodejs/examples/8-migration.md)
+
 ```javascript=
 /**
  * This example creates a new database and account,
