@@ -35,8 +35,8 @@ A community tool for searching transactions in the Tangle.
 
 ---------------
 
-#### TangleExplorer - IOTA Explorer ####
-[Link](https://tanglexplorer.com/mainnet)
+#### TangleBayExplorer - IOTA Explorer ####
+[Link](https://explorer.tanglebay.com/mainnet)
 
 An community tool for searching transactions in the Tangle.
 
