@@ -128,7 +128,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           // Please change this to your repo.
-          editUrl: 'https://github.com/iotaledger/chrysalis-docs/tree/main/docs',
+          editUrl: 'https://github.com/iotaledger/chrysalis-docs/tree/main',
         },
         theme: {
           customCss: require.resolve('./src/css/iota.css'),
