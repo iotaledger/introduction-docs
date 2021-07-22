@@ -1,6 +1,10 @@
-# IOTA Hub migration guide
+# IOTA Hub Migration Guide
 
-> This guide will explain how you can switch from IOTA Hub to using the [IOTA Wallet Library](https://wallet-lib.docs.iota.org).
+:::info
+
+This guide outlines how to switch from IOTA Hub to using [Wallet.rs](https://wallet-lib.docs.iota.org/) or its [bindings](https://wallet-lib.docs.iota.org/libraries/index.html) instead.
+
+:::
 
 > ⚠️ **Attention** ⚠️
 >
@@ -14,15 +18,14 @@
 >
 > Discord: Dave [IF]#3333
 
-Because of the unique features of IOTA 1.0, it was difficult to manage IOTA transactions with just a library. With the new Chrysalis update (IOTA 1.5), the whole protocol was upgraded to be more accommodating to industry wide standards and developer friendliness. 
+Because of the unique features of IOTA 1.0, it was difficult to manage IOTA transactions with just a library. With the Chrysalis update, we have updated to be more accommodating to industry wide standards and developers. 
 
-IOTA Hub is deprecated with the Chrysalis update and will not work with the new protocol changes. If you still use Hub, we ask you to utilize our new [IOTA Wallet Library](https://wallet-lib.docs.iota.org) where you can easily manage IOTA addresses, deposits, and withdrawals for user accounts.
+IOTA Hub was deprecated with the Chrysalis upgrade and will not work with the new protocol changes. If you somehow still use Hub, we recommend that you to switch our new wallet library [Iota.rs](https://client-lib.docs.iota.org/), or its [bindings](https://client-lib.docs.iota.org/libraries/index.html), where you can easily manage IOTA addresses, deposits, and withdrawals for user accounts.
 
-To upgrade from Hub to a Chrysalis implementation you need to:
+To upgrade from Hub to a Chrysalis implementation you will need to:
 
-1) Generate a [migration address](https://chrysalis.docs.iota.org/guides/token_guide.html?highlight=migration%20address#migration-address) and validate if it's correct.  Your can validate this by doing a small transaction and see if it is included in the [new network](https://explorer.iota.org/). 
-2) Do a `UserWithdraw` for each user account in Hub with that address as the `payoutAddress`. This could be just one account or many accounts - this depends on your implementation.
-
-
-## Troubleshooting
-For any address re-use the `RecoverFunds` function can be used, which allows you to transfer directly to a migration address for a spent-from address.
+ - Integrate the Chrysalis network using [Wallet.rs](https://wallet-lib.docs.iota.org/) as mentioned in the [Exchange section](exchange_guide.md).
+ - Pause withdrawals/deposits.
+ - Make sure all balances have been swept and all deposits have been processed.
+ - Transfer all IOTA to a generated migration address (instructions to be provided).
+ - Once migrated, transfer the IOTA coins to your host wallet account on your wallet.rs implementation.

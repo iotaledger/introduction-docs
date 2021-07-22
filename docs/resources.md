@@ -1,11 +1,11 @@
 # Resources
 
-### **Official support** ###
+### **Official Support** ###
 
 ---------------
 
 #### **IOTA Explorer** ####
-[Link](https://explorer.iota.org/chrysalis)
+[Link](https://explorer.iota.org/mainnet)
 
 Official Tangle explorer with a lot of tools to browse through the Tangle.
 
@@ -25,7 +25,7 @@ The official forum where you can ask or answer technical questions about IOTA.
 
 ---------------
 
-### __Community support__ ###
+### __Community Support__ ###
 
 ---------------
 #### TheTangle.org - IOTA Explorer ####
@@ -35,8 +35,8 @@ A community tool for searching transactions in the Tangle.
 
 ---------------
 
-#### TangleExplorer - IOTA Explorer ####
-[Link](https://tanglexplorer.com/mainnet)
+#### TangleBayExplorer - IOTA Explorer ####
+[Link](https://explorer.tanglebay.com/mainnet)
 
 An community tool for searching transactions in the Tangle.
 
