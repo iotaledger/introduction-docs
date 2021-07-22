@@ -6,6 +6,18 @@ This guide outlines how to switch from IOTA Hub to using [Wallet.rs](https://wal
 
 :::
 
+> ⚠️ **Attention** ⚠️
+>
+> Before you start a migration from IOTA Hub get in contact with us so we can assist you in this process. 
+>
+> **Contact details:**
+>
+> Dave de Fijter
+>
+> Email: [dave.defijter@iota.org](mailto:dave.defijter@iota.org)
+>
+> Discord: Dave [IF]#3333
+
 Because of the unique features of IOTA 1.0, it was difficult to manage IOTA transactions with just a library. With the Chrysalis update, we have updated to be more accommodating to industry wide standards and developers. 
 
 IOTA Hub was deprecated with the Chrysalis upgrade and will not work with the new protocol changes. If you somehow still use Hub, we recommend that you to switch our new wallet library [Iota.rs](https://client-lib.docs.iota.org/), or its [bindings](https://client-lib.docs.iota.org/libraries/index.html), where you can easily manage IOTA addresses, deposits, and withdrawals for user accounts.
