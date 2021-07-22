@@ -4,14 +4,13 @@
 
 The IOTA Foundation provides following loadbalanced public mainnet endpoints:
 
-- chrysalis-nodes.iota.org
-- chrysalis-nodes.iota.cafe
+- chrysalis-nodes.iota.org.
+- chrysalis-nodes.iota.cafe.
 
-These endpoints have MQTT (via WebSockets) exposed and offer the HTTP REST API
-(according to this [specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml))
+These endpoints have MQTT (via WebSockets) exposed and offer the HTTP REST API (according to this [specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml))
 over TLS.
 
-## Developer tools
+## Developer Tools
 
-- [Explorer](https://explorer.iota.org/mainnet)
+- [Explorer.](https://explorer.iota.org/mainnet)
 
