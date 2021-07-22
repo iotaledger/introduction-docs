@@ -3,8 +3,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Chrysalis',
-  tagline: 'Official IOTA Chrysalis Software',
+  title: 'Chrysalis Documentation',
+  tagline: 'Everything for the IOTA Chrysalis Update',
   url: 'https://chrysalis.docs.iota.org/',
   baseUrl: '/',
   onBrokenLinks: 'warn',

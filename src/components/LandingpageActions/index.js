@@ -9,25 +9,25 @@ const ActionList = [
     link: 'welcome',
     description: (
       <>
-        Learn the Basics about the IOTA Identity Wallet Library and how it works behind the scenes. 
+        Learn the Basics about the IOTA 1.5 Update and how it works behind the scenes. 
       </>
     ),
   },
   {
     title: 'Build',
-    link: 'chrysalis/guides/',
+    link: 'libraries',
     description: (
       <>
-        Follow our tutorial to build your own IOTA application. IOTA Identity supports Rust, Python and Javascript.
+        Follow our tutorial to build your own IOTA application. You can use your favorite language like Rust, Python, Javascript or others.
       </>
     ),
   },
   {
     title: 'Participate',
-    link: 'resources',
+    link: 'node_software',
     description: (
       <>
-        You want to be a part of the IOTA mission? Join the IOTA community or join the IOTA Libraries X-Team.
+        You want to participate in the new IOTA Chrysalis network? Setup a HORNET or Bee Node Software and be part of the Tangle!
       </>
     ),
   },
