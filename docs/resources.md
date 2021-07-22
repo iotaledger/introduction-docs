@@ -1,6 +1,6 @@
 # Resources
 
-### **Official support** ###
+### **Official Support** ###
 
 ---------------
 
@@ -25,7 +25,7 @@ The official forum where you can ask or answer technical questions about IOTA.
 
 ---------------
 
-### __Community support__ ###
+### __Community Support__ ###
 
 ---------------
 #### TheTangle.org - IOTA Explorer ####
