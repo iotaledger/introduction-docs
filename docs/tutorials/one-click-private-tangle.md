@@ -90,7 +90,7 @@ But now let us see how we can launch our Private Tangle via a "single click". We
 
 ## "One Click" Private Tangle on AWS
 
-To materialize on AWS using the deployment architecture described above, go to the AWS Marketplace and install this [product](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and follow the [instructions](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/README_AWS.md). That's it!. 
+To materialize on AWS using the deployment architecture described above, go to the AWS Marketplace and install this [product](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and follow the [instructions](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). That's it!. 
 
 Behind the scenes, the process will launch all the Docker containers (through docker-compose), create a key pair for the Coordinator,  configure the Coordinator public key for the initial node, generate an initial IOTA Address holding all IOTAs, the identity for our Nodes, etc i.e. our [deployment architecture](#mvp-deployment-architecture-of-a-private-tangle) and all the steps described [here](https://hornet.docs.iota.org/getting_started/private_tangle.html), but **fully automated**, with "one click"!.
 
@@ -100,7 +100,7 @@ The Parameters of this "one click" installation are as follows (further details 
 * Coordinator Milestones Period: `60` seconds, check [this line of code](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config/config-coo.json#L120)
 * Spammer Settings, check [these lines of code](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config/config-spammer.json#L118).
 
-Further instructions for AWS deployments can be found [here](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/README_AWS.md). If you want to know lower-level details of the AWS installation, how to do it yourself in any Docker-enabled VM, and what happens under the scenes, please continue reading. 
+Further instructions for AWS deployments can be found [here](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). If you want to know lower-level details of the AWS installation, how to do it yourself in any Docker-enabled VM, and what happens under the scenes, please continue reading. 
 
 ## "One Click" Private Tangle on any Docker-enabled VM
 
