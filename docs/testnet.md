@@ -4,8 +4,8 @@
 
 The IOTA Foundation provides the following load-balanced public testnet endpoint:
 
-- [https://lb-0.h.chrysalis-devnet.iota.cafe](https://lb-0.h.chrysalis-devnet.iota.cafe)
-- [https://lb-1.h.chrysalis-devnet.iota.cafe/](https://lb-1.h.chrysalis-devnet.iota.cafe/)
+- [https://api.lb-0.h.chrysalis-devnet.iota.cafe/](https://api.lb-0.h.chrysalis-devnet.iota.cafe/)
+- [https://api.lb-1.h.chrysalis-devnet.iota.cafe/](https://api.lb-1.h.chrysalis-devnet.iota.cafe/)
 
 ## Developer tools
 
