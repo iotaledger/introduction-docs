@@ -14,7 +14,7 @@ IOTA [mainnet](../mainnet.md) and [testnet](../testnet.md) are public IOTA Netwo
 
 The figure below depicts a minimum viable deployment architecture of a Private Tangle using [Docker](https://docker.io). 
 
-![Private Tangle Architecture](../../static/img/tutorials/one-click-private-tangle-architecture.png "Private Tangle Architecture")
+![Private Tangle Architecture](/img/tutorials/one-click-private-tangle-architecture.png "Private Tangle Architecture")
 
 There are three main nodes identified: 
 

@@ -1,27 +1,14 @@
 # Testnet
 
 ## Public Infrastructure
-The IOTA Foundation provides the following loadbalanced public testnet endpoint:
 
-- api.lb-0.testnet.chrysalis2.com
+The IOTA Foundation provides the following load-balanced public testnet endpoint:
 
-:::info
-
-We recommend using the load balancer for most scenarios.
-
-:::
-
-Single node endpoints that expose native MQTT, in case you need them, are:
-
-- api.hornet-0.testnet.chrysalis2.com.
-- api.hornet-1.testnet.chrysalis2.com.
-- api.hornet-2.testnet.chrysalis2.com.
-- api.hornet-3.testnet.chrysalis2.com.
-
-These endpoints have MQTT (via WebSockets and raw TCP) exposed and offer the HTTP REST API (according to this [specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml))
-over TLS.
+- [https://api.lb-0.h.chrysalis-devnet.iota.cafe/](https://api.lb-0.h.chrysalis-devnet.iota.cafe/)
+- [https://api.lb-1.h.chrysalis-devnet.iota.cafe/](https://api.lb-1.h.chrysalis-devnet.iota.cafe/)
 
 ## Developer tools
+
 - [Explorer](https://explorer.iota.org/testnet)
 - [Online Faucet](https://faucet.testnet.chrysalis2.com/)
 - [cli-wallet](https://github.com/iotaledger/cli-wallet)
