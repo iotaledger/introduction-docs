@@ -59,7 +59,7 @@ e94346bce41402155ef120e2525fad2d0bf30b10a89e4b93fd8471df1e6a0981
 ...
 ```
 
-> In modern wallet implementations, such as our [wallet.rs library](https://chrysalis.docs.iota.org/libraries/wallet.html) and [firefly wallet](https://github.com/iotaledger/firefly), the seed is usually generated from a `seed mnemonic` (`seed phrase`), using [BIP39 standard](https://en.bitcoin.it/wiki/BIP_0039), to be better memorized/stored by humans. It is based on randomly generated list of english words and is later used to generate the seed. Either way, the seed is a root for all generated private keys and addresses
+> In modern wallet implementations, such as our [wallet.rs library](https://chrysalis.docs.iota.org/libraries/wallet) and [firefly wallet](https://github.com/iotaledger/firefly), the seed is usually generated from a `seed mnemonic` (`seed phrase`), using [BIP39 standard](https://en.bitcoin.it/wiki/BIP_0039), to be better memorized/stored by humans. It is based on randomly generated list of english words and is later used to generate the seed. Either way, the seed is a root for all generated private keys and addresses
 
 For further refefence, please see our [Protocol-rfc#0010 - Mnemonic Seed](https://github.com/Wollac/protocol-rfcs/blob/mnemonic-seed/text/0010-mnemonic-ternary-seed/0010-mnemonic-ternary-seed.md)
 
@@ -89,7 +89,7 @@ And there are few additional things to note:
 
 :::Note 
 
-Having many different accounts may have a negative impact on performance while [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://chrysalis.docs.iota.org/libraries/wallet.html) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](https://chrysalis.docs.iota.org/guides/exchange_guide.html) provides some useful tips how different accounts may be leveraged.
+Having many different accounts may have a negative impact on performance while [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://chrysalis.docs.iota.org/libraries/wallet) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](https://chrysalis.docs.iota.org/guides/exchange_guide) provides some useful tips how different accounts may be leveraged.
 
 :::
 

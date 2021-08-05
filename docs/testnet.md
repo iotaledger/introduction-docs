@@ -7,6 +7,18 @@ The IOTA Foundation provides the following load-balanced public testnet endpoint
 - [https://api.lb-0.h.chrysalis-devnet.iota.cafe/](https://api.lb-0.h.chrysalis-devnet.iota.cafe/)
 - [https://api.lb-1.h.chrysalis-devnet.iota.cafe/](https://api.lb-1.h.chrysalis-devnet.iota.cafe/)
 
+:::info
+We recommend using the load balancer for most scenarios.
+:::
+
+Single node endpoints that expose native MQTT, in case you need them, are:
+
+- mqtt.lb-0.h.chrysalis-devnet.iota.cafe:1883
+- mqtt.lb-1.h.chrysalis-devnet.iota.cafe:1883
+
+These endpoints have MQTT (via WebSockets and raw TCP) exposed and offer the HTTP REST API (according to this [specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml))
+over TLS.
+
 ## Developer tools
 
 - [Explorer](https://explorer.iota.org/testnet)

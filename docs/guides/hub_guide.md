@@ -2,7 +2,7 @@
 
 :::info
 
-This guide outlines how to switch from IOTA Hub to using [Wallet.rs](https://wallet-lib.docs.iota.org/) or its [bindings](https://wallet-lib.docs.iota.org/libraries/index.html) instead.
+This guide outlines how to switch from IOTA Hub to using [Wallet.rs](https://wallet-lib.docs.iota.org/) or its [bindings](https://wallet-lib.docs.iota.org/docs/libraries/overview) instead.
 
 :::
 
@@ -20,7 +20,7 @@ This guide outlines how to switch from IOTA Hub to using [Wallet.rs](https://wal
 
 Because of the unique features of IOTA 1.0, it was difficult to manage IOTA transactions with just a library. With the Chrysalis update, we have updated to be more accommodating to industry wide standards and developers. 
 
-IOTA Hub was deprecated with the Chrysalis upgrade and will not work with the new protocol changes. If you somehow still use Hub, we recommend that you to switch our new wallet library [Iota.rs](https://client-lib.docs.iota.org/), or its [bindings](https://client-lib.docs.iota.org/libraries/index.html), where you can easily manage IOTA addresses, deposits, and withdrawals for user accounts.
+IOTA Hub was deprecated with the Chrysalis upgrade and will not work with the new protocol changes. If you somehow still use Hub, we recommend that you to switch our new wallet library [Iota.rs](https://client-lib.docs.iota.org/), or its [bindings](https://client-lib.docs.iota.org/docs/libraries/overview), where you can easily manage IOTA addresses, deposits, and withdrawals for user accounts.
 
 To upgrade from Hub to a Chrysalis implementation you will need to:
 
