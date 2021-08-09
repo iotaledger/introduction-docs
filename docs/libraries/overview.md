@@ -21,7 +21,7 @@ The official IOTA libraries serve as `one-source-code-of-truth` to IOTA users an
 
 ![overview-libs](/img/guides/overview-libraries.svg)
 
-All libraries are in active development. The libraries target the Chrysalis testnet and no longer work with the previous IOTA mainnet.
+All libraries are in active development. The libraries target the Chrysalis devnet and no longer work with the previous IOTA mainnet.
 
 The IOTA foundation is in charge of maintaining the official client libraries.  You can find the libraries source code in the [Official GitHub repository](https://github.com/iotaledger).
 
@@ -30,7 +30,7 @@ The IOTA foundation is in charge of maintaining the official client libraries.  
 
 #### **Developer tools** ####    
 - [Official explorer](https://explorer.iota.org/chrysalis)
-- [Testnet faucet](https://faucet.testnet.chrysalis2.com/)
+- [Devnet faucet](https://faucet.devnet.chrysalis2.com/)
 - [Commandline wallet](https://github.com/iotaledger/cli-wallet)
 
 ---------------

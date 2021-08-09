@@ -128,11 +128,11 @@ Once the backend storage is created, individual accounts for individual users ca
 ```javascript
     let account = await manager.createAccount({
         alias: user_id,  // an unique id from your existing user
-        clientOptions: { node: 'http://api.lb-0.testnet.chrysalis2.com', localPow: false }
+        clientOptions: { node: 'https://api.lb-0.h.chrysalis-devnet.iota.cafe/', localPow: false }
     })
 ```
 
-Each account is related to a specific IOTA network (mainnet/devnet) which is referenced by a node property, such as node url (in this example, the Chrysalis testnet balancer).
+Each account is related to a specific IOTA network (mainnet/devnet) which is referenced by a node property, such as node url (in this example, the Chrysalis devnet balancer).
 
 For more information about `clientOptions`, please refer to [Wallet NodeJs API Reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html).
 
@@ -170,7 +170,7 @@ Every account can own multiple addresses. Addresses are represented by an `index
 
     console.log('Need a refill? Send it to this address:', latestAddress)
 ```
-Feel free to fill the address with Testnet Tokens with the [IOTA Faucet](https://faucet.testnet.chrysalis2.com/) to test it.
+Feel free to fill the address with Devnet Tokens with the [IOTA Faucet](https://faucet.devnet.chrysalis2.com/) to test it.
 
 Addresses are of two types, `internal` and `public` (external):
 * Each set of addresses are independent from each other and has an independent `index` id.

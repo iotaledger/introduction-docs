@@ -76,8 +76,8 @@ module.exports = {
               label: 'Mainnet'
             },
             {
-              to: 'testnet/',
-              label: 'Testnet'
+              to: 'devnet/',
+              label: 'Devnet'
             },
             {
               to: 'one-click-private-tangle',
