@@ -18,7 +18,7 @@ Mainnet with `iota`.
 iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml
 ```
 
-Testnet with `atoi`.
+Devnet with `atoi`.
 ```bash=
 atoi1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75zaxtpj
 ```

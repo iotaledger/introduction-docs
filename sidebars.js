@@ -111,8 +111,8 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'testnet',
-      label: 'Testnet'
+      id: 'devnet',
+      label: 'Devnet'
     },
     {
       type: 'doc',

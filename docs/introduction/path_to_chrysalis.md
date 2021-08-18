@@ -76,23 +76,22 @@ The Trinity wallet is a popular IOTA wallet. With Chrysalis, we released a new w
 
 ### Infrastructure
 
-Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet/Testnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can discover the networks on our Explorer [https://explorer.iota.org](https://explorer.iota.org/mainnet).  
+Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can discover the networks on our Explorer [https://explorer.iota.org](https://explorer.iota.org/mainnet).  
 
 
-### Chrysalis Testnet
+### Chrysalis Devnet
 
-Nodes deployed to the testnet can be queried using a load balancer at:
+Nodes deployed to the devnet can be queried using a load balancer at:
 
-- api.lb-0.testnet.chrysalis2.com
+- [https://api.lb-0.h.chrysalis-devnet.iota.cafe/](https://api.lb-0.h.chrysalis-devnet.iota.cafe/)
+- [https://api.lb-1.h.chrysalis-devnet.iota.cafe/](https://api.lb-1.h.chrysalis-devnet.iota.cafe/)
 
 We recommend using the load balancer for most scenarios.
 
 Single node endpoints that expose native MQTT in case you need this are:
 
-- api.hornet-0.testnet.chrysalis2.com
-- api.hornet-1.testnet.chrysalis2.com
-- api.hornet-2.testnet.chrysalis2.com
-- api.hornet-3.testnet.chrysalis2.com
+- [mqtt.lb-0.h.chrysalis-devnet.iota.cafe:1883](mqtt.lb-0.h.chrysalis-devnet.iota.cafe:1883)
+- [mqtt.lb-1.h.chrysalis-devnet.iota.cafe:1883](mqtt.lb-1.h.chrysalis-devnet.iota.cafe:1883)
 
 ## Conclusion
 

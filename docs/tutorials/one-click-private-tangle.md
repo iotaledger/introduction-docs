@@ -8,7 +8,7 @@ In this tutorial, you will learn how to use a set of Docker-based tools and pre-
 
 ## Background
 
-IOTA [mainnet](../mainnet.md) and [testnet](../testnet.md) are public IOTA Networks where you can develop permissionless applications based on the Tangle. However, there can be situations where you would like to run your own local IOTA network (Private Tangle) so that only a limited set of stakeholders or nodes can participate. To automate and simplify the deployment of a Private Tangle, some tools publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository have been developed. Additionally, the IOTA Foundation has integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and, in the future, on other Cloud marketplaces.
+IOTA [mainnet](../mainnet.md) and [devnet](../devnet.md) are public IOTA Networks where you can develop permissionless applications based on the Tangle. However, there can be situations where you would like to run your own local IOTA network (Private Tangle) so that only a limited set of stakeholders or nodes can participate. To automate and simplify the deployment of a Private Tangle, some tools publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository have been developed. Additionally, the IOTA Foundation has integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and, in the future, on other Cloud marketplaces.
 
 ## MVP Deployment Architecture of a Private Tangle
 
