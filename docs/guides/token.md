@@ -30,7 +30,7 @@ than 5 minutes).
 
 For further information on the migration process, see our [blog post](https://blog.iota.org/firefly-token-migration/).
 
-For a detailed explaination on how the migration process works technically, see [migration-mechanism](migration-mechanism.md)
+For a detailed explaination on how the migration process works technically, see [migration-mechanism](migration_mechanism.md)
 
 ## Exchange Token Migration Guide
 

@@ -1,6 +1,3 @@
----
-slug: /libraries/
----
 # Libraries
 
 **The IOTA client libraries allow you to easily integrate IOTA into your own applications. You can choose a library to match your use case.**

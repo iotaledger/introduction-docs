@@ -1,6 +1,3 @@
----
-slug: /firefly/
----
 # Firefly
 
 :::info

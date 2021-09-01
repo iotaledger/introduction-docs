@@ -36,7 +36,7 @@ The single account approach allows for just one account and creates addresses fo
 
 ## Implementation Guide
 
-This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](hub_guide.md).
+This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](hub_migration.md).
 
 Features of the Wallet Library:
 - Secure seed management.
@@ -274,4 +274,4 @@ Default options are perfectly fine and are successful; however, additional optio
 
 The `Account.send()` function returns a `wallet message` that fully describes the given transaction. The `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via `account.listMessages()` function.
 
-Please note that when sending tokens, a [dust protection](dev_guide.md#dust-protection) mechanism should be considered. 
+Please note that when sending tokens, a [dust protection](developer.md#dust-protection) mechanism should be considered. 

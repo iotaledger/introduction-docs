@@ -28,7 +28,7 @@ module.exports = {
       label: 'Firefly',
       items: [{
           type: 'doc',
-          id: 'firefly/README',
+          id: 'firefly/introduction',
           label: 'Introduction'
         },
         {
@@ -64,32 +64,32 @@ module.exports = {
       label: 'Guides',
       items: [{
           type: 'doc',
-          id: 'guides/README',
+          id: 'guides/overview',
           label: 'Overview'
         },
         {
           type: 'doc',
-          id: 'guides/dev_guide',
+          id: 'guides/developer',
           label: 'Developer'
         },
         {
           type: 'doc',
-          id: 'guides/exchange_guide',
+          id: 'guides/exchange',
           label: 'Exchange'
         },
         {
           type: 'doc',
-          id: 'guides/token_guide',
+          id: 'guides/token',
           label: 'Token Migration'
         },
         {
           type: 'doc',
-          id: 'guides/migration-mechanism',
+          id: 'guides/migration_mechanism',
           label: 'Migration Mechanism'
         },
         {
           type: 'doc',
-          id: 'guides/hub_guide',
+          id: 'guides/hub_migration',
           label: 'Hub Migration'
         },
         {
@@ -121,7 +121,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'rfc',
+      id: 'protocol_rfc',
       label: 'Protocol RFCs'
     },
     {
