@@ -7,7 +7,8 @@
 IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. But this architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.
 
 Within the Chrysalis update (also known as IOTA 1.5), some building blocks were changed to be more approachable and more aligned with currently leveraged standards. We also ship many [client libraries](../libraries/overview.md) to help developers implement IOTA into their applications:
-![layers](/img/guides/wallet_rs_layers.svg)
+
+![Wallet.rs layer overview](/img/guides/wallet_rs_layers.svg)
 
 ## How Do I Implement It to My Exchange?
 
@@ -24,7 +25,7 @@ The library also allows consumers to assign a meaningful alias to each account. 
 
 It also leaves the choice to users if they want to segregate their funds across multiple accounts or multiple addresses. The following illustration outlines the relationships between seed, accounts, and addresses: 
 
-![accounts](/img/guides/accounts.svg)
+![Relationship between seed, accounts, and addresses](/img/guides/accounts.svg)
 
 ### Multi Account Approach
 

@@ -4,4 +4,4 @@ This page outlines the fundamental changes to the IOTA protocol which were deplo
 
 This is the technical documentation for developers. For updates and network status, please visit [https://chrysalis.iota.org](https://chrysalis.iota.org). 
 
-![](/img/introduction/01_butterfly.png)
+![Chrysalis, a new dawn](/img/introduction/01_butterfly.png)

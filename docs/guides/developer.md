@@ -95,7 +95,7 @@ Having many different accounts may have a negative impact on performance while [
 
 :::
 
-![address_generation](/img/guides/address_generation.svg)
+![Address Generation](/img/guides/address_generation.svg)
 
 So in case of Chrysalis, the derivation path of address/key space is `[seed]/44/4218/{int}/{0,1}/{int}`:
 * The levels `purpose` and `coin_type` are given.
@@ -126,7 +126,7 @@ For further refefence, please see our: [Protocol-rfc#0018 - Transaction Payload]
 
 Needless to say, the IOTA network ensures the outer structure of the message itself is valid and strictly complies with network consensus protocol. However, the inner structure is very flexible, future-proof, and offers an unmatched network extensibility.
 
-![messages_in_tangle](/img/guides/messages_in_tangle.svg)
+![Messages in the Tangle](/img/guides/messages_in_tangle.svg)
 
 The current Chrysalis network incorporates the following core payloads:
 * `SignedTransaction`: a payload that describes `UTXO` transactions that are the cornerstones of value-based transfers in the IOTA network. Via this payload, a `message` can be also cryptographically signed.
@@ -152,7 +152,7 @@ Below is a simplified analogy of how the UTXO works:
   *  `Output D` = 50 tokens.
 * The total supply remains the same, just number of outputs differs and some outputs were replaced by other outputs in the process.
 
-![utxo](/img/guides/utxo.svg)
+![Unspent Transaction Output](/img/guides/utxo.svg)
 
 The key takeaway of the outlined process above is the fact that each unique `output` can be spent **only once**. Once the given `output` is spent, it cannot be used any more and is irrelevant in regards to the ledger state.
 
