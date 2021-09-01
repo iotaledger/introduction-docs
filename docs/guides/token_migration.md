@@ -1,3 +1,12 @@
+---
+description: Overview on how to migrate your tokens from the IOTA 1.0 to IOTA 1.5 Chrysalis network using the firefly wallet or a migration bundle.
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- migration
+- migration bundle
+- Firefly
+- Chrysalis Phase 2
+---
 # Chrysalis Migration
 
 By the end of the Chrysalis migration, a number of aspects at IOTA changed for the better. With easier ways to
@@ -20,13 +29,14 @@ Below is an overview of how the migration is taking place for normal token holde
 
 :::tip
 
-If you migrate after the Chrysalis launch, your funds will become available shortly after you migrate (within less
-than 5 minutes).
+If you migrate after the Chrysalis launch, your funds will become available shortly after you migrate (within less than 5 minutes).
 
 :::
 
-> Firefly will initially only be available on desktop operating systems such as: macOS, Linux and Windows and not support
-> migrations for Ledger devices or using a Ledger device.
+
+:::info
+Firefly will initially only be available on desktop operating systems such as: macOS, Linux and Windows and not support migrations for Ledger devices or using a Ledger device.
+:::
 
 For further information on the migration process, see our [blog post](https://blog.iota.org/firefly-token-migration/).
 
@@ -37,10 +47,12 @@ For a detailed explaination on how the migration process works technically, see 
 To help you successfully transfer your tokens securely to the  Chrysalis network, we created this guide as
 an overview of the migration process and its intricacies.
 
-Note: On the 28th of April, Chrysalis Phase 2 was released (with its corresponding node software, libraries and tooling).
+:::info
+On the 28th of April, Chrysalis Phase 2 was released (with its corresponding node software, libraries and tooling).
 After this, the legacy network only supports migration transfers moving further (this is accompanied by a legacy
 node release). This means that both a legacy (albeit only for migrations), and a new Chrysalis Phase 2 network will
 co-exist. 
+:::
 
 There are two ways with which you can migrate your funds from the old legacy to the Chrysalis Phase 2 network:
 

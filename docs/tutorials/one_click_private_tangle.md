@@ -1,7 +1,13 @@
 ---
-slug: /one-click-private-tangle
+description: Learn how to use a set of Docker-based tools and pre-configured setups to deploy a (hornet-based) Chrysalis Private Tangle in "one click" to cloud environments or platforms.
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- tutorial
+- tangle
+- AWS
+- Docker 
+- VM
 ---
-
 # One Click Private Tangle Tutorial
 
 In this tutorial, you will learn how to use a set of Docker-based tools and pre-configured setups to deploy a ([hornet-based](https://github.com/gohornet/hornet)) Chrysalis Private Tangle in **"one click"** to cloud environments or platforms.

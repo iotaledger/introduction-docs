@@ -1,3 +1,15 @@
+---
+description: The IOTA client libraries allow you to easily integrate IOTA into your own applications. 
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- wallet library
+- client library
+- Tangle
+- C
+- golang
+- javascript
+- rust
+---
 # Libraries
 
 **The IOTA client libraries allow you to easily integrate IOTA into your own applications. You can choose a library to match your use case.**

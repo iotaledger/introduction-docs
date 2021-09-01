@@ -1,12 +1,28 @@
+---
+description: Overview of available guides for the Chrysalis network. Changes from IOTA 1.0 to IOTA 1.5 , aka Chrysalis.  
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- IOTA 1.0
+- IOTA 1.5
+- changes
+- guides
+- migration
+- developer
+---
+
 # IOTA Chrysalis Guides
 
 - [Developer Guide](developer.md).
 - [Exchange Guide](exchange.md).
-- [Token Migration Guide.](token.md)
+- [Token Migration Guide](token_migration.md)
+- [Migration Mechanism](migration_mechanism.md).
 - [Hub Migration Guide](hub_migration.md).
+- [Backup and Security](backup_security.md).
+- [Chrysalis Snapshot Validation](snapshot_validation_bootstrapping.md).
 
 
 ## Overall Changes from IOTA 1.0 to 1.5 (Chrysalis) in a Nutshell
+
 * The format of the address was changed, and it is based on both `derivation path` and `bech32` standards. For reference, see the [IOTA address anatomy](developer.md#iota-15-address-anatomy)
 * The concepts of `bundles` and `transactions` were replaced with the concepts of `messages` and `payloads`. The `message` is a data structure that is actually being broadcast in the network and represents a node (vertex) in the Tangle graph. For reference, see [messages, payload and transactions](developer.md#messages-payloads-and-transactions) and [selected message payloads](developer.md#selected-message-payloads).
 * The IOTA network is based on a DAG (Directed Acyclic Graph) to store individual `messages` and related `transactions`. However, each `message` can newly reference up to 8 parent messages. For reference, see [messages, payload and transactions](developer.md#messages-payloads-and-transactions).

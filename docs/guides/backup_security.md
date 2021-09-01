@@ -1,3 +1,17 @@
+---
+description: How to back up your account, restore an account from a backup, export a user's Stronghold, rekey stronghold.
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- stronghold
+- checklist
+- backup
+- DMZ
+- account
+- restore
+- export
+- rekey
+---
+
 # Backup and Security
 
 ## Security Checklist

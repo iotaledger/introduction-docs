@@ -1,3 +1,13 @@
+---
+keywords:
+- Coordicide
+- Upgrades
+- Mainnet
+- Protocol Improvements
+description: Specific Chrysalis Upgrades from IOTA 1.0.  
+image: /img/logo/Chrysalis_logo_dark.png
+---
+
 # What is Chrysalis?
 
 The objective of the IOTA Foundation was to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. This was achieved by an intermediate update called `Chrysalis`. You can read more about how Chrysalis was strategically released here.

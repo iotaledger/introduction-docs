@@ -1,3 +1,15 @@
+---
+description: Easily integrate IOTA with your exchange, custody solution, or product using the wallet.rs library.
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- integrate
+- exchange
+- account model
+- addresses
+- wallet.rs
+- setup
+- NodeJS
+---
 # Exchange Guide
 
 ## The IOTA Wallet Library

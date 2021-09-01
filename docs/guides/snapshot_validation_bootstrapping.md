@@ -1,3 +1,16 @@
+---
+description: How to take part in the global snapshot.  
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- golang
+- github
+- bootstrapping
+- snapshot
+- verify
+- validate
+- hornet 
+- tools
+---
 # Chrysalis Snapshot Validation/Boostrapping
 
 This guide outlined how to take part in the global snapshot, respectively genesis snapshot creation for the
@@ -16,7 +29,9 @@ which contained the already burned/migrated funds from the 7-day-migration windo
 
 ## Steps
 
-> Make sure you've Go installed by issuing `go version` on your command line.
+:::info
+Make sure you've Go installed by issuing `go version` on your command line.
+:::
 
 1. `git clone https://github.com/iotaledger/chrysalis-tools.git`.
 2. `cd chrysalis-tools/snapshot/verify`.
@@ -55,8 +70,9 @@ $ sha256sum genesis_snapshot.bin genesis_snapshot_alt.bin global_snapshot.csv
 
 ## Bootstrapping the Legacy Hornet Node From The Global Snapshot
 
-> Loading the global snapshot ensured that your legacy Hornet node added the genesis transaction (999...) as a solid entry point:
-> this was important as the Coordinator would issue the next milestone after the global snapshot index on top of it. Your node would **not** lose the data it already had.
+:::info
+Loading the global snapshot ensured that your legacy Hornet node added the genesis transaction (999...) as a solid entry point: this was important as the Coordinator would issue the next milestone after the global snapshot index on top of it. Your node would **not** lose the data it already had.
+:::
 
 1. Await for confirmation that the global snapshot was taken successfully by looking into the validation issue on
    the [Hornet repository](https://github.com/gohornet/hornet) or Discord.

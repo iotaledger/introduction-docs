@@ -1,3 +1,15 @@
+---
+description: The official client library for interacting with the IOTA Tangle allows you to create messages and transactions, sign transactions, generate addresses, interact with an IOTA node.
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- stateless
+- Rust
+- python
+- nodejs
+- python
+- client
+---
+
 # IOTA Wallet Library
 
 The wallet library is a stateful library for developers; essentially it's a programmable wallet. We recommended that you use this library if you are mainly using IOTA for token transfers. This library stateful design add support for handling and monitoring of multiple account/addresses.

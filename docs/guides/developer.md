@@ -1,3 +1,16 @@
+---
+description: Differences between IOTA 1.0 and IOTA 1.5 (aka Chrysalis).  
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- developer
+- Address Anatomy
+- seeds
+- UTXO
+- Ed25519
+- IOTA 1.5
+- IOTA 1.0
+---
+
 # Developer Guide to Chrysalis
 This is a quick guide meant to help you navigate through some of the differences you will encounter while migrating from IOTA 1.0 to IOTA 1.5, also known as Chrysalis.
 
@@ -116,13 +129,13 @@ The `message` is an atomic unit that is confirmed by the network as a whole.
 
 A `message` can be up to 32 kb in size and it can hold variable sets of information called `payloads`. The number of payloads a single message can encapsulate is not given. Even a message without a `payload` is completely valid and can be broadcast. The `message` itself does not include any timestamp; a message timestamp is derived from an acceptance of the given message by the Tangle network.
 
-For further refefence, please see our [Protocol-rfc#0017 - Message](https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md) 
+For further reference, please see our [Protocol-rfc#0017 - Message](https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md) 
 
 A`payload` represents a layer of concern. Some payloads may change the state of the ledger (ex. `SignedTransactions`) and some may provide extra features to some specific applications and business use cases (ex. `IndexationPayload`).
 
 There are already implemented core payloads, such as `SignedTransaction`, `MilestonePayload`, and `IndexationPayload` but the message and payload definition is generic enough to incorporate any future payload(s) the community agrees upon.
 
-For further refefence, please see our: [Protocol-rfc#0018 - Transaction Payload](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md)
+For further reference, please see our: [Protocol-rfc#0018 - Transaction Payload](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md)
 
 Needless to say, the IOTA network ensures the outer structure of the message itself is valid and strictly complies with network consensus protocol. However, the inner structure is very flexible, future-proof, and offers an unmatched network extensibility.
 

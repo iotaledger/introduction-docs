@@ -1,3 +1,12 @@
+---
+keywords:
+- Welcome
+- Chrysalis
+- Documentation
+description: Welcome to the official Chrysalis documentation
+image: /img/logo/Chrysalis_logo_dark.png
+---
+
 # Welcome
 
 This page outlines the fundamental changes to the IOTA protocol which were deployed in April 2021 in a release called Chrysalis.

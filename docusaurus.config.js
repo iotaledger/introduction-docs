@@ -7,8 +7,8 @@ module.exports = {
   tagline: 'Everything for the IOTA Chrysalis Update',
   url: 'https://chrysalis.docs.iota.org/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
   favicon: '/img/logo/favicon.ico',
   organizationName: 'iotaledger', // Usually your GitHub org/user name.
   projectName: 'Chrysalis', // Usually your repo name.
@@ -56,19 +56,19 @@ module.exports = {
               label: 'Path to Chrysalis'
             },
             {
-              to: 'firefly/',
+              to: 'firefly/introduction',
               label: 'Firefly'
             },
             {
-              to: 'node_software/',
+              to: 'node_software',
               label: 'Node Software'
             },
             {
-              to: 'libraries/',
+              to: 'libraries/overview',
               label: 'Libraries'
             },
             {
-              to: 'guides/',
+              to: 'guides/overview',
               label: 'Guides'
             },
             {
@@ -80,11 +80,11 @@ module.exports = {
               label: 'Devnet'
             },
             {
-              to: 'one-click-private-tangle',
+              to: 'tutorials/one_click_private_tangle',
               label: 'Private Tangle'
             },
             {
-              to: 'rfc',
+              to: 'protocol_rfc',
               label: 'Protocol RFCs'
             },
             {

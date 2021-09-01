@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'node-software/node-software',
+      id: 'node_software',
       label: 'Node Software'
     }, {
       type: 'category',
@@ -79,7 +79,7 @@ module.exports = {
         },
         {
           type: 'doc',
-          id: 'guides/token',
+          id: 'guides/token_migration',
           label: 'Token Migration'
         },
         {
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'tutorials/one-click-private-tangle',
+      id: 'tutorials/one_click_private_tangle',
       label: 'Private Tangle'
     },
     {
