@@ -18,7 +18,7 @@ Below is an overview of how the migration is taking place for normal token holde
 4. Your funds become available on the new network on the EdDSA address Firefly created for you.
 5. Your funds are successfully migrated.
 
-:::Note
+:::tip
 
 If you migrate after the Chrysalis launch, your funds will become available shortly after you migrate (within less
 than 5 minutes).
