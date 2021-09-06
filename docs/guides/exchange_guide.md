@@ -60,7 +60,7 @@ The following examples cover the *multi account approach* using `NodeJS` binding
 5. Check the user balance.
 6. Enable withdrawals.
 
-:::Note
+:::tip
 
 If you are looking for other languages, please read the [wallet library overview](../libraries/wallet.md).
 
@@ -88,7 +88,7 @@ Once you have everything needed to use the `wallet.rs` library, it is necessary 
 
 The storage is encrypted at rest, so you need a strong password and location where to put your storage. 
 
-:::Note
+:::tip
 
 Manage your password with the utmost care.
 
@@ -98,16 +98,13 @@ Technically speaking, "storage" means a single file called `wallet.stronghold`. 
 
 One of the key principles behind the `stronghold`-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the `Account_Manager` instance where all complexities are hidden under the hood and are dealt with securely. In case you would also like to store a seed somewhere else, there is another method, `AccountManager.generateMnemonic()`, that generates random seeds. This method can be leveraged before the actual account initialization.
 
-:::Note
-
-It is highly recommended to store the `stronghold` password and the `stronghold` database on separate devices. For reference, see the [backup and security guide](backup_security.md) for more information
-
-:::Note
+:::tip
 It is highly recommended to store the `stronghold` password and the `stronghold` database on separate devices. For reference, see the [backup and security guide](backup_security.md) for more information
 
 :::
 
 Import the Wallet Library and create an account manager:
+
 ```javascript
     const { AccountManager, SignerType } = require('@iota/wallet')
 
@@ -116,7 +113,10 @@ Import the Wallet Library and create an account manager:
         storagePath: './storage'
     })
     manager.setStrongholdPassword(process.env.SH_PASSWORD)
-    manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic()) // seed generation
+    const mnemonic = manager.generateMnemonic(); // seed generation
+    // Store your mnemonic in a secure location, it's the only backup option apart from the Stronghold file
+    console.log("Save this securely: " + mnemonic)
+    manager.storeMnemonic(SignerType.Stronghold, mnemonic) 
 ```
 
 Once the stronghold storage is created, it is not needed to generate the seed any longer (`manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())`). It has been already saved in the storage together with all account information.
@@ -151,7 +151,7 @@ The most common methods of `account` instance include:
 ### 3. Generate a User Address to Deposit Funds
 `Wallet.rs` is a stateful library which means it caches all relevant information in storage to provide performance benefits while dealing with, potentially, many accounts/addresses.
 
-:::Note 
+:::tip
 
 Sync the account info with the network during the wallet manipulation to be sure the storage reflects an actual state of the ledger (network).
 
@@ -178,15 +178,14 @@ Addresses are of two types, `internal` and `public` (external):
 * Internal addresses (`internal=true`) are called `change` addresses and are used to send the excess funds to them.
 * The approach is also known as a *BIP32 Hierarchical Deterministic wallet (HD Wallet)*.
 
-:::Note
+:::tip
 
 You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in the Chrysalis network.
 
 :::
 
-:::
-
 ### 4. Listen to Events
+
 The `Wallet.rs` library supports several events for listening. As soon as the given event occurs, a provided callback is triggered.
 
 Below is an example of fetching existing accounts and listening to transaction events coming into the account:
@@ -247,6 +246,7 @@ Get the available account balance across all addresses of the given account:
 ```
 
 ### 6. Enable Withdrawals
+
 Sending tokens is performed via the `SyncedAccount` instance that is a result of the `account.sync()` function:
 
 ```javascript
@@ -254,13 +254,10 @@ Sending tokens is performed via the `SyncedAccount` instance that is a result of
     const synced = await account.sync()
     console.log('available balance', account.balance().available)
 
-    const address = 'atoi1qykf7rrdjzhgynfkw6z7360avhaaywf5a4vtyvvk6a06gcv5y7sksu7n5cs'
-
-    // TODO: Check if address is valid.
-
+    const address = 'atoi1qzt0nhsf38nh6rs4p6zs5knqp6psgha9wsv74uajqgjmwc75ugupx3y7x0r'
     const amount = 1000000 // Amount in IOTA: 1000000 == 1 MIOTA
 
-    const node_response = await synced.send(
+    const node_response = await account.send(
         address,
         amount
     )
@@ -268,13 +265,13 @@ Sending tokens is performed via the `SyncedAccount` instance that is a result of
     console.log("Check your message on https://explorer.iota.org/chrysalis/message/", node_response.id)
 ```
 
-The full function signature is `SyncedAccount.send(address, amount[, options])`.
+The full function signature is `Account.send(address, amount[, options])`.
 
 Default options are perfectly fine and are successful; however, additional options can be provided, such as `remainderValueStrategy`:
 
 * `changeAddress`: Send the remainder value to an internal address.
 * `reuseAddress`: Send the remainder value back to its original address.
 
-The `SyncedAccount.send()` function returns a `wallet message` that fully describes the given transaction. The `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via `account.listMessages()` function.
+The `Account.send()` function returns a `wallet message` that fully describes the given transaction. The `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via `account.listMessages()` function.
 
 Please note that when sending tokens, a [dust protection](dev_guide.md#dust-protection) mechanism should be considered. 

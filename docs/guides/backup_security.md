@@ -29,7 +29,7 @@ You can create a new Stronghold snapshot on the fly to allow a user to leave you
 
 The procedure for changing a Stronghold password is "simple": you read a snapshot into a vault and then write it out with a new encryption password. [See this code for the source.](https://github.com/iotaledger/wallet.rs/blob/d1b8893d73aae35dfcf7c5c8006e2177988d25d0/src/stronghold.rs#L436-L451)
 
-:::Note
+:::tip
 
 For obvious reasons, old snapshot backups will not be "rekeyed", so you have to track your old passwords. 
 

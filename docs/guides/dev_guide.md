@@ -41,7 +41,7 @@ With the updated [wallet library](../libraries/wallet.md), developers do not nee
 
 More information about IOTA Wallet Library is available on [Wallet docs page](https://wallet-lib.docs.iota.org) or in the [Exchange guide](exchange_guide.md), which is mainly focused on value transactions.
 
-:::Note
+:::tip
 
 It is highly recommended to NOT use online seed generators at all. The seed is the only key to the given funds.
 
@@ -87,7 +87,7 @@ And there are few additional things to note:
 * The standard was agreed upon different crypto communities, although not all `derivation path` components are always in active use. For example, `account` is not always actively leveraged across crypto space (if this is a case then there is usually `account=0` used).
 * Using different `accounts` may be useful to split addresses/key into some independent spaces and it is up to developers to implement.<br />
 
-:::Note 
+:::tip 
 
 Having many different accounts may have a negative impact on performance while [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://chrysalis.docs.iota.org/libraries/wallet) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](https://chrysalis.docs.iota.org/guides/exchange_guide) provides some useful tips how different accounts may be leveraged.
 
