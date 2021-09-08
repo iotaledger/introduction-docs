@@ -1,6 +1,6 @@
 # Devnet
 
-Since the Chrysalis update, the `tesnet` is now called `devnet`.  We recommend you use the `devnet` to develop and test your application.  
+Since the Chrysalis update, the `testnet` is now called `devnet`.  We recommend you use the `devnet` to develop and test your application.  
 
 ## Public Infrastructure
 
