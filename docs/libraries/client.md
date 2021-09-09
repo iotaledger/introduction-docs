@@ -33,6 +33,13 @@ If you mainly intend to process value transfers, we recommend you use our statef
 - [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python) - Browse through the code and learn what's happening behind the scenes. Pull requests are very welcome!
 - [API Documentation](https://client-lib.docs.iota.org/docs/libraries/python/api_reference) - The IOTA Client Library Python API Documentation.
 
+## Java
+
+- [Getting Started](https://client-lib.docs.iota.org/docs/libraries/java/getting_started) - Getting Started with Java and the IOTA Client Library.
+- [Examples](https://client-lib.docs.iota.org/docs/libraries/java/examples) - Find starting points or inspiration in the examples.
+- [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/java) - Browse through the code and learn what's happening behind the scenes. Pull requests are very welcome!
+- [API Documentation](https://client-lib.docs.iota.org/docs/libraries/java/api_reference) - The IOTA Client Library Java API Documentation.
+
 ## C
 
 - [Getting Started](https://iota-c-client.readthedocs.io/en/latest/index.html) - Getting Started with C and the IOTA Client Library.
