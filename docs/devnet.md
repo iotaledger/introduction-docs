@@ -1,5 +1,5 @@
 ---
-description: The IOTA foundation provides load-balanced public devnet endpoints, with MQTT and offer and HTTP REST API.
+description: The IOTA foundation provides load-balanced public devnet endpoints, with MQTT and the HTTP REST API enabled.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - devnet

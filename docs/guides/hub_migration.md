@@ -1,5 +1,5 @@
 ---
-description: HOw to switch from IOTA hub using wallet.rs, or it's bindings.
+description: How to switch from IOTA hub using wallet.rs, or its bindings.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - wallet.rs

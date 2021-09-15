@@ -1,5 +1,5 @@
 ---
-description: Overview on how to migrate your tokens from the IOTA 1.0 to IOTA 1.5 Chrysalis network using the firefly wallet or a migration bundle.
+description: Overview on how to migrate your tokens from the IOTA 1.0 to IOTA 1.5 Chrysalis network using the Firefly wallet or a migration bundle.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - migration
@@ -40,7 +40,7 @@ Firefly will initially only be available on desktop operating systems such as: m
 
 For further information on the migration process, see our [blog post](https://blog.iota.org/firefly-token-migration/).
 
-For a detailed explaination on how the migration process works technically, see [migration-mechanism](migration_mechanism.md)
+For a detailed explanation on how the migration process works technically, see [migration-mechanism](migration_mechanism.md)
 
 ## Exchange Token Migration Guide
 

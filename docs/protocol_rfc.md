@@ -1,5 +1,5 @@
 ---
-description: The Chrysalis protocol changes are described in full detail in these RFC hosted on Github.
+description: The Chrysalis protocol changes are described in full detail in these RFCs hosted on Github.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - RFC
