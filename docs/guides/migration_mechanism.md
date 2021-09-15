@@ -6,7 +6,7 @@ keywords:
 - trustless
 - migration mechanism
 - treasury
-- firefly
+- Firefly
 - wallet
 - legacy nodes
 ---
