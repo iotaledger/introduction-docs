@@ -104,12 +104,7 @@ Essentially, via the Firefly wallet, token holders:
 A verifier node is a Chrysalis Phase 2 node which upon seeing receipts:
 
 1. Queries a legacy node for the confirmation data for the specified milestone in the receipt.
-2. Then performs WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
-3. Additionally, it also checks that all confirmed funds on the legacy network for the given legacy milestone, are indeed minted with a given batch of receipts (i.e. nothing is left out).
-4. Produces migration bundles which send funds to `migration addresses` controlled by the given owner.
-5. The legacy networks confirms these bundles.
-6. The Chrysalis Phase 2 Coordinator picks these confirmed legacy bundles up and generates receipts minting those funds to the target Ed25519 address.
-7. Verifier nodes verify the receipts and make sure that the funds originate from the legacy network.
-
+1. Then performs WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
+1. Additionally, it also checks that all confirmed funds on the legacy network for the given legacy milestone, are indeed minted with a given batch of receipts (i.e. nothing is left out).
 
 See [Hornet as a verifier node](https://wiki.iota.org/hornet/post_installation/run_as_a_verifier)

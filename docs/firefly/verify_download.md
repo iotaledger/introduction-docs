@@ -1,5 +1,5 @@
 ---
-description: Verify your firefly download on Windows, maxOS and/or Linux.
+description: Verify your Firefly download on Windows, maxOS and/or Linux.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - firefly

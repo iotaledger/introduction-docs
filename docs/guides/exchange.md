@@ -14,7 +14,11 @@ keywords:
 
 ## The IOTA Wallet Library
 
-> Easily integrate IOTA with your exchange, custody solution, or product.
+:::tip
+
+Easily integrate IOTA with your exchange, custody solution, or product.
+
+:::
 
 IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. But this architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.
 
