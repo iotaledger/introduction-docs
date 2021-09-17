@@ -215,9 +215,29 @@ dd4bcad67c5e        iotaledger/explorer-webapp   "docker-entrypoint.s…"   2 da
 
 You can now get access to the Tangle Explorer through `http://localhost:8082`. 
 
+## Adding Extra Nodes to your Private Tangle
+
+For convenience reasons, a script is also available to add new Nodes to an already running Private Tangle. 
+
+To do so, you can follow these steps:
+
+```console
+cd ./extra-nodes
+chmod +x ./private-hornet.sh
+./private-hornet.sh install "my-node:14266:15601:8082"
+```
+
+The main parameter is a Node connection string. Such string has different fields separated by a colon (`:`). The first field is the (container and host) name of your Node and, at installation time, it can be followed, optionally, by the TCP port numbers corresponding to the API endpoint, the peering endpoint and the dashboard endpoint.
+
+After executing the commands described above a new Docker container running a Hornet node will be running. Such Hornet node will be automatically peered with the `node1` Hornet node. The snapshot and Coordinator address will be taken, respectively, from the configuration and snapshot folders of your Private Tangle. 
+
+Note: In case you want to spin a Node in a different machine (or base folder) you would need to pass manually those parameters including the multipeer address of the Node you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
+
 ## Limitations and Troubleshooting
 
-Mac OS users should install GNU sed, for instance, using `brew install --default-names gnu-sed`.  
+Mac OS users should install GNU sed, for instance, using `brew install --default-names gnu-sed`. 
+
+As new peered extra nodes are considered as unknown by `node1`, the number of extra nodes that can be spined is limited by the maximum number of unknown peers parameter. If you want more extra nodes you would need to change [this configuration property](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config/config-node.json#L127) 
 
 ## Next Steps
 
