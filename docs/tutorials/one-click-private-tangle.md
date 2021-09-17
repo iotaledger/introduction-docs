@@ -229,9 +229,9 @@ chmod +x ./private-hornet.sh
 
 The main parameter is a Node connection string. Such string has different fields separated by a colon (`:`). The first field is the (container and host) name of your Node and, at installation time, it can be followed, optionally, by the TCP port numbers corresponding to the API endpoint, the peering endpoint and the dashboard endpoint.
 
-After executing the commands described above a new Docker container running a Hornet node will be running. Such Hornet node will be automatically peered with the `node1` Hornet node. The snapshot and Coordinator address will be taken, respectively, from the configuration and snapshot folders of your Private Tangle. 
+After executing the commands described above a new Docker container (named `my-node`) executing a Hornet node will be running. Such Hornet node will be automatically peered with the `node1` Hornet node. The snapshot and Coordinator's public keys will be taken, respectively, from the configuration and snapshot folders of your Private Tangle. 
 
-Note: In case you want to spin a Node in a different machine (or base folder) you would need to pass manually those parameters including the multipeer address of the Node you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
+Note: In case you want to spin a node from a different machine (or base folder) you would need to pass manually those parameters including the [multiaddr](https://hornet.docs.iota.org/post_installation/peering/#addressing-peer-neighbors) peer address of the node (for instance `node1`) you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
 
 ## Limitations and Troubleshooting
 
