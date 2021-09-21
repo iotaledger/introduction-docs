@@ -23,6 +23,6 @@ These endpoints have MQTT (via WebSockets and raw TCP) exposed and offer the HTT
 ## Developer tools
 
 - [Explorer](https://explorer.iota.org/devnet)
-- [Online Faucet](https://faucet.devnet.chrysalis2.com/)
+- [Online Faucet](https://faucet.chrysalis-devnet.iota.cafe)
 - [cli-wallet](https://github.com/iotaledger/cli-wallet)
 - [chrysalis-faucet Code (nodejs + svelte)](https://github.com/iotaledger/chrysalis-faucet)
