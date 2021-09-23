@@ -28,24 +28,27 @@ There are three main nodes identified:
 
 * The **Spammer**: A node that periodically sends messages to the Private Tangle, thus enabling a minimal message load to support transaction approval as per the IOTA protocol. 
 
-* The **Regular Hornet Node**: An initial node, it is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later join the same Private Tangle.  
+* The **Regular Hornet Node** (`node1`): An initial node, it is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later join the same Private Tangle.  
 
 These three nodes are peered amongst each other as our architecture is based on Docker, so that each node runs within a Docker Container and all containers are attached to the same network named `private-tangle`. 
+
+In addition, to facilitate adding extra nodes to the Private Tangle, an [autopeering](https://hornet.docs.iota.org/post_installation/peering/#autopeering) entry node is automatically created. Actually, the `Spammer` and the `node1` enable by default autopeering so that they can be peered with any extra node later added. The autopeering entry node listens on the *UDP* port `14626`.
 
 In addition, to make the Private Tangle easier to use, a Tangle Explorer can be deployed, conveniently, similar to the one at [https://explorer.iota.org](https://explorer.iota.org). As a result, all the participants in the network are able to browse and visualize messages or IOTA Streams channels. The Tangle Explorer deployment involves two different containers, one with the REST API listening at port `4000` and one with the Web Application listening at port `8082`. The Tangle Explorer also uses MQTT to watch what is happening on the Tangle. This is the rationale for having a connection between the Explorer's REST API Container and the Hornet Node through port `1881`. 
 
 The Hornet Dashboard (available through HTTP port `8081`) is also useful as a way to monitor and ensure that your Private Tangle Nodes are in sync and performing well.
 
-The summary of containers that shall be running and **TCP** ports exposed is as follows: 
+The summary of containers that shall be running and ports exposed is as follows: 
 
 
-| Component           | Container name    | Docker Ports exposed (TCP)       |
-| ------------------- | ----------------- | :------------------------------- |
-| Hornet Initial Node | `node1`           | `14265`, `15600`, `8081`, `1881` |
-| Coordinator         | `coo`             | `15600`                          |
-| Spammer             | `spammer`         | `14265`, `15600`                 |
-| Explorer API        | `explorer-api`    | `4000`                           |
-| Explorer Web App    | `explorer-webapp` | `8082:80`                        |
+| Component           | Container name    |  Docker Ports in use (TCP)       | Docker Ports in use (UDP) |
+| ------------------- | ----------------- | :------------------------------- | --------------------------| 
+| Hornet Initial Node | `node1`           | `14265`, `15600`, `8081`, `1881` | `14626`                   |
+| Coordinator         | `coo`             | `15600`                          |                           |
+| Spammer             | `spammer`         | `14265`, `15600`                 | `14626`                   |
+| Autopeering Entry N.| `node-autopeering`|                                  |                           |
+| Explorer API        | `explorer-api`    | `4000`                           |                           |
+| Explorer Web App    | `explorer-webapp` | `8082:80`                        |                           |
 
 
 The network policies for those containers should be configured as follows:
@@ -56,6 +59,7 @@ The network policies for those containers should be configured as follows:
 | Hornet Initial Node | `node1`           | `coo:15600`, `spammer:15600`   |
 | Coordinator         | `coo`             | `node1:15600`, `spammer:15600` |
 | Spammer             | `spammer`         | `coo:15600`, `node1:15600`     |
+| 
 | Explorer API        | `explorer-api`    | `node1:14265`, `node1:1881`    |
 | Explorer Web App    | `explorer-webapp` |                                |
 
@@ -77,14 +81,15 @@ The network policies for those containers should be configured as follows:
 The summary of services exposed to the outside is as follows: 
 
 
-| Service          | Container name    | Host TCP Port |
-| ---------------- | ----------------- | ------------- |
-| IOTA Protocol    | `node1`           | `14265`       |
-| IOTA Peering     | `node1`           | `15600`       |
-| Hornet Dashboard | `node1`           | `8081`        |
-| MQTT             | `node1`           | `1881`        |
-| Explorer API     | `explorer-api`    | `4000`        |
-| Explorer Web App | `explorer-webapp` | `8082`        |
+| Service          | Container name    | Host TCP Port | Host UDP Port |
+| ---------------- | ----------------- | ------------- | ------------- |
+| IOTA Protocol    | `node1`           | `14265`       |               |
+| IOTA Gossip      | `node1`           | `15600`       |               |
+| IOTA Autopeering | `node-autopeering`|               | `14626`       |
+| Hornet Dashboard | `node1`           | `8081`        |               |
+| MQTT             | `node1`           | `1881`        |               |
+| Explorer API     | `explorer-api`    | `4000`        |               |
+| Explorer Web App | `explorer-webapp` | `8082`        |               |
 
 
 The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Private Tangle can be achieved. IOTA Foundation intends to provide automatic, "one click" deployment of this kind of enhanced architectures in a future version of this software. 
