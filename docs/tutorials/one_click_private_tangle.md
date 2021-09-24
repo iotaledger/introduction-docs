@@ -8,13 +8,14 @@ keywords:
 - Docker 
 - VM
 ---
-# One Click Private Tangle Tutorial
 
-In this tutorial, you will learn how to use a set of Docker-based tools and pre-configured setups to deploy a ([hornet-based](https://github.com/gohornet/hornet)) Chrysalis (child or private) Tangle in **"one click"** to cloud environments or platforms.
+# Deploy your own Tangle "in one click" Tutorial
+
+In this tutorial, you will learn how to use a set of Docker-based tools and pre-configured setups to deploy your own ([hornet-based](https://github.com/gohornet/hornet)) Chrysalis Tangle in **"one click"** to cloud environments or platforms.
 
 ## Background
 
-IOTA [mainnet](../mainnet.md) and [devnet](../devnet.md) are public IOTA Networks where you can develop "permissionless" applications based on the Tangle. However, there can be situations where you would like to run your own local IOTA Tangle (Private Tangle). Such (child) Tangle might be anchored to the IOTA mainnet, thanks to the Data Sharding capabilities currently under development. To automate and simplify the deployment of a Chrysalis Tangle, some tools publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository have been developed. Additionally, the IOTA Foundation has integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and, in the future, on other Cloud marketplaces.
+IOTA [mainnet](../mainnet.md) and [devnet](../devnet.md) are public IOTA Networks where you can develop your own applications. Due to scalability or data locality reasons, sometimes it is also needed to run your own *local* IOTA Tangle (aka Private Tangle). Such (child) Tangle might also be *anchored* to the IOTA mainnet, as a Data Shard (feature currently under development). To automate and simplify the deployment of a Chrysalis Tangle, some tools publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository have been developed. Additionally, the IOTA Foundation has integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and, in the future, on other Cloud marketplaces.
 
 ## MVP Deployment Architecture
 
@@ -28,17 +29,17 @@ There are three main nodes identified:
 
 * The **Spammer**: A node that periodically sends messages to your Tangle, thus enabling a minimal message load to support transaction approval as per the IOTA protocol. 
 
-* The **Regular Hornet Node** (`node1`): An initial node, it is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later join your Tangle.  
+* The **Regular Hornet Node** (`node1`): An initial node, it is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later join your Tangle. 
 
-These three nodes are peered amongst each other as our architecture is based on Docker, so that each node runs within a Docker Container and all containers are attached to the same network named `private-tangle`. 
+These three nodes are peered amongst each other as our architecture is based on Docker, so that each node runs within a Docker Container and all containers are attached to the same network named `private-tangle`.
 
 In addition, to facilitate adding extra nodes to your Tangle, an [autopeering](https://hornet.docs.iota.org/post_installation/peering/#autopeering) entry node is automatically created. Actually, the `Spammer` and the `node1` enable by default autopeering so that they can be peered with any extra node later added. The autopeering entry node listens on the *UDP* port `14626`.
 
-In addition, to make your child Tangle easier to use, a Tangle Explorer can be deployed, conveniently, similar to the one at [https://explorer.iota.org](https://explorer.iota.org). As a result, all the participants in the network are able to browse and visualize messages or IOTA Streams channels. The Tangle Explorer deployment involves two different containers, one with the REST API listening at port `4000` and one with the Web Application exposed to the host at port `8082`. The Tangle Explorer also uses MQTT to watch what is happening on the Tangle. This is the rationale for having a connection between the Explorer's REST API Container and the Hornet Node through port `1881`. 
+In addition, to make your Tangle easier to use, a Tangle Explorer can be deployed, conveniently, similar to the one at [https://explorer.iota.org](https://explorer.iota.org). As a result, all the participants in the network are able to browse and visualize messages or IOTA Streams channels. The Tangle Explorer deployment involves two different containers, one with the REST API listening at port `4000` and one with the Web Application exposed to the host at port `8082`. The Tangle Explorer also uses MQTT to watch what is happening on your Tangle. This is the rationale for having a connection between the Explorer's REST API Container and the Hornet Node through port `1881`. 
 
 The Hornet Dashboard (available through HTTP port `8081`) is also useful as a way to monitor and ensure that your Tangle Nodes are in sync and performing well.
 
-The summary of containers that shall be running and the exposed ports (actually in use) is as follows: 
+The summary of containers that shall be running and the exposed (actually in use) Docker ports is as follows: 
 
 
 | Component           | Container name    |  Docker Ports in use                         |
@@ -81,7 +82,7 @@ The network policies for those containers should be configured as follows:
 | `explorer-webapp`   | `8082:80`   | outside clients                     |
 
 
-The summary of services exposed to the outside (host) is as follows: 
+The summary of services exposed to the outside world (through the host) is as follows: 
 
 
 | Service          | Container name    | Host TCP Port | Host UDP Port |
@@ -97,12 +98,12 @@ The summary of services exposed to the outside (host) is as follows:
 
 The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Tangle can be achieved. IOTA Foundation intends to provide automatic, "one click" deployment of this kind of enhanced architectures in a future version of this software. 
 
-To support the deployment of a child Tangle, the IOTA Community has developed a set of shell scripts and configuration templates to make it easier to deploy a (Docker based) Tangle with the architecture described above. You can also customize the [default configuration files](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config) if, for instance, you want to enable extra [Hornet plugins](https://hornet.docs.iota.org/post_installation/config.html). 
+To support the deployment of a new Tangles, the IOTA Community has developed a set of shell scripts and configuration templates to make it easier to deploy a (Docker based) Tangle with the architecture described above. You can also customize the [default configuration files](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config) if, for instance, you want to enable extra [Hornet plugins](https://hornet.docs.iota.org/post_installation/config.html). 
 
-But now let us see how we can launch our child Tangle via a "single click". We have two options: through the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) or through any [Docker-enabled machine](#one-click-private-tangle-on-any-docker-enabled-vm). 
+But now let us see how we can launch our Tangle via a "single click". We have two options: through the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) or through any [Docker-enabled machine](#one-click-private-tangle-on-any-docker-enabled-vm). 
 
 
-## "One Click" Tangle on AWS
+## Deploying a new Tangle in "One Click" on AWS
 
 To materialize on AWS using the deployment architecture described above, go to the AWS Marketplace and install this [product](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and follow the [instructions](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). That's it!. 
 
@@ -116,7 +117,7 @@ The Parameters of this "one click" installation are as follows (further details 
 
 Further instructions for AWS deployments can be found [here](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). If you want to know lower-level details of the AWS installation, how to do it yourself in any Docker-enabled VM, and what happens under the scenes, please continue reading. 
 
-## "One Click" Tangle on any Docker-enabled VM
+## Deploying a new Tangle in "One Click" on any Docker-enabled VM
 
 ### Prerequisites
 
@@ -148,7 +149,7 @@ cd one-click-tangle/hornet-private-net
 chmod +x ./private-tangle.sh
 ```
 
-### Run your Tangle
+### Run your new Tangle
 
 To start our Tangle through the command line:
 
@@ -198,7 +199,7 @@ The initial snapshot for your Tangle:
 
 If you browse to `http://localhost:8081` you can test out the Hornet Dashboard.
 
-You can find the Tangle database files at `db/private-tangle`. 
+You can find the database files of your Tangle at `db/private-tangle`. 
 
 When a snapshot is created, `1000000000` tokens are sent to the treasury. `2779529283277761` out of the total number of tokens, which is `2779530283277761` are sent to the mint address. To change the amount that is allocated to the treasury, you can change the value 
 [here](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/private-tangle.sh#L191). 
@@ -215,21 +216,21 @@ You operate your Tangle by issuing one of the following commands:
 
 ### Tangle Explorer
 
-Once we have our Tangle up and running, we can install and run a Tangle Explorer as follows:  
+Once we have your Tangle up and running, you can install and run a Tangle Explorer as follows:  
 
 ```console
 cd ../explorer
 ./tangle-explorer.sh install ../hornet-private-net
 ```
 
-The Tangle Explorer will automatically be configured with the parameters of our Tangle and once the docker build process finishes, you should find the following additional docker containers up and running:
+The Tangle Explorer will automatically be configured with the parameters of ouyourr Tangle and once the docker build process finishes, you should find the following additional docker containers up and running:
 
 ```console
 dd4bcad67c5e        iotaledger/explorer-webapp   "docker-entrypoint.s…"   2 days ago          Up 2 days           0.0.0.0:8082->80/tcp                                                                   explorer-webapp
 7c22023f4316        iotaledger/explorer-api      "docker-entrypoint.s…"   2 days ago          Up 2 days           0.0.0.0:4000->4000/tcp                                                                 explorer-api
 ```
 
-You can now get access to the Tangle Explorer through `http://localhost:8082`. 
+You can now get access to your Tangle Explorer through `http://localhost:8082`. 
 
 ## Adding Extra Nodes to your Tangle
 
@@ -243,17 +244,23 @@ chmod +x ./private-hornet.sh
 ./private-hornet.sh install "my-node:14266:15601:8082"
 ```
 
-The main parameter is a Node connection string. Such string has different fields separated by a colon (`:`). The first field is the (container and host) name of your Node and, at installation time, it can be followed, optionally, by the TCP port numbers corresponding to the API endpoint, the peering endpoint and the dashboard endpoint.
+The main parameter is a Node connection string. Such string has different fields separated by a colon (`:`). The first field is the (container and host) name of your Node and, at installation time, it can be followed, optionally, by the TCP port numbers corresponding to the API endpoint, the peering endpoint and the dashboard endpoint. 
 
-After executing the commands described above a new Docker container (named `my-node`) executing a Hornet node will be running. Such Hornet node will be automatically peered with the `node1` Hornet node. The snapshot and Coordinator's public keys will be taken, respectively, from the configuration and snapshot folders of your Private Tangle. 
+If no port numbers are provided, i.e. only the container name is supplied, no ports will be exposed to the host. In addition, you can omit some of the ports, but the separator `:` has to be kept, for instance, if you just only want to  expose the dashboard port to the host you can run:
 
-Note: In case you want to spin a node from a different machine (or base folder) you would need to pass manually those parameters including the [multiaddr](https://wiki.iota.org/hornet/post_installation/peering#addressing-peer-neighbors) peer address of the node (for instance `node1`) you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
+```console
+./private-hornet.sh install "my-node:::8082"
+```
+
+After executing the commands described above a new Docker container (named `my-node`) executing a Hornet node will be running. Such Hornet node will be automatically peered. The snapshot, Coordinator's public keys and autopeering entry node address will be taken, from the snapshot and configuration folders of your Tangle. 
+
+Note: In case you want to spin a node from a different machine (or base folder) you would need to pass manually those parameters including a [multiaddr](https://hornet.docs.iota.org/post_installation/peering/#addressing-peer-neighbors) peer address of a node to peer with (for instance `node1`) you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
 
 ## Limitations and Troubleshooting
 
 Mac OS users should install GNU sed, for instance, using `brew install --default-names gnu-sed`. 
 
-As new peered extra nodes are considered as unknown by `node1`, the number of extra nodes that can be spined is limited by the maximum number of unknown peers parameter. If you want more extra nodes you would need to change [this configuration property](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config/config-node.json#L127) 
+There could be limitations in the number of peers triggered by the maximum number of unknown peers parameter. To overcome it, you may need to change [this configuration property](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config/config-node.json#L127) 
 
 ## Next Steps
 
