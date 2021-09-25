@@ -92,7 +92,7 @@ But now let us see how we can launch our Private Tangle via a "single click". We
 
 To materialize on AWS using the deployment architecture described above, go to the AWS Marketplace and install this [product](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and follow the [instructions](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). That's it!. 
 
-Behind the scenes, the process will launch all the Docker containers (through docker-compose), create a key pair for the Coordinator,  configure the Coordinator public key for the initial node, generate an initial IOTA Address holding all IOTAs, the identity for our Nodes, etc i.e. our [deployment architecture](#mvp-deployment-architecture-of-a-private-tangle) and all the steps described [here](https://hornet.docs.iota.org/getting_started/private_tangle.html), but **fully automated**, with "one click"!.
+Behind the scenes, the process will launch all the Docker containers (through docker-compose), create a key pair for the Coordinator,  configure the Coordinator public key for the initial node, generate an initial IOTA Address holding all IOTAs, the identity for our Nodes, etc i.e. our [deployment architecture](#mvp-deployment-architecture-of-a-private-tangle) and all the steps described [here](https://wiki.iota.org/hornet/getting_started/private_tangle), but **fully automated**, with "one click"!.
 
 The Parameters of this "one click" installation are as follows (further details can be found at [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/config):
 
@@ -144,7 +144,7 @@ To start our Private Tangle through the command line:
 
 You can optionally pass the amount of time (in seconds) to wait for the Coordinator bootstrap step. This step enables the Coordinator to bootstrap by emitting its first milestone.
 
-Behind the scenes, our process will create the identity for the Coordinator, the keys that will be used for signing milestones, an initial IOTA Address holding all IOTAs, the identity of our Nodes, etc i.e. all the steps described [here](https://hornet.docs.iota.org/getting_started/private_tangle.html), but fully automated. 
+Behind the scenes, our process will create the identity for the Coordinator, the keys that will be used for signing milestones, an initial IOTA Address holding all IOTAs, the identity of our Nodes, etc i.e. all the steps described [here](https://wiki.iota.org/hornet/getting_started/private_tangle), but fully automated. 
 
 After the process finishes you should see the following docker containers up and running:
 
@@ -231,7 +231,7 @@ The main parameter is a Node connection string. Such string has different fields
 
 After executing the commands described above a new Docker container (named `my-node`) executing a Hornet node will be running. Such Hornet node will be automatically peered with the `node1` Hornet node. The snapshot and Coordinator's public keys will be taken, respectively, from the configuration and snapshot folders of your Private Tangle. 
 
-Note: In case you want to spin a node from a different machine (or base folder) you would need to pass manually those parameters including the [multiaddr](https://hornet.docs.iota.org/post_installation/peering/#addressing-peer-neighbors) peer address of the node (for instance `node1`) you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
+Note: In case you want to spin a node from a different machine (or base folder) you would need to pass manually those parameters including the [multiaddr](https://wiki.iota.org/hornet/post_installation/peering#addressing-peer-neighbors) peer address of the node (for instance `node1`) you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
 
 ## Limitations and Troubleshooting
 
