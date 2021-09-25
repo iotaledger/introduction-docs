@@ -108,4 +108,4 @@ A verifier node is a Chrysalis Phase 2 node which upon seeing receipts:
 1. Additionally it also checks that all confirmed funds on the legacy network for the given legacy milestone, are
    indeed minted with a given batch of receipts (i.e. nothing is left out).
 
-See [Hornet as a verifier node](https://hornet.docs.iota.org/post_installation/run_as_verifier.html)
+See [Hornet as a verifier node](https://wiki.iota.org/hornet/post_installation/run_as_a_verifier)
