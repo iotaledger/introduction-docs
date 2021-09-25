@@ -27,7 +27,7 @@ On average, confirmation times on the new network are around 10 seconds. Once a 
 
 ## Hornet or Bee? Which Node Software Should I Use?
 
-You can either pick [Bee](https://bee.docs.iota.org/) (Rust based) or [Hornet](https://hornet.docs.iota.org/) (Go based). We currently recommend Hornet since it’s the most complete version of the node software. Bee is still missing some optional features you might wish to use.
+You can either pick [Bee](https://wiki.iota.org/bee/getting_started/getting_started) (Rust based) or [Hornet](https://wiki.iota.org/hornet/welcome) (Go based). We currently recommend Hornet since it’s the most complete version of the node software. Bee is still missing some optional features you might wish to use.
 
 ## What are Spent Addresses and Why are they Dangerous?
 - In the IOTA 1.0 network, IOTA used Winternitz One Time Signatures (W-OTS) - think of these as, more or less, an authenticator and validator for a transaction. These keys and signatures are highly secure against malicious attacks for signing transactions. But, on the downside, by signing a transaction, W-OTS reveals parts of a private key for the specific address tokens are being spent from. 
