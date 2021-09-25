@@ -49,7 +49,7 @@ Features of the Wallet Library:
 
 The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with the IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database; however, using the Stronghold component is highly recommended due to the most advanced level of security being applied.
 
-For further reference, you can see the [full documentation here](https://wallet-lib.docs.iota.org).
+For further reference, you can see the [full documentation here](https://wiki.iota.org/wallet.rs/welcome).
 
 The following examples cover the *multi account approach* using `NodeJS` binding:
 
@@ -134,7 +134,7 @@ Once the backend storage is created, individual accounts for individual users ca
 
 Each account is related to a specific IOTA network (mainnet/devnet) which is referenced by a node property, such as node url (in this example, the Chrysalis devnet balancer).
 
-For more information about `clientOptions`, please refer to [Wallet NodeJs API Reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html).
+For more information about `clientOptions`, please refer to [Wallet NodeJs API Reference](https://wiki.iota.org/wallet.rs/libraries/nodejs/api_reference).
 
 The `Alias` can be whatever fits to the given use case and should be unique. The `Alias` is usually used to identify the given account later on. Each account is also represented by an `index` which is incremented (by 1) every time a new account is created. Any account can be then referred to via `index`, `alias`, or one of its generated `addresses`.
 
@@ -230,7 +230,7 @@ data: {
 
 `accountId` can then be used to identify the given account via `AccountManager.getAccount(accountId)`.
 
-For further reference, you can read more about events in the [API reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html#addeventlistenerevent-cb).
+For further reference, you can read more about events in the [API reference](https://wiki.iota.org/wallet.rs/libraries/nodejs/api_reference#addeventlistenerevent-cb).
 
 ### 5. Check the Account Balance
 
