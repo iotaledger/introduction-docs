@@ -1,3 +1,16 @@
+---
+description: The wallet library is a stateful library for developers, recommended if using IOTA for token transfers. This library has a stateful design and adds support for handling and monitoring of multiple account/addresses.
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- stateful
+- value transactions
+- Rust
+- python
+- nodejs
+- C
+- wallet
+- stronghold.rs
+---
 # IOTA Client Library
 
 The official client library for interacting with the IOTA Tangle allows you to:

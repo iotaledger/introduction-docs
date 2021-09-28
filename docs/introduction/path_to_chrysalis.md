@@ -1,3 +1,15 @@
+---
+description: Chrysalis was the most promising series of upgrades made to IOTA yet with increased transaction throughput, network stability, improved usability.
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- EdDSA
+- phases
+- upgrades
+- performance
+- tip selection
+- UTXO
+- efficiency
+---
 # Path to Chrysalis
 
 One of the IOTA Foundation’s primary roles is defining and delivering on a development roadmap that aligns with the Foundation's strategy to reach production-readiness and adoption.
@@ -17,7 +29,7 @@ The intended outcomes for Chrysalis were:
 
 ## The Stages to Chrysalis
 
-![](/img/introduction/path_to_chrysalis/01.png)
+![The stages to Chrysalis](/img/introduction/path_to_chrysalis/01.png)
 
 The Chrysalis upgrade was a complex undertaking. We coordinated a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. In addition to the core node software, we also needed to update our wallet software, our libraries, and the entire infrastructure.  
 

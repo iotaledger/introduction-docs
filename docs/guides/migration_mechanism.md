@@ -1,3 +1,16 @@
+---
+description: Description of the migration components and mechanism used to migrate from IOTA 1.0 to IOTA 1.5(Chrysalis). 
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- WOTS addresses
+- trustless
+- migration mechanism
+- treasury
+- Firefly
+- wallet
+- legacy nodes
+---
+
 # How the IOTA Chrysalis Phase 2 Token Migration Works
 
 For the transition to Chrysalis Phase 2, the IOTA Foundation had to develop a way for funds to be migrated to the new
@@ -88,24 +101,10 @@ Essentially, via the Firefly wallet, token holders:
 
 ### Verifier Node
 
-A verifier node was a Chrysalis Phase 2 node which upon seeing receipts:
-
-1. Queried a legacy node for the confirmation data for the specified milestone in the receipt.
-1. Then performed WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
-1. Additionally it also checked that all confirmed funds on the legacy network for the given legacy milestone, were
-1. Produce migration bundles which sent funds to `migration addresses` controlled by the given owner.
-1. These bundles are confirmed on the legacy network.
-1. The Chrysalis Phase 2 Coordinator picks these confirmed legacy bundles up and generates receipts minting those funds
-   to the target Ed25519 address.
-1. Verifier nodes verify the receipts and make sure that the funds originate from the legacy network.
-
-### Verifier Node
-
 A verifier node is a Chrysalis Phase 2 node which upon seeing receipts:
 
 1. Queries a legacy node for the confirmation data for the specified milestone in the receipt.
 1. Then performs WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
-1. Additionally it also checks that all confirmed funds on the legacy network for the given legacy milestone, are
-   indeed minted with a given batch of receipts (i.e. nothing is left out).
+1. Additionally, it also checks that all confirmed funds on the legacy network for the given legacy milestone, are indeed minted with a given batch of receipts (i.e. nothing is left out).
 
 See [Hornet as a verifier node](https://wiki.iota.org/hornet/post_installation/run_as_a_verifier)

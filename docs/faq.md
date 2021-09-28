@@ -1,3 +1,21 @@
+---
+description: Frequently asked questions regarding the Chrysalis implementation. 
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- FAQ
+- dust protection
+- coordicide
+- transactions
+- hornet
+- bee
+- libraries
+- wallet.rs
+- iota.rs
+- Firefly
+- C
+- spent addresses
+- bundle mining
+---
 # FAQ
 
 
@@ -15,7 +33,7 @@ Additionally, there is also a native C ([iota.c](https://github.com/iotaledger/i
 
 Since IOTA is feeless and has the ability to send microtransactions, attackers could use this to spam the network with very low value transactions, which we call dust. To avoid this, we only allow microtransaction below 1Mi of IOTA tokens to another address if you already have at least 1Mi on that address.
 
-For referemce, you can read more about Dust Protection [RFC](https://github.com/iotaledger/protocol-rfcs/pull/32).
+For reference, you can read more about Dust Protection on this [RFC](https://github.com/iotaledger/protocol-rfcs/pull/32).
 
 ## What is Happening with Coordicide?
 

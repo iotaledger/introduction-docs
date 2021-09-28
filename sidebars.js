@@ -28,7 +28,7 @@ module.exports = {
       label: 'Firefly',
       items: [{
           type: 'doc',
-          id: 'firefly/README',
+          id: 'firefly/introduction',
           label: 'Introduction'
         },
         {
@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'node-software/node-software',
+      id: 'node_software',
       label: 'Node Software'
     }, {
       type: 'category',
@@ -64,32 +64,32 @@ module.exports = {
       label: 'Guides',
       items: [{
           type: 'doc',
-          id: 'guides/README',
+          id: 'guides/overview',
           label: 'Overview'
         },
         {
           type: 'doc',
-          id: 'guides/dev_guide',
+          id: 'guides/developer',
           label: 'Developer'
         },
         {
           type: 'doc',
-          id: 'guides/exchange_guide',
+          id: 'guides/exchange',
           label: 'Exchange'
         },
         {
           type: 'doc',
-          id: 'guides/token_guide',
+          id: 'guides/token_migration',
           label: 'Token Migration'
         },
         {
           type: 'doc',
-          id: 'guides/migration-mechanism',
+          id: 'guides/migration_mechanism',
           label: 'Migration Mechanism'
         },
         {
           type: 'doc',
-          id: 'guides/hub_guide',
+          id: 'guides/hub_migration',
           label: 'Hub Migration'
         },
         {
@@ -116,12 +116,12 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'tutorials/one-click-private-tangle',
+      id: 'tutorials/one_click_private_tangle',
       label: 'Private Tangle'
     },
     {
       type: 'doc',
-      id: 'rfc',
+      id: 'protocol_rfc',
       label: 'Protocol RFCs'
     },
     {
