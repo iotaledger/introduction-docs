@@ -15,7 +15,7 @@ In this tutorial, you will learn how to use a set of Docker-based tools and pre-
 
 ## Background
 
-IOTA [mainnet](../mainnet.md) and [devnet](../devnet.md) are public IOTA Networks where you can develop your own applications. Due to scalability or data locality reasons, sometimes it is also needed to run your own *local* IOTA Tangle (aka Private Tangle). Such (child) Tangle might also be *anchored* to the IOTA mainnet, as a Data Shard (feature currently under development). To automate and simplify the deployment of a Chrysalis Tangle, some tools publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository have been developed. Additionally, the IOTA Foundation has integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and, in the future, on other Cloud marketplaces.
+IOTA [mainnet](../mainnet.md) and [devnet](../devnet.md) are public IOTA Networks where you can develop your own applications. Due to scalability or data locality reasons, sometimes it is also needed to run your own *local* IOTA Tangle (aka Private Tangle). In the future such (child) Tangle might also be *anchored* to the IOTA mainnet, through Data Sharding (feature currently under research and development by the IOTA Foundation). To automate and simplify the deployment of a Chrysalis Tangle, some tools publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository have been developed. Additionally, the IOTA Foundation has integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and, in the future, on other Cloud marketplaces.
 
 ## MVP Deployment Architecture
 
@@ -98,12 +98,12 @@ The summary of services exposed to the outside world (through the host) is as fo
 
 The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Tangle can be achieved. IOTA Foundation intends to provide automatic, "one click" deployment of this kind of enhanced architectures in a future version of this software. 
 
-To support the deployment of a new Tangles, the IOTA Community has developed a set of shell scripts and configuration templates to make it easier to deploy a (Docker based) Tangle with the architecture described above. You can also customize the [default configuration files](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config) if, for instance, you want to enable extra [Hornet plugins](https://hornet.docs.iota.org/post_installation/config.html). 
+To support the deployment of an IOTA Tangle, the IOTA Community has developed a set of shell scripts and configuration templates to make it easier to deploy a (Docker based) Tangle with the architecture described above. You can also customize the [default configuration files](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config) if, for instance, you want to enable extra [Hornet plugins](https://hornet.docs.iota.org/post_installation/config.html). 
 
 But now let us see how we can launch our Tangle via a "single click". We have two options: through the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) or through any [Docker-enabled machine](#one-click-private-tangle-on-any-docker-enabled-vm). 
 
 
-## Deploying a new Tangle in "One Click" on AWS
+## Deploying your Tangle in "One Click" on AWS
 
 To materialize on AWS using the deployment architecture described above, go to the AWS Marketplace and install this [product](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and follow the [instructions](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). That's it!. 
 
@@ -117,7 +117,7 @@ The Parameters of this "one click" installation are as follows (further details 
 
 Further instructions for AWS deployments can be found [here](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). If you want to know lower-level details of the AWS installation, how to do it yourself in any Docker-enabled VM, and what happens under the scenes, please continue reading. 
 
-## Deploying a new Tangle in "One Click" on any Docker-enabled VM
+## Deploying your Tangle in "One Click" on any Docker-enabled VM
 
 ### Prerequisites
 
