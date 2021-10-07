@@ -254,7 +254,7 @@ If no port numbers are provided, i.e. only the container name is supplied, no po
 
 After executing the commands described above, a new Docker container (named `my-node`) executing a Hornet node will be running. This Hornet node will be automatically peered. The snapshot, Coordinator's public keys, and autopeering entry node address will be taken from the snapshot and configuration folders of your Tangle. 
 
-Note: In case you want to spin a node from a different machine (or base folder) you would need to pass manually those parameters including a [multiaddr](https://hornet.docs.iota.org/post_installation/peering/#addressing-peer-neighbors) peer address of a node to peer with (for instance `node1`) you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
+Note: In case you want to spin a node from a different machine (or base folder) you would need to manually pass those parameters including a [multiaddr](https://hornet.docs.iota.org/post_installation/peering/#addressing-peer-neighbors) peer address of a node to peer with (for instance `node1`) you want to peer with, as explained [here](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-private-net/extra-nodes). 
 
 ## Limitations and Troubleshooting
 
