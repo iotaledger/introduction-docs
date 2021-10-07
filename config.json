@@ -1,0 +1,6 @@
+{
+    "repoName": "chrysalis-docs",
+    "contentFolder": "chrysalis-docs",
+    "localWikiFolder": "local-wiki",
+    "excludeList": ["node_modules", "target", ".git/", "local-wiki"]
+}
