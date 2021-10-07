@@ -103,7 +103,7 @@ To support the deployment of an IOTA Tangle, the IOTA Community has developed a 
 But now let us see how we can launch our Tangle via a "single click". We have two options: through the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) or through any [Docker-enabled machine](#one-click-private-tangle-on-any-docker-enabled-vm). 
 
 
-## Deploying your Tangle in "One Click" on AWS
+## Deploying Your Tangle in "One Click" on AWS
 
 To materialize on AWS using the deployment architecture described above, go to the AWS Marketplace and install this [product](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and follow the [instructions](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). That's it!. 
 
