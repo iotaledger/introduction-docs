@@ -29,7 +29,7 @@ There are three main nodes identified:
 
 * The **Spammer**: A node that periodically sends messages to your Tangle, thus enabling a minimal message load to support transaction approval as per the IOTA protocol. 
 
-* The **Regular Hornet Node** (`node1`): An initial node, it is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later join your Tangle. 
+* The **Regular Hornet Node** (`node1`): An initial node that is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later join your Tangle. 
 
 These three nodes are peered amongst each other as our architecture is based on Docker, so that each node runs within a Docker Container and all containers are attached to the same network named `private-tangle`.
 
