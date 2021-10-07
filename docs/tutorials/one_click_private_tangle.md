@@ -96,7 +96,7 @@ The summary of services exposed to the outside world (through the host) is as fo
 | Explorer Web App | `explorer-webapp` | `8082`        |               |
 
 
-The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Tangle can be achieved. IOTA Foundation intends to provide automatic, "one click" deployment of this kind of enhanced architectures in a future version of this software. 
+The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Tangle can be achieved. The IOTA Foundation intends to provide automatic, "one click" deployment of this kind of enhanced architectures in a future version of this software. 
 
 To support the deployment of an IOTA Tangle, the IOTA Community has developed a set of shell scripts and configuration templates to make it easier to deploy a (Docker based) Tangle with the architecture described above. You can also customize the [default configuration files](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/config) if, for instance, you want to enable extra [Hornet plugins](https://hornet.docs.iota.org/post_installation/config.html). 
 
