@@ -149,7 +149,7 @@ cd one-click-tangle/hornet-private-net
 chmod +x ./private-tangle.sh
 ```
 
-### Run your new Tangle
+### Run your New Tangle
 
 To start our Tangle through the command line:
 
