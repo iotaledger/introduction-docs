@@ -9,7 +9,7 @@ keywords:
 - VM
 ---
 
-# Deploy your own Tangle "in one click" Tutorial
+# Deploy Your Own Tangle "In One Click" Tutorial
 
 In this tutorial, you will learn how to use a set of Docker-based tools and pre-configured setups to deploy your own ([hornet-based](https://github.com/gohornet/hornet)) Chrysalis Tangle in **"one click"** to cloud environments or platforms.
 
