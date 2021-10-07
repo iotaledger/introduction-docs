@@ -223,7 +223,7 @@ cd ../explorer
 ./tangle-explorer.sh install ../hornet-private-net
 ```
 
-The Tangle Explorer will automatically be configured with the parameters of ouyourr Tangle and once the docker build process finishes, you should find the following additional docker containers up and running:
+The Tangle Explorer will automatically be configured with the parameters of your Tangle and once the docker build process finishes, you should find the following additional docker containers up and running:
 
 ```console
 dd4bcad67c5e        iotaledger/explorer-webapp   "docker-entrypoint.s…"   2 days ago          Up 2 days           0.0.0.0:8082->80/tcp                                                                   explorer-webapp
