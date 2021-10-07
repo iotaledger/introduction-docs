@@ -117,7 +117,7 @@ The Parameters of this "one click" installation are as follows (further details 
 
 Further instructions for AWS deployments can be found [here](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-private-net/README_AWS.md). If you want to know lower-level details of the AWS installation, how to do it yourself in any Docker-enabled VM, and what happens under the scenes, please continue reading. 
 
-## Deploying your Tangle in "One Click" on any Docker-enabled VM
+## Deploying Your Tangle in "One Click" on any Docker-enabled VM
 
 ### Prerequisites
 
