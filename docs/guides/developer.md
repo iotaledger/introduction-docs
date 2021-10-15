@@ -52,7 +52,7 @@ For further reference, please see our [Protocol-rfc#0020 - Bech32 Address Format
 
 With the updated [wallet library](../libraries/wallet.md), developers do not need to use a self-generated seed. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.
 
-More information about IOTA Wallet Library is available on [Wallet docs page](https://wiki.iota.org/wallet.rs/welcome) or in the [Exchange guide](exchange_guide.md), which is mainly focused on value transactions.
+More information about IOTA Wallet Library is available on [Wallet docs page](https://wiki.iota.org/wallet.rs/welcome) or in the [Exchange guide](https://wiki.iota.org/chrysalis-docs/guides/exchange), which is mainly focused on value transactions.
 
 :::tip
 
@@ -104,7 +104,7 @@ And there are few additional things to note:
 
 :::tip 
 
-Having many different accounts may have a negative impact on performance while [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://wiki.iota.org/wallet.rs/welcome) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](https://wiki.iota.org/chrysalis-docs/guides/exchange_guide) provides some useful tips how different accounts may be leveraged.
+Having many different accounts may have a negative impact on performance while [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://wiki.iota.org/wallet.rs/welcome) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](https://wiki.iota.org/chrysalis-docs/guides/exchange) provides some useful tips how different accounts may be leveraged.
 
 :::
 
