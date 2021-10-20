@@ -16,7 +16,7 @@ We recommend using the load balancer for most scenarios.
 Single node endpoints that expose native [MQTT](https://mqtt.org/), in case you need them, are:
 
 - [https://api.thin-hornet-0.h.chrysalis-devnet.iota.cafe](https://api.thin-hornet-0.h.chrysalis-devnet.iota.cafe)
-- [https://api.thin-hornet-0.h.chrysalis-devnet.iota.cafe](https://api.thin-hornet-0.h.chrysalis-devnet.iota.cafe)
+- [https://api.thin-hornet-1.h.chrysalis-devnet.iota.cafe](https://api.thin-hornet-1.h.chrysalis-devnet.iota.cafe)
 - [mqtt.lb-0.h.chrysalis-devnet.iota.cafe:1883](mqtt.lb-0.h.chrysalis-devnet.iota.cafe:1883)
 - [mqtt.lb-1.h.chrysalis-devnet.iota.cafe:1883](mqtt.lb-1.h.chrysalis-devnet.iota.cafe:1883)
 
