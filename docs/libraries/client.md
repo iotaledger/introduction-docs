@@ -53,6 +53,13 @@ If you mainly intend to process value transfers, we recommend you use our statef
 - [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/java) - Browse through the code and learn what's happening behind the scenes. Pull requests are very welcome!
 - [API Documentation](https://wiki.iota.org/iota.rs/libraries/java/api_reference) - The IOTA Client Library Java API Documentation.
 
+## Wasm
+
+- [Getting Started](https://wiki.iota.org/iota.rs/libraries/wasm/getting_started) - Getting Started with Wasm and the IOTA Client Library.
+- [Examples](https://wiki.iota.org/iota.rs/libraries/wasm/examples) - Find starting points or inspiration in the examples.
+- [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/wasm) - Browse through the code and learn what's happening behind the scenes. Pull requests are very welcome!
+- [API Documentation](https://wiki.iota.org/iota.rs/libraries/wasm/api_reference) - The IOTA Client Library Wasm API Documentation.
+
 ## C
 
 - [Getting Started](https://iota-c-client.readthedocs.io/en/latest/client_intro.html) - Getting Started with C and the IOTA Client Library.
