@@ -102,8 +102,8 @@ We recommend using the load balancer for most scenarios.
 
 Single node endpoints that expose native MQTT in case you need this are:
 
-- [mqtt.lb-0.h.chrysalis-devnet.iota.cafe:1883](mqtt.lb-0.h.chrysalis-devnet.iota.cafe:1883)
-- [mqtt.lb-1.h.chrysalis-devnet.iota.cafe:1883](mqtt.lb-1.h.chrysalis-devnet.iota.cafe:1883)
+- `mqtt.lb-0.h.chrysalis-devnet.iota.cafe:1883`
+- `mqtt.lb-1.h.chrysalis-devnet.iota.cafe:1883`
 
 ## Conclusion
 
