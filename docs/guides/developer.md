@@ -108,8 +108,6 @@ Having many different accounts may have a negative impact on performance while [
 
 :::
 
-:::
-
 ![Address Generation](/img/guides/address_generation.svg)
 
 So in case of Chrysalis, the derivation path of address/key space is `[seed]/44/4218/{int}/{0,1}/{int}`:
