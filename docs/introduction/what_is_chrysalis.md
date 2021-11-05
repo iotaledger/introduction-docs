@@ -10,7 +10,7 @@ image: /img/logo/Chrysalis_logo_dark.png
 
 # What is Chrysalis?
 
-The objective of the IOTA Foundation was to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. This was achieved by an intermediate update called `Chrysalis`. You can read more about how Chrysalis was strategically released here.
+The objective of the IOTA Foundation was to optimize the IOTA mainnet before the release of IOTA 2.0 (Coordicide) to offer an enterprise-ready solution for our ecosystem. This was achieved by an intermediate update called `Chrysalis`. You can read more about how Chrysalis was strategically released here.
 
 ![IOTA1.0 vs Chrysalis(IOTA1.5) confirmation time](/img/introduction/what_is_chrysalis/00.gif)
 
