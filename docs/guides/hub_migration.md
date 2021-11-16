@@ -24,7 +24,7 @@ Dave de Fijter
 
 **Email**: [dave.defijter@iota.org](mailto:dave.defijter@iota.org)
 
-**Discord**: Dave [IF]#3333
+[**Discord**](https://discord.iota.org/): Dave [IF]#3333
 :::
 
 Because of the unique features of IOTA 1.0, it was difficult to manage IOTA transactions with just a library. With the Chrysalis update, we have updated to be more accommodating to industry-wide standards and developers. 
@@ -36,5 +36,5 @@ To upgrade from Hub to a Chrysalis implementation you will need to:
  - Integrate the Chrysalis network using [Wallet.rs](https://wiki.iota.org/wallet.rs/welcome) as mentioned in the [Exchange section](exchange.md).
  - Pause withdrawals/deposits.
  - Make sure all balances have been swept and all deposits have been processed.
- - Transfer all IOTA to a generated migration address (instructions to be provided).
+ - [Transfer all IOTA to a generated migration address](token_migration.md).
  - Once migrated, transfer the IOTA coins to your host wallet account on your wallet.rs implementation.
