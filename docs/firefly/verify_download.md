@@ -42,13 +42,25 @@ certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
 
 2. Go to **Digital Signatures** > **Details** > **View Certificate**.
 
+#### For Firefly 1.2.0 and earlier
 3. In the Certification Path tab, make sure that the path matches the following information:
 
-    - DigiCert.
-    - DigiCert SHA2 Assured Code Signing CA.
-    - IOTA Stiftung.
+    - DigiCert
+    - DigiCert SHA2 Assured Code Signing CA
+    - IOTA Stiftung
 
-4. Make sure that the Certificate status reads, "This certificate is OK.".
+4. Make sure that the Certificate status reads "This certificate is OK.".
+
+
+#### For Firefly 1.3.0 and later
+3. In the Certification Path tab, make sure that the path matches the following information:
+
+    - Sectigo (AAA)
+    - Sectigo Public Code Signing Root R46
+    - Sectigo Public Code Signing CA R36
+    - IOTA Stiftung
+
+4. Make sure that the Certificate status reads "This certificate is OK.".
 
 ## MacOS Operating System
 
