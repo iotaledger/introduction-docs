@@ -135,7 +135,7 @@ legacy network.
 
 [More detailed documentation for the following example](https://github.com/iotaledger/wallet.rs/blob/dev/bindings/nodejs/examples/8-migration.md)
 
-```javascript=
+```js
 /**
  * This example creates a new database and account,
  * and migrate funds from the legacy network to the chrysalis network
