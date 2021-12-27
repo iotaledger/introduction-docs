@@ -158,7 +158,7 @@ To follow these instructions you need the `sha256sum` package, which is included
 
 ### Verify the Code Signature
 
-1. Download the .asc and .gpg files in the Assets section of the [release notes](https://github.com/iotaledger/firefly/releases).
+1. Download the .asc file in the Assets section of the [release notes](https://github.com/iotaledger/firefly/releases).
 
 2. Import the Firefly GPG key from keyserver.ubuntu.com.
 
