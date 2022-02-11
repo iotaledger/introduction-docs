@@ -133,13 +133,13 @@ IOTA is no longer based on ternary. IOTA 1.5 uses binary to encode and broadcast
 
 A `message` can be up to 32 kb in size and it can hold variable sets of information called `payloads`. The number of payloads a single message can encapsulate is not given. Even a message without a `payload` is completely valid and can be broadcast. The `message` itself does not include any timestamp; a message timestamp is derived from an acceptance of the given message by the Tangle network.
 
-For further reference, please see our [Protocol-rfc#0017 - Message](https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md) 
+For further reference, please see our [TIP#0006 - Message](https://github.com/iotaledger/tips/blob/main/tips/TIP-0006/tip-0006.md) 
 
 A`payload` represents a layer of concern. Some payloads may change the state of the ledger (ex. `SignedTransactions`) and some may provide extra features to some specific applications and business use cases (ex. `IndexationPayload`).
 
 There are already implemented core payloads, such as `SignedTransaction`, `MilestonePayload`, and `IndexationPayload` but the message and payload definition is generic enough to incorporate any future payload(s) the community agrees upon.
 
-For further reference, please see our: [Protocol-rfc#0018 - Transaction Payload](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md)
+For further reference, please see our: [TIP#0018 - Transaction Payload](https://github.com/iotaledger/tips/blob/main/tips/TIP-0007/tip-0007.md)
 
 Needless to say, the IOTA network ensures the outer structure of the message itself is valid and strictly complies with network consensus protocol. However, the inner structure is very flexible, future-proof, and offers an unmatched network extensibility.
 
@@ -183,7 +183,7 @@ Every `output` also stores information about an IOTA address to which it is coup
 ## Selected Message Payloads
 Currently, there are two commonly used message payloads, `IndexationPayload` and `SignedTransaction` which can be combined based as needed.
 
-For further reference, please see our [Protocol-rfc#0018 - Transaction Payload](https://github.com/luca-moser/protocol-rfcs/blob/signed-tx-payload/text/0000-transaction-payload/0000-transaction-payload.md).
+For further reference, please see our [TIP#0007 - Transaction Payload](https://github.com/iotaledger/tips/blob/main/tips/TIP-0007/tip-0007.md).
 
 ### IndexationPayload
 `IndexationPayload` is a payload type that can be used to attach an arbitrary `data` and key `index` to a message. When this particular payload is leveraged, then a message and related data entity can be searched via key `index` in addition to a `message_id`.
@@ -206,10 +206,10 @@ In the UTXO model, each node in the network needs to keep track of all the curre
 
 :::
 
-For further reference, please see our [Protocol-rfc#0032 - Dust Protection](https://github.com/GalRogozinski/protocol-rfcs/blob/dust/text/0032-dust-protection/0032-dust-protection.md).
+For further reference, please see our [TIP#0015 - Dust Protection](https://github.com/iotaledger/tips/blob/main/tips/TIP-0015/tip-0015.md).
 
 ## Up to 8 Parents
 
 With IOTA 1.0, you always had to reference 2 parent transactions. With Chrysalis, we introduce a more dynamic number of parent nodes where you can reference up to 8 parents. We recommend you reference at least 2 unique parents at all times for the best possible results.
 
-For further reference, please see our [Protocol-rfc#0017 - Message](https://github.com/GalRogozinski/protocol-rfcs/blob/message/text/0017-message/0017-message.md). 
+For further reference, please see our [TIP#0008 - Message](https://github.com/iotaledger/tips/blob/main/tips/TIP-0008/tip-0008.md). 
