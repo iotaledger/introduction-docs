@@ -1,10 +1,3 @@
----
-description: The page outlines the necessary steps to verify your Firefly downloads. 
-image: /img/logo/01_butterfly.png
-keywords:
-- Firefly
-- How to
----
 # Verify your Firefly Desktop Download
 
 **When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this how-to guode, you learn how to verify Firefly Desktop downloads.**

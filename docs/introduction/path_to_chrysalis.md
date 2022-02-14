@@ -1,11 +1,3 @@
----
-description: One of the IOTA Foundation’s primary roles is defining and delivering a development roadmap that aligns with the Foundation's strategy to reach production-readiness and adoption before Coordicide. This section outlines part of the overall Coordicide roadmap. 
-image: /img/logo/01_butterfly.png
-keywords:
-- Chrysalis
-- explanation
-
----
 # Path to Chrysalis
 
 One of the IOTA Foundation’s primary roles is defining and delivering on a development roadmap that aligns with it's strategy to reach production-readiness and adoption.

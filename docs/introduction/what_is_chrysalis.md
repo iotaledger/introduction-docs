@@ -1,18 +1,3 @@
----
-description: The objective of the IOTA Foundation is to optimize the IOTA mainnet before Coordicide through an intermediate update called Chrysalis. 
-image: /img/logo/01_butterfly.png
-keywords:
-- Chrysalis
-- explanation
-- White flag
-- Milestone
-- URTS
-- Ed25519 Signature scheme
-- Atomic transactions
-- UTXO
-- Internal binary
-- Client libraries
----
 # What is Chrysalis
 
 The objective of the IOTA Foundation is to optimize the IOTA mainnet before Coordicide and to offer an enterprise-ready solution for our ecosystem. `Chrysalis` acts as an intermediate update in the progress towards Coordicide. This article outlines what the Chrysalis upgrade entails.  
