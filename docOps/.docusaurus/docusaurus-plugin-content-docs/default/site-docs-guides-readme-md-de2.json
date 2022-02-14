@@ -1,0 +1,25 @@
+{
+  "unversionedId": "guides/README",
+  "id": "guides/README",
+  "isDocsHomePage": false,
+  "title": "IOTA Chrysalis Guides",
+  "description": "- Developer Guide.",
+  "source": "@site/docs/guides/README.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/",
+  "permalink": "/guides/",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/guides/README.md",
+  "version": "current",
+  "frontMatter": {
+    "slug": "/guides/"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "IOTA Wallet Library",
+    "permalink": "/libraries/wallet"
+  },
+  "next": {
+    "title": "Developer Guide to Chrysalis",
+    "permalink": "/guides/dev_guide"
+  }
+}

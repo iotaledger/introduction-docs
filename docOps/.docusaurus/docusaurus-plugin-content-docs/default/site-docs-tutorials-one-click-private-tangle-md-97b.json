@@ -1,0 +1,25 @@
+{
+  "unversionedId": "tutorials/one-click-private-tangle",
+  "id": "tutorials/one-click-private-tangle",
+  "isDocsHomePage": false,
+  "title": "One Click Private Tangle Tutorial",
+  "description": "In this tutorial, you will learn how to use a set of Docker-based tools and pre-configured setups to deploy a (hornet-based) Chrysalis Private Tangle in \"one click\" to cloud environments or platforms.",
+  "source": "@site/docs/tutorials/one-click-private-tangle.md",
+  "sourceDirName": "tutorials",
+  "slug": "/one-click-private-tangle",
+  "permalink": "/one-click-private-tangle",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/tutorials/one-click-private-tangle.md",
+  "version": "current",
+  "frontMatter": {
+    "slug": "/one-click-private-tangle"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Testnet",
+    "permalink": "/testnet"
+  },
+  "next": {
+    "title": "IOTA Protocol RFCs",
+    "permalink": "/rfc"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "libraries/overview",
+  "id": "libraries/overview",
+  "isDocsHomePage": false,
+  "title": "Libraries",
+  "description": "The IOTA client libraries allow you to easily integrate IOTA into your own applications. You can choose a library to match your use case.",
+  "source": "@site/docs/libraries/overview.md",
+  "sourceDirName": "libraries",
+  "slug": "/libraries/",
+  "permalink": "/libraries/",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/libraries/overview.md",
+  "version": "current",
+  "frontMatter": {
+    "slug": "/libraries/"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Node Software",
+    "permalink": "/node_software"
+  },
+  "next": {
+    "title": "IOTA Client Library",
+    "permalink": "/libraries/client"
+  }
+}

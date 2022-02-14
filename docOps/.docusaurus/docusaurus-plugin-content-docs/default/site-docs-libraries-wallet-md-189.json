@@ -1,0 +1,23 @@
+{
+  "unversionedId": "libraries/wallet",
+  "id": "libraries/wallet",
+  "isDocsHomePage": false,
+  "title": "IOTA Wallet Library",
+  "description": "The wallet library is a stateful library for developers; essentially it's a programmable wallet. We recommended that you use this library if you are mainly using IOTA for token transfers. This library stateful design add support for handling and monitoring of multiple account/addresses.",
+  "source": "@site/docs/libraries/wallet.md",
+  "sourceDirName": "libraries",
+  "slug": "/libraries/wallet",
+  "permalink": "/libraries/wallet",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/libraries/wallet.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "IOTA Client Library",
+    "permalink": "/libraries/client"
+  },
+  "next": {
+    "title": "IOTA Chrysalis Guides",
+    "permalink": "/guides/"
+  }
+}

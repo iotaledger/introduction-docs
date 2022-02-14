@@ -1,0 +1,23 @@
+{
+  "unversionedId": "firefly/verify_download",
+  "id": "firefly/verify_download",
+  "isDocsHomePage": false,
+  "title": "Verify your Firefly Desktop Download",
+  "description": "When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this tutorial, you learn how to verify Firefly Desktop downloads.",
+  "source": "@site/docs/firefly/verify_download.md",
+  "sourceDirName": "firefly",
+  "slug": "/firefly/verify_download",
+  "permalink": "/firefly/verify_download",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/firefly/verify_download.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Firefly",
+    "permalink": "/firefly/"
+  },
+  "next": {
+    "title": "Node Software",
+    "permalink": "/node_software"
+  }
+}

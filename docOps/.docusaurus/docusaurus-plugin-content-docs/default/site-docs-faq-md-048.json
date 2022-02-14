@@ -1,0 +1,19 @@
+{
+  "unversionedId": "faq",
+  "id": "faq",
+  "isDocsHomePage": false,
+  "title": "FAQ",
+  "description": "Which Libraries are Available for Chrysalis?",
+  "source": "@site/docs/faq.md",
+  "sourceDirName": ".",
+  "slug": "/faq",
+  "permalink": "/faq",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/faq.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Resources",
+    "permalink": "/resources"
+  }
+}

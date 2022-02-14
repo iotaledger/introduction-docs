@@ -1,0 +1,23 @@
+{
+  "unversionedId": "guides/hub_guide",
+  "id": "guides/hub_guide",
+  "isDocsHomePage": false,
+  "title": "IOTA Hub Migration Guide",
+  "description": "This guide outlines how to switch from IOTA Hub to using Wallet.rs or its bindings instead.",
+  "source": "@site/docs/guides/hub_guide.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/hub_guide",
+  "permalink": "/guides/hub_guide",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/guides/hub_guide.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "How the IOTA Chrysalis Phase 2 Token Migration Works",
+    "permalink": "/guides/migration-mechanism"
+  },
+  "next": {
+    "title": "Backup and Security",
+    "permalink": "/guides/backup_security"
+  }
+}

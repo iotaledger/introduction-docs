@@ -1,0 +1,23 @@
+{
+  "unversionedId": "guides/token_guide",
+  "id": "guides/token_guide",
+  "isDocsHomePage": false,
+  "title": "Chrysalis Migration",
+  "description": "By the end of the Chrysalis migration, a number of aspects at IOTA changed for the better. With easier ways to",
+  "source": "@site/docs/guides/token_guide.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/token_guide",
+  "permalink": "/guides/token_guide",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/guides/token_guide.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Exchange Guide",
+    "permalink": "/guides/exchange_guide"
+  },
+  "next": {
+    "title": "How the IOTA Chrysalis Phase 2 Token Migration Works",
+    "permalink": "/guides/migration-mechanism"
+  }
+}

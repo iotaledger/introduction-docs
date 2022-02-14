@@ -1,0 +1,23 @@
+{
+  "unversionedId": "guides/exchange_guide",
+  "id": "guides/exchange_guide",
+  "isDocsHomePage": false,
+  "title": "Exchange Guide",
+  "description": "The IOTA Wallet Library",
+  "source": "@site/docs/guides/exchange_guide.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/exchange_guide",
+  "permalink": "/guides/exchange_guide",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/guides/exchange_guide.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Developer Guide to Chrysalis",
+    "permalink": "/guides/dev_guide"
+  },
+  "next": {
+    "title": "Chrysalis Migration",
+    "permalink": "/guides/token_guide"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "testnet",
+  "id": "testnet",
+  "isDocsHomePage": false,
+  "title": "Testnet",
+  "description": "Public Infrastructure",
+  "source": "@site/docs/testnet.md",
+  "sourceDirName": ".",
+  "slug": "/testnet",
+  "permalink": "/testnet",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/testnet.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Mainnet",
+    "permalink": "/mainnet"
+  },
+  "next": {
+    "title": "One Click Private Tangle Tutorial",
+    "permalink": "/one-click-private-tangle"
+  }
+}

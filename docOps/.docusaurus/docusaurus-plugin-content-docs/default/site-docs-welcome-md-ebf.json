@@ -1,0 +1,19 @@
+{
+  "unversionedId": "welcome",
+  "id": "welcome",
+  "isDocsHomePage": false,
+  "title": "Welcome",
+  "description": "This page outlines the fundamental changes to the IOTA protocol which will be deployed in 2021 in a release called Chrysalis.",
+  "source": "@site/docs/welcome.md",
+  "sourceDirName": ".",
+  "slug": "/welcome",
+  "permalink": "/welcome",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/welcome.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "next": {
+    "title": "What is Chrysalis?",
+    "permalink": "/introduction/what_is_chrysalis"
+  }
+}

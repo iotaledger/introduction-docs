@@ -1,0 +1,14 @@
+{
+  "unversionedId": "tutorials/README",
+  "id": "tutorials/README",
+  "isDocsHomePage": false,
+  "title": "README",
+  "description": "",
+  "source": "@site/docs/tutorials/README.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/README",
+  "permalink": "/tutorials/README",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/tutorials/README.md",
+  "version": "current",
+  "frontMatter": {}
+}

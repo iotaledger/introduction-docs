@@ -1,0 +1,23 @@
+{
+  "unversionedId": "rfc",
+  "id": "rfc",
+  "isDocsHomePage": false,
+  "title": "IOTA Protocol RFCs",
+  "description": "Changes to the IOTA protocol have to go through a proposal process first, where a proposal is posted as a \"Request for comment\" (RFC). The Chrysalis protocol changes are described in full detail in these RFC's which can be found below:",
+  "source": "@site/docs/rfc.md",
+  "sourceDirName": ".",
+  "slug": "/rfc",
+  "permalink": "/rfc",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/rfc.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "One Click Private Tangle Tutorial",
+    "permalink": "/one-click-private-tangle"
+  },
+  "next": {
+    "title": "Resources",
+    "permalink": "/resources"
+  }
+}

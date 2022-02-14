@@ -1,0 +1,23 @@
+{
+  "unversionedId": "guides/snapshot_validation_bootstrapping",
+  "id": "guides/snapshot_validation_bootstrapping",
+  "isDocsHomePage": false,
+  "title": "Chrysalis Snapshot Validation/Boostrapping",
+  "description": "This guide outlined how to take part in the global snapshot, respectively genesis snapshot creation for the",
+  "source": "@site/docs/guides/snapshot_validation_bootstrapping.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/snapshot_validation_bootstrapping",
+  "permalink": "/guides/snapshot_validation_bootstrapping",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/guides/snapshot_validation_bootstrapping.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Backup and Security",
+    "permalink": "/guides/backup_security"
+  },
+  "next": {
+    "title": "Mainnet",
+    "permalink": "/mainnet"
+  }
+}

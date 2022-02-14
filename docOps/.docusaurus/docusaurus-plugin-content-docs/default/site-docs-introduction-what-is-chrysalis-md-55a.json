@@ -1,0 +1,23 @@
+{
+  "unversionedId": "introduction/what_is_chrysalis",
+  "id": "introduction/what_is_chrysalis",
+  "isDocsHomePage": false,
+  "title": "What is Chrysalis?",
+  "description": "<<<<<<< HEAD",
+  "source": "@site/docs/introduction/what_is_chrysalis.md",
+  "sourceDirName": "introduction",
+  "slug": "/introduction/what_is_chrysalis",
+  "permalink": "/introduction/what_is_chrysalis",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/introduction/what_is_chrysalis.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Welcome",
+    "permalink": "/welcome"
+  },
+  "next": {
+    "title": "Path to Chrysalis",
+    "permalink": "/introduction/path_to_chrysalis"
+  }
+}

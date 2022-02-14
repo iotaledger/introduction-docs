@@ -1,0 +1,23 @@
+{
+  "unversionedId": "guides/backup_security",
+  "id": "guides/backup_security",
+  "isDocsHomePage": false,
+  "title": "Backup and Security",
+  "description": "Security Checklist",
+  "source": "@site/docs/guides/backup_security.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/backup_security",
+  "permalink": "/guides/backup_security",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/guides/backup_security.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "IOTA Hub Migration Guide",
+    "permalink": "/guides/hub_guide"
+  },
+  "next": {
+    "title": "Chrysalis Snapshot Validation/Boostrapping",
+    "permalink": "/guides/snapshot_validation_bootstrapping"
+  }
+}

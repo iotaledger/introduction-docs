@@ -1,0 +1,23 @@
+{
+  "unversionedId": "introduction/path_to_chrysalis",
+  "id": "introduction/path_to_chrysalis",
+  "isDocsHomePage": false,
+  "title": "Path to Chrysalis",
+  "description": "One of the IOTA Foundation’s primary roles is defining and delivering on a development roadmap that aligns with the Foundation's strategy to reach production-readiness and adoption.",
+  "source": "@site/docs/introduction/path_to_chrysalis.md",
+  "sourceDirName": "introduction",
+  "slug": "/introduction/path_to_chrysalis",
+  "permalink": "/introduction/path_to_chrysalis",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/introduction/path_to_chrysalis.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "What is Chrysalis?",
+    "permalink": "/introduction/what_is_chrysalis"
+  },
+  "next": {
+    "title": "Firefly",
+    "permalink": "/firefly/"
+  }
+}

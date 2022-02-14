@@ -1,0 +1,128 @@
+{
+  "/-deb": {
+    "component": "component---site-src-pages-index-jsc-4-f-f99",
+    "config": "config---5-e-9-4f3"
+  },
+  "/__docusaurus/debug-3d6": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/__docusaurus/debug/config-914": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/__docusaurus/debug/content-c28": {
+    "component": "component---theme-debug-contentba-8-ce7",
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-3cf": {
+    "component": "component---theme-debug-global-dataede-0fa"
+  },
+  "/__docusaurus/debug/metadata-31b": {
+    "component": "component---theme-debug-site-metadata-68-e-3d4"
+  },
+  "/__docusaurus/debug/registry-0da": {
+    "component": "component---theme-debug-registry-679-501"
+  },
+  "/__docusaurus/debug/routes-244": {
+    "component": "component---theme-debug-routes-946-699"
+  },
+  "/-948": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---935-fcf"
+  },
+  "/faq-155": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---faq-048-9a2"
+  },
+  "/firefly/-4a6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---firefly-7-a-8-f70"
+  },
+  "/firefly/verify_download-488": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---firefly-verify-download-9-c-5-7e5"
+  },
+  "/guides/-d13": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---guides-de-2-d99"
+  },
+  "/guides/backup_security-adb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---guides-backup-securitye-55-219"
+  },
+  "/guides/dev_guide-c81": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---guides-dev-guide-189-eb8"
+  },
+  "/guides/exchange_guide-470": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---guides-exchange-guide-9-ed-102"
+  },
+  "/guides/hub_guide-cad": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---guides-hub-guide-3-b-4-e6a"
+  },
+  "/guides/migration-mechanism-78b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---guides-migration-mechanism-54-d-d77"
+  },
+  "/guides/snapshot_validation_bootstrapping-53c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---guides-snapshot-validation-bootstrappingfa-8-d5e"
+  },
+  "/guides/token_guide-9d2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---guides-token-guidea-6-c-138"
+  },
+  "/introduction/path_to_chrysalis-2e4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---introduction-path-to-chrysalisb-55-704"
+  },
+  "/introduction/what_is_chrysalis-053": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---introduction-what-is-chrysalis-55-a-b40"
+  },
+  "/libraries/-0a0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---libraries-861-8da"
+  },
+  "/libraries/client-0a9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---libraries-client-947-35b"
+  },
+  "/libraries/wallet-746": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---libraries-wallet-189-55b"
+  },
+  "/mainnet-c6f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---mainnet-819-dfc"
+  },
+  "/node_software-867": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---node-softwareba-8-34f"
+  },
+  "/one-click-private-tangle-b0c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---one-click-private-tangle-97-b-8a0"
+  },
+  "/resources-fc0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---resourcesd-92-d89"
+  },
+  "/rfc-025": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---rfc-546-4ec"
+  },
+  "/testnet-169": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---testneteff-a6a"
+  },
+  "/tutorials/README-79f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---tutorials-readme-87-f-269"
+  },
+  "/welcome-f66": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---welcomeebf-48d"
+  }
+}

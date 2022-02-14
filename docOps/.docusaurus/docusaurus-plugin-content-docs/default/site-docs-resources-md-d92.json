@@ -1,0 +1,23 @@
+{
+  "unversionedId": "resources",
+  "id": "resources",
+  "isDocsHomePage": false,
+  "title": "Resources",
+  "description": "Official Support",
+  "source": "@site/docs/resources.md",
+  "sourceDirName": ".",
+  "slug": "/resources",
+  "permalink": "/resources",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/resources.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "IOTA Protocol RFCs",
+    "permalink": "/rfc"
+  },
+  "next": {
+    "title": "FAQ",
+    "permalink": "/faq"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "node-software/node-software",
+  "id": "node-software/node-software",
+  "isDocsHomePage": false,
+  "title": "Node Software",
+  "description": "We have been running the network exclusively on the Go powered Hornet node since the summer of 2020. For Chrysalis, we introduced the options of using an updated version of Hornet or our new Rust-based Bee node.",
+  "source": "@site/docs/node-software/node-software.md",
+  "sourceDirName": "node-software",
+  "slug": "/node_software",
+  "permalink": "/node_software",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/node-software/node-software.md",
+  "version": "current",
+  "frontMatter": {
+    "slug": "/node_software"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Verify your Firefly Desktop Download",
+    "permalink": "/firefly/verify_download"
+  },
+  "next": {
+    "title": "Libraries",
+    "permalink": "/libraries/"
+  }
+}

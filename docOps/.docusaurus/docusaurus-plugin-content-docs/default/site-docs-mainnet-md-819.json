@@ -1,0 +1,23 @@
+{
+  "unversionedId": "mainnet",
+  "id": "mainnet",
+  "isDocsHomePage": false,
+  "title": "Mainnet",
+  "description": "Public Infrastructure",
+  "source": "@site/docs/mainnet.md",
+  "sourceDirName": ".",
+  "slug": "/mainnet",
+  "permalink": "/mainnet",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/mainnet.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Chrysalis Snapshot Validation/Boostrapping",
+    "permalink": "/guides/snapshot_validation_bootstrapping"
+  },
+  "next": {
+    "title": "Testnet",
+    "permalink": "/testnet"
+  }
+}

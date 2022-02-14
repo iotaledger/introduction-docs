@@ -1,0 +1,23 @@
+{
+  "unversionedId": "libraries/client",
+  "id": "libraries/client",
+  "isDocsHomePage": false,
+  "title": "IOTA Client Library",
+  "description": "The official client library for interacting with the IOTA Tangle allows you to:",
+  "source": "@site/docs/libraries/client.md",
+  "sourceDirName": "libraries",
+  "slug": "/libraries/client",
+  "permalink": "/libraries/client",
+  "editUrl": "https://github.com/iotaledger/chrysalis-docs/tree/main/docs/docs/libraries/client.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Libraries",
+    "permalink": "/libraries/"
+  },
+  "next": {
+    "title": "IOTA Wallet Library",
+    "permalink": "/libraries/wallet"
+  }
+}

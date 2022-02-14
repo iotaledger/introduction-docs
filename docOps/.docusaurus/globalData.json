@@ -1,0 +1,137 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "welcome",
+          "docs": [
+            {
+              "id": "faq",
+              "path": "/faq",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "firefly/README",
+              "path": "/firefly/",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "firefly/verify_download",
+              "path": "/firefly/verify_download",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "guides/backup_security",
+              "path": "/guides/backup_security",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "guides/dev_guide",
+              "path": "/guides/dev_guide",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "guides/exchange_guide",
+              "path": "/guides/exchange_guide",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "guides/hub_guide",
+              "path": "/guides/hub_guide",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "guides/migration-mechanism",
+              "path": "/guides/migration-mechanism",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "guides/README",
+              "path": "/guides/",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "guides/snapshot_validation_bootstrapping",
+              "path": "/guides/snapshot_validation_bootstrapping",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "guides/token_guide",
+              "path": "/guides/token_guide",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "introduction/path_to_chrysalis",
+              "path": "/introduction/path_to_chrysalis",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "introduction/what_is_chrysalis",
+              "path": "/introduction/what_is_chrysalis",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "libraries/client",
+              "path": "/libraries/client",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "libraries/overview",
+              "path": "/libraries/",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "libraries/wallet",
+              "path": "/libraries/wallet",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "mainnet",
+              "path": "/mainnet",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "node-software/node-software",
+              "path": "/node_software",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "resources",
+              "path": "/resources",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "rfc",
+              "path": "/rfc",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "testnet",
+              "path": "/testnet",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "tutorials/one-click-private-tangle",
+              "path": "/one-click-private-tangle",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "tutorials/README",
+              "path": "/tutorials/README"
+            },
+            {
+              "id": "welcome",
+              "path": "/welcome",
+              "sidebar": "mySidebar"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

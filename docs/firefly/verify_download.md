@@ -1,15 +1,22 @@
-# Verify your Firefly desktop download
+---
+description: The page outlines the necessary steps to verify your Firefly downloads. 
+image: /img/logo/01_butterfly.png
+keywords:
+- Firefly
+- How to
+---
+# Verify your Firefly Desktop Download
 
-**When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this tutorial, you learn how to verify Firefly Desktop downloads.**
+**When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this how-to guode, you learn how to verify Firefly Desktop downloads.**
 
 
 To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and its code signature. Instructions for both of these steps differ, depending on your operating system.
 
-## Windows operating system
+## Windows Operating System
 
-### Verify the SHA256 hash
+### Verify the SHA256 Hash
 
-1. Open a command-line interface
+1. Open a command-line interface.
 
 2. Create a SHA256 hash of the Firefly Desktop `.exe` file. Replace the path with the path to your Firefly `.exe` file.
 
@@ -23,27 +30,27 @@ For example, if the file is in the `C:\Users\yourname\Downloads` directory, do t
 certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
 ```
 
-3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match
+3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match.
 
-### Verify the code signature
+### Verify the Code Signature
 
-1. Right-click on `firefly-desktop-version.exe`
+1. Right-click on `firefly-desktop-version.exe`.
 
-2. Go to **Digital Signatures** > **Details** > **View Certificate**
+2. Go to **Digital Signatures** > **Details** > **View Certificate**.
 
 3. In the Certification Path tab, make sure that the path matches the following information:
 
-    - DigiCert
-    - DigiCert SHA2 Assured Code Signing CA
-    - IOTA Stiftung
+    - DigiCert.
+    - DigiCert SHA2 Assured Code Signing CA.
+    - IOTA Stiftung.
 
-4. Make sure that the Certificate status reads "This certificate is OK."
+4. Make sure that the Certificate status reads, "This certificate is OK."
 
-## MacOS operating system
+## MacOS Operating System
 
-### Verify the SHA256 hash
+### Verify the SHA256 Hash
 
-1. Open Terminal (in `/Applications/Utilities/Terminal`)
+1. Open your Terminal (in `/Applications/Utilities/Terminal`).
 
 2. Create a SHA256 hash of the Firefly Desktop `.dmg` file. Replace the path with the path to your Firefly `.dmg` file.
 
@@ -57,17 +64,17 @@ certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
   shasum -a 256 ~/Downloads/firefly-desktop-1.0.0.dmg
   ```
 
-3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match
+3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match.
 
-### Verify the code signature
+### Verify the Code Signature
 
 #### Prerequisites
 
-To follow these instructions you need the [Xcode Command Line Tools](https://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/allexperimental/macxcodecommandlinetools.html).
+To follow these instructions, you need the [Xcode Command Line Tools](https://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/allexperimental/macxcodecommandlinetools.html).
 
-1. Open Terminal (in `/Applications/Utilities/Terminal`)
+1. Open your Terminal (in `/Applications/Utilities/Terminal`).
 
-2. Verify the `Firefly.app` file's signature. Replace the path with the path to your `Firefly.app` file. This command confirms whether the code binaries are actually signed, the signature is valid, all the sealed components are unaltered, and the signature passes some basic consistency checks.
+2. Verify the `Firefly.app` file's signature. Replace the path with the path to your `Firefly.app` file. This command confirms whether the code binaries are actually signed, the signature is valid, all the sealed components are unaltered, and the signature passes a few basic consistency checks.
 
     ```bash
     codesign -d -vv /path/to/Firefly.app
@@ -109,15 +116,15 @@ To follow these instructions you need the [Xcode Command Line Tools](https://www
     ```
     
     
-## Linux operating system
+## Linux Operating System
 
-### Verify the SHA256 hash
+### Verify the SHA256 Hash
 
 #### Prerequisites
 
-To follow these instructions you need the `sha256sum` package, which is included with most Linux distributions.
+You will need the `sha256sum` package, which is included with most Linux distributions, to complete these steps.
 
-1. Open Terminal
+1. Open your Terminal.
 
 2. Create a SHA256 hash of the Firefly Desktop executable file. Replace the path with the path to your Firefly executable file.
 
@@ -131,13 +138,13 @@ To follow these instructions you need the `sha256sum` package, which is included
   sha256sum ~/Downloads/firefly-desktop-1.0.0.AppImage
   ```
 
-3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match
+3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match.
 
-### Verify the code signature
+### Verify the Code Signature
 
-1. Download the .asc and .gpg files in the Assets section of the [release notes](https://github.com/iotaledger/firefly/releases)
+1. Download the .asc and .gpg files in the Assets section of the [release notes](https://github.com/iotaledger/firefly/releases).
 
-2. Import the Firefly GPG key from keyserver.ubuntu.com
+2. Import the Firefly GPG key from keyserver.ubuntu.com.
 
     ```bash
     gpg --keyserver keyserver.ubuntu.com --recv 466385BD0B40D9550F93C04746A440CCE5664A64
@@ -149,7 +156,7 @@ To follow these instructions you need the `sha256sum` package, which is included
     gpg: key 46A440CCE5664A64: public key "IOTA Foundation (IOTA Foundation Identity) <contact@iota.org>"
     ```
 
-4. Verify the signature
+4. Verify the signature.
 
     ```bash
     gpg --verify path/to/firefly-desktop-version.AppImage.asc path/to/firefly-desktop-version.AppImage
