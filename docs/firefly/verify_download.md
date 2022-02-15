@@ -1,5 +1,5 @@
 ---
-description: Verify your Firefly download on Windows, maxOS and/or Linux.
+description: Verify your Firefly download on Windows, maxOS, and/or Linux.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - Firefly
@@ -8,13 +8,14 @@ keywords:
 - windows
 - macOS
 - linux
+- how to
 ---
 # Verify your Firefly Desktop Download
 
-When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this tutorial, you learn how to verify Firefly Desktop downloads.
+When you download Firefly Desktop, you may want to verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this how-to guide, you learn how to verify various Firefly Desktop downloads.
 
 
-To verify the authenticity of Firefly Desktop, you can check its SHA256 hash and its code signature. Instructions for both of these steps differ, depending on your operating system.
+You can verify the authenticity of the Firefly Desktop by checking its SHA256 hash and code signature. The instructions for both of these steps differ, depending on your operating system.
 
 ## Windows Operating System
 
@@ -45,22 +46,22 @@ certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
 #### For Firefly 1.2.0 and earlier
 3. In the Certification Path tab, make sure that the path matches the following information:
 
-    - DigiCert
-    - DigiCert SHA2 Assured Code Signing CA
-    - IOTA Stiftung
+    - DigiCert.
+    - DigiCert SHA2 Assured Code Signing CA.
+    - IOTA Stiftung.
 
-4. Make sure that the Certificate status reads "This certificate is OK.".
+4. Make sure that the Certificate status reads, "This certificate is OK.".
 
 
 #### For Firefly 1.3.0 and later
 3. In the Certification Path tab, make sure that the path matches the following information:
 
-    - Sectigo (AAA)
-    - Sectigo Public Code Signing Root R46
-    - Sectigo Public Code Signing CA R36
-    - IOTA Stiftung
+    - Sectigo (AAA).
+    - Sectigo Public Code Signing Root R46.
+    - Sectigo Public Code Signing CA R36.
+    - IOTA Stiftung.
 
-4. Make sure that the Certificate status reads "This certificate is OK.".
+4. Make sure that the Certificate status reads, "This certificate is OK.".
 
 ## MacOS Operating System
 
@@ -138,7 +139,7 @@ To follow these instructions you need the [Xcode Command Line Tools](https://www
 
 #### Prerequisites
 
-To follow these instructions you need the `sha256sum` package, which is included with most Linux distributions.
+You will need the `sha256sum` package, which is included with most Linux distributions, to complete these instructions.
 
 1. Open the Terminal.
 

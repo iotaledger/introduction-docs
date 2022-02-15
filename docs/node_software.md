@@ -1,5 +1,5 @@
 ---
-description: Hornet is an EDF-supported community node written in Go. Bee is an IOTA Node implemented by the Foundation and written in Rust.  We recommend using Hornet since it has several optional features that are not implemented in Bee.
+description: Hornet is an EDF-supported community node written in Go. Bee is an IOTA Node implemented by the Foundation and written in Rust. We recommend using Hornet since it has several optional features that are not implemented in Bee.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - Node
@@ -7,6 +7,7 @@ keywords:
 - Bee
 - Golang
 - Rust
+- explanation
 ---
 # Node Software
 
@@ -28,10 +29,10 @@ At this stage, we recommend using Hornet since it has several optional features 
 
 ## Node Software
 
-- [hornet](https://wiki.iota.org/hornet/welcome)
-- [bee (branch: chrysalis-pt-2)](https://github.com/iotaledger/bee/tree/chrysalis-pt-2)
+- [hornet](https://wiki.iota.org/hornet/welcome).
+- [bee (branch: chrysalis-pt-2)](https://github.com/iotaledger/bee/tree/chrysalis-pt-2).
 
 ## Node API Specification
 
-- [rest-api specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml)
+- [rest-api specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml).
 

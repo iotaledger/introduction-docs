@@ -4,6 +4,7 @@ keywords:
 - Upgrades
 - Mainnet
 - Protocol Improvements
+- explanation
 description: Specific Chrysalis Upgrades from IOTA 1.0.  
 image: /img/logo/Chrysalis_logo_dark.png
 ---
@@ -14,13 +15,13 @@ The objective of the IOTA Foundation was to optimize the IOTA mainnet before Coo
 
 ![IOTA1.0 vs Chrysalis(IOTA1.5) confirmation time](/img/introduction/what_is_chrysalis/00.gif)
 
-A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis was the mainnet’s intermediate stage before Coordicide's completion. The main purpose of Chrysalis is to improve the usability of the previous IOTA mainnet, for users and developers alike.
+A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis was the mainnet’s intermediate stage before Coordicide's completion. The main purpose of Chrysalis is to improve the usability of the previous IOTA mainnet, for you and developers.
 
 ![From cocoon to butterfly](/img/introduction/02_path_to.png)
 
-Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless Digital Ledger Technologies (DLTs)? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives differ from those of regular network users. Changes to throughput and network latencies can disrupt the fee market the miners rely on. This in turn makes them likely to object to network upgrades as it affects their bottom line.
+Why is this process of adopting major protocol improvements relatively unique to IOTA among permissionless Digital Ledger Technologies (DLTs)? The simple answer is the absence of miners. In most permissionless DLTs, the miners’ economic incentives differ from those of regular network users. Changes to throughput and network latencies can disrupt the fee market the miners rely on. This makes them more likely to object to network upgrades as it affects their bottom line.
 
-In IOTA, validators and users are one and the same. There is no conflict of interests between parties with different motivations, meaning there is a much smoother path to network improvements. This is why we are able to incrementally and smoothly upgrade the network before Coordicide.
+In IOTA, you and validators are one and the same. There is no conflict of interests between either with different motivations, meaning there is a much smoother path to network improvements. This is why we are able to incrementally and smoothly upgrade the network before Coordicide.
 
 ## What Are the Specific Chrysalis Upgrades?
 
