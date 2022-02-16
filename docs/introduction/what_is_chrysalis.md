@@ -15,7 +15,7 @@ The objective of the IOTA Foundation was to optimize the IOTA mainnet before Coo
 
 ![IOTA1.0 vs Chrysalis(IOTA1.5) confirmation time](/img/introduction/what_is_chrysalis/00.gif)
 
-A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. In the context of IOTA, Chrysalis was the mainnet’s intermediate stage before Coordicide's completion. The main purpose of Chrysalis is to improve the usability of the previous IOTA mainnet, for you and developers.
+A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. For IOTA, Chrysalis was the mainnet’s intermediate stage before Coordicide's completion. The purpose of Chrysalis is to improve the usability of the previous IOTA mainnet, for you and developers.
 
 ![From cocoon to butterfly](/img/introduction/02_path_to.png)
 
@@ -56,4 +56,4 @@ A new [Uniform Random Tip Selection](https://github.com/iotaledger/protocol-rfcs
 ### New Node API and Client Libraries
 With Chrysalis, we wanted to offer a more standard API on both the node and client library level. Node implementations provide a completely redesigned [RESTful](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml) and [eventful](https://playground.asyncapi.io/?load=https://raw.githubusercontent.com/luca-moser/protocol-rfcs/rfc/node-event-api/text/0033-node-event-api/0033-node-event-api.yml) API implementations.
 
-Our [client libraries](../libraries/overview.md) provide high level abstractions that allow developers to build solutions that are easier to develop and cheaper to maintain.
+Our [client libraries](../libraries/overview.md) provide high-level abstractions that allow developers to build solutions that are easier to develop and cheaper to maintain.

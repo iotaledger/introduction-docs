@@ -32,11 +32,11 @@ The intended outcomes for Chrysalis were:
 
 ![The stages to Chrysalis](/img/introduction/path_to_chrysalis/01.svg)
 
-The Chrysalis upgrade was a complex undertaking. We coordinated a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. In addition to the core node software, we also needed to update our wallet software, our libraries, and the entire infrastructure.  
+The Chrysalis upgrade was a complex undertaking. We coordinated a number of distinct products to ensure a smooth transition for IOTA’s you and the partners. In addition to the core node software, we also needed to update our wallet software, our libraries, and the entire infrastructure.  
 
 Another important requirement was the ease of transition to the future Coordicide network. By carefully planning the breaking changes introduced along the way, and providing support in our developer tools, we ensured that our growing ecosystem of developers, startups, and corporations could reliably develop and launch new innovative products on IOTA.  
 
-The plan for implementing Chrysalis was divided into two phases.
+The plan for implementing Chrysalis was divided into two phases:
 
 **The first phase** consisted of improved tip selection (URTS), milestone selection, and White flag. These were gradually implemented in the node software. This phase required an upgrade of all nodes, including the coordinator node, and did not require a snapshot.  
 
