@@ -22,7 +22,7 @@ You can pass the following parameters as variables on the command line to the on
 * `INSTANCES`: The number of Hornet instances to be deployed. `1` by default.
 * `INGRESS_CLASS`: The class associated with the [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) object that will be used to externally expose the Node API endpoint so that it can be load balanced. It can depend on the target K8s environment. `nginx` by default.
 
-For deploying a Hornet Node using the default parameter values you just need to run:
+You can deploy a Hornet Node using the default parameter values by running the following command:
 
 ```sh
 hornet-k8s.sh deploy
