@@ -13,7 +13,7 @@ This [script](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/horn
 ## Deploying Using the “One Click” Script
 
 For running the [one click script](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-mainnet-k8s/README.md) you need to get access to a K8s cluster. For local development, we recommend [microk8s](https://microk8s.io/). Instructions on how to install it can be found [here](https://blog.jarrousse.org/installing-microk8s-on-mac-os-x/). You may also need to enable the ingress add-on on micro-k8s by running `microk8s.enable ingress`.
-You will also need [properly configure](https://kubernetes.io/docs/reference/kubectl/overview/) the [kubectl](https://kubernetes.io/docs/tasks/tools/) command-line tool to get access to your cluster.
+You will also need to [properly configure](https://kubernetes.io/docs/reference/kubectl/overview/) the [kubectl](https://kubernetes.io/docs/tasks/tools/) command-line tool to get access to your cluster.
 
 You can pass the following parameters as variables on the command line to the one-click script:
 
@@ -293,13 +293,13 @@ The Pod template configuration also declares extra configuration details such as
 
 Two different kinds of Services are used in our blueprint:
 
-* A Node Port Service `hornet-rest` (declared by the `hornet-rest-service.yaml` manifest) that is just bound to the StatefulSet and the port `14265` of the Hornet Nodes. Its purpose is to expose the REST API endpoint of the Hornet nodes. The endpoint Pods of such a Service are labeled as `app=hornet`.
+* A Node Port Service `hornet-rest` (declared by the `hornet-rest-service.yaml` manifest) that is bound to the StatefulSet and the port `14265` of the Hornet Nodes. Its purpose is to expose the REST API endpoint of the Hornet nodes. The endpoint Pods of such a Service are labeled as `app=hornet`.
 
 * One Node Port Service (`hornet-0`, `hornet-1`, ..., `hornet-n`) per Hornet Node, declared by the `hornet-service.yaml` manifest. These Node Port Services expose access to the individual dashboard and gossip and auto-peering endpoints of each node. Thus, it is *only bound to one and only one Hornet Node*. For this purpose, its configuration includes `externalTrafficPolicy` `local` and a selector named `statefulset.kubernetes.io/pod-name: hornet-set-x` where `x` corresponds to the Pod number of the Hornet Node the Service is bound. Under the hood, the one-click script takes care of creating as many Services of this type as needed.
 
 ### Ingress Controller `hornet-ingress`
 
-The Ingress Controller `hornet-ingress` is configured so that the `hornet-rest` Service can be externally load-balanced. There are two path mappings, `/api`, whose backend is the `hornet-rest` Service, and `/` whose backend is the dashboard of the `hornet-0` Service. The latter exists just for convenience reasons of this blueprint. In the default configuration, the `kubernetes.io/ingress.class` is `nginx`, but you can override that for specific cloud environments (see below).
+The Ingress Controller `hornet-ingress` is configured so that the `hornet-rest` Service can be externally load-balanced. There are two path mappings, `/api`, whose backend is the `hornet-rest` Service, and `/` whose backend is the dashboard of the `hornet-0` Service. The latter exists for convenience reasons of this blueprint. In the default configuration, the `kubernetes.io/ingress.class` is `nginx`, but you can override that for specific cloud environments (see below).
 
 ### ConfigMap and Secrets
 
@@ -343,7 +343,7 @@ INGRESS_CLASS=gce hornet-k8s.sh deploy
  The process of deploying an external load balancer by a public cloud provider can take a while.
 :::
 
-If you want to get access to the Service Node Ports, you will need to have a cluster with public K8s workers. You can know the public IP addresses of your K8s workers by running:
+If you want to get access to the Service Node Ports, you will need to have a cluster with public K8s workers. You can determine the public IP addresses of your K8s workers by running:
 
 ```sh
 kubectl get nodes -o=wide
@@ -355,7 +355,7 @@ Then, you can determine on which K8s worker your Hornet Pod is running by execut
 kubectl get pods -n $NAMESPACE -o=wide
 ```
 
-Once you know the worker and its IP address, you can access each Hornet Node by knowing the Node ports declared by the corresponding service. You can do this by running the following command: 
+Once you determine the worker and its IP address, you can access each Hornet Node by knowing the Node ports declared by the corresponding service. You can do this by running the following command:
 
 ```sh
 kubectl get services -n $NAMESPACE
