@@ -20,7 +20,7 @@ You can pass the following parameters as variables on the command line to the on
 * `NAMESPACE`: The namespace where the one-click script will create the K8s objects. `tangle` by default.
 * `PEER`: A [multipeer address](https://wiki.iota.org/hornet/post_installation/peering#addressing-peer-neighbors) that will be used to peer your nodes with. If you do not provide an address, auto-peering will be configured for the set's first Hornet Node (`hornet-0`).
 * `INSTANCES`: The number of Hornet instances to be deployed. `1` by default.
-* `INGRESS_CLASS`: The class associated to the [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) object that will be used to expose externally the Node API endpoint so that it can be load balanced. It can depend on the target K8s environment. `nginx` by default.
+* `INGRESS_CLASS`: The class associated with the [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) object that will be used to externally expose the Node API endpoint so that it can be load balanced. It can depend on the target K8s environment. `nginx` by default.
 
 For deploying a Hornet Node using the default parameter values you just need to run:
 
