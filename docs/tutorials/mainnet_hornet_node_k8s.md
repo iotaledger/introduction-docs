@@ -383,7 +383,7 @@ In addition you need to annotate your Ingress Controller with the following:
 
 Remember that you can annotate your Ingress Controller with `kubectl annotate`.
 
-If all the cluster preparations and annotations have been made properly if you execute:
+If you have made all the preparations and annotations properly, you will be able to find the DNS name of your external load balancer when you execute the following command (Please note it can take a while for DNS servers to sync up):
 
 ```sh
 kubectl get ingress -n $NAMESPACE -o=wide
