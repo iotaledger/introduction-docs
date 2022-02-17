@@ -1,6 +1,6 @@
 #  How to Run Iota Mainnet Hornet Nodes on a Kubernetes Environment
 
-In this tutorial you will learn how to run [IOTA](https://wiki.iota.org/chrysalis-docs/welcome) mainnet [Hornet](https://wiki.iota.org/hornet/welcome) nodes on a Kubernetes (K8s) environment. [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both **declarative configuration** and automation. It has a large, rapidly growing ecosystem. K8s services, support and tools are widely available from multiple cloud providers.
+In this tutorial, you will learn how to run [IOTA mainnet](https://wiki.iota.org/chrysalis-docs/mainnet) [Hornet](https://wiki.iota.org/hornet/welcome) nodes on a Kubernetes (K8s) environment. [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) is a portable, extensible, open-source platform for managing containerized workloads and services that facilitates both **declarative configuration** and automation. It has a large, rapidly growing ecosystem. K8s services, support, and tools are widely available on multiple cloud providers.
 
 If you are not familiar with K8s we recommend you to start by [learning the K8s technology](https://kubernetes.io/docs/tutorials/kubernetes-basics/).
 
