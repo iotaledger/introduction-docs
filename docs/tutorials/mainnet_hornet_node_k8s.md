@@ -389,7 +389,6 @@ If all the cluster preparations and annotations have been made properly if you e
 kubectl get ingress -n $NAMESPACE -o=wide
 ```
 
-you will be able to find the DNS name of your external load balancer. (Please note it can take a while DNS servers to sync up).
 
 ```ascii
 NAME             CLASS    HOSTS   ADDRESS                                                                 PORTS   AGE
