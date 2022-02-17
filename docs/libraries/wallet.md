@@ -1,5 +1,5 @@
 ---
-description: The official client library for interacting with the IOTA Tangle allows you to create messages and transactions, sign transactions, generate addresses, interact with an IOTA node.
+description: The official client library for interacting with the IOTA Tangle allows you to create messages and transactions, sign transactions, generate addresses, and interact with an IOTA node.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - stateless
@@ -8,15 +8,14 @@ keywords:
 - nodejs
 - python
 - client
+- reference
 ---
 
 # IOTA Wallet Library
 
-The wallet library is a stateful library for developers; essentially it's a programmable wallet. We recommended that you use this library if you are mainly using IOTA for token transfers. This library stateful design add support for handling and monitoring of multiple account/addresses.
+The wallet library is a stateful library for developers; essentially, it's a programmable wallet. However, if you are mainly using IOTA to transfer tokens, you should use this library as its stateful design adds support for the handling and monitoring of multiple accounts/addresses.
 
-Additionally, it also supports the [Stronghold.rs](https://github.com/iotaledger/stronghold.rs) enclave, incorporating the best security practices in one package:
-
-[IOTA Wallet Library full documentation](https://wiki.iota.org/wallet.rs/welcome).
+Additionally, it also supports the [Stronghold.rs](https://github.com/iotaledger/stronghold.rs) enclave, incorporating the best security practices in one package. You can read more about the [IOTA Wallet Library documentation in our wiki](https://wiki.iota.org/wallet.rs/welcome).
 
 ## Rust
 ---------------
