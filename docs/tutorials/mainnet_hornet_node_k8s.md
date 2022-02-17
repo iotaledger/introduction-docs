@@ -397,4 +397,4 @@ hornet-ingress   <none>   *       xyz.eu-west-1.elb.amazonaws.com               
 
 ## Conclusion
 
-The availability of reference recipes is key to facilitate the deployment of IOTA mainnet Hornet nodes. The IOTA Foundation provides them as a blueprint that can be customised by developers and administrators in their journey towards a production-ready deployment. The reference recipes have been designed with portability and simplicity in mind and tested successfully on some popular commercial public cloud environments.
+Reference recipes are key in facilitating the deployment of IOTA mainnet Hornet nodes. The IOTA Foundation provides them as a blueprint that can be customized by developers and administrators in their journey towards production-ready deployment. The reference recipes have been designed with portability and simplicity in mind and tested successfully on some popular commercial public cloud environments.
