@@ -12,7 +12,7 @@ This [script](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/horn
 
 ## Deploying Using the “One Click” Script
 
-For running the [one click script](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-mainnet-k8s/README.md) you need to get access to a K8s cluster. For local development we recommend [microk8s](https://microk8s.io/). Instructions on how to install it can be found [here](https://blog.jarrousse.org/installing-microk8s-on-mac-os-x/). You may also need to enable the ingress add-on on micro-k8s with `microk8s.enable ingress`.
+For running the [one click script](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-mainnet-k8s/README.md) you need to get access to a K8s cluster. For local development, we recommend [microk8s](https://microk8s.io/). Instructions on how to install it can be found [here](https://blog.jarrousse.org/installing-microk8s-on-mac-os-x/). You may also need to enable the ingress add-on on micro-k8s by running `microk8s.enable ingress`.
 In addition you need the [kubectl](https://kubernetes.io/docs/tasks/tools/) command line tool [properly configured](https://kubernetes.io/docs/reference/kubectl/overview/) to get access to your cluster.
 
 The referred script accepts the following parameters (passed as variables on the command line):
