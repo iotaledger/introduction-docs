@@ -381,7 +381,7 @@ In addition you need to annotate your Ingress Controller with the following:
 * `alb.ingress.kubernetes.io/scheme=internet-facing`
 * `alb.ingress.kubernetes.io/subnets` a comma-separated list of the IDs of the subnets that can actually host the Services being load balanced, for instance `subnet-aa1649cc, subnet-a656cffc, subnet-fdf3dcb5`.
 
-Remember that you can annotate your Ingress Controller with `kubectl annotate`.
+Remember that you can annotate your Ingress Controller by running `kubectl annotate`.
 
 If you have made all the preparations and annotations properly, you will be able to find the DNS name of your external load balancer when you execute the following command (Please note it can take a while for DNS servers to sync up):
 
