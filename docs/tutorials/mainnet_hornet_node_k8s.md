@@ -207,7 +207,7 @@ hornet-set-0   1/1     Running   0          24h
 hornet-set-1   1/1     Running   0          24h
 ```
 
-However, if your cluster has not enough resources the new Pod will be listed but its status will be `Pending`:
+However, if your cluster does not have enough resources, the new POD will still be listed but its status will be `Pending`:
 
 ```ascii
 hornet-set-1   0/1     Pending   0          2m12s
