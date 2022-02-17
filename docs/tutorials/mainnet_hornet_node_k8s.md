@@ -207,7 +207,19 @@ hornet-set-0   1/1     Running   0          24h
 hornet-set-1   1/1     Running   0          24h
 ```
 
-As well as  a new Persistent Volume:
+However, if your cluster has not enough resources the new Pod will be listed but its status will be `Pending`:
+
+```ascii
+hornet-set-1   0/1     Pending   0          2m12s
+```
+
+You can find more details on the reasons why the new Pod is not running by executing:
+
+```sh
+kubectl describe pods/hornet-set-1 -n tangle 
+```
+
+If your Pod is running properly, a new Persistent Volume will be listed as well:
 
 ```sh
 kubectl get pvc -n tangle -o=wide
