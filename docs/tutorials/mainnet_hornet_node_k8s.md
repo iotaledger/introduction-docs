@@ -28,7 +28,7 @@ You can deploy a Hornet Node using the default parameter values by running the f
 hornet-k8s.sh deploy
 ```
 
-After executing the script different Kubernetes objects will be created (under the `tangle` namespace) as enumerated and depicted below (you can see the `kubectl` instruction to get details about them):
+After executing the script, different Kubernetes objects will be created under the `tangle` namespace, as enumerated and depicted below. You can see the `kubectl` instruction to get more details about them.
 
 ![K8s Object map](/img/tutorials/hornet-kubernetes-object-map.png)
 
@@ -47,7 +47,7 @@ kube-public       Active   81d
 kube-system       Active   81d
 ```
 
-* A [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) (named `hornet-set`) that controls the different Hornet instances and enables scaling them.
+* A [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) named `hornet-set` that controls the different Hornet instances and enables scaling them.
 
 ```sh
  kubectl get statefulset -n tangle -o=wide
@@ -58,7 +58,7 @@ NAME         READY   AGE   CONTAINERS   IMAGES
 hornet-set   1/1     20h   hornet       gohornet/hornet:1.1.3
 ```
 
-* One [Pod](https://kubernetes.io/docs/concepts/workloads/pods/) per Hornet Node bound to our StatefulSet. A pod is actually an artefact that executes the Hornet Docker container.
+* One [Pod](https://kubernetes.io/docs/concepts/workloads/pods/) per Hornet Node bound to our StatefulSet. A pod is an artifact that executes the Hornet Docker container.
 
 ```sh
 kubectl get pods -n tangle
@@ -69,7 +69,7 @@ NAME           READY   STATUS    RESTARTS   AGE
 hornet-set-0   1/1     Running   0          20h
 ```
 
-You may have noticed that the name of the pod is the concatenation of the name of the Statefulset `hornet-set` plus an index indicating the pod number in the set (in our case `0`). If we scaled our StatefulSet to `2` then we would have two pods (`hornet-set-0` and `hornet-set-1`).
+You may have noticed that the pod's name is the concatenation of the name of the Statefulset `hornet-set` plus an index indicating the pod number in the set (in this case `0`). If you scaled your StatefulSet to `2`, you would have two pods (`hornet-set-0` and `hornet-set-1`).
 
 * One [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) bound to each instance of the StatefulSet. It is used to store permanently all the files corresponding to the internal databases and snapshots of a Hornet Node.
 
@@ -82,11 +82,11 @@ NAME                         STATUS   VOLUME                                    
 hornet-ledger-hornet-set-0   Bound    pvc-905fe9c7-6a10-4b29-a9fd-a405fd49a5fd   20Gi       RWO            standard       157m
 ```
 
-You can observe that the name of the Persistent Volume Claim is the concatenation of `hornet-ledger` plus the name of the bound Pod `hornet-set-0` in our case.
+The name of the Persistent Volume Claim is the concatenation of `hornet-ledger` plus the name of the bound Pod, `hornet-set-0` in our case.
 
 * [Service](https://kubernetes.io/es/docs/concepts/services-networking/service/) objects:
-  * One Service Node Port object which exposes the REST API of the nodes. It is actually a load balancer to port `14625` of **all** the Nodes.
-  * One Service Node Port object **per Hornet instance** (in our example just one) which exposes as a "Node Port" the gossip, dashboard and autopeering endpoints.
+  * One Service Node Port object exposes the REST API of the nodes. It is a load balancer to port `14625` of **all** the Nodes.
+  * One Service Node Port object **per Hornet instance** (in this example, just one) which exposes as a "Node Port" the gossip, dashboard, and auto-peering endpoints.
 
 ```sh
 kubectl get services -n tangle -o=wide
@@ -98,11 +98,13 @@ hornet-0      NodePort   10.60.4.75     <none>        15600:30744/TCP,8081:30132
 hornet-rest   NodePort   10.60.3.96     <none>        14265:31480/TCP                                  19h   app=hornet
 ```
 
-Additionally, you can run  `kubectl describe services -n tangle` to get more details about the endpoints supporting the referred Services.
+You can run `kubectl describe services -n tangle` to get more details about the endpoints supporting the referred Services.
 
-Note: The name of the Services is important as will allow to address Hornet Nodes by DNS name *within the cluster*. For instance, if you want to peer a Hornet Node within the cluster you can refer to it with the name of its bound Service, for instance, `hornet-0`.
+:::note
+The name of the Services is important as it will allow you to address Hornet Nodes by DNS name *within the cluster*. For instance, if you want to peer a Hornet Node within the cluster, you can refer to it with the name of its bound Service, for example, `hornet-0`.
+:::
 
-* An [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) controller intended to expose the load-balanced Hornet REST API endpoint outside the cluster, under the `/api` path. For convenience also the dashboard corresponding to the first Hornet in the StatefulSet (`hornet-0`) is also exposed through the `/` path.
+* An [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) controller intended to expose the load-balanced Hornet REST API endpoint outside the cluster, under the `/api` path. For convenience, the dashboard corresponding to the first Hornet in the StatefulSet (`hornet-0`) is also exposed through the `/` path.
 
 ```sh
 kubectl get ingress -n tangle -o=wide
@@ -113,9 +115,9 @@ NAME             CLASS    HOSTS   ADDRESS        PORTS   AGE
 hornet-ingress   <none>   *       34.1.1.1   80      21h
 ```
 
-In the example above you can observe that public IP address of the load balancer associated to the Ingress Controller is shown. This will actually happen when you are deploying on a commercial public cloud service.  
+In the example above, you can observe that the public IP address of the load balancer associated with the Ingress Controller is shown. This will happen when you deploy on a commercial, public cloud service.  
 
-* A [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/) that contains the configuration applied to each Hornet Node, including the peering configuration. (Remember that our Hornet nodes, that belong to an StatefulSet, are peered among them).
+* A [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/) that contains the configuration applied to each Hornet Node, including the peering configuration. Remember that your Hornet nodes, which belong to a StatefulSet, are peered among them.
 
 ```sh
 kubectl get configmap -n tangle -o=wide
@@ -127,12 +129,12 @@ hornet-config      4      19h
 kube-root-ca.crt   1      19h
 ```
 
-Likewise, `kubectl describe configmap hornet-config` can be run to obtain more details about such ConfigMap.
+Likewise, you can run `kubectl describe configmap hornet-config` to obtain more details about the ConfigMap.
 
 * [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) of the Nodes (keys, etc.). Two secrets are created:
 
-  * `hornet-secret` which contains secrets related to the dashboard credentials (hash and salt).
-  * `hornet-private-key` contains the Ed25519 private keys of each node.
+  * `hornet-secret`: Contains secrets related to the dashboard credentials (hash and salt).
+  * `hornet-private-key`: Contains the Ed25519 private keys of each node.
 
 ```sh
 kubectl get secrets -n tangle -o=wide
@@ -145,11 +147,13 @@ hornet-private-key    Opaque                                1      20h
 hornet-secret         Opaque                                2      20h
 ```
 
-Note: Network Policies are not provided by this blueprint but in a real production environment they should be defined, so that Pods are properly restricted to perform outbound connections or receive inbound connections.
+:::note
+This blueprint does not provide Network Policies. However, in a production environment, they should be defined so that Pods are properly restricted to perform outbound connections or receive inbound connections.
+:::
 
-### Getting access to your Hornet Node
+### Accessing Your Hornet Node
 
-Once your Hornet Node has been deployed on the cluster you would want to get access to it from the outside. Fortunately that is easy as we have already created [K8s Services of type Node Port](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport). It essentially means that your Hornet Node will be accessible through certain ports published on the K8s machine (worker node in K8s terminology) where Hornet is actually running.
+Once you have deployed your Hornet Node on the cluster, you will want to access it from the outside. Fortunately, that is easy as you have already created [K8s Services of type Node Port](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport). This means that your Hornet Node will be accessible through certain ports published on the K8s machine (worker node in K8s terminology) where Hornet is actually running.
 
 If you execute:
 
@@ -162,34 +166,34 @@ hornet-0      NodePort   10.60.4.75     <none>        15600:30744/TCP,8081:30132
 hornet-rest   NodePort   10.60.3.96     <none>        14265:31480/TCP                                  20h
 ```
 
-In the example above the REST API endpoint of your Hornet Node will be accessible through the port `31480` of a K8s worker. Likewise, the Hornet dashboard will be exposed on the port `30744`.
+In the example above, the REST API endpoint of your Hornet Node will be accessible through the port `31480` of a K8s worker. Likewise, the Hornet dashboard will be exposed on the port `30744`.
 
-If you are running microk8s locally in your machine you will typically have only one K8s machine running as a virtual machine in your desktop or laptop. Usually the IP address of such a virtual machine is `192.168.64.2`. Nonetheless you can double check such IP address by displaying your 
-current kubectl configuration:
+If you are running microk8s locally in your machine, you will typically have only one K8s machine running as a virtual machine. Usually, the IP address of the virtual machine is `192.168.64.2`. You can double-check the IP address by displaying your 
+current kubectl configuration running the following command:
 
 ```sh
 kubectl config view | grep server
 ```
 
-and you will get an output similar to (that will correspond to the endpoint of the [K8s API Server](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/).
+You should receive an output similar to the endpoint of the [K8s API Server](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/).
 
 ```ascii
 server: https://192.168.64.2:16443
 ```
 
-Additionally you can get access to your Hornet Node REST API endpoint through the external load balancer defined by the Ingress Controller. In the case of a local configuration this does not make so much a difference as the machine where the Ingress Controller lives is just the same as the Service machine (more details at [https://kubernetes.github.io/ingress-nginx](https://kubernetes.github.io/ingress-nginx)). However in the case of a real environment provided by a public cloud provider, your Ingress controller will usually be mapped to a load balancer exposed through a public IP address. You can find more information below when we talk about specifics of commercial public cloud environments.
+Additionally, you can get access to your Hornet Node REST API endpoint through the external load balancer defined by the Ingress Controller. If you are using a local configuration, this will not make much difference as the machine where the Ingress Controller lives is the same as the Service machine (more details at [https://kubernetes.github.io/ingress-nginx](https://kubernetes.github.io/ingress-nginx)). However, in the case of a real environment provided by a public cloud provider, your Ingress controller will usually be mapped to a load balancer exposed through a public IP address. You can find more information in the [commercial public cloud environment's specifics section](#commercial-public-cloud-environments-specifics).
 
 *Remember that it might take a while for your Hornet Pods to be running and ready*
 
-### Working with multiple instances
+### Working With Multiple Instances
 
-If you want to work with multiple instances you can scale your current K8s StatefulSet by running:
+If you want to work with multiple instances, you can scale your current K8s StatefulSet by running:
 
 ```sh
 INSTANCES=2 hornet-k8s.sh scale
 ```
 
-If the cluster has enough resources, automatically a new Hornet Node will be spawned and peered with your original one.
+If the cluster has enough resources, a new Hornet Node will automatically be spawned and peered with your original one.
 
 You will notice that one more Pod (`hornet-set-1`) will be running:
 
@@ -203,7 +207,7 @@ hornet-set-0   1/1     Running   0          24h
 hornet-set-1   1/1     Running   0          24h
 ```
 
-and a new Persistent Volume
+As well as  a new Persistent Volume:
 
 ```sh
 kubectl get pvc -n tangle -o=wide
@@ -214,7 +218,7 @@ hornet-ledger-hornet-set-0   Bound    pvc-905fe9c7-6a10-4b29-a9fd-a405fd49a5fd  
 hornet-ledger-hornet-set-1   Bound    pvc-95b3b566-4602-4a36-8b1b-5e6bf75e5c6f   20Gi       RWO            standard       24h
 ```
 
-and an additional Service `hornet-1`.
+And an additional Service `hornet-1`:
 
 ```sh
 kubectl get services -n tangle -o=wide
@@ -227,7 +231,7 @@ hornet-1      NodePort   10.60.7.44     <none>        15600:32184/TCP,8081:31776
 hornet-rest   NodePort   10.60.3.96     <none>        14265:31480/TCP                                  24h
 ```
 
-The REST service now will be load balancing two Pods as you can check out yourself:
+The REST service will be load balancing two Pods. You can verify this by running the following command:
 
 ```sh
 kubectl describe services/hornet-rest -n tangle 
@@ -252,134 +256,136 @@ Session Affinity:         None
 External Traffic Policy:  Cluster
 ```
 
-And last but not least, if your `hornet-0` node is synced, `hornet-1` should also be synced as `hornet-0` and `hornet-1` will be peered between them. You can check it out by connecting to the corresponding dashboards.
+If your `hornet-0` node is synced, `hornet-1` should also be synced as `hornet-0` and `hornet-1` will have peered. You can verify this by connecting to the corresponding dashboards.
 
-## Deep dive. The "one-click" script internals
+## Deep Dive. The "One-Click" Script Internals
 
-In this section of the tutorial you will learn the internals of our blueprints for deploying Hornet Nodes on K8s. The figure below depicts the target deployment architecture behind our proposed blueprint.
+In this section, you can find the internals of our blueprints for deploying Hornet Nodes on K8s. The figure below depicts the target deployment architecture behind our proposed blueprint.
 
 ![K8s Deployment Architecture](/img/tutorials/hornet-kubernetes-deployment.png)
 
-The figure presented before shows the formerly described K8s objects used and their relationships. Now we are going to give more details about them and what are the K8s manifests that declare them, all of them available at the [repository](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-mainnet-k8s). The label `source=one-click-tangle` is generally used to mark these K8s objects that will live under a specific Namespace (named `tangle` by default).
+The figure shows the K8s objects used and their relationships. The following sections will provide more details about them, and the K8s manifests that declare them (available at the [repository](https://github.com/iotaledger/one-click-tangle/tree/chrysalis/hornet-mainnet-k8s)). The label `source=one-click-tangle` is used to mark these K8s objects that will live under a specific Namespace (named `tangle` by default).
 
 ### StatefulSet `hornet-set`
 
-`hornet.yaml` source file contains the definition of the StatefulSet (`hornet-set`) that templates and controls the execution of the Hornet Pods. The StatefulSet also is bound to a `volumeClaimTemplate` so that each Hornet Node on the set can be bound to its own K8s Persistent Volume. Such StatefulSet is labelled as `source=one-click-tangle` and the selector used for the Pods is `app=hornet`. In addition the StatefulSet is bound to the Service `hornet-rest`. More details about Services are given later.
+The `hornet.yaml` source file contains the definition of the StatefulSet (`hornet-set`) that templates and controls the execution of the Hornet Pods. The StatefulSet is also bound to a `volumeClaimTemplate` so that each Hornet Node on the set can be bound to its own K8s Persistent Volume. The StatefulSet is labeled as `source=one-click-tangle` and the selector used for the Pods is `app=hornet`. Additionally, the StatefulSet is bound to the Service `hornet-rest`. 
 
-The template contains the Pod definition which declares different volumes:
+The template contains the Pod definition, which declares different volumes:
 
 * `configuration` which is mapped to the `hornet-config` ConfigMap.
 * `private-key` which is mapped to the `hornet-private-key` Secret.
 * `secrets-volume` an `emptyDir` internal volume where the Hornet Node private key will be actually copied.
 
-The Pod definition within the StatefulSet contains one initialization container (`create-volumes`) and one regular container (`hornet`). The initialization container is in charge of preparing the corresponding volumes so that the `hornet` container volume mounts are ready to be used with the proper files inside and suitable permissions. In fact, the initialization container copies the Hornet Node private key and peering configuration so that each Hornet is bound to its own private key and peering details.
+The Pod definition within the StatefulSet contains one initialization container (`create-volumes`) and one regular container (`hornet`). The initialization container is in charge of preparing the corresponding volumes so that the `hornet` container volume mounts are ready to be used with the proper files inside and suitable permissions. The initialization container copies the Hornet Node private key and peering configuration so that each Hornet is bound to its private key and peering details.
 
-The `hornet` container declares the following volume mounts which are key to make the `hornet` container run properly within its Pod:
+The `hornet` container declares the following volume mounts, which are key for the `hornet` container to run properly within its Pod:
 
 * `/app/config.json` against the `configuration` volume. 
 * `app/p2p2store` against the `p2pstore` subfolder of the `hornet-ledger` Persistent Volume.
 * `app/p2pstore/identity.key` against the transient, internal `secrets-volume` of the Pod.
-* `app/peering.json` against the `peering` subfolder of the `hornet-ledger` Persistent Volume. Please note that this is necessary as the peering configuration is dynamic and new peers might be added during the lifecycle of the Hornet Node.
-* `app/mainnetdb` against the `mainnetdb` subfolder of the  `hornet-ledger` Persistent Volume (to store the database files).
-* `app/snapshots/mainnet` against the `snapshots` subfolder of the `hornet-ledger` Persistent Volume (to store snapshots).
+* `app/peering.json` against the `peering` subfolder of the `hornet-ledger` Persistent Volume. This is necessary as the peering configuration is dynamic, and new peers might be added during the lifecycle of the Hornet Node.
+* `app/mainnetdb` against the `mainnetdb` subfolder of the  `hornet-ledger` Persistent Volume to store the database files.
+* `app/snapshots/mainnet` against the `snapshots` subfolder of the `hornet-ledger` Persistent Volume to store snapshots.
 
-Apart from that, the Pod template configuration declares extra configuration details such as `liveness` and `readiness` probes, security contexts, and links to other resources such as the Secret that defines the dashboard credentials (actually mapped into environment variables).  
+The Pod template configuration also declares extra configuration details such as `liveness` and `readiness` probes, security contexts, and links to other resources such as the Secret that defines the dashboard credentials, mapped into environment variables.  
 
 ### Services
 
-There are two different kind of Services used in our blueprint:
+Two different kinds of Services are used in our blueprint:
 
-* A Node Port Service `hornet-rest` (declared by the `hornet-rest-service.yaml` manifest) that is just bound to the StatefulSet and to the port `14265` of the Hornet Nodes. Its purpose is to enable exposing the REST API endpoint of the Hornet nodes. The endpoint Pods of such a Service are those labeled as `app=hornet`.
+* A Node Port Service `hornet-rest` (declared by the `hornet-rest-service.yaml` manifest) that is just bound to the StatefulSet and the port `14265` of the Hornet Nodes. Its purpose is to expose the REST API endpoint of the Hornet nodes. The endpoint Pods of such a Service are labeled as `app=hornet`.
 
-* One Node Port Service (`hornet-0`, `hornet-1`, ..., `hornet-n`) per Hornet Node, declared by the `hornet-service.yaml` manifest. These Node Port Services are intended to expose access to the individual dashboard, gossip and autopeering endpoints of each node. Thus, it is *only bound to one and only one Hornet Node*. For this purpose its configuration includes `externalTrafficPolicy` `local` and a selector named `statefulset.kubernetes.io/pod-name: hornet-set-x` where `x` corresponds to the Pod number of the Hornet Node the Service is bound to. Under the hood the one-click script takes care of creating as many Services of this type as needed.
+* One Node Port Service (`hornet-0`, `hornet-1`, ..., `hornet-n`) per Hornet Node, declared by the `hornet-service.yaml` manifest. These Node Port Services expose access to the individual dashboard and gossip and auto-peering endpoints of each node. Thus, it is *only bound to one and only one Hornet Node*. For this purpose, its configuration includes `externalTrafficPolicy` `local` and a selector named `statefulset.kubernetes.io/pod-name: hornet-set-x` where `x` corresponds to the Pod number of the Hornet Node the Service is bound. Under the hood, the one-click script takes care of creating as many Services of this type as needed.
 
 ### Ingress Controller `hornet-ingress`
 
-The Ingress Controller `hornet-ingress` is configured so that the `hornet-rest` Service can be externally load balanced. There are two path mappings, `/api` which backend is the  `hornet-rest` Service and `/` which backend is the dashboard of the `hornet-0` Service. The latter is just for convenience reasons of this blueprint. In the default configuration the `kubernetes.io/ingress.class` is `nginx` but that can be overridden for specific cloud environments (see below).
+The Ingress Controller `hornet-ingress` is configured so that the `hornet-rest` Service can be externally load-balanced. There are two path mappings, `/api`, whose backend is the `hornet-rest` Service, and `/` whose backend is the dashboard of the `hornet-0` Service. The latter exists just for convenience reasons of this blueprint. In the default configuration, the `kubernetes.io/ingress.class` is `nginx`, but you can override that for specific cloud environments (see below).
 
 ### ConfigMap and Secrets
 
-For ConfigMaps and Secrets there are no YAML definition files as they are created on the fly through the `kubectl` command line.
-Actually they are created from a `config` directory that is automatically generated by the "one click" script. You can see the contents of those objects by running
+For ConfigMaps and Secrets, there are no YAML definition files as they are created on the fly through the `kubectl` command line.
+They are created from a `config` directory automatically generated by the "one-click" script. You can see the contents of those objects by running the following command:
 
 ```sh
 kubectl get configmap/hornet-config -n tangle -o=yaml
 ```
 
-The same for credentials of the Hornet dashboard (all the nodes share the same admin credentials)
+The same goes for the Hornet dashboard credentials (all the nodes share the same admin credentials).  
 
 ```sh
 kubectl get secrets/hornet-secret -n tangle -o=yaml
 ```
 
-and for the Nodes' private keys:
+As well as for the Nodes' private keys:
 
 ```sh
 kubectl get secrets/hornet-private-key -n tangle -o=yaml
 ```
+## Commercial Public Cloud Environments Specifics
 
-## Google Kubernetes environment (GKE) specifics
+### Google Kubernetes Environment (GKE) Specifics
 
-Our deployment recipes are fully portable to the [GKE](https://cloud.google.com/kubernetes-engine) public cloud environment. The only custom step is to ensure that the Ingress Controller is properly annotated with `kubernetes.io/ingress.class: gce`. You can do that by just executing
+The deployment recipes are fully portable to the [GKE](https://cloud.google.com/kubernetes-engine) public cloud environment. You will only need to ensure that the Ingress Controller is correctly annotated with `kubernetes.io/ingress.class: gce`. You can do this by executing the following command:
 
 ```sh
 kubectl annotate -f hornet-ingress.yaml -n $NAMESPACE --overwrite kubernetes.io/ingress.class=gce
 ```
 
-Alternatively if you are using the "one click" script you can just execute
+Alternatively, if you are using the "one-click" script you can simply execute the following command and the one-click script will perform the annotation during the deployment process.:
 
 ```sh
 INGRESS_CLASS=gce hornet-k8s.sh deploy
 ```
 
-and the one click script will perform the annotation during the deployment process.
 
-*Remember that the process of deploying an external load balancer by a public cloud provider can take a while.*
+:::note
+ The process of deploying an external load balancer by a public cloud provider can take a while.
+:::
 
-On the other hand to get access to the Service Node Ports you would need to have a cluster with public K8s workers. You can know the public IP addresses of your K8s workers by running:
+If you want to get access to the Service Node Ports, you will need to have a cluster with public K8s workers. You can know the public IP addresses of your K8s workers by running:
 
 ```sh
 kubectl get nodes -o=wide
 ```
 
-Then, you can know on which K8s worker your Hornet Pod is running by executing (`NAMESPACE` by default would be `tangle`):
+Then, you can determine on which K8s worker your Hornet Pod is running by executing the following command (the default `NAMESPACE` is `tangle`):
 
 ```sh
 kubectl get pods -n $NAMESPACE -o=wide
 ```
 
-Once you know the worker and its IP address you can get access to each individual Hornet Node by knowing the Node ports declared by the corresponding service. And remember you can do it by running:
+Once you know the worker and its IP address, you can access each Hornet Node by knowing the Node ports declared by the corresponding service. You can do this by running the following command: 
 
 ```sh
 kubectl get services -n $NAMESPACE
 ```
 
-Once you know the port you have to create firewall rules so that such port is reachable. That can be done using the [gcloud](https://cloud.google.com/sdk/docs/install) tool. For instance, if our Hornet Node's dashboard is mapped to port `34200` and the public IP address of our K8s worker is `1.1.1.1`:
+Once you know the port, you will have to create firewall rules so that the port is reachable. That can be done using the [gcloud tool](https://cloud.google.com/sdk/docs/install). For instance, if your Hornet Node's dashboard is mapped to port `34200` and the public IP address of our K8s worker is `1.1.1.1`:
 
 ```sh
 gcloud compute firewall-rules create test-hornet-dashboard --allow tcp:34200
 ```
 
-Afterwards we can open up a browser and load `http://1.1.1.1:34200` to get access to the Hornet Node's dashboard.
+Now, you can open up a browser and load `http://1.1.1.1:34200` to access the Hornet Node's dashboard.
 
-Other interesting aspects you may have to look into when moving to a production-ready system is the encryption of Secrets.
+You may also have to look into encrypting Secrets when moving to a production-ready system.
 
-## Amazon Kubernetes environment (EKS) specifics
+### Amazon Kubernetes Environment (EKS) Specifics
 
-Our deployment recipes are fully portable to the [EKS](https://aws.amazon.com/eks/) commercial public cloud environment. However there are certain preparation steps (including IAM permission grants) that have to be executed on your cluster so that the Ingress Controller is properly mapped to an AWS Application Load Balancer (ALB). In addition, as it happens with the GKE environment (see above) you can get access to your Hornet Nodes through its Service Node Port. The procedure to be followed is similar to the one described above, and it as well requires a cluster with public workers and security groups configured so that traffic is enabled to the corresponding Service Node Ports.
+The deployment recipes are fully portable to the [EKS](https://aws.amazon.com/eks/) commercial public cloud environment. However, there are certain preparation steps (including IAM permission grants) that have to be executed on your cluster so that the Ingress Controller is properly mapped to an AWS Application Load Balancer (ALB). Additionally, as it happens with the [GKE environment](#google-kubernetes-environment-gke-specifics), you can access your Hornet Nodes through its Service Node Port. The procedure requires a cluster with public workers and security groups configured so that traffic is enabled to the corresponding Service Node Ports.
 
-There are several preparation steps to be done on your cluster so that Ingress Controller objects are mapped to AWS Application Load Balancers. Please read these documents and follow the corresponding instructions on your cluster:
+You will need to follow several preparation steps on your cluster to map the Ingress Controller objects to AWS Application Load Balancers. Please read these documents and follow the corresponding instructions on your cluster:
 
-* [https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html](https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html) 
-* [https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
-* [https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html](https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html)
-* [https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.3/](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.3/)
+* [AWS Docs - Create a kubeconfig for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html) 
+* [AWS Docs - Application load balancing on Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
+* [AWS Docs - AWS Load Balancer Controller](https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html)
+* [Kubernets Docs - AWS Load Balancer Controller](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.3/)
 
-In addition you need to annotate your Ingress Controller with the following:
+You will also need to annotate your Ingress Controller with the following:
 
 * `kubernetes.io/ingress.class=alb`
 * `alb.ingress.kubernetes.io/scheme=internet-facing`
-* `alb.ingress.kubernetes.io/subnets` a comma-separated list of the IDs of the subnets that can actually host the Services being load balanced, for instance `subnet-aa1649cc, subnet-a656cffc, subnet-fdf3dcb5`.
+* `alb.ingress.kubernetes.io/subnets`: A comma-separated list of the IDs of the subnets that can actually host the Services being load balanced, for instance `subnet-aa1649cc, subnet-a656cffc, subnet-fdf3dcb5`.
 
 Remember that you can annotate your Ingress Controller by running `kubectl annotate`.
 
