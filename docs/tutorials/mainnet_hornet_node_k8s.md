@@ -8,7 +8,7 @@ If you are not familiar with K8s we recommend you to start by [learning the K8s 
 
 Running Hornet mainnet nodes on K8s can enjoy all the advantages of a declarative, managed, portable and automated container-based environment. However, as Hornet is a stateful service with several persistence, configuration and peering requirements, the task can be challenging. To overcome it, the IOTA Foundation under the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository umbrella is providing K8s recipes and associated scripts that intend to educate developers on how nodes can be automatically deployed, peered and load balanced in a portable way.
 
-Furthermore, a ready to be used [script](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-mainnet-k8s/hornet-k8s.sh) allows running sets of Hornet instances "in one click" in your K8s environment of choice, but also provides a blueprint with the best practices to be leveraged by K8s administrators when deploying production-ready environments.
+This [script](https://github.com/iotaledger/one-click-tangle/blob/chrysalis/hornet-mainnet-k8s/hornet-k8s.sh) allows you to run sets of Hornet instances "in one click" in your K8s' environment of choice and also provides a blueprint with the best practices K8s administrators can leverage when deploying production-ready environments.
 
 ## Deployment using the "one click" script
 
