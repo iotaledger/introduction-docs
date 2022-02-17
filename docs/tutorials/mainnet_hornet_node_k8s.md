@@ -71,7 +71,7 @@ hornet-set-0   1/1     Running   0          20h
 
 You may have noticed that the pod's name is the concatenation of the name of the Statefulset `hornet-set` plus an index indicating the pod number in the set (in this case `0`). If you scaled your StatefulSet to `2`, you would have two pods (`hornet-set-0` and `hornet-set-1`).
 
-* One [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) bound to each instance of the StatefulSet. It is used to store permanently all the files corresponding to the internal databases and snapshots of a Hornet Node.
+* One [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) bound to each instance of the StatefulSet. It is used to permanently store all the files corresponding to the internal databases and snapshots of a Hornet Node.
 
 ```sh
 kubectl get pvc -n tangle -o=wide
@@ -321,6 +321,7 @@ As well as for the Nodes' private keys:
 ```sh
 kubectl get secrets/hornet-private-key -n tangle -o=yaml
 ```
+## Commercial Public Cloud Environments Specifics
 ## Commercial Public Cloud Environments Specifics
 
 ### Google Kubernetes Environment (GKE) Specifics
