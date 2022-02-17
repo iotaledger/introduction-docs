@@ -84,6 +84,10 @@ module.exports = {
               label: 'Private Tangle'
             },
             {
+              to: 'tutorials/mainnet_hornet_node_k8s',
+              label: 'Mainnet Nodes on Kubernetes'
+            },
+            {
               to: 'protocol_rfc',
               label: 'Protocol RFCs'
             },
