@@ -334,9 +334,8 @@ As well as for the Nodes' private keys:
 kubectl get secrets/hornet-private-key -n tangle -o=yaml
 ```
 ## Commercial Public Cloud Environments Specifics
-## Commercial Public Cloud Environments Specifics
 
-### Google Kubernetes Environment (GKE) Specifics
+### Google Kubernetes Environment (GKE)
 
 The deployment recipes are fully portable to the [GKE](https://cloud.google.com/kubernetes-engine) public cloud environment. You will only need to ensure that the Ingress Controller is correctly annotated with `kubernetes.io/ingress.class: gce`. You can do this by executing the following command:
 
@@ -383,7 +382,7 @@ Now, you can open up a browser and load `http://1.1.1.1:34200` to access the Hor
 
 You may also have to look into encrypting Secrets when moving to a production-ready system.
 
-### Amazon Kubernetes Environment (EKS) Specifics
+### Amazon Kubernetes Environment (EKS)
 
 The deployment recipes are fully portable to the [EKS](https://aws.amazon.com/eks/) commercial public cloud environment. However, there are certain preparation steps (including IAM permission grants) that have to be executed on your cluster so that the Ingress Controller is properly mapped to an AWS Application Load Balancer (ALB). Additionally, as it happens with the [GKE environment](#google-kubernetes-environment-gke-specifics), you can access your Hornet Nodes through its Service Node Port. The procedure requires a cluster with public workers and security groups configured so that traffic is enabled to the corresponding Service Node Ports.
 
