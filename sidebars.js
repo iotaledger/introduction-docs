@@ -115,9 +115,19 @@ module.exports = {
       label: 'Devnet'
     },
     {
-      type: 'doc',
-      id: 'tutorials/one_click_private_tangle',
-      label: 'Private Tangle'
+      type: 'category',
+      label: 'Tutorials',
+      items: [
+        {
+          type: 'doc',
+          id: 'tutorials/one_click_private_tangle',
+          label: 'Private Tangle'
+        },
+        {
+          type: 'doc',
+          id: 'tutorials/mainnet_hornet_node_k8s',
+          label: 'Mainnet Hornet Node K8s'
+        },]
     },
     {
       type: 'doc',
