@@ -10,7 +10,7 @@ keywords:
 - restore
 - export
 - rekey
--how to
+- how to
 ---
 
 # Backup and Security
