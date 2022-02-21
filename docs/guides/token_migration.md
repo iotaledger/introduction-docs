@@ -1,15 +1,16 @@
 ---
-description: Overview on how to migrate your tokens from the IOTA 1.0 to IOTA 1.5 Chrysalis network using the Firefly wallet or a migration bundle.
+description: Overview on how you migrated tokens from the IOTA 1.0 to IOTA 1.5 Chrysalis network using the Firefly wallet or a migration bundle.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - migration
 - migration bundle
 - Firefly
 - Chrysalis Phase 2
+- explanation
 ---
 # Chrysalis Migration
 
-By the end of the Chrysalis migration, a number of aspects at IOTA changed for the better. With easier ways to
+By the end of the Chrysalis migration, several aspects at IOTA changed for the better. With easier ways to
 manage and secure your experience, IOTA seamlessly integrated these innovations with no service interruptions.
 
 With Chrysalis, we made a clear-cut from the current IOTA protocol, and started a new with a much better, and more mature
@@ -22,57 +23,61 @@ This included one of the innovations that directly impacted one of the most cruc
 Below is an overview of how the migration is taking place for normal token holders:
 
 1. You enter your seed in Firefly.
-2. Firefly creates you a new seed and generates an EdDSA address for the new network.
+2. Firefly creates a new seed for you and generates an EdDSA address for the new network.
 3. Firefly sends your funds to a specific migration address (which encapsulates your EdDSA address) on the old network.
 4. Your funds become available on the new network on the EdDSA address Firefly created for you.
 5. Your funds are successfully migrated.
 
-:::tip
+:::note
 
 If you migrate after the Chrysalis launch, your funds will become available shortly after you migrate (within less than 5 minutes).
 
 :::
 
 
-:::info
-Firefly will initially only be available on desktop operating systems such as: macOS, Linux and Windows and not support migrations for Ledger devices or using a Ledger device.
+:::note
+
+Firefly will initially only be available on desktop operating systems such as: macOS, Linux, and Windows and not support migrations for Ledger devices or using a Ledger device.
+
 :::
 
 For further information on the migration process, see our [blog post](https://blog.iota.org/firefly-token-migration/).
 
-For a detailed explanation on how the migration process works technically, see [migration-mechanism](migration_mechanism.md)
+For a detailed explanation on how the migration process works technically, see the [migration-mechanism](https://wiki.iota.org/chrysalis-docs/guides/migration_mechanism) page.
 
 ## Exchange Token Migration Guide
 
-To help you successfully transfer your tokens securely to the  Chrysalis network, we created this guide as
+To help you successfully transfer your tokens securely to the Chrysalis network, we created this guide as
 an overview of the migration process and its intricacies.
 
 :::info
-On the 28th of April, Chrysalis Phase 2 was released (with its corresponding node software, libraries and tooling).
+
+On the 28th of April 2021, Chrysalis Phase 2 was released (with its corresponding node software, libraries, and tooling).
 After this, the legacy network only supports migration transfers moving further (this is accompanied by a legacy
-node release). This means that both a legacy (albeit only for migrations), and a new Chrysalis Phase 2 network will
+node release). This means that both a legacy (albeit only for migrations), and a new Chrysalis Phase 2 network
 co-exist. 
+
 :::
 
 There are two ways with which you can migrate your funds from the old legacy to the Chrysalis Phase 2 network:
 
 1. You can either use our Firefly wallet (which allows migrating from either an 81-tryte seed or seed vault file)
-   (check out this [blog post](https://blog.iota.org/firefly-token-migration/) on how to do this)(.
+   (check out this [blog post](https://blog.iota.org/firefly-token-migration/) on how to do this).
 2. Or you can craft a migration bundle yourself which transfers your funds to a special migration address under your
    control (programmatic approach).
 
-This guide will further only explain how to create a migration bundle, and the rules imposed on it.
+This guide will further explain how to create a migration bundle and the rules imposed on it.
 
 ### Migrating Funds by Issuing Migration Bundles
 
-Note that as mentioned above, there was a special release for the legacy node software on the 28th of April, which
-will only further support migration bundles. In case you're operating a node yourself you must upgrade to that version,
+As mentioned above, there was a special release for the legacy node software on the 28/4/2021, which
+will only further support migration bundles. In case you are operating a node yourself you must upgrade to that version,
 as otherwise you will no longer be synchronized with the network.
 
 #### Migration bundle
 
-With this limited legacy network, only migration bundles will further confirm. A migration bundle is nothing else than a
-normal value bundle/transfer which has some additional restrictions. If you craft a bundle which obeys to the following
+With this limited legacy network, only migration bundles will be confirmed moving forward. A migration bundle is simply a
+normal value bundle/transfer which has some additional restrictions. If you craft a bundle which obeys the following
 rules, then it falls under what we define as a migration bundle:
 
 - It contains exactly one output transaction of which the destination address is a valid migration address and is
@@ -82,25 +87,22 @@ rules, then it falls under what we define as a migration bundle:
   other than the tail transaction must always be part of an input.
 - Input transactions must not use migration addresses.
 
-If in doubt whether your bundle is an actual migration bundle, you can use [ValidBundle(bundle, true)](https://github.com/iotaledger/iota.go/blob/2618d56d58105dfc2f3b7f1eb3481d9f89a1d6bc/bundle/bundle.go#L335)
-function of our iota.go library to validate this. In case you're not acquainted with Go, you can also contact us on
+If you are in doubt whether your bundle is an actual migration bundle, you can use the [ValidBundle(bundle, true)](https://github.com/iotaledger/iota.go/blob/2618d56d58105dfc2f3b7f1eb3481d9f89a1d6bc/bundle/bundle.go#L335) function of our iota.go library to validate this. If you are not acquainted with Go, you can also contact us on
 Discord or Slack to ensure that your crafted bundles are valid migration bundles.
 
-Things to consider:
+Here are a few things to consider:
 
-- You must not broadcast your own migration bundles unless you're 100% sure that they are indeed valid migration
+- You must not broadcast your own migration bundles unless you are 100% sure that they are valid migration
   bundles.
 - If one of your input transactions spends funds from an already used address (meaning it is subject to key re-use), we
   recommend that you use the [bundle miner tool](https://github.com/iotaledger/iota.rs/tree/migration-new/iota-bundle-miner) to craft a bundle with the most applicable security given the already exposed parts of the given address' private key.
-- Do not use too many input transactions as this will increase the overall Proof-of-Work time needed for a single
-  bundle. Rather, split your input addresses over multiple migration bundles.
+- Do not use too many input transactions as this will increase the overall Proof-of-Work time needed for a single bundle. Rather, split your input addresses over multiple migration bundles.
 - Your code must include logic to await for the migration bundle's confirmation. If you find that your migration bundle
   is not confirming, consider re-attaching it (re-attaching is **not** the same as re-signing the bundle).
-- If you submit a migration bundle for broadcasting via the `broadcastTransactions` API command and you're using the
-  updated legacy node software (which you must on/after the 28th of April), then it will additionally check up on
-  submission whether your submitted bundle really adheres to the rules outlined above as an additional safe guard.
+- If you submit a migration bundle for broadcasting via the `broadcastTransactions` API command and you are using the
+  updated legacy node software, then it will additionally check up on the submission whether your submitted bundle really adheres to the rules outlined above as an additional safeguard.
 
-For further information about the migration bundles, have a look at [RFC-0035](https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md#migration-bundle).
+For further information about the migration bundles, see the [RFC-0035](https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md#migration-bundle) page.
 
 As an example, [this bundle](https://explorer.iota.org/mainnet/bundle/ZRAFFSEPRKDYGGA9DJQBWCXG9CGODUNZUBOWHVFQY9DK9HCHJQTHHSYBQRGZHGXWAPXDTJPPFJ9XFUALW) is a valid migration bundle. It spends 1 Mi
 
@@ -112,7 +114,7 @@ As an example, [this bundle](https://explorer.iota.org/mainnet/bundle/ZRAFFSEPRK
 ##### Migration address
 
 As mentioned above, a migration bundle must have as its single destination/output address a migration address. A
-migration address is in essence an EdDSA address (to which you hold the keys on the new network) encoded in a legacy
+migration address is, in essence, an EdDSA address (to which you hold the keys on the new network) encoded in a legacy
 tryte address. You can create such an address in the following way:
 
 - Compute the [BLAKE2b-256](https://tools.ietf.org/html/rfc7693) hash `H` of your Ed25519 address `A` (this address is the one you control in the new network; note that an Ed25519 address is the Blake2b-256 hash of your Ed25519 public key).
@@ -128,12 +130,11 @@ Example:
 - Migration address including 9-tryte checksum (
   90-tryte): `TRANSFERCDJWLVPAIXRWNAPXV9WYKVUZWWKXVBE9JBABJ9D9C9F9OEGADYO9CWDAGZHBRWIXLXG9MAJV9RJEOLXSJW`
 
-Since nobody holds keys to such migration addresses, funds are effectively burned and can no longer be used in the
-legacy network.
+Since nobody holds keys to such migration addresses, funds are effectively burned and can no longer be used in the legacy network.
 
 #### Migration Code Example with Node.js
 
-[More detailed documentation for the following example](https://github.com/iotaledger/wallet.rs/blob/dev/bindings/nodejs/examples/8-migration.md)
+[Click to see more detailed documentation for the following example](https://github.com/iotaledger/wallet.rs/blob/dev/bindings/nodejs/examples/8-migration.md).
 
 ```javascript=
 /**
@@ -146,7 +147,7 @@ require('dotenv').config()
 const ADDRESS_SECURITY_LEVEL = 2
 // Minimum balance that is required for a migration bundle, because of the dust protection in the new network
 const MINIMUM_MIGRATION_BALANCE = 1000000
-// This value shouldn't be too high, because then the PoW could take to long to get it confirmed
+// This value should not be too high, because then the PoW could take too long to get it confirmed
 const MAX_INPUTS_PER_BUNDLE = 10
 
 
@@ -264,11 +265,11 @@ const getMigrationBundles = (inputs) => {
  *         - Sort the inputs in descending order based on balance;
  *         - Pick first N inputs (where N = MAX_INPUTS_PER_BUNDLE) and see if their accumulative balance >= MINIMUM_MIGRATION_BALANCE
  *         - If yes, then repeat the process for next N inputs. Otherwise, iterate on the remaining inputs and add it to a chunk that has space for more inputs
- *         - If there's no chunk with space left, then ignore these funds. NOTE THAT THESE FUNDS WILL ESSENTIALLY BE LOST!
+ *         - If there is no chunk with space left, then ignore these funds. NOTE THAT THESE FUNDS WILL ESSENTIALLY BE LOST!
  * 
- * NOTE: If the total sum of provided inputs are less than MINIMUM_MIGRATION_BALANCE, then this method will just return and empty array as those funds can't be migrated.
+ * NOTE: If the total sum of provided inputs are less than MINIMUM_MIGRATION_BALANCE, then this method will just return and empty array as those funds cannot be migrated.
  * 
- * This method gives precedence to max inputs over funds. It ensures, a maximum a bundle could have is 30 inputs and their accumulative balance >= MINIMUM_MIGRATION_BALANCE
+ * This method gives precedence to max inputs over funds. It ensures a maximum a bundle could have is 30 inputs and their accumulative balance >= MINIMUM_MIGRATION_BALANCE
  * 
  * @method selectInputsForUnspentAddresses
  * 
@@ -359,4 +360,4 @@ const selectInputsForUnspentAddresses = (inputs) => {
 };
 ```
 
-After the migration only the 24 word mnemonic or the stronghold file gives you access to the funds, so make sure to back them up properly. It's not possible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for [Backup and security](https://wiki.iota.org/chrysalis-docs/guides/backup_security).
+After the migration only the 24 word mnemonic or the stronghold file gives you access to the funds, so make sure to back them up properly. it is not possible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for [Backup and security](https://wiki.iota.org/chrysalis-docs/guides/backup_security).

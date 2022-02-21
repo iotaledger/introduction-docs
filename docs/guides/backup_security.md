@@ -1,5 +1,5 @@
 ---
-description: How to back up your account, restore an account from a backup, export a user's Stronghold, rekey Stronghold.
+description: This page describes how to back up your account, restore an account from a backup, export a user's Stronghold, and rekey Stronghold.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - stronghold
@@ -10,6 +10,7 @@ keywords:
 - restore
 - export
 - rekey
+-how to
 ---
 
 # Backup and Security
@@ -33,7 +34,7 @@ You can use a copy of the `stronghold.snapshot` file as a backup. You can implem
 
 ## How to Restore From a Backup
 
-Simply place a snapshot file in the directory that wallet.rs expects.
+Place a snapshot file in the directory that wallet.rs expects.
 
 ## How to Export a User's Stronghold
 
@@ -41,9 +42,9 @@ You can create a new Stronghold snapshot on the fly to allow a user to leave you
 
 ## How to Rekey a Stronghold/Password Rotation
 
-The procedure for changing a Stronghold password is "simple": you read a snapshot into a vault and then write it out with a new encryption password. [See this code for the source.](https://github.com/iotaledger/wallet.rs/blob/d1b8893d73aae35dfcf7c5c8006e2177988d25d0/src/stronghold.rs#L436-L451)
+The procedure for changing a Stronghold password is simple: you read a snapshot into a vault and then write it out with a new encryption password. [See this code for the source.](https://github.com/iotaledger/wallet.rs/blob/d1b8893d73aae35dfcf7c5c8006e2177988d25d0/src/stronghold.rs#L436-L451)
 
-:::tip
+:::note
 
 For obvious reasons, old snapshot backups will not be "rekeyed", so you have to track your old passwords. 
 
