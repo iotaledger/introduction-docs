@@ -39,6 +39,7 @@ The IOTA foundation is in charge of maintaining the official client libraries. Y
 ## Utilities
 
 #### **Developer tools** ####    
+- [Official explorer](https://explorer.iota.org/mainnet).
 - [Devnet faucet](https://faucet.devnet.chrysalis2.com/).
 - [Commandline wallet](https://github.com/iotaledger/cli-wallet).
 
