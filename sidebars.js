@@ -22,19 +22,10 @@ module.exports = {
       type: 'doc',
       id: 'introduction/path_to_chrysalis',
       label: 'Path to Chrysalis'
-    },
-    {
-      type: 'category',
-      label: 'Firefly',
-      items: [{
-          type: 'doc',
-          id: 'firefly/introduction',
-          label: 'Introduction'
-        },
-        {
-          type: 'doc',
-          id: 'firefly/verify_download',
-          label: 'Verify Download'
+    },{
+      type: 'doc',
+      id: 'firefly/verify_download',
+      label: 'Verify Download'
         },
       ]
     },
