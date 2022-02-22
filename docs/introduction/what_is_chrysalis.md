@@ -15,7 +15,7 @@ The objective of the IOTA Foundation was to optimize the IOTA mainnet before Coo
 
 ![IOTA1.0 vs Chrysalis(IOTA1.5) confirmation time](/img/introduction/what_is_chrysalis/00.gif)
 
-A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. For IOTA, Chrysalis was the mainnet’s intermediate stage before Coordicide's completion. The purpose of Chrysalis is to improve the usability of the previous IOTA mainnet, for you and developers.
+A chrysalis is “the form a caterpillar takes before it emerges from its cocoon as a fully-formed moth or butterfly”. For IOTA, Chrysalis was the mainnet’s intermediate stage before Coordicide's completion. The purpose of Chrysalis is to improve the usability of the previous IOTA mainnet, for developers.
 
 ![From cocoon to butterfly](/img/introduction/02_path_to.png)
 

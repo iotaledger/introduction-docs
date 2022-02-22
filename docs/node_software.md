@@ -27,10 +27,14 @@ At this stage, we recommend using Hornet since it has several optional features 
 
 :::
 
-## Node Software
+## Hornet
 
-- [hornet](https://wiki.iota.org/hornet/welcome).
-- [bee (branch: chrysalis-pt-2)](https://github.com/iotaledger/bee/tree/chrysalis-pt-2).
+- [Official GitHub Repository](https://github.com/gohornet/hornet).
+- [Documentation](https://wiki.iota.org/hornet/welcome).
+
+## Bee
+- [Official GitHub Repository](https://github.com/iotaledger/bee/tree/chrysalis-pt-2).
+- [Documentation](https://wiki.iota.org/bee/welcome).
 
 ## Node API Specification
 

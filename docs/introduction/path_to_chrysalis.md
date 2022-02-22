@@ -25,7 +25,7 @@ The intended outcomes for Chrysalis were:
 
 - **A simpler transition to Coordicide** - With Coordicide making significant progress, we wanted to ensure that all developers and companies that built and deployed on Chrysalis would have as smooth a transition to Coordicide as possible.
 - **Substantial performance improvements** - With the changes introduced by Chrysalis, we saw a substantial improvement in the scalability and reliability of the IOTA Mainnet.
-- **Improved developer and user experience** - The new protocol features, new libraries, and the new wallet made IOTA one of the best platforms to build on, removing the friction which developers experience today while allowing solutions built on top of the protocol to provide a better experience for you.
+- **Improved developer and user experience** - With the new protocol features, new libraries, and the new wallet, we strived to make IOTA a platform to build on by enhancing the developer's experience today while allowing solutions built on top of the protocol to provide a better experience.
 - **Accelerated adoption** - Chrysalis made IOTA production-ready by becoming a stable protocol, with a reliable set of developer tools and frameworks that enabled startups, corporations, and governments to develop and launch products powered by IOTA.
 
 ## The Stages to Chrysalis
