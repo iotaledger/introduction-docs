@@ -66,7 +66,7 @@ Features of the Wallet Library:
 
 ## How Does it Work?
 
-The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with the IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database; however, using the Stronghold component is recommended due to its high level of security.
+The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with the IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use an SQLite database; however, using the Stronghold component is recommended due to its high level of security.
 
 For further reference, you can read our [wallet documentation here](https://wiki.iota.org/wallet.rs/welcome).
 
@@ -90,7 +90,7 @@ Since all `wallet.rs` bindings are based on core principles provided by the `wal
 ### 1. Set up the Wallet Library
 First, you should install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the `NodeJs` binding, it is straightforward since it is distributed via the `npm` package manager. We also recommend you use `dotenv` for password management.
 
-For further reference, you can read more about [backup and security here](https://wiki.iota.org/chrysalis-docs/guides/backup_security).
+You can read more about [backup and security in this guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security).
 
 ```bash
 npm install @iota/wallet dotenv
@@ -118,7 +118,7 @@ Technically speaking, "storage" means a single file called `wallet.stronghold`. 
 One of the key principles behind the `stronghold`-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the `Account_Manager` instance where all complexities are hidden under the hood and are dealt with securely. In case you would also like to store a seed somewhere else, there is another method, `AccountManager.generateMnemonic()`, that generates random seeds. This method can be leveraged before the actual account initialization.
 
 :::note
-It is recommended you store the `stronghold` password and the `stronghold` database on separate devices. For reference, see the the [backup and security guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security) for more information.
+It is recommended you store the `stronghold` password and the `stronghold` database on separate devices. See the [backup and security guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security) for more information.
 
 :::
 

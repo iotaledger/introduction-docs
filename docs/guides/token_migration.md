@@ -360,4 +360,4 @@ const selectInputsForUnspentAddresses = (inputs) => {
 };
 ```
 
-After the migration only the 24 word mnemonic or the stronghold file gives you access to the funds, so make sure to back them up properly. it is not possible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for [Backup and security](https://wiki.iota.org/chrysalis-docs/guides/backup_security).
+After the migration, only the 24-word mnemonic or the stronghold file gives you access to the funds, so make sure to back them up properly. It is impossible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for [Backup and security](https://wiki.iota.org/chrysalis-docs/guides/backup_security).

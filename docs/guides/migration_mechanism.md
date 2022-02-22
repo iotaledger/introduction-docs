@@ -14,13 +14,7 @@ keywords:
 
 # How the IOTA Chrysalis Phase 2 Token Migration Works
 
-For the Chrysalis Phase 2 transition, the IOTA Foundation had to develop a way for funds to be migrated to the new network. Because the previous network did not support the WOTS addresses, this new mechanism was created.
-
-The developed mechanism includes that:
-
-- It is trustless, meaning that everyone who is interested can verify that migrated funds were legitimate.
-- Migrated funds take less than 5 minutes until they become available in the network.
-- Migrations take place at any time for the foreseeable future.
+For the Chrysalis Phase 2 transition, the IOTA Foundation developed a way to migrate funds to the new network. IOTA created this new mechanism because the previous network did not support the WOTS addresses.
 
 Before proceeding into the developed mechanism, below is our reasoning for why other mechanisms were not chosen:
 
@@ -34,7 +28,7 @@ Before proceeding into the developed mechanism, below is our reasoning for why o
   viable option, we decided not to include support for WOTS as it brought several legacy problems we did not want, including:
     - WOTS signatures are very large and make up a disproportional amount of data in a transaction (note that our PoW
       requirement in Chrysalis' Phase 2 was dependent on the size of the message). Additionally, there were no real bounds
-      on how big such signatures could grow to (even if, per the default, we only supported 3 security levels in our
+      on how big such signatures could grow to (even if, per the default, we only supported three security levels in our
       libraries).
     - We would have needed to pollute our new Chrysalis Phase 2 models with support for these addresses and signatures,
       adding unnecessary complexity to what should be a clean protocol.
@@ -75,7 +69,7 @@ transactions. Likewise, a `Treasury Transaction` was only valid as an inner payl
     - A checksum of that Ed25519 address.
     - A tryte prefix `TRANSFER` (these addresses always start with this prefix).
 2. As mentioned above, a `Receipt` could only be contained in a milestone and therefore the Coordinator on the Chrysalis
-   Phase 2 network:
+   Phase 2 network.
     1. Periodically polled data from a legacy node about what kind of newly confirmed burned/migrated funds there were (while also performing WOTS signature verification on these and the legacy milestone bundle).
     2. Then a milestone is produced with a `Receipt` that contained those funds, where within the `Receipt`,
        a `Treasury Transaction` was placed which deducts the sum of tokens migrated from the `Treasury`.
