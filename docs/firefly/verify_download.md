@@ -24,16 +24,16 @@ Firefly is IOTA's new official wallet for Chrysalis.
 
 **Code Repository**: [https://github.com/iotaledger/firefly](https://github.com/iotaledger/firefly)
 
-# Verify your Firefly Desktop Download
+## Verify your Firefly Desktop Download
 
 When you download Firefly Desktop, you should verify its authenticity to make sure that you downloaded the correct one from the IOTA Foundation GitHub repository. In this how-to guide, you learn how to verify various Firefly Desktop downloads.
 
 
 You can verify the authenticity of the Firefly Desktop by checking its SHA256 hash and code signature. The instructions for both of these steps differ, depending on your operating system.
 
-## Windows Operating System
+### Windows Operating System
 
-### Verify the SHA256 Hash
+#### Verify the SHA256 Hash
 
 1. Open a command-line interface.
 
@@ -51,13 +51,13 @@ certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
 
 3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match.
 
-### Verify the Code Signature
+#### Verify the code signature
 
 1. Right-click on `firefly-desktop-version.exe`.
 
 2. Go to **Digital Signatures** > **Details** > **View Certificate**.
 
-#### For Firefly 1.2.0 and earlier
+##### For Firefly 1.2.0 and earlier
 1. In the Certification Path tab, make sure that the path matches the following information:
 
     - DigiCert.
@@ -67,7 +67,7 @@ certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
 2. Make sure that the Certificate status reads "This certificate is OK.".
 
 
-#### For Firefly 1.3.0 and later
+##### For Firefly 1.3.0 and later
 1. In the Certification Path tab, make sure that the path matches the following information:
 
     - Sectigo (AAA).
@@ -77,9 +77,9 @@ certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
 
 2. Make sure that the Certificate status reads, "This certificate is OK.".
 
-## MacOS Operating System
+### MacOS Operating System
 
-### Verify the SHA256 Hash
+#### Verify the SHA256 Hash
 
 1. Open the Terminal (in `/Applications/Utilities/Terminal`).
 
@@ -97,9 +97,9 @@ certUtil -hashfile C:\Users\yourname\Downloads\firefly-desktop-1.0.0.exe SHA256
 
 3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match.
 
-### Verify the Code Signature
+#### Verify the code signature
 
-#### Prerequisites
+##### Prerequisites
 
 To follow these instructions you need the [Xcode Command Line Tools](https://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/allexperimental/macxcodecommandlinetools.html).
 
@@ -147,11 +147,11 @@ To follow these instructions you need the [Xcode Command Line Tools](https://www
     ```
     
     
-## Linux Operating System
+### Linux Operating System
 
-### Verify the SHA256 Hash
+#### Verify the SHA256 Hash
 
-#### Prerequisites
+##### Prerequisites
 
 You will need the `sha256sum` package, which is included with most Linux distributions.
 
@@ -171,7 +171,7 @@ You will need the `sha256sum` package, which is included with most Linux distrib
 
 3. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/firefly/releases) and make sure that they match.
 
-### Verify the Code Signature
+#### Verify the code signature
 
 1. Download the .asc file in the Assets section of the [release notes](https://github.com/iotaledger/firefly/releases).
 
