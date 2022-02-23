@@ -1,5 +1,5 @@
 ---
-description: An overview of the available guides for the Chrysalis network that also outlines the Changes from IOTA 1.0 to IOTA 1.5, aka Chrysalis.  
+description: An overview of the available guides for the Chrysalis network that also outlines the changes from IOTA 1.0 to IOTA 1.5, aka Chrysalis.  
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - IOTA 1.0

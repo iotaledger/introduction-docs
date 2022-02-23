@@ -1,5 +1,5 @@
 ---
-description: The wallet library is a stateful library for developers and it is recommended if you want to use IOTA for token transfers. This library has a stateful design and supports the handling and monitoring of multiple accounts and addresses.
+description: The wallet library is a stateful library for developers who want to use IOTA for token transfers. This library has a stateful design and supports the handling and monitoring of multiple accounts and addresses.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - stateful
