@@ -7,6 +7,7 @@ keywords:
 - stackExchange
 - community
 - official
+- reference
 ---
 # Resources
 
@@ -15,21 +16,21 @@ keywords:
 ---------------
 
 #### **IOTA Explorer** ####
-[Link](https://explorer.iota.org/mainnet)
+[IOTA Explorer](https://explorer.iota.org/mainnet)
 
 Official Tangle explorer with a lot of tools to browse through the Tangle.
 
 ---
 
 #### **Discord** ####
-[Link](https://discord.iota.org)
+[IOTA Discord](https://discord.iota.org)
 
 The official Discord server where community members and the IOTA Foundation discuss projects and related subjects.
 
 ---
 
 #### **IOTA StackExchange** ####
-[Link](https://iota.stackexchange.com)
+[IOTA StackExchange](https://iota.stackexchange.com)
 
 The official forum where you can ask or answer technical questions about IOTA.
 
@@ -39,14 +40,14 @@ The official forum where you can ask or answer technical questions about IOTA.
 
 ---------------
 #### TheTangle.org - IOTA Explorer ####
-[Link](https://thetangle.org)
+[The Tangle](https://thetangle.org)
 
 A community tool for searching transactions in the Tangle.
 
 ---------------
 
 #### TangleBayExplorer - IOTA Explorer ####
-[Link](https://explorer.tanglebay.com/mainnet)
+[Tangle Bay](https://explorer.tanglebay.com/mainnet)
 
 An community tool for searching transactions in the Tangle.
 
