@@ -112,6 +112,5 @@ module.exports = {
       id: 'faq',
       label: 'FAQ'
     },
-​
   ]
-}
+};
