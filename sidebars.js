@@ -1,4 +1,4 @@
-{
+module.exports = {
   mySidebar: [{
       type: 'doc',
       id: 'welcome',
@@ -114,4 +114,4 @@
     },
 ​
   ]
-};
+}
