@@ -1,5 +1,5 @@
 ---
-description: Chrysalis was the most promising series of upgrades made to IOTA yet with increased transaction throughput, network stability, improved usability.
+description: Chrysalis was the most promising series of upgrades made to IOTA yet with increased transaction throughput, network stability, and improved usability.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - EdDSA
@@ -9,6 +9,7 @@ keywords:
 - tip selection
 - UTXO
 - efficiency
+- explanation
 ---
 # Path to Chrysalis
 
@@ -24,20 +25,20 @@ The intended outcomes for Chrysalis were:
 
 - **A simpler transition to Coordicide** - With Coordicide making significant progress, we wanted to ensure that all developers and companies that built and deployed on Chrysalis would have as smooth a transition to Coordicide as possible.
 - **Substantial performance improvements** - With the changes introduced by Chrysalis, we saw a substantial improvement in the scalability and reliability of the IOTA Mainnet.
-- **Improved developer and user experience** - The new protocol features, new libraries, and the new wallet madeIOTA one of the best platforms to build on, removing the friction which developers experience today while allowing solutions built on top of the protocol to provide better user experience.
-- **Accelerated adoption** - Chrysalis made IOTA production-ready by becoming a stable protocol, with a reliable set of developer tools and frameworks that will enabled startups, corporations, and governments to develop and launch products powered by IOTA.
+- **Improved developer and user experience** - With the new protocol features, new libraries, and the new wallet, we strived to make IOTA a platform to build on by enhancing the developer's experience today while allowing solutions built on top of the protocol to provide a better experience.
+- **Accelerated adoption** - Chrysalis made IOTA production-ready by becoming a stable protocol, with a reliable set of developer tools and frameworks that enabled startups, corporations, and governments to develop and launch products powered by IOTA.
 
 ## The Stages to Chrysalis
 
 ![The stages to Chrysalis](/img/introduction/path_to_chrysalis/01.svg)
 
-The Chrysalis upgrade was a complex undertaking. We coordinated a number of distinct products to ensure a smooth transition for IOTA’s current users and partners. In addition to the core node software, we also needed to update our wallet software, our libraries, and the entire infrastructure.  
+The Chrysalis upgrade was a complex undertaking. We coordinated a number of distinct products to ensure a smooth transition for IOTA’s you and the partners. In addition to the core node software, we also needed to update our wallet software, our libraries, and the entire infrastructure.  
 
 Another important requirement was the ease of transition to the future Coordicide network. By carefully planning the breaking changes introduced along the way, and providing support in our developer tools, we ensured that our growing ecosystem of developers, startups, and corporations could reliably develop and launch new innovative products on IOTA.  
 
-The plan for implementing Chrysalis was divided into two phases.
+The plan for implementing Chrysalis was divided into two phases:
 
-**The first phase** consisted of improved tip selection (URTS), milestone selection, and White flag. These were implemented in the node software gradually. This phase required an upgrade of all nodes, including the coordinator node, and did not require a snapshot.  
+**The first phase** consisted of improved tip selection (URTS), milestone selection, and White flag. These were gradually implemented in the node software. This phase required an upgrade of all nodes, including the coordinator node, and did not require a snapshot.  
 
 The first phase of Chrysalis resulted in:
 
@@ -84,7 +85,7 @@ The Chrysalis changes were specified in the form of RFCs. You can find all the R
 
 ### Wallet Support
 
-The Trinity wallet is a popular IOTA wallet. With Chrysalis, we released a new wallet implementation, [Firefly](https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/). The team worked on a complete reevaluation of the wallet architecture, with a completely redesigned user experience. At its core is a [new wallet library](../libraries/wallet.md) written in Rust. The wallet library is designed to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library utilized by Firefly is Stronghold; Stronghold enables ultra-secure secret handling and storage.  
+The Trinity wallet was a popular IOTA wallet. With Chrysalis, we released a new wallet implementation, [Firefly](https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/). The team worked on a complete reevaluation of the wallet architecture, with a completely redesigned experience for you. At its core is a [new wallet library](../libraries/wallet.md) written in Rust. The wallet library is designed to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library utilized by Firefly is Stronghold; Stronghold enables ultra-secure secret handling and storage.  
 
 ### Infrastructure
 
