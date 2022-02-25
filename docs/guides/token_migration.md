@@ -37,7 +37,7 @@ If you migrate after the Chrysalis launch, your funds will become available shor
 
 :::note
 
-Firefly will initially only be available on desktop operating systems such as: macOS, Linux, and Windows and not support migrations for Ledger devices or using a Ledger device.
+Firefly will initially only be available on desktop operating systems such as: macOS, Linux, or Windows and will not support migrations for Ledger devices or using a Ledger device.
 
 :::
 
