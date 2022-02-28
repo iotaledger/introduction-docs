@@ -118,7 +118,8 @@ Technically speaking, "storage" means a single file called `wallet.stronghold`. 
 One of the key principles behind the `stronghold`-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the `Account_Manager` instance where all complexities are hidden under the hood and are dealt with securely. In case you would also like to store a seed somewhere else, there is another method, `AccountManager.generateMnemonic()`, that generates random seeds. This method can be leveraged before the actual account initialization.
 
 :::note
-It is recommended you store the `stronghold` password and the `stronghold` database on separate devices. See the [backup and security guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security) for more information.
+
+Keep the `stronghold` password and the `stronghold` database on separate devices. See the [backup and security guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security) for more information.
 
 :::
 
