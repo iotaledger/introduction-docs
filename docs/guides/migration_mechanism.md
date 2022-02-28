@@ -25,7 +25,7 @@ Before proceeding into the developed mechanism, below is our reasoning for why o
   tokens but were blocked by the fact that the next global snapshot would only be performed in 20 days and so they
   couldn't move their tokens to an exchange (which only supports Chrysalis Phase 2 IOTA).
 - `Supporting WOTS on Chrysalis Phase 2 (and only allowing to send to non-WOTS addresses)`: while this was also a
-  viable option, we decided not to include support for WOTS as it brought several legacy problems we did not want, including:
+  viable option, we decided not to include support for WOTS as it brought several legacy problems:
     - WOTS signatures are very large and make up a disproportional amount of data in a transaction (note that our PoW
       requirement in Chrysalis' Phase 2 was dependent on the size of the message). Additionally, there were no real bounds
       on how big such signatures could grow to (even if, per the default, we only supported three security levels in our
