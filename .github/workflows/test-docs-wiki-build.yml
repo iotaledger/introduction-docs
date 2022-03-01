@@ -12,11 +12,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-      - name: Install dependencies
+      - name: Install dependencies, set up Wiki and Build
         run: |
           npm install
-      - name: Setup Wiki and Build
-        run: |
           export config=$(cat EXTERNAL_DOCS_CONFIG)
           npm run setup
           rsync -av --progress ./static/img/ ./local-wiki/iota-wiki/static/img/
