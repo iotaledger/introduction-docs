@@ -136,7 +136,7 @@ Since nobody holds keys to such migration addresses, funds are effectively burne
 
 [Click to see more detailed documentation for the following example](https://github.com/iotaledger/wallet.rs/blob/dev/bindings/nodejs/examples/8-migration.md).
 
-```javascript=
+```js
 /**
  * This example creates a new database and account,
  * and migrate funds from the legacy network to the chrysalis network
