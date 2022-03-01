@@ -10,8 +10,8 @@ Be sure to reference any related issues by adding `fixes issue #`.
 
 Choose a type of change, and delete any options that are not relevant.
 
-- Bug fix (a non-breaking change which fixes an issue)
-- Enhancement (a non-breaking change which adds functionality)
+- Bug fix (a non-breaking change that fixes an issue)
+- Enhancement (a non-breaking change that adds functionality)
 - Documentation Fix
 - Documentation Enhancement
 
