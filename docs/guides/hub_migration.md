@@ -6,17 +6,18 @@ keywords:
 - IOTA Hub
 - iota.rs
 - migration
+- explanation
 ---
 # IOTA Hub Migration Guide
 
 :::info
 
-This guide outlines how to switch from IOTA Hub to using [Wallet.rs](https://wiki.iota.org/wallet.rs/welcome) or its [bindings](https://wiki.iota.org/wallet.rs/libraries/overview) instead.
+This guide outlines how to switch from using IOTA Hub to [Wallet.rs](https://wiki.iota.org/wallet.rs/welcome) or its [bindings](https://wiki.iota.org/wallet.rs/libraries/overview) instead.
 
 :::
 
 :::warning
-Before you start a migration from IOTA Hub get in contact with us so we can assist you in this process. 
+Before you start a migration from IOTA Hub, get in contact with us so we can assist you in this process. 
  
 **Contact details:**
 

@@ -1,5 +1,5 @@
 ---
-description: How to take part in the global snapshot.  
+description: This page described to take part in the global snapshot.  
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - golang
@@ -14,23 +14,25 @@ keywords:
 # Chrysalis Snapshot Validation/Boostrapping
 
 This guide outlined how to take part in the global snapshot, respectively genesis snapshot creation for the
-legacy, and Chrysalis Phase 2 IOTA network. The goal was to generate a global snapshot for the legacy network which acted
-as a cut-off point for when only migration bundles/transactions were allowed, and a genesis snapshot for the new network
-which contained the already burned/migrated funds from the 7-day-migration window.
+legacy, and the Chrysalis Phase 2 IOTA network. The goal was to generate a global snapshot for the legacy network which acted
+as a cut-off point for when only migration bundles/transactions were allowed. Then a genesis snapshot for the new network
+which contained the already burned/migrated funds from the 7-day-migration window would be created.
 
 ## Requirements
 
 - A GitHub account and git.
 - A synchronized legacy Hornet node (running version < 0.x.x).
-    - The `getLedgerState` API command must be permitted. Add an entry to  `httpAPI.permitRemoteAccess` in case this API
+    - The `getLedgerState` API command must be permitted. Add an entry to `httpAPI.permitRemoteAccess` in case this API
       command is not added yet (restart your node afterwards).
     - The API port must be accessible.
 - Golang version 1.16.x (https://golang.org/).
 
 ## Steps
 
-:::info
-Make sure you've Go installed by issuing `go version` on your command line.
+:::note
+
+Make sure you have Go installed by issuing `go version` on your command line.
+
 :::
 
 1. `git clone https://github.com/iotaledger/chrysalis-tools.git`.
@@ -70,18 +72,20 @@ $ sha256sum genesis_snapshot.bin genesis_snapshot_alt.bin global_snapshot.csv
 
 ## Bootstrapping the Legacy Hornet Node From The Global Snapshot
 
-:::info
+:::note
+
 Loading the global snapshot ensured that your legacy Hornet node added the genesis transaction (999...) as a solid entry point: this was important as the Coordinator would issue the next milestone after the global snapshot index on top of it. Your node would **not** lose the data it already had.
+
 :::
 
 1. Await for confirmation that the global snapshot was taken successfully by looking into the validation issue on
    the [Hornet repository](https://github.com/gohornet/hornet) or Discord.
-1. Stop your legacy Hornet node and download the binary or docker image of the Hornet build which only supports
+2. Stop your legacy Hornet node and download the binary or docker image of the Hornet build which only supports
    migration-bundles. With this "migration-bundles-only" version, your Hornet node will also no longer peer to nodes
    which do not run the same version.
-1. Let `snapshots.global.path` point to the global snapshot file (i.e `global_snapshot.csv`).
-1. Under `snapshots.global.index` define the index of the milestone at which the global snapshot was taken. (this should
+3. Let `snapshots.global.path` point to the global snapshot file (i.e `global_snapshot.csv`).
+4. Under `snapshots.global.index` define the index of the milestone at which the global snapshot was taken. (This should
    correspond to what `legacy node state` was from the program output, i.e. `3705194` from the example output above).
-1. Change `snapshots.loadType` to `"global"` (note the quotes as the value is a string).
-1. Restart your legacy Hornet **with the additional `--forceGlobalSnapshot` flag** (this will instruct your Hornet node
+5. Change `snapshots.loadType` to `"global"` (note the quotes as the value is a string).
+6. Restart your legacy Hornet **with the additional `--forceGlobalSnapshot` flag** (this will instruct your Hornet node
    to load the global snapshot despite the fact that it already has a database).
