@@ -1,5 +1,5 @@
 ---
-description: The IOTA foundation provides load-balanced public mainnet endpoints, with MQTT and the HTTP REST API enabled. 
+description: The IOTA foundation provides load-balanced public mainnet endpoints where MQTT and the HTTP REST API are enabled. 
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - mainnet
@@ -7,12 +7,13 @@ keywords:
 - REST API
 - HTTP
 - Explorer
+- reference
 ---
 # Mainnet
 
 ## Public Infrastructure
 
-The IOTA Foundation provides following load-balanced public mainnet endpoints:
+IOTA currently provides two load-balanced public mainnet endpoints:
 
 - chrysalis-nodes.iota.org.
 - chrysalis-nodes.iota.cafe.
@@ -22,5 +23,5 @@ over TLS.
 
 ## Developer Tools
 
-- [Explorer.](https://explorer.iota.org/mainnet)
+- [Explorer](https://explorer.iota.org/mainnet).
 
