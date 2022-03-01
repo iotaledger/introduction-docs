@@ -56,19 +56,19 @@ module.exports = {
               label: 'Path to Chrysalis'
             },
             {
-              to: 'firefly/',
+              to: 'firefly/introduction',
               label: 'Firefly'
             },
             {
-              to: 'node_software/',
+              to: 'node_software',
               label: 'Node Software'
             },
             {
-              to: 'libraries/',
+              to: 'libraries/overview',
               label: 'Libraries'
             },
             {
-              to: 'guides/',
+              to: 'guides/overview',
               label: 'Guides'
             },
             {
@@ -80,11 +80,15 @@ module.exports = {
               label: 'Devnet'
             },
             {
-              to: 'one-click-private-tangle',
+              to: 'tutorials/one_click_private_tangle',
               label: 'Private Tangle'
             },
             {
-              to: 'rfc',
+              to: 'tutorials/mainnet_hornet_node_k8s',
+              label: 'Mainnet Nodes on Kubernetes'
+            },
+            {
+              to: 'protocol_rfc',
               label: 'Protocol RFCs'
             },
             {

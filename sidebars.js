@@ -1,14 +1,3 @@
-/**
- * * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
-
 module.exports = {
   mySidebar: [{
       type: 'doc',
@@ -22,25 +11,14 @@ module.exports = {
       type: 'doc',
       id: 'introduction/path_to_chrysalis',
       label: 'Path to Chrysalis'
-    },
-    {
-      type: 'category',
-      label: 'Firefly',
-      items: [{
-          type: 'doc',
-          id: 'firefly/README',
-          label: 'Introduction'
+    },{
+      type: 'doc',
+      id: 'firefly/verify_download',
+      label: 'Verify Download'
         },
-        {
-          type: 'doc',
-          id: 'firefly/verify_download',
-          label: 'Verify Download'
-        },
-      ]
-    },
     {
       type: 'doc',
-      id: 'node-software/node-software',
+      id: 'node_software',
       label: 'Node Software'
     }, {
       type: 'category',
@@ -64,32 +42,32 @@ module.exports = {
       label: 'Guides',
       items: [{
           type: 'doc',
-          id: 'guides/README',
+          id: 'guides/overview',
           label: 'Overview'
         },
         {
           type: 'doc',
-          id: 'guides/dev_guide',
+          id: 'guides/developer',
           label: 'Developer'
         },
         {
           type: 'doc',
-          id: 'guides/exchange_guide',
+          id: 'guides/exchange',
           label: 'Exchange'
         },
         {
           type: 'doc',
-          id: 'guides/token_guide',
+          id: 'guides/token_migration',
           label: 'Token Migration'
         },
         {
           type: 'doc',
-          id: 'guides/migration-mechanism',
+          id: 'guides/migration_mechanism',
           label: 'Migration Mechanism'
         },
         {
           type: 'doc',
-          id: 'guides/hub_guide',
+          id: 'guides/hub_migration',
           label: 'Hub Migration'
         },
         {
@@ -115,13 +93,23 @@ module.exports = {
       label: 'Devnet'
     },
     {
-      type: 'doc',
-      id: 'tutorials/one-click-private-tangle',
-      label: 'Private Tangle'
+      type: 'category',
+      label: 'Tutorials',
+      items: [
+        {
+          type: 'doc',
+          id: 'tutorials/one_click_private_tangle',
+          label: 'Private Tangle'
+        },
+        {
+          type: 'doc',
+          id: 'tutorials/mainnet_hornet_node_k8s',
+          label: 'Mainnet Hornet Node K8s'
+        },]
     },
     {
       type: 'doc',
-      id: 'rfc',
+      id: 'protocol_rfc',
       label: 'Protocol RFCs'
     },
     {
@@ -134,6 +122,5 @@ module.exports = {
       id: 'faq',
       label: 'FAQ'
     },
-
   ]
 };

@@ -15,7 +15,7 @@ const ActionList = [
   },
   {
     title: 'Build',
-    link: 'libraries',
+    link: 'libraries/overview',
     description: (
       <>
         Follow our tutorial to build your own IOTA application. You can use your favorite language like Rust, Python, Javascript or others.

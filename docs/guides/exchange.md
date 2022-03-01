@@ -1,13 +1,32 @@
+---
+description: Easily integrate IOTA with your exchange, custody solution, or product using the wallet.rs library.
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- integrate
+- exchange
+- account model
+- addresses
+- wallet.rs
+- setup
+- NodeJS
+- explanation
+---
+
 # Exchange Guide
 
 ## The IOTA Wallet Library
 
-> Easily integrate IOTA with your exchange, custody solution, or product.
+:::note
+
+You can easily integrate IOTA with your exchange, custody solution, or product.
+
+:::
 
 IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. But this architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.
 
 Within the Chrysalis update (also known as IOTA 1.5), some building blocks were changed to be more approachable and more aligned with currently leveraged standards. We also ship many [client libraries](../libraries/overview.md) to help developers implement IOTA into their applications:
-![layers](/img/guides/wallet_rs_layers.svg)
+
+![Wallet.rs layer overview](/img/guides/wallet_rs_layers.svg)
 
 ## How Do I Implement It to My Exchange?
 
@@ -20,23 +39,23 @@ Since IOTA addresses in the Chrysalis network are perfectly reusable, they can b
 
 The library supports derivation for multiple accounts from a single seed. An account is simply a deterministic identifier from which multiple addresses can be further derived. 
 
-The library also allows consumers to assign a meaningful alias to each account. In addition to this, generated individual accounts can be also searched via generated addresses. This means it does not matter whether aliases or addresses are known as the search for the related account is very straightforward using the `wallet.rs` library.
+The library also allows consumers to assign a meaningful alias to each account. In addition to this, generated individual accounts can also be searched via generated addresses. This means it does not matter whether aliases or addresses are known as the search for the related account is very straightforward using the `wallet.rs` library.
 
 It also leaves the choice to users if they want to segregate their funds across multiple accounts or multiple addresses. The following illustration outlines the relationships between seed, accounts, and addresses: 
 
-![accounts](/img/guides/accounts.svg)
+![Relationship between seed, accounts, and addresses](/img/guides/accounts.svg)
 
-### Multi Account Approach
+### Multi-Account Approach
 
-The multi account approach is used to create an account for each individual user. The created accounts can then be linked to the internal user IDs as an account alias, which are distinctly separated.
+The multi-account approach is used to create an account for each individual user. The created accounts can then be linked to the internal user IDs as an account alias, which are distinctly separated.
 
 ### Single Account Approach
 
-The single account approach allows for just one account and creates addresses for each individual user. The associated addresses are then linked to the internal user IDs and store who owns which address in the database. Most exchanges are more familiar with the single account approach and find it easier to use, implement, and backup.
+The single account approach allows for just one account and creates addresses for each user. The associated addresses are then linked to the internal user IDs and store who owns which address in the database. Most exchanges are more familiar with the single account approach and find it easier to use, implement, and backup.
 
 ## Implementation Guide
 
-This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you already implemented the IOTA Hub, please visit the [Hub Migration Guide](hub_guide.md).
+This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you have already implemented the IOTA Hub, please visit the [Hub Migration Guide](hub_migration.md).
 
 Features of the Wallet Library:
 - Secure seed management.
@@ -47,11 +66,11 @@ Features of the Wallet Library:
 
 ## How Does it Work?
 
-The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with the IOTA Stronghold for seed handling, seed storage, and state backup. Alternatively, you can use a SQLite database; however, using the Stronghold component is highly recommended due to the most advanced level of security being applied.
+The Wallet Library is a stateful package with a standardized interface for developers to build applications involving IOTA value transactions. It offers abstractions to handle IOTA payments and can optionally interact with the IOTA Stronghold for seed handling, seed storage, and state backup. You can also use an SQLite database instead of Stronghold but it is not as secure.
 
-For further reference, you can see the [full documentation here](https://wallet-lib.docs.iota.org).
+For further reference, you can read our [wallet documentation here](https://wiki.iota.org/wallet.rs/welcome).
 
-The following examples cover the *multi account approach* using `NodeJS` binding:
+The following examples cover the *multi-account approach* using the `NodeJS` binding:
 
 1. Set up the Wallet Library.
 2. Create an account for each user.
@@ -60,18 +79,18 @@ The following examples cover the *multi account approach* using `NodeJS` binding
 5. Check the user balance.
 6. Enable withdrawals.
 
-:::tip
+:::note
 
-If you are looking for other languages, please read the [wallet library overview](../libraries/wallet.md).
+If you are looking for other languages, please read the [wallet library overview](https://wiki.iota.org/chrysalis-docs/libraries/wallet).
 
 :::
 
 Since all `wallet.rs` bindings are based on core principles provided by the `wallet.rs` library, the outlined approach is very similar regardless of the programming language of your choice.
 
 ### 1. Set up the Wallet Library
-First, let's install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the `NodeJs` binding, it is quite straightforward since it is distributed via the `npm` package manager. We also recommend you use `dotenv` for password management.
+First, you should install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the `NodeJs` binding, it is straightforward since it is distributed via the `npm` package manager. We also recommend you use `dotenv` for password management.
 
-For further reference, read more about [backup and security here](backup_security.md).
+You can read more about [backup and security in this guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security).
 
 ```bash
 npm install @iota/wallet dotenv
@@ -88,7 +107,7 @@ Once you have everything needed to use the `wallet.rs` library, it is necessary 
 
 The storage is encrypted at rest, so you need a strong password and location where to put your storage. 
 
-:::tip
+:::note
 
 Manage your password with the utmost care.
 
@@ -98,8 +117,9 @@ Technically speaking, "storage" means a single file called `wallet.stronghold`. 
 
 One of the key principles behind the `stronghold`-based storage is that no one can get a seed from the storage. You deal with all the accounts purely via the `Account_Manager` instance where all complexities are hidden under the hood and are dealt with securely. In case you would also like to store a seed somewhere else, there is another method, `AccountManager.generateMnemonic()`, that generates random seeds. This method can be leveraged before the actual account initialization.
 
-:::tip
-It is highly recommended to store the `stronghold` password and the `stronghold` database on separate devices. For reference, see the [backup and security guide](backup_security.md) for more information
+:::note
+
+Keep the `stronghold` password and the `stronghold` database on separate devices. See the [backup and security guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security) for more information.
 
 :::
 
@@ -119,7 +139,7 @@ Import the Wallet Library and create an account manager:
     manager.storeMnemonic(SignerType.Stronghold, mnemonic) 
 ```
 
-Once the stronghold storage is created, it is not needed to generate the seed any longer (`manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())`). It has been already saved in the storage together with all account information.
+Once the stronghold storage is created, it is not needed to generate the seed any longer (`manager.storeMnemonic(SignerType.Stronghold, manager.generateMnemonic())`). It has already been saved in the storage together with all account information.
 
 ### 2. Create an Account For a User
 
@@ -134,13 +154,14 @@ Once the backend storage is created, individual accounts for individual users ca
 
 Each account is related to a specific IOTA network (mainnet/devnet) which is referenced by a node property, such as node url (in this example, the Chrysalis devnet balancer).
 
-For more information about `clientOptions`, please refer to [Wallet NodeJs API Reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html).
+For more information about `clientOptions`, please refer to the [Wallet NodeJs API Reference](https://wiki.iota.org/wallet.rs/libraries/nodejs/api_reference).
 
-The `Alias` can be whatever fits to the given use case and should be unique. The `Alias` is usually used to identify the given account later on. Each account is also represented by an `index` which is incremented (by 1) every time a new account is created. Any account can be then referred to via `index`, `alias`, or one of its generated `addresses`.
+The `Alias` can be whatever fits to the given use case and should be unique. The `Alias` is typically used to identify the given account later on. Each account is also represented by an `index` which is incremented (by 1) every time a new account is created. Any account can then be referred to via `index`, `alias`, or one of its generated `addresses`.
 
 Once an account has been created, you get an instance of it using the following methods: `AccountManager.getAccount(accountId)`, `AccountManager.getAccountByAlias(alias)` or `AccountManager.getAccounts()`.
 
 The most common methods of `account` instance include:
+
 * `account.alias()` - returns an alias of the given account.
 * `account.listAddresses()` - returns list of addresses related to the account.
 * `account.getUnusedAddress()` - returns a first unused address.
@@ -170,15 +191,16 @@ Every account can own multiple addresses. Addresses are represented by an `index
 
     console.log('Need a refill? Send it to this address:', latestAddress)
 ```
-Feel free to fill the address with Devnet Tokens with the [IOTA Faucet](https://faucet.devnet.chrysalis2.com/) to test it.
+You can fill the address with Devnet Tokens with the [IOTA Faucet](https://faucet.devnet.chrysalis2.com/) to test it.
 
 Addresses are of two types, `internal` and `public` (external):
+
 * Each set of addresses are independent from each other and has an independent `index` id.
 * Addresses that are created by `account.generateAddress()` are indicated as `internal=false` (public).
 * Internal addresses (`internal=true`) are called `change` addresses and are used to send the excess funds to them.
 * The approach is also known as a *BIP32 Hierarchical Deterministic wallet (HD Wallet)*.
 
-:::tip
+:::note
 
 You may remember IOTA 1.0 network in which addresses were not reusable. It is no longer true and addresses can be reused multiple times in the Chrysalis network.
 
@@ -230,7 +252,7 @@ data: {
 
 `accountId` can then be used to identify the given account via `AccountManager.getAccount(accountId)`.
 
-For further reference, you can read more about events in the [API reference](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html#addeventlistenerevent-cb).
+For further reference, you can read more about events in the [API reference](https://wiki.iota.org/wallet.rs/libraries/nodejs/api_reference#addeventlistenerevent-cb).
 
 ### 5. Check the Account Balance
 
@@ -267,11 +289,11 @@ Sending tokens is performed via the `SyncedAccount` instance that is a result of
 
 The full function signature is `Account.send(address, amount[, options])`.
 
-Default options are perfectly fine and are successful; however, additional options can be provided, such as `remainderValueStrategy`:
+Default options are fine and are successful; however, additional options can be provided, such as `remainderValueStrategy`:
 
 * `changeAddress`: Send the remainder value to an internal address.
 * `reuseAddress`: Send the remainder value back to its original address.
 
-The `Account.send()` function returns a `wallet message` that fully describes the given transaction. The `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via `account.listMessages()` function.
+The `Account.send()` function returns a `wallet message` that fully describes the given transaction. The `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via the `account.listMessages()` function.
 
-Please note that when sending tokens, a [dust protection](dev_guide.md#dust-protection) mechanism should be considered. 
+Please note that when sending tokens, a [dust protection](https://wiki.iota.org/chrysalis-docs/guides/developer#dust-protection) mechanism should be considered. 

@@ -1,11 +1,21 @@
 ---
-slug: /libraries/
+description: The IOTA client libraries allow you to easily integrate IOTA into your own applications. 
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- wallet library
+- client library
+- Tangle
+- C
+- golang
+- javascript
+- rust
+- explanation
 ---
 # Libraries
 
-**The IOTA client libraries allow you to easily integrate IOTA into your own applications. You can choose a library to match your use case.**
+**With the IOTA client libraries you can easily integrate IOTA into your own applications. You can choose a library to match your use case.**
 
-The official IOTA libraries serve as `one-source-code-of-truth` to IOTA users and provide binding to other programming languages. You can read more about core principles behind IOTA client libraries in the following blog [post](https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/).
+The official IOTA libraries serve as `one-source-code-of-truth` to IOTA users and provide binding to other programming languages. Below is a list of the IOTA libraries. You can also check out the [IOTA client libraries blog post](https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/), to learn about the libraries' core principles. 
 
 
 - [client-lib](client.md): a general purpose IOTA client library for interacting with the IOTA network (Tangle).
@@ -19,18 +29,18 @@ The official IOTA libraries serve as `one-source-code-of-truth` to IOTA users an
 <iframe src="https://www.youtube.com/embed/N2VW3zJQmso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-![overview-libs](/img/guides/overview-libraries.svg)
+![Libraries Overview](/img/guides/overview-libraries.svg)
 
-All libraries are in active development. The libraries target the Chrysalis devnet and no longer work with the previous IOTA mainnet.
+Currently, all of the libraries are in active development. The libraries target the Chrysalis devnet and no longer work with the previous IOTA mainnet.
 
-The IOTA foundation is in charge of maintaining the official client libraries.  You can find the libraries source code in the [Official GitHub repository](https://github.com/iotaledger).
+The IOTA foundation is in charge of maintaining the official client libraries. You can find the libraries' source code in the [Official GitHub repository](https://github.com/iotaledger).
 
 
 ## Utilities
 
 #### **Developer tools** ####    
-- [Official explorer](https://explorer.iota.org/chrysalis)
-- [Devnet faucet](https://faucet.devnet.chrysalis2.com/)
-- [Commandline wallet](https://github.com/iotaledger/cli-wallet)
+- [Official explorer](https://explorer.iota.org/mainnet).
+- [Devnet faucet](https://faucet.devnet.chrysalis2.com/).
+- [Commandline wallet](https://github.com/iotaledger/cli-wallet).
 
 ---------------

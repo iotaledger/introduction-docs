@@ -1,15 +1,22 @@
+---
+description: This page describes the migration components and mechanism used to migrate from IOTA 1.0 to IOTA 1.5 (Chrysalis). 
+image: /img/logo/Chrysalis_logo_dark.png
+keywords:
+- WOTS addresses
+- trustless
+- migration mechanism
+- treasury
+- Firefly
+- wallet
+- legacy nodes
+- explanation
+---
+
 # How the IOTA Chrysalis Phase 2 Token Migration Works
 
-For the transition to Chrysalis Phase 2, the IOTA Foundation had to develop a way for funds to be migrated to the new
-network. The reason a migration mechanism was necessary was because the previous network no longer supported WOTS addresses.
+For the Chrysalis Phase 2 transition, the IOTA Foundation developed a way to migrate funds to the new network. IOTA created this new mechanism because the previous network did not support the WOTS addresses.
 
-The developed mechanism features the following properties:
-
-- It is trustless, meaning that everyone who is interested can verify that migrated funds were legitimate.
-- Migrated funds take less than 5 minutes until they become available in the network.
-- Migrations take place at any time for the foreseeable future.
-
-Before we proceed into the developed mechanism, you can view why other mechanisms were not chosen:
+Before proceeding into the developed mechanism, below is our reasoning for why other mechanisms were not chosen:
 
 - `Migrating funds by performing periodic global snapshots on both networks`: while this approach would have
   been the easiest to do, it would have blocked the funds of people between the times of global snapshots. For example, if
@@ -17,11 +24,11 @@ Before we proceed into the developed mechanism, you can view why other mechanism
   have been excluded from opportunities arising from the change in token price. In this case, perhaps a user wanted to sell
   tokens but were blocked by the fact that the next global snapshot would only be performed in 20 days and so they
   couldn't move their tokens to an exchange (which only supports Chrysalis Phase 2 IOTA).
-- `Supporting WOTS on Chrysalis Phase 2 (and only allowing to send to non WOTS addresses)`: while this was also a
-  viable option, we decided to not include support for WOTS as it brought a number of legacy problems we did not want includedf:
+- `Supporting WOTS on Chrysalis Phase 2 (and only allowing to send to non-WOTS addresses)`: while this was also a
+  viable option, we decided not to include support for WOTS as it brought several legacy problems:
     - WOTS signatures are very large and make up a disproportional amount of data in a transaction (note that our PoW
       requirement in Chrysalis' Phase 2 was dependent on the size of the message). Additionally, there were no real bounds
-      on how big such signatures could grow to (even if per default we only supported 3 security levels in our
+      on how big such signatures could grow to (even if, per the default, we only supported three security levels in our
       libraries).
     - We would have needed to pollute our new Chrysalis Phase 2 models with support for these addresses and signatures,
       adding unnecessary complexity to what should be a clean protocol.
@@ -30,7 +37,7 @@ Before we proceed into the developed mechanism, you can view why other mechanism
 
 ## Components
 
-The developed migration mechanism was built from following components:
+The developed migration mechanism was built from the following components:
 
 - Chrysalis phase 2 data types (for reference, see [the RFC](https://github.com/luca-moser/protocol-rfcs/blob/rfc/wotsicide/text/0035-wotsicide/0035-wotsicide.md) for details):
     - `Treasury Output`: an object which specified an amount of tokens held in the treasury.
@@ -39,14 +46,18 @@ The developed migration mechanism was built from following components:
       new `Treasury Output` that held the delta of what the `Treasury Transaction` was spending.
     - `Receipt`: an object which held a pointer to a legacy milestone index, a list of funds to mint, and
       a `Treasury Transaction`. A `Receipt` can only be an inner payload of a milestone.
-- Chrysalis Phase 2 nodes which validated receipts
-- Legacy nodes which provided a special API command for the above Chrysalis Phase 2 nodes
-- `Treasury`: this was the last `Treasury Output` in the ledger. There only one existed at any point in time.
-  After Chrysalis Phase 2 network launched, the `Treasury` contained the total supply of tokens (2779530283277761) minus the funds which were already migrated during the "7-day-migration-period" prior to the network launch. This means that all funds which are not migrated from the legacy network, always will reside in the `Treasury`.
+- Chrysalis Phase 2 nodes which validated receipts.
+- Legacy nodes which provided a special API command for the above Chrysalis Phase 2 nodes.
+- `Treasury`: this was the last `Treasury Output` in the ledger. At one point, only one existed.
+  After Chrysalis Phase 2 network launched, the `Treasury` contained the total supply of tokens (2779530283277761) aside from the funds that were already migrated during the "7-day-migration-period" prior to the network launch. This means that all funds which are not migrated from the legacy network, will always reside in the `Treasury`.
 
-Note, that again, a `Receipt` could only be contained within a milestone and that valid milestones could only be issued by
-the Coordinator, therefore, minting of migrated funds could only happen through milestones and not any other type of
+:::note
+
+A `Receipt` could only be contained within a milestone and that valid milestones could only be issued by
+the Coordinator. Therefore, a minting of migrated funds could only happen through milestones and not any other type of
 transactions. Likewise, a `Treasury Transaction` was only valid as an inner payload of a `Receipt`.
+
+:::
 
 ## How it Actually Works
 
@@ -57,12 +68,12 @@ transactions. Likewise, a `Treasury Transaction` was only valid as an inner payl
       accessible from.
     - A checksum of that Ed25519 address.
     - A tryte prefix `TRANSFER` (these addresses always start with this prefix).
-1. As mentioned above, a `Receipt` could only be contained in a milestone and therefore the Coordinator on the Chrysalis
-   Phase 2 network:
+2. As mentioned above, a `Receipt` could only be contained in a milestone and therefore the Coordinator on the Chrysalis
+   Phase 2 network.
     1. Periodically polled data from a legacy node about what kind of newly confirmed burned/migrated funds there were (while also performing WOTS signature verification on these and the legacy milestone bundle).
-    1. Then a milestone is produced with a `Receipt` that contained those funds, where within the `Receipt`,
+    2. Then a milestone is produced with a `Receipt` that contained those funds, where within the `Receipt`,
        a `Treasury Transaction` was placed which deducts the sum of tokens migrated from the `Treasury`.
-1. Chrysalis Phase 2 nodes then saw receipts when applying milestones and automatically generated outputs for the Ed25519
+3. Chrysalis Phase 2 nodes then saw receipts when applying milestones and automatically generated outputs for the Ed25519
    address as defined in the origin `migration address` in the legacy network. As an optional step (which is not turned
    on by default), every node could have been configured to verify whether the funds in the receipt were really migrated in the
    old network using a legacy node and whether all funds for a given legacy milestone index were migrated. If this
@@ -70,42 +81,28 @@ transactions. Likewise, a `Treasury Transaction` was only valid as an inner payl
 
 This meant that:
 
-- The IOTA Foundation could not mint funds out of thin air, because nodes in the Chrysalis Phase 2 network verify that the
+- The IOTA Foundation could not mint funds out of thin air, because nodes in the Chrysalis Phase 2 network verified that the
   funds were burned in the legacy network.
 - All migration bundles, respectively transferred to `migration addresses` which were confirmed by a given legacy
   milestone, had to have been migrated fully to the new network, as otherwise the verification failed.
 - Node operators were free to choose which legacy nodes they queried with their Chrysalis Phase 2 nodes, so the
-  verification of migrations/receipts was decentralized. For example, a node operator chooses to both operate their own
+  verification of migrations/receipts was decentralized. For example, a node operator chose to both operate their own
   legacy and Chrysalis Phase 2 nodes.
 
 Essentially, via the Firefly wallet, token holders:
 
 1. Produced migration bundles which sent funds to `migration addresses` controlled by the given owner.
-1. These bundles were confirmed on the legacy network.
-1. The Chrysalis Phase 2 Coordinator picked these confirmed legacy bundles up and generated receipts minting those funds
+2. These bundles were confirmed on the legacy network.
+3. The Chrysalis Phase 2 Coordinator picked these confirmed legacy bundles up and generated receipts minting those funds
    to the target Ed25519 address.
-1. Verifier nodes verified the receipts and made sure that the funds originated from the legacy network.
-
-### Verifier Node
-
-A verifier node was a Chrysalis Phase 2 node which upon seeing receipts:
-
-1. Queried a legacy node for the confirmation data for the specified milestone in the receipt.
-1. Then performed WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
-1. Additionally it also checked that all confirmed funds on the legacy network for the given legacy milestone, were
-1. Produce migration bundles which sent funds to `migration addresses` controlled by the given owner.
-1. These bundles are confirmed on the legacy network.
-1. The Chrysalis Phase 2 Coordinator picks these confirmed legacy bundles up and generates receipts minting those funds
-   to the target Ed25519 address.
-1. Verifier nodes verify the receipts and make sure that the funds originate from the legacy network.
+4. Verifier nodes verified the receipts and made sure that the funds originated from the legacy network.
 
 ### Verifier Node
 
 A verifier node is a Chrysalis Phase 2 node which upon seeing receipts:
 
 1. Queries a legacy node for the confirmation data for the specified milestone in the receipt.
-1. Then performs WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
-1. Additionally it also checks that all confirmed funds on the legacy network for the given legacy milestone, are
-   indeed minted with a given batch of receipts (i.e. nothing is left out).
+2. Then performs WOTS signature verification of the legacy milestone bundle and all confirmed bundles.
+3. Additionally, it also checks that all confirmed funds on the legacy network for the given legacy milestone, are indeed minted with a given batch of receipts (i.e. nothing is left out).
 
-See [Hornet as a verifier node](https://hornet.docs.iota.org/post_installation/run_as_verifier.html)
+For further reference, you can read the [Hornet as a verifier node](https://wiki.iota.org/hornet/post_installation/run_as_a_verifier) page.
