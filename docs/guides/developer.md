@@ -21,19 +21,19 @@ In Chrysalis, all ternary conversions apart from PoW have been removed which res
 With these changes, and the further adoption of industry standards, both seeds and addresses look completely different in Chrysalis.
 
 IOTA 1.0 address:
-```bash=
+```bash
 UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZRGJMIGPDW
 ```
 
 IOTA 1.5 (Chrysalis) address (bech32 standard):
 
 Mainnet with `iota`.
-```bash=
+```bash
 iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m759nh2ml
 ```
 
 Devnet with `atoi`.
-```bash=
+```bash
 atoi1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75zaxtpj
 ```
 ### IOTA 1.5 Address Anatomy
