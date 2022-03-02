@@ -109,8 +109,8 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'protocol_rfc',
-      label: 'Protocol RFCs'
+      id: 'protocol_tip',
+      label: 'Protocol TIPs'
     },
     {
       type: 'doc',
