@@ -38,5 +38,5 @@ At this stage, we recommend using Hornet since it has several optional features 
 
 ## Node API Specification
 
-- [rest-api specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/rufsam/protocol-rfcs/master/text/0026-rest-api/rest-api.yaml).
+- [rest-api specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/iotaledger/tips/main/tips/TIP-0013/rest-api.yaml).
 
