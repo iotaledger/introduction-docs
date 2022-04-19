@@ -1,6 +1,6 @@
 ---
 description: Firefly is IOTA's new official wallet for Chrysalis. You can verify your Firefly download on Windows, maxOS, and/or Linux.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_firefly.png
 keywords:
 - Firefly
 - DLT
@@ -13,6 +13,8 @@ keywords:
 - how to
 ---
 # Firefly
+
+![Firefly](/img/Banner/banner_firefly.png)
 
 :::info
 

@@ -1,6 +1,6 @@
 ---
 description: This article outlines the differences between IOTA 1.0 and IOTA 1.5, aka Chrysalis.  
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_developer.png
 keywords:
 - developer
 - Address Anatomy
@@ -13,6 +13,9 @@ keywords:
 ---
 
 # Developer Guide to Chrysalis
+
+![Developer](/img/Banner/banner_developer.png)
+
 This article is meant to act as a quick reference that will help outline some of the differences in the migration from IOTA 1.0 to IOTA 1.5, also known as Chrysalis.
 
 ## Seed and Addresses

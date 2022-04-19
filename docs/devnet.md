@@ -1,6 +1,6 @@
 ---
 description: The IOTA foundation provides load-balanced public devnet endpoints, where MQTT and the HTTP REST API are enabled.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_devnet.png
 keywords:
 - devnet
 - load-balanced
@@ -9,6 +9,8 @@ keywords:
 - reference
 ---
 # Devnet
+
+![IOTA Devnet](/img/Banner/banner_devnet.png)
 
 Since the Chrysalis update, the `testnet` is now called `devnet`.  We recommend using the `devnet` to develop and test your application.  
 

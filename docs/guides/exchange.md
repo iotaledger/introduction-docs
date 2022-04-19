@@ -14,6 +14,8 @@ keywords:
 
 # Exchange Guide
 
+![Exchanges](/img/Banner/banner_exchanges.png)
+
 ## The IOTA Wallet Library
 
 :::note

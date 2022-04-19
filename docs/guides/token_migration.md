@@ -1,6 +1,6 @@
 ---
 description: Overview on how you migrated tokens from the IOTA 1.0 to IOTA 1.5 Chrysalis network using the Firefly wallet or a migration bundle.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_chrysalis_migration.png
 keywords:
 - migration
 - migration bundle
@@ -9,6 +9,8 @@ keywords:
 - explanation
 ---
 # Chrysalis Migration
+
+![Token Migration](/img/Banner/banner_chrysalis_migration.png)
 
 By the end of the Chrysalis migration, several aspects at IOTA changed for the better. With easier ways to
 manage and secure your experience, IOTA seamlessly integrated these innovations with no service interruptions.

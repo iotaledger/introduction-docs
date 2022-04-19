@@ -1,6 +1,6 @@
 ---
 description: How to back up your account, restore an account from a backup, export a user's Stronghold, and rekey Stronghold.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_backup_security.png
 keywords:
 - stronghold
 - checklist
@@ -14,6 +14,8 @@ keywords:
 ---
 
 # Backup and Security
+
+![Backup and Security](/img/Banner/banner_backup_security.png)
 
 ## Security Checklist
 

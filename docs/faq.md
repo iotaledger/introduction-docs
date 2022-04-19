@@ -1,6 +1,6 @@
 ---
 description: Frequently asked questions regarding the Chrysalis implementation. 
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_faqs.png
 keywords:
 - FAQ
 - dust protection
@@ -19,6 +19,7 @@ keywords:
 ---
 # FAQ
 
+![Frequently Asked Questions](/img/Banner/banner_faqs.png)
 
 ## Which Libraries are Available for Chrysalis?
 

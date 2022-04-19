@@ -1,6 +1,6 @@
 ---
 description: This page described to take part in the global snapshot.  
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_snapshot_validation.png
 keywords:
 - golang
 - github
@@ -12,6 +12,8 @@ keywords:
 - tools
 ---
 # Chrysalis Snapshot Validation/Boostrapping
+
+![Snapshot Validation](/img/Banner/banner_snapshot_validation.png)
 
 This guide outlined how to take part in the global snapshot, respectively genesis snapshot creation for the
 legacy, and the Chrysalis Phase 2 IOTA network. The goal was to generate a global snapshot for the legacy network which acted

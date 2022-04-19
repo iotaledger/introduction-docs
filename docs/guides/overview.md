@@ -1,6 +1,6 @@
 ---
 description: An overview of the available guides for the Chrysalis network that also outlines the changes from IOTA 1.0 to IOTA 1.5, aka Chrysalis.  
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_guides.png
 keywords:
 - IOTA 1.0
 - IOTA 1.5
@@ -12,6 +12,8 @@ keywords:
 ---
 
 # IOTA Chrysalis Guides
+
+![Guides](/img/Banner/banner_guides.png)
 
 - [Developer Guide](https://wiki.iota.org/chrysalis-docs/guides/developer).
 - [Exchange Guide](https://wiki.iota.org/chrysalis-docs/guides/exchange).

@@ -1,6 +1,6 @@
 ---
 description: Official and Community resources to help you develop and troubleshoot your application.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_resources.png
 keywords:
 - tangle explorer
 - discord
@@ -10,6 +10,8 @@ keywords:
 - reference
 ---
 # Resources
+
+![Resources](/img/Banner/banner_resources.png)
 
 ### **Official Support** ###
 

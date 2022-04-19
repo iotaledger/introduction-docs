@@ -1,6 +1,6 @@
 ---
 description: Hornet is an EDF-supported community node written in Go. Bee is an IOTA Node implemented by the Foundation and written in Rust. We recommend using Hornet since it has several optional features that are not implemented in Bee.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/Banner/banner_node_software.png
 keywords:
 - Node
 - Hornet
@@ -10,6 +10,8 @@ keywords:
 - explanation
 ---
 # Node Software
+
+![Node Software](/img/Banner/banner_node_software.png)
 
 We have been running the network exclusively on the Go powered Hornet node since the summer of 2020. For Chrysalis, we introduced the options of using an updated version of Hornet or our new Rust-based Bee node.
 
