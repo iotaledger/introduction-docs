@@ -5,12 +5,12 @@ module.exports = {
       label: 'Welcome'
     }, {
       type: 'doc',
-      id: 'introduction/what_is_chrysalis',
-      label: 'What is Chrysalis?'
+      id: 'introduction/what_is_stardust',
+      label: 'What is Stardust'
     }, {
       type: 'doc',
-      id: 'introduction/path_to_chrysalis',
-      label: 'Path to Chrysalis'
+      id: 'protocol/stardust_ledger',
+      label: 'Stardust Ledger'
     },{
       type: 'doc',
       id: 'firefly/verify_download',
