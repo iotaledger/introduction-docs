@@ -1,8 +1,9 @@
 {
   "name": "chrysalis-docs",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "docusaurus start"
+    "start": "iota-wiki start"
   },
   "license": "UNLICENSED",
   "engines": {
