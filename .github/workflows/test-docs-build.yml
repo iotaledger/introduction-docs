@@ -17,4 +17,4 @@ jobs:
       - name: Test Build
         run: |
           yarn install --immutable
-          npx docusaurus build
+          yarn build
