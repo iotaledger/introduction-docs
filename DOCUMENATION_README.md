@@ -13,7 +13,7 @@ The documentation is built using [Docusaurus 2](https://docusaurus.io/). The dep
 yarn
 ```
 
-This command installs all needed dependencies.
+This command installs all necessary dependencies.
 
 ## Local Development
 
