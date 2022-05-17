@@ -21,7 +21,7 @@ This command installs all necessary dependencies.
 yarn start
 ```
 
-This command starts a local, wiki themed, development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local, wiki themed development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ## Including .md file
 
