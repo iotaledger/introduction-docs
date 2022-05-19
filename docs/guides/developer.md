@@ -47,7 +47,7 @@ We can break down the address `iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5t
 | iota \| atoi              | 1         | 48 bytes [0..9a..z]                                   | 6 characters [0..9a..z] |
 | iota                      | 1         | qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5ts6f5x5m75 | 9nh2ml                  |
 
-For further reference, please see our [Protocol-rfc#0020 - Bech32 Address Format](https://github.com/Wollac/protocol-rfcs/blob/bech32-address-format/text/0020-bech32-address-format/0020-bech32-address-format.md) page.
+For further reference, please see our [Protocol-rfc#0020 - Bech32 Address Format](https://github.com/iotaledger/tips/blob/main/tips/TIP-0011/tip-0011.md) page.
 
 ### Seed
 With the updated [wallet library](../libraries/wallet.md), developers do not need to use a self-generated seed. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.
@@ -75,7 +75,7 @@ e94346bce41402155ef120e2525fad2d0bf30b10a89e4b93fd8471df1e6a0981
 > In modern wallet implementations, such as our [wallet.rs library](https://wiki.iota.org/wallet.rs/welcome) and [firefly wallet](https://github.com/iotaledger/firefly), the seed is usually generated from a `seed mnemonic` (`seed phrase`), using the [BIP39 standard](https://en.bitcoin.it/wiki/BIP_0039), for better memorization or to be stored by humans. It is based on a randomly generated list of english words and is later used to generate the seed. Either way, the seed is a root for all generated private keys and addresses.
 
 
-For further reference, please see the [Protocol-rfc#0010 - Mnemonic Seed](https://github.com/Wollac/protocol-rfcs/blob/mnemonic-seed/text/0010-mnemonic-ternary-seed/0010-mnemonic-ternary-seed.md) page.
+For further reference, please see the [Protocol-rfc#0010 - Mnemonic Seed](https://github.com/iotaledger/tips/blob/main/tips/TIP-0010/tip-0010.md) page.
 
 ### Address/Key Space
 As mentioned above, IOTA 1.5 embraced some existing industry standards, which is apparent during an address generation process. This included the [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) standard that describes an approach to _Hierarchical Deterministic Wallets_ which was further improved by [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki).
