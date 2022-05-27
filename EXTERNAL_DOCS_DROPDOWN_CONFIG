@@ -1,6 +1,0 @@
-{
-  label: "Chrysalis Docs",
-  to: "chrysalis-docs/welcome",
-  className: 'icon-chrysalis',
-  activeBaseRegex: 'chrysalis-docs/.*',
-},
