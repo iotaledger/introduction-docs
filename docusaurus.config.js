@@ -5,12 +5,18 @@ module.exports = {
         [
             '@docusaurus/plugin-content-docs',
             {
-                id: 'chrysalis-docs',
+                id: 'introduction-docs',
                 path: path.resolve(__dirname, 'docs'),
-                routeBasePath: 'chrysalis-docs',
+                routeBasePath: 'introduction',
                 sidebarPath: path.resolve(__dirname, 'sidebars.js'),
                 editUrl: 'https://github.com/iotaledger/chrysalis-docs/edit/main',
                 remarkPlugins: [require('remark-code-import'), require('remark-import-partial'), require('remark-remove-comments')],
+                versions: {
+                    current: {
+                        label: 'Develop',
+                        badge: true
+                    },
+                },
             }
         ],
     ],
