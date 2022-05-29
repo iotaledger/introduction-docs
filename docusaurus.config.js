@@ -5,7 +5,7 @@ module.exports = {
         [
             '@docusaurus/plugin-content-docs',
             {
-                id: 'introduction-docs',
+                id: 'introduction-docs-develop',
                 path: path.resolve(__dirname, 'docs'),
                 routeBasePath: 'introduction',
                 sidebarPath: path.resolve(__dirname, 'sidebars.js'),
