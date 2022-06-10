@@ -11,14 +11,18 @@ keywords:
 ---
 # Resources
 
+:::warning
+TODO: Update for Stardust/Shimmer.
+:::
+
 ### **Official Support** ###
 
 ---------------
 
-#### **IOTA Explorer** ####
-[IOTA Explorer](https://explorer.iota.org/mainnet)
+#### **Shimmer Explorer** ####
+[Shimmer Explorer](https://explorer.iota.org/shimmer)
 
-Official Tangle explorer with a lot of tools to browse through the Tangle.
+Official Shimmer explorer with a lot of tools to browse through the Tangle.
 
 ---
 

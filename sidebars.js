@@ -11,12 +11,7 @@ module.exports = {
       type: 'doc',
       id: 'protocol/stardust_ledger',
       label: 'Stardust Ledger'
-    },{
-      type: 'doc',
-      id: 'firefly/verify_download',
-      label: 'Verify Download'
-        },
-    {
+    }, {
       type: 'doc',
       id: 'node_software',
       label: 'Node Software'
@@ -57,40 +52,24 @@ module.exports = {
         },
         {
           type: 'doc',
-          id: 'guides/token_migration',
-          label: 'Token Migration'
-        },
-        {
-          type: 'doc',
-          id: 'guides/migration_mechanism',
-          label: 'Migration Mechanism'
-        },
-        {
-          type: 'doc',
-          id: 'guides/hub_migration',
-          label: 'Hub Migration'
-        },
-        {
-          type: 'doc',
           id: 'guides/backup_security',
           label: 'Backup and Security'
         },
-        {
-          type: 'doc',
-          id: 'guides/snapshot_validation_bootstrapping',
-          label: 'Chrysalis Snapshot Validation'
-        },
       ]
+    },{
+      type: 'doc',
+      id: 'firefly/verify_download',
+      label: 'Verify Firefly Download'
     },
     {
       type: 'doc',
-      id: 'mainnet',
-      label: 'Mainnet'
+      id: 'shimmer',
+      label: 'Shimmer'
     },
     {
       type: 'doc',
-      id: 'devnet',
-      label: 'Devnet'
+      id: 'betanet',
+      label: 'Pre-Shimmer Beta'
     },
     {
       type: 'category',
@@ -100,11 +79,6 @@ module.exports = {
           type: 'doc',
           id: 'tutorials/one_click_private_tangle',
           label: 'Private Tangle'
-        },
-        {
-          type: 'doc',
-          id: 'tutorials/mainnet_hornet_node_k8s',
-          label: 'Mainnet Hornet Node K8s'
         },]
     },
     {
