@@ -12,6 +12,10 @@ keywords:
 - explanation
 ---
 
+:::warning
+TODO: update exchange guide for Stardust
+:::
+
 # Exchange Guide
 
 ## The IOTA Wallet Library

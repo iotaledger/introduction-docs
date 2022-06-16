@@ -12,7 +12,12 @@ keywords:
 - explanation
 ---
 
-# Developer Guide to Chrysalis
+# Developer Guide to Stardust
+
+:::warning
+TODO: Add a list of changes from IOTA 1.5 to Stardust.
+:::
+
 This article is meant to act as a quick reference that will help outline some of the differences in the migration from IOTA 1.0 to IOTA 1.5, also known as Chrysalis.
 
 ## Seed and Addresses
