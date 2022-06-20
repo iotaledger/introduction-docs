@@ -3913,17 +3913,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chrysalis-docs-develop@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "chrysalis-docs-develop@workspace:."
-  dependencies:
-    "@iota-community/iota-wiki-cli": "iota-community/iota-wiki-cli#v2"
-    remark-code-import: ^0.3.0
-    remark-import-partial: ^0.0.2
-    remark-remove-comments: ^0.2.0
-  languageName: unknown
-  linkType: soft
-
 "ci-info@npm:^2.0.0":
   version: 2.0.0
   resolution: "ci-info@npm:2.0.0"
@@ -6613,6 +6602,17 @@ __metadata:
   checksum: 2e5f51268b5941e4a17e4ef0575bc91ed0ab5f8515e3cf77486f7c14d13f3010df9c0959f37063dcc96e78d12dc6b0bb1b9e111cdfe69771f4656d2993d36155
   languageName: node
   linkType: hard
+
+"intoduction-docs-develop@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "intoduction-docs-develop@workspace:."
+  dependencies:
+    "@iota-community/iota-wiki-cli": "iota-community/iota-wiki-cli#v2"
+    remark-code-import: ^0.3.0
+    remark-import-partial: ^0.0.2
+    remark-remove-comments: ^0.2.0
+  languageName: unknown
+  linkType: soft
 
 "invariant@npm:^2.2.4":
   version: 2.2.4
