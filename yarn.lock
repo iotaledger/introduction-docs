@@ -3913,9 +3913,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chrysalis-docs@workspace:.":
+"introduction-docs@workspace:.":
   version: 0.0.0-use.local
-  resolution: "chrysalis-docs@workspace:."
+  resolution: "introduction-docs@workspace:."
   dependencies:
     "@iota-community/iota-wiki-cli": "iota-community/iota-wiki-cli#v2"
     remark-code-import: ^0.3.0

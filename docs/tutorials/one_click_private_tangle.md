@@ -16,7 +16,7 @@ In this tutorial, you will learn how to use a set of Docker-based tools and pre-
 
 ## Background
 
-IOTA [mainnet](https://wiki.iota.org/chrysalis-docs/mainnet) and [devnet](https://wiki.iota.org/chrysalis-docs/devnet) are public IOTA Networks where you can develop your own applications. Due to scalability or data locality reasons, sometimes it is necessary to run your own *local* IOTA Tangle (aka Private Tangle). In the future, the (child) Tangle may also be *anchored* to the IOTA mainnet, through Data Sharding (a feature currently under research and development by the IOTA Foundation). To automate and simplify the deployment of a Chrysalis Tangle, some tools, publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository, have been developed. We have also integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and, in the future, on other Cloud marketplaces.
+IOTA [mainnet](./mainnet) and [devnet](./devnet) are public IOTA Networks where you can develop your own applications. Due to scalability or data locality reasons, sometimes it is necessary to run your own *local* IOTA Tangle (aka Private Tangle). In the future, the (child) Tangle may also be *anchored* to the IOTA mainnet, through Data Sharding (a feature currently under research and development by the IOTA Foundation). To automate and simplify the deployment of a Chrysalis Tangle, some tools, publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository, have been developed. We have also integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B095WQQTNG/) and, in the future, on other Cloud marketplaces.
 
 ## MVP Deployment Architecture
 
@@ -269,4 +269,4 @@ There could be limitations in the number of peers triggered by the maximum numbe
 
 ## Next Steps
 
-Try using one of the [client libraries](https://wiki.iota.org/chrysalis-docs/libraries/client) to send transactions to the nodes in your Tangle. 
+Try using one of the [client libraries](./libraries/client) to send transactions to the nodes in your Tangle. 

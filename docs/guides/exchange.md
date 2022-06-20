@@ -81,7 +81,7 @@ The following examples cover the *multi-account approach* using the `NodeJS` bin
 
 :::note
 
-If you are looking for other languages, please read the [wallet library overview](https://wiki.iota.org/chrysalis-docs/libraries/wallet).
+If you are looking for other languages, please read the [wallet library overview](./libraries/wallet).
 
 :::
 
@@ -90,7 +90,7 @@ Since all `wallet.rs` bindings are based on core principles provided by the `wal
 ### 1. Set up the Wallet Library
 First, you should install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the `NodeJs` binding, it is straightforward since it is distributed via the `npm` package manager. We also recommend you use `dotenv` for password management.
 
-You can read more about [backup and security in this guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security).
+You can read more about [backup and security in this guide](./guides/backup_security).
 
 ```bash
 npm install @iota/wallet dotenv
@@ -119,7 +119,7 @@ One of the key principles behind the `stronghold`-based storage is that no one c
 
 :::note
 
-Keep the `stronghold` password and the `stronghold` database on separate devices. See the [backup and security guide](https://wiki.iota.org/chrysalis-docs/guides/backup_security) for more information.
+Keep the `stronghold` password and the `stronghold` database on separate devices. See the [backup and security guide](./guides/backup_security) for more information.
 
 :::
 
@@ -296,4 +296,4 @@ Default options are fine and are successful; however, additional options can be 
 
 The `Account.send()` function returns a `wallet message` that fully describes the given transaction. The `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via the `account.listMessages()` function.
 
-Please note that when sending tokens, a [dust protection](https://wiki.iota.org/chrysalis-docs/guides/developer#dust-protection) mechanism should be considered. 
+Please note that when sending tokens, a [dust protection](./guides/developer#dust-protection) mechanism should be considered. 

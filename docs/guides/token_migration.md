@@ -43,7 +43,7 @@ Firefly will initially only be available on desktop operating systems such as: m
 
 For further information on the migration process, see our [blog post](https://blog.iota.org/firefly-token-migration/).
 
-For a detailed explanation on how the migration process works technically, see the [migration-mechanism](https://wiki.iota.org/chrysalis-docs/guides/migration_mechanism) page.
+For a detailed explanation on how the migration process works technically, see the [migration-mechanism](./guides/migration_mechanism) page.
 
 ## Exchange Token Migration Guide
 
@@ -360,4 +360,4 @@ const selectInputsForUnspentAddresses = (inputs) => {
 };
 ```
 
-After the migration, only the 24-word mnemonic or the stronghold file gives you access to the funds, so make sure to back them up properly. It is impossible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for [Backup and security](https://wiki.iota.org/chrysalis-docs/guides/backup_security).
+After the migration, only the 24-word mnemonic or the stronghold file gives you access to the funds, so make sure to back them up properly. It is impossible to get access to the funds with the old seed after the migration transaction. Please read our recommendations for [Backup and security](./guides/backup_security).
