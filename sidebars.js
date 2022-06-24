@@ -8,9 +8,30 @@ module.exports = {
       id: 'introduction/what_is_stardust',
       label: 'What is Stardust'
     }, {
-      type: 'doc',
-      id: 'protocol/stardust_ledger',
-      label: 'Stardust Ledger'
+      type: 'category',
+      label: 'Stardust Ledger Anatomy',
+      items: [{
+        type: 'doc',
+        id: 'protocol/intro',
+        label: `Introduction`
+      },{
+        type: 'doc',
+        id: 'protocol/simple_transfers',
+        label: `Simple Transactions`
+      },{
+        type: 'doc',
+        id: 'protocol/alias',
+        label: `Alias Transactions`
+      },{
+        type: 'doc',
+        id: 'protocol/foundry',
+        label: `Native Tokens and Foundries`
+      },{
+        type: 'doc',
+        id: 'protocol/nft',
+        label: `NFT Transactions`
+      }
+      ]
     }, {
       type: 'doc',
       id: 'node_software',
