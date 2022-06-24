@@ -61,7 +61,7 @@ As a consequence, Stardust implements a limited set of programs and commands via
 built-in ledger programs is to support second-layer IOTA Smart Contracts, the general, Turing-complete decentralized
 application platform on which any smart contract logic can be implemented.
 
-To learn more about the ledger programs and outputs, check out [Anatomy of Stardust Ledger](../protocol/stardust_ledger.md).
+To learn more about the ledger programs and outputs, check out [Anatomy of Stardust Ledger](../protocol/intro.md).
 
 ## Smart Contract Chain Support
 
