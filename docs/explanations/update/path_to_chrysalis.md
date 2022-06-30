@@ -89,8 +89,7 @@ The Trinity wallet was a popular IOTA wallet. With Chrysalis, we released a new 
 
 ### Infrastructure
 
-Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can discover the networks on our Explorer [https://explorer.iota.org](https://explorer.iota.org/mainnet).  
-
+Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can discover the networks on our Explorer [https://explorer.iota.org](https://explorer.iota.org/mainnet).
 
 ### Chrysalis Devnet
 

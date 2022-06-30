@@ -9,13 +9,14 @@ keywords:
 - Ed25519
 - IOTA 1.5
 - IOTA 1.0
-- explanation
+- reference
 ---
 
 # Developer Guide to Chrysalis
 This article is meant to act as a quick reference that will help outline some of the differences in the migration from IOTA 1.0 to IOTA 1.5, also known as Chrysalis.
 
 ## Seed and Addresses
+
 In Chrysalis, all ternary conversions apart from PoW have been removed which results in a better, faster developer experience. Additionally, the WOTS-Signature has been replaced by an `Ed25519` signature scheme. This means that you can now use an address multiple times to send and receive coins.
 
 With these changes, and the further adoption of industry standards, both seeds and addresses look completely different in Chrysalis.
@@ -50,6 +51,7 @@ We can break down the address `iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5t
 For further reference, please see our [Protocol-rfc#0020 - Bech32 Address Format](https://github.com/iotaledger/tips/blob/main/tips/TIP-0011/tip-0011.md) page.
 
 ### Seed
+
 With the updated [wallet library](../libraries/wallet.md), developers do not need to use a self-generated seed. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.
 
 More information about IOTA Wallet Library is available on the [Wallet docs page](https://wiki.iota.org/wallet.rs/welcome) or in the [Exchange guide](./exchange), which is mainly focuses on value transactions.
@@ -78,6 +80,7 @@ e94346bce41402155ef120e2525fad2d0bf30b10a89e4b93fd8471df1e6a0981
 For further reference, please see the [Protocol-rfc#0010 - Mnemonic Seed](https://github.com/iotaledger/tips/blob/main/tips/TIP-0010/tip-0010.md) page.
 
 ### Address/Key Space
+
 As mentioned above, IOTA 1.5 embraced some existing industry standards, which is apparent during an address generation process. This included the [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) standard that describes an approach to _Hierarchical Deterministic Wallets_ which was further improved by [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki).
 
 These standards define a tree structure as a base for address and key space generation which is represented by a `derivation path`:
@@ -117,6 +120,7 @@ So in case of Chrysalis, the derivation path of address/key space is `[seed]/44/
 For further reference, please see our [Protocol-rfc#0003 - Signature Scheme](https://github.com/iotaledger/protocol-rfcs/blob/ee07797acb5940b7dbb5c3411b184ccdc6afdbb1/text/0000-ed25519-signature-scheme/0000-ed25519-signature-scheme.md) page.
 
 ## Messages, Payloads, and Transactions
+
 In comparison to the original IOTA 1.0, Chrysalis also introduced some fundamental changes to the underlying data structures. The original concept of `transactions` and `bundles` is gone and has been replaced by a concept of `messages` and `payloads`.
 
 A `message` is a data structure that is actually being broadcast in the Chrysalis network and represents a node (vertex) in the Tangle graph.
@@ -153,8 +157,8 @@ The current Chrysalis network incorporates the following core payloads:
 
 In comparison to IOTA 1.0, a `message` itself is not directly related to the IOTA address while broadcasting to the Chrysalis network. Such messages are referenced using the so-called `message_id`. Messages are indirectly related to IOTA addresses via `SignedTransaction` payload, specifically the `UTXO` section.
 
-
 ## Unspent Transaction Output (UTXO)
+
 Originally, IOTA 1.0 used an `account-based model` for tracking individual iota tokens: each IOTA address held a number of tokens and the aggregated number of tokens from all IOTA addresses was equal to the total supply.
 
 In contrast, Chrysalis uses the `unspent transaction output` model, or `UTXO`. It is based on an idea to track unspent amounts of tokens via a data structure called `output`.
@@ -183,6 +187,7 @@ Every `output` also stores information about an IOTA address to which it is coup
 
 
 ## Selected Message Payloads
+
 Currently, there are two commonly used message payloads, `IndexationPayload` and `SignedTransaction` which can be combined as needed.
 
 For further reference, please see our [TIP#0007 - Transaction Payload](https://github.com/iotaledger/tips/blob/main/tips/TIP-0007/tip-0007.md) page.

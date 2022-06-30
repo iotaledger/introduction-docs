@@ -9,7 +9,7 @@ keywords:
 - wallet.rs
 - setup
 - NodeJS
-- explanation
+- how to
 ---
 
 # Exchange Guide

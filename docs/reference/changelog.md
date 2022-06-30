@@ -10,19 +10,7 @@ keywords:
 - developer
 - reference
 ---
-
-# IOTA Chrysalis Guides
-
-- [Developer Guide](./developer).
-- [Exchange Guide](./exchange).
-- [Token Migration Guide](./token_migration)
-- [Migration Mechanism](./migration_mechanism).
-- [Hub Migration Guide](./hub_migration).
-- [Backup and Security](./backup_security).
-- [Chrysalis Snapshot Validation](./snapshot_validation_bootstrapping).
-
-
-## Overall Changes from IOTA 1.0 to 1.5 (Chrysalis) in a Nutshell
+# Chrysalis Changelog
 
 * The format of the address was changed, and it is now based on both the `derivation path` and `bech32` standards. For reference, you can read the [IOTA address anatomy](./developer#iota-15-address-anatomy) guide.
 * The concepts of `bundles` and `transactions` were replaced with `messages` and `payloads`. The `message` is a data structure that is actually being broadcast in the network and represents a node (vertex) in the Tangle graph. For reference, you can read both the [messages, payload, and transactions](./developer#messages-payloads-and-transactions) and [selected message payloads](./developer#selected-message-payloads) guides.
@@ -34,4 +22,3 @@ keywords:
 * Our official IOTA tools, such as wallet software, use the same libraries under the hood so any developer may work in the same environment as we do.
 * The official client libraries embraced an `Hierarchical Deterministic Wallets` approach which is fully `BIP44` compatible. For reference, you can read the [address/key space](./developer#addresskey-space) guide.
 * There is a new official wallet software called Firefly. See [Firefly](https://firefly.iota.org/) and the Repo at: [Firefly Github](https://github.com/iotaledger/firefly)
-

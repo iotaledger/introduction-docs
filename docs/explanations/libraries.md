@@ -13,7 +13,7 @@ keywords:
 ---
 # Libraries
 
-**With the IOTA client libraries you can easily integrate IOTA into your own applications. You can choose a library to match your use case.**
+With the IOTA client libraries you can easily integrate IOTA into your own applications. You can choose a library to match your use case.
 
 The official IOTA libraries serve as `one-source-code-of-truth` to IOTA users and provide binding to other programming languages. Below is a list of the IOTA libraries. You can also check out the [IOTA client libraries blog post](https://blog.iota.org/the-new-iota-client-libraries-harder-better-faster-stronger/), to learn about the libraries' core principles. 
 

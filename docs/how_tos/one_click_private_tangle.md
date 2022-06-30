@@ -2,12 +2,11 @@
 description: On this page, you will learn how to use a set of Docker-based tools and pre-configured setups to deploy a (hornet-based) Chrysalis Private Tangle in "one-click" to cloud environments or platforms.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
-- tutorial
 - tangle
 - AWS
 - Docker 
 - VM
-- tutorial
+- how to
 ---
 
 # Deploy Your Own Tangle "In One Click" Tutorial
