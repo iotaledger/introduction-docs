@@ -24,13 +24,13 @@ You can easily integrate IOTA with your exchange, custody solution, or product.
 
 IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. But this architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.
 
-Within the Chrysalis update (also known as IOTA 1.5), some building blocks were changed to be more approachable and more aligned with currently leveraged standards. We also ship many [client libraries](../libraries/overview.md) to help developers implement IOTA into their applications:
+Within the Chrysalis update (also known as IOTA 1.5), some building blocks were changed to be more approachable and more aligned with currently leveraged standards. We also ship many [client libraries](../explanations/libraries.md) to help developers implement IOTA into their applications:
 
 ![Wallet.rs layer overview](/img/guides/wallet_rs_layers.svg)
 
 ## How Do I Implement It to My Exchange?
 
-In [wallet.rs](../libraries/wallet.md), we use an account model so you can create an account for each of your users. Another approach would be to use one account and generate multiple addresses, which you can then link to the users in your database. The wallet library is designed to be as flexible as possible to back up any of your use cases.
+In [wallet.rs](https://wiki.iota.org/wallet.rs/welcome), we use an account model so you can create an account for each of your users. Another approach would be to use one account and generate multiple addresses, which you can then link to the users in your database. The wallet library is designed to be as flexible as possible to back up any of your use cases.
 
 Since IOTA addresses in the Chrysalis network are perfectly reusable, they can be mapped to your users in a clear and concise way:
 
@@ -55,7 +55,7 @@ The single account approach allows for just one account and creates addresses fo
 
 ## Implementation Guide
 
-This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you have already implemented the IOTA Hub, please visit the [Hub Migration Guide](hub_migration.md).
+This guide explains how to use the IOTA Wallet Library to successfully implement IOTA into an exchange. If you have already implemented the IOTA Hub, please visit the [Hub Migration Guide](migration/hub_migration.md).
 
 Features of the Wallet Library:
 - Secure seed management.
@@ -78,12 +78,6 @@ The following examples cover the *multi-account approach* using the `NodeJS` bin
 4. Listen to events.
 5. Check the user balance.
 6. Enable withdrawals.
-
-:::note
-
-If you are looking for other languages, please read the [wallet library overview](../libraries/wallet).
-
-:::
 
 Since all `wallet.rs` bindings are based on core principles provided by the `wallet.rs` library, the outlined approach is very similar regardless of the programming language of your choice.
 
@@ -296,4 +290,4 @@ Default options are fine and are successful; however, additional options can be 
 
 The `Account.send()` function returns a `wallet message` that fully describes the given transaction. The `messageId` can be used later for checking a confirmation status. Individual messages related to the given account can be obtained via the `account.listMessages()` function.
 
-Please note that when sending tokens, a [dust protection](./developer#dust-protection) mechanism should be considered. 
+Please note that when sending tokens, a [dust protection](../reference/details.md#dust-protection) mechanism should be considered. 

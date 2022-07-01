@@ -12,8 +12,7 @@ keywords:
 - reference
 ---
 
-# Developer Guide to Chrysalis
-This article is meant to act as a quick reference that will help outline some of the differences in the migration from IOTA 1.0 to IOTA 1.5, also known as Chrysalis.
+# Chrysalis Details
 
 ## Seed and Addresses
 
@@ -52,9 +51,9 @@ For further reference, please see our [Protocol-rfc#0020 - Bech32 Address Format
 
 ### Seed
 
-With the updated [wallet library](../libraries/wallet.md), developers do not need to use a self-generated seed. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.
+With the updated [wallet library](https://wiki.iota.org/wallet.rs/welcome), developers do not need to use a self-generated seed. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.
 
-More information about IOTA Wallet Library is available on the [Wallet docs page](https://wiki.iota.org/wallet.rs/welcome) or in the [Exchange guide](./exchange), which is mainly focuses on value transactions.
+More information about IOTA Wallet Library is available on the [Wallet docs page](https://wiki.iota.org/wallet.rs/welcome) or in the [Exchange guide](../how_tos/exchange.md), which is mainly focuses on value transactions.
 
 :::note
 
@@ -107,7 +106,7 @@ And there are a few additional things to note:
 
 :::note 
 
-Having many different accounts may have a negative impact on performance while in the [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://wiki.iota.org/wallet.rs/welcome) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](./exchange) provides some useful tips on how different accounts may be leveraged.
+Having many different accounts may have a negative impact on performance while in the [account discovery](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#account-discovery) phase. So, if you are after using multiple, different accounts then you may be interested in our stateful library [wallet.rs](https://wiki.iota.org/wallet.rs/welcome) that incorporates all business logic needed to efficiently manage independent accounts. Additionally, our [exchange guide](../how_tos/exchange.md) provides some useful tips on how different accounts may be leveraged.
 
 :::
 
