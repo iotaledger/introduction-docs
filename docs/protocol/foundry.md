@@ -98,16 +98,16 @@ foundry and the controlling alias account.
 
 Transferring native tokens is similar to transferring base tokens. The output that you create on the receiver's address
 however needs to have base tokens to cover for the storage deposit. Therefore, there are two ways to transfer native tokens:
- - Sending native tokens together with the required storage deposit. The sender looses access to the storage deposit.
+ - Sending native tokens together with the required storage deposit. The sender loses access to the storage deposit.
  - Sending native tokens with _Storage Deposit Return Unlock Condition_. The receiver has to claim the transfer by refunding
-   the storage deposit of the sender. The sender doesn't loose the storage deposit.
+   the storage deposit of the sender. The sender doesn't lose the storage deposit.
 
 The former method is depicted in Transaction E. Due to claiming in the latter method, it is called a conditional transfer, depicted in Transaction F.
 ![Transaction E](/img/protocol/foundry/tx_E.png)
 
 ## Conditional transfer of native tokens
 
-In order not to loose access to the storage deposit, two additional unlock conditions are defined on
+In order not to lose access to the storage deposit, two additional unlock conditions are defined on
 _Basic Output #7_ in Transaction F:
  - A _Storage Deposit Return Unlock Condition_ that forces the consumer of the output to refund _Return Amount_ of base tokens to _Return Address_,
  - and an _Expiration Unlock Condition_ that defines a time window until the recipient has to claim the transfer. If they don't do so,
