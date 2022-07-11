@@ -84,13 +84,13 @@ module.exports = {
     },
     {
       type: 'doc',
-      id: 'shimmer',
-      label: 'Shimmer'
+      id: 'betanet',
+      label: 'Shimmer Beta'
     },
     {
       type: 'doc',
-      id: 'betanet',
-      label: 'Pre-Shimmer Beta'
+      id: 'shimmer',
+      label: 'Shimmer'
     },
     {
       type: 'category',

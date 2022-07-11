@@ -1,5 +1,5 @@
 ---
-description: The IOTA foundation provides load-balanced public Pre-Shimmer Beta endpoints, where MQTT and the HTTP REST API are enabled.
+description: The IOTA foundation provides load-balanced public Shimmer Beta endpoints, where MQTT and the HTTP REST API are enabled.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - devnet
@@ -8,16 +8,16 @@ keywords:
 - MQTT
 - reference
 ---
-# Pre-Shimmer Beta
+# Shimmer Beta
 
-Pre-Shimmer Beta is a pre-release of the Shimmer network that is currently under development.
+Shimmer Beta is a pre-release of the Shimmer network that is currently under development.
 
 ## Public Infrastructure
 
-IOTA currently provides a load-balanced public Pre-Shimmer Beta endpoint:
+IOTA currently provides a load-balanced public Shimmer Beta endpoint:
 
 :::warning
-TODO: Add a list of public Pre-Shimmer Beta endpoints.
+TODO: Add a list of public Shimmer Beta endpoints.
 :::
 
 :::note
@@ -29,7 +29,7 @@ We recommend using the load balancer for most scenarios.
 We also provide single node endpoints that expose native [MQTT](https://mqtt.org/):
 
 :::warning
-TODO: Add a list of public Pre-Shimmer Beta MQTT endpoints.
+TODO: Add a list of public Shimmer Beta MQTT endpoints.
 :::
 
 These endpoints have MQTT (via WebSockets and raw TCP) exposed and offer the HTTP REST API (according to this [specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/iotaledger/tips/stardust-api/tips/TIP-0025/core-rest-api.yaml)) over TLS.
@@ -37,7 +37,7 @@ These endpoints have MQTT (via WebSockets and raw TCP) exposed and offer the HTT
 ## Developer Tools
 
 :::warning
-TODO: Add a list of public Pre-Shimmer Beta developer tools.
+TODO: Add a list of public Shimmer Beta developer tools.
 :::
 
 - [Explorer](https://explorer.iota.org/betanet).
