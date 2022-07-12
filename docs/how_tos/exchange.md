@@ -28,13 +28,13 @@ You can easily integrate IOTA with your exchange, custody solution, or product.
 
 IOTA is built on an architecture that was designed to be the backbone of the Internet of Things (IoT) environment of the future. But this architecture has made it more challenging for service providers like exchanges to integrate IOTA compared to traditional blockchain-based distributed ledgers.
 
-Within the Chrysalis update (also known as IOTA 1.5), some building blocks were changed to be more approachable and more aligned with currently leveraged standards. We also ship many [client libraries](../libraries/overview.md) to help developers implement IOTA into their applications:
+Within the Chrysalis update (also known as IOTA 1.5), some building blocks were changed to be more approachable and more aligned with currently leveraged standards. We also ship many [client libraries](../explanations/libraries/overview.md) to help developers implement IOTA into their applications:
 
 ![Wallet.rs layer overview](/img/guides/wallet_rs_layers.svg)
 
 ## How Do I Implement It to My Exchange?
 
-In [wallet.rs](../libraries/wallet.md), we use an account model so you can create an account for each of your users. Another approach would be to use one account and generate multiple addresses, which you can then link to the users in your database. The wallet library is designed to be as flexible as possible to back up any of your use cases.
+In [wallet.rs](../explanations/libraries/wallet.md), we use an account model so you can create an account for each of your users. Another approach would be to use one account and generate multiple addresses, which you can then link to the users in your database. The wallet library is designed to be as flexible as possible to back up any of your use cases.
 
 Since IOTA addresses in the Chrysalis network are perfectly reusable, they can be mapped to your users in a clear and concise way:
 

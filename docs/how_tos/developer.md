@@ -55,7 +55,7 @@ We can break down the address `iota1qpw6k49dedaxrt854rau02talgfshgt0jlm5w8x9nk5t
 For further reference, please see our [Protocol-rfc#0020 - Bech32 Address Format](https://github.com/iotaledger/tips/blob/main/tips/TIP-0011/tip-0011.md) page.
 
 ### Seed
-With the updated [wallet library](../libraries/wallet.md), developers do not need to use a self-generated seed. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.
+With the updated [wallet library](../explanations/libraries/wallet.md), developers do not need to use a self-generated seed. By default, the seed is created and stored in Stronghold, our in-house built security enclave. It is not possible to extract the seed from Stronghold for security purposes. Stronghold uses encrypted snapshots that can easily be backed up and securely shared between devices. These snapshots are then further secured with a password.
 
 More information about IOTA Wallet Library is available on the [Wallet docs page](https://wiki.iota.org/wallet.rs/welcome) or in the [Exchange guide](https://wiki.iota.org/chrysalis-docs/guides/exchange), which is mainly focuses on value transactions.
 
