@@ -6,7 +6,7 @@ keywords:
 - IOTA Hub
 - iota.rs
 - migration
-- explanation
+- how to
 ---
 # IOTA Hub Migration Guide
 

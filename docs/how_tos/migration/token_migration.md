@@ -6,7 +6,7 @@ keywords:
 - migration bundle
 - Firefly
 - Chrysalis Phase 2
-- explanation
+- how to
 ---
 # Chrysalis Migration
 

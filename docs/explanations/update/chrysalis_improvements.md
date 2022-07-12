@@ -1,3 +1,12 @@
+---
+keywords:
+- Coordicide
+- mainnet
+- protocol improvements
+- explanation
+description: Specific Chrysalis improvements over IOTA 1.0.  
+image: /img/logo/Chrysalis_logo_dark.png
+---
 
 # Chrysalis Improvements
 
