@@ -13,9 +13,9 @@ keywords:
 
 # IOTA Wallet Library
 
-The wallet library is a stateful library for developers; essentially, it's a programmable wallet. However, if you use IOTA to transfer tokens, you should use this library as its stateful design supports the handling and monitoring of multiple accounts and addresses.
+The wallet library is a stateful library for developers; essentially, it's a programmable wallet. However, if you use IOTA or Shimmer to transfer tokens, you should use this library as its stateful design supports the handling and monitoring of multiple accounts and addresses.
 
-It also supports the [Stronghold.rs](https://github.com/iotaledger/stronghold.rs) enclave, incorporating the best security practices in one package. You can read more about the [IOTA Wallet Library documentation in our wiki](https://wiki.iota.org/wallet.rs/welcome).
+It also supports the [Stronghold.rs](https://github.com/iotaledger/stronghold.rs) enclave, incorporating the best security practices in one package. You can read more about the [IOTA Wallet Library documentation in our wiki](https://wiki.iota.org/develop/wallet.rs/welcome).
 
 ## Rust
 ---------------

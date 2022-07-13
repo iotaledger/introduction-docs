@@ -1,5 +1,5 @@
 ---
-description: Firefly is IOTA's new official wallet. You can verify your Firefly download on Windows, maxOS, and/or Linux.
+description: Firefly is Shimmer's new official wallet. You can verify your Firefly download on Windows, maxOS, and/or Linux.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - Firefly
@@ -12,17 +12,17 @@ keywords:
 - linux
 - how to
 ---
-# Firefly
+# Firefly Shimmer
 
 :::info
 
-Firefly is IOTA's new official wallet starting with Chrysalis. 
+Firefly Shimmer is Shimmer's official wallet. 
 
 :::
 
 **Website**: [https://firefly.iota.org/](https://firefly.iota.org/)
 
-**Code Repository**: [https://github.com/iotaledger/firefly](https://github.com/iotaledger/firefly)
+**Code Repository**: [https://github.com/iotaledger/firefly](https://github.com/iotaledger/firefly/tree/stardust-develop)
 
 ## Verify your Firefly Desktop Download
 

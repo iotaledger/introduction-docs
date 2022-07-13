@@ -12,9 +12,6 @@ keywords:
 - wallet.rs
 - iota.rs
 - Firefly
-- C
-- spent addresses
-- bundle mining
 - explanation
 ---
 # FAQ
@@ -33,5 +30,5 @@ On average, confirmation times on the new network are around 5 seconds. Once a t
 
 ## Hornet or Bee? Which Node Software Should I Use?
 
-You can either pick [Bee](https://wiki.iota.org/bee/getting_started/getting_started) (Rust based) or [Hornet](https://wiki.iota.org/hornet/welcome) (Go based). We currently recommend Hornet since it is the most complete version of the node software. Bee is still missing some optional features you might wish to use.
+You can either pick [Bee](https://wiki.iota.org/bee/develop/getting_started/getting_started) (Rust based) or [Hornet](https://wiki.iota.org/hornet/develop/welcome) (Go based). We currently recommend Hornet since it is the most complete version of the node software. Bee is still missing some optional features you might wish to use.
 

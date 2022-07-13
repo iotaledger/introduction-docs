@@ -83,18 +83,13 @@ module.exports = {
       },
         {
           type: 'doc',
-          id: 'how_tos/developer',
-          label: 'Developer'
-        },
-        {
-          type: 'doc',
-          id: 'how_tos/exchange',
-          label: 'Exchange'
-        },
-        {
-          type: 'doc',
           id: 'how_tos/backup_security',
           label: 'Backup and Security'
+        },
+        {
+          type: 'doc',
+          id: 'how_tos/verify_download',
+          label: 'Verify Firefly Download'
         },
       ]
     },
@@ -121,16 +116,6 @@ module.exports = {
               ]
           },
         ]
-    },
-    {
-      type: 'category',
-      label: 'Tutorials',
-      items: [
-        {
-          type: 'doc',
-          id: 'tutorials/one_click_private_tangle',
-          label: 'Private Tangle'
-        },]
     },
     {
       type: 'doc',
