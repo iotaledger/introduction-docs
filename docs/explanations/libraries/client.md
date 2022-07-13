@@ -23,8 +23,6 @@ The official client library for interacting with the IOTA Tangle allows you to:
 
 However, if you want to process value transfers, you should use our stateful [wallet library](wallet.md) instead.
 
-[IOTA Client Library full documentation](https://wiki.iota.org/chrysalis-docs/libraries/client).
-
 ## Rust
 
 - [Getting Started](https://wiki.iota.org/iota.rs/develop/libraries/rust/getting_started) - Getting Started with Rust and the IOTA Client Library.

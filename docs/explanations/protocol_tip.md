@@ -12,4 +12,5 @@ keywords:
 
 Changes to the IOTA protocol have to go through a proposal process first, where a proposal is posted as a "Tangle Improvement Proposal" (TIP). The Stardust protocol changes are described in full detail in the TIPs found below:
 
-- [Git Repo](https://github.com/iotaledger/tips/pulls).
+- [TIP Repository](https://github.com/iotaledger/tips)
+- [TIP Discussion Forum](https://github.com/iotaledger/tips/discussions)

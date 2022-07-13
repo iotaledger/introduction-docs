@@ -11,16 +11,12 @@ keywords:
 ---
 # Resources
 
-:::warning
-TODO: Update for Stardust/Shimmer.
-:::
-
 ### **Official Support** ###
 
 ---------------
 
 #### **Shimmer Explorer** ####
-[Shimmer Explorer](https://explorer.iota.org/shimmer)
+[Shimmer Explorer](https://explorer.shimmer.network)
 
 Official Shimmer explorer with a lot of tools to browse through the Tangle.
 
@@ -30,6 +26,26 @@ Official Shimmer explorer with a lot of tools to browse through the Tangle.
 [IOTA Discord](https://discord.iota.org)
 
 The official Discord server where community members and the IOTA Foundation discuss projects and related subjects.
+
+---
+
+---
+
+#### **Tangle Improvement Proposals** ####
+[TIP Repository](https://github.com/iotaledger/tips)
+
+[TIP Discussion Forum](https://github.com/iotaledger/tips/discussions)
+
+Tangle Improvement Proposals for the IOTA technology stack.
+
+---
+
+---
+
+#### **Governance Forum** ####
+[Governance Forum](https://govern.iota.org/)
+
+Research and governance forum for IOTA and Shimmer.
 
 ---
 
