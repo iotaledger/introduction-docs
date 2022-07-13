@@ -31,7 +31,7 @@ smart contract chain interactions.
 
 ## NFTs as native tokens?
 
-The alert reader might be wondering: can't we just set the maximum supply of a [native token](/docs/protocol/foundry.md) to one to have a unique native token, therefore an NFT?
+The alert reader might be wondering: can't we just set the maximum supply of a [native token](/docs/explanations/ledger/foundry.md) to one to have a unique native token, therefore an NFT?
 The answer is yes, we could do that, but this approach has its limitations compared to the output based approach:
  - NFTs link the actual owned asset via metadata to the token. Metadata of a native token sits in the foundry output,
    while the native token itself may reside in any other output. Therefore, the NFT and its metadata are detached from each other.
