@@ -10,9 +10,60 @@ module.exports = {
       items:
         [
           {
-            type: 'doc',
-            id: 'explanations/what_is_stardust',
-            label: 'What is Stardust'
+            type: 'category',
+            label: 'What is Stardust',
+            items: [
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/what_is_stardust',
+                label: `Introduction`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/rethink_utxo',
+                label: `Rethinking UTXO`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/sc_support',
+                label: `Smart Contract Chain Support`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/tokenization',
+                label: `Tokenization`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/storage_deposit',
+                label: `Storage Deposit`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/unlock_conditions',
+                label: `Output Unlock Conditions`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/output_features',
+                label: `Output Features`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/protecting_users',
+                label: `Protecting Users`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/data_processing',
+                label: `Offloading Data Processing`
+              },
+              {
+                type: 'doc',
+                id: 'explanations/what_is_stardust/dynamic_pow',
+                label: `Dynamic PoW`
+              },
+            ]
           },
           {
             type: 'category',
