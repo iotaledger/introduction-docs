@@ -14,7 +14,7 @@ image: /img/logo/Chrysalis_logo_dark.png
 
 # Output Unlock Conditions
 
-As discussed [previously](/docs/explanations/what_is_stardust/rethink_utxo.md), the redesigned UTXO model allows for
+As discussed [previously](./rethink_utxo.md), the redesigned UTXO model allows for
 implementing additional logic on transfers. Outputs, that are technically the results of a transfer, may define special
 unlocking logic. When these outputs are consumed in subsequent transfers they have to satisfy all unlock conditions that
 are defined on them.
