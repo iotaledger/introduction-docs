@@ -20,7 +20,7 @@ image: /img/logo/Chrysalis_logo_dark.png
 Stardust introduces custom, user-defined tokens. Fungible tokens, called **native tokens**, are minted and melted in token
 foundries. One does not need to convert base currency into native tokens, they are injected into the ledger out of thin
 air. Anyone is free to issue their own tokens, but keep in mind that holding native tokens in one's wallet increases the
-required storage deposit in the base currency. We will elaborate on storage deposits [here](/docs/explanations/what_is_stardust/storage_deposit.md).
+required storage deposit in the base currency. We will elaborate on storage deposits [here](./storage_deposit.md).
 
 ## Non-fungible Tokens (NFTs)
 

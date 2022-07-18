@@ -13,8 +13,8 @@ keywords:
 
 # IOTA Stardust Guides
 
-- [Backup and Security](/docs/how_tos/backup_security.md).
-- [Verify Firefly Shimmer download](/docs/how_tos/verify_download.md)
+- [Backup and Security](./backup_security.md).
+- [Verify Firefly Shimmer download](./verify_download.md)
 
 
 ## Overall Changes from IOTA 1.5 (Chrysalis) to Stardust in a Nutshell
