@@ -7,7 +7,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: Specific Stardust Upgrades from IOTA 1.5 Chrysalis.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # What is Stardust?

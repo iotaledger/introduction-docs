@@ -8,7 +8,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: Data transactions are supported in Stardust, but application specific data processing is off-loaded to external applications.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Offloading Data Processing

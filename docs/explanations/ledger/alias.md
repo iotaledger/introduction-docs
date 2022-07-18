@@ -4,7 +4,7 @@ keywords:
 - UTXO
 - explanation
 description: Alias Transfers in Stardust.  
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Alias Transactions

@@ -9,7 +9,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: The new output features enrich the properties of outputs.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Output Features

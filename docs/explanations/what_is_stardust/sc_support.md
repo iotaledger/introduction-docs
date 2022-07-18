@@ -8,7 +8,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: Smart contract chain support in Stardust.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Smart Contract Chain Support

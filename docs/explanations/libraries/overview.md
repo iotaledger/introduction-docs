@@ -1,6 +1,6 @@
 ---
 description: The IOTA client libraries allow you to easily integrate IOTA into your own applications. 
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 keywords:
 - wallet library
 - client library

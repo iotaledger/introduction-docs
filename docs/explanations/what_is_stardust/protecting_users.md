@@ -10,7 +10,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: The Stardust protocol prevents transaction replay and client eclipse attacks.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Protecting Users
