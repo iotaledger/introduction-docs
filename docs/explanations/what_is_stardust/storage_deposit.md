@@ -9,7 +9,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: Stardust introduces the new storage deposit system where data storage on protocol level is tied to refundable token deposits. 
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Storage Deposit System

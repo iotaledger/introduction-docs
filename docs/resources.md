@@ -1,6 +1,6 @@
 ---
 description: Official and Community resources to help you develop and troubleshoot your application.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 keywords:
 - tangle explorer
 - discord

@@ -8,7 +8,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: Extending the UTXO ledger concept with Stardust.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Rethinking the UTXO Model

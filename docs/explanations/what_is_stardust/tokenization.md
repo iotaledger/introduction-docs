@@ -10,7 +10,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: Stardust introduces layer 1 tokenization such as native tokens and NFTs.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Tokenization

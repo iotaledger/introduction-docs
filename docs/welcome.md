@@ -4,7 +4,7 @@ keywords:
 - Stardust
 - Documentation
 description: Welcome to the official Stardust documentation
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Welcome

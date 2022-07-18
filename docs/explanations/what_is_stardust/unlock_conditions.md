@@ -9,7 +9,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: The new output unlock conditions make outputs configurable for conditional transfers.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Output Unlock Conditions

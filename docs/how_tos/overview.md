@@ -1,6 +1,6 @@
 ---
 description: An overview of the available guides for the Shimmer network that also outlines the changes from IOTA 1.5, aka Chrysalis to Stardust.  
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 keywords:
 - IOTA 1.5
 - stardust

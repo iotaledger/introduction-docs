@@ -1,6 +1,6 @@
 ---
 description: The official client library for interacting with the IOTA Tangle allows you to create blocks and transactions, sign transactions, generate addresses, and interact with an IOTA node.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 keywords:
 - stateless
 - Rust

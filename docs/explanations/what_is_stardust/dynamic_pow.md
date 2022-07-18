@@ -9,7 +9,7 @@ keywords:
 - Protocol Improvements
 - explanation
 description: Stardust prepares the protocol for the support of dynamic proof-of-work.
-image: /img/logo/Chrysalis_logo_dark.png
+image: /img/logo/preview.png
 ---
 
 # Dynamic Proof of Work
