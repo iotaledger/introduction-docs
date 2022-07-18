@@ -28,7 +28,7 @@ for Stardust eases the development of application specific node extensions.
 Bee is an IOTA Node implemented by the Foundation and written in Rust.
 
 - [Official GitHub Repository](https://github.com/iotaledger/bee/tree/shimmer-develop)
-- [Documentation](https://wiki.iota.org/bee/develop welcome)
+- [Documentation](https://wiki.iota.org/bee/develop/welcome)
 
 :::info
 
