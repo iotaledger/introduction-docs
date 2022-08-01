@@ -10,6 +10,7 @@ keywords:
 - validate
 - hornet 
 - tools
+- how to
 ---
 # Chrysalis Snapshot Validation/Boostrapping
 

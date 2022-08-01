@@ -1,12 +1,12 @@
 ---
-description: The Chrysalis protocol changes are described in full detail in these TIPs hosted on our Github.
+description: The Chrysalis protocol changes are described in full detail in the TIPs.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - TIP
 - RFC
 - protocol
 - GIT
-- reference
+- explanation
 ---
 # IOTA Protocol TIPs
 

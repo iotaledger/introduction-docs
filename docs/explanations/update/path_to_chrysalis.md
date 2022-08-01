@@ -85,12 +85,11 @@ The Chrysalis changes were specified in the form of RFCs. You can find all the R
 
 ### Wallet Support
 
-The Trinity wallet was a popular IOTA wallet. With Chrysalis, we released a new wallet implementation, [Firefly](https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/). The team worked on a complete reevaluation of the wallet architecture, with a completely redesigned experience for you. At its core is a [new wallet library](../libraries/wallet.md) written in Rust. The wallet library is designed to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library utilized by Firefly is Stronghold; Stronghold enables ultra-secure secret handling and storage.  
+The Trinity wallet was a popular IOTA wallet. With Chrysalis, we released a new wallet implementation, [Firefly](https://blog.iota.org/firefly-iota-next-generation-wallet-26bdd4d01510/). The team worked on a complete reevaluation of the wallet architecture, with a completely redesigned experience for you. At its core is a [new wallet library](https://wiki.iota.org/wallet.rs/welcome) written in Rust. The wallet library is designed to allow other developers to easily implement IOTA wallets within their applications. Another new Rust library utilized by Firefly is Stronghold; Stronghold enables ultra-secure secret handling and storage.  
 
 ### Infrastructure
 
-Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can discover the networks on our Explorer [https://explorer.iota.org](https://explorer.iota.org/mainnet).  
-
+Currently, the IOTA Foundation supports two public Networks: Mainnet and Devnet (Devnet is for PoCs and application tests). Both networks provide public endpoints for users and partners. You can discover the networks on our Explorer [https://explorer.iota.org](https://explorer.iota.org/mainnet).
 
 ### Chrysalis Devnet
 

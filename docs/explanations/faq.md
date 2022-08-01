@@ -19,7 +19,6 @@ keywords:
 ---
 # FAQ
 
-
 ## Which Libraries are Available for Chrysalis?
 
 At this time, there are a handful of libraries available for Chrysalis which are outlined below:
