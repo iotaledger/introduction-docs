@@ -9,7 +9,7 @@ module.exports = {
                 path: path.resolve(__dirname, 'docs'),
                 routeBasePath: 'introduction',
                 sidebarPath: path.resolve(__dirname, 'sidebars.js'),
-                editUrl: 'https://github.com/iotaledger/introduction-docs/edit/main',
+                editUrl: 'https://github.com/iotaledger/introduction-docs/edit/main/docs',
                 remarkPlugins: [require('remark-code-import'), require('remark-import-partial'), require('remark-remove-comments')],
                 versions: {
                     current: {
