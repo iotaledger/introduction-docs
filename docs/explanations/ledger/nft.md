@@ -52,7 +52,7 @@ Minting must respect the following constraints:
 It is recommended to use one of the _IRC_ standards to define NFT metadata. See [IRC-27](https://github.com/Kami-Labs/tips/blob/main/tips/TIP-0027/tip-0027.md)
 for instance on how to define basic metadata linked to the NFT.
 
-![Transaction A](/img/protocol/nft/tx_A.png)
+![Transaction A - Minting an NFT](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_A.svg)
 
 ## Transferring NFT
 
@@ -68,7 +68,7 @@ Transaction B sends the newly issued _NFT Output #1_ to the _recipient_.
  - Without further unlock conditions, _owner_ loses the 100i storage deposit which is now controlled by _recipient_. When an NFT is sold via a marketplace, it is the
    platform that decides how to handle the storage deposit, whether the buying price accounts for it or the owner should be refunded by the recipient via a _Storage Deposit Return Unlock Condition_.
 
-![Transaction B](/img/protocol/nft/tx_B.png)
+![Transaction B - Transferring NFT](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_B.svg)
 
 ### Why can't NFT ID be set directly upon minting?
 
@@ -97,7 +97,7 @@ Transaction C defines that _recipient_ has to claim the output in a transaction 
  - _owner_ is refunded with 100i via a _Basic Output_,
  - the claiming transaction may only be carried out until _May 24 2022 18:00:00_.
 
-![Transaction C](/img/protocol/nft/tx_C.png)
+![Transaction C - Transferring NFT with storage deposit return](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_C.svg)
 
 ## Claiming a conditional NFT transfer
 
@@ -112,7 +112,7 @@ Transaction D shows how _recipient_ can claim the conditional transfer initiated
  - Since both _NFT Output #3_ and _Basic Output #2_ are unlocked by _recipient_ address, it is enough to sign the transaction
    once in _Signature Unlock #1_ and reference this unlock in _Reference Unlock #2_.
 
-![Transaction D](/img/protocol/nft/tx_D.png)
+![Transaction D - Claiming a conditional NFT transfer](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_D.svg)
 
 ## Burning an NFT
 
@@ -126,7 +126,7 @@ Before burning an NFT, always check whether its _NFT Address_ owns something in 
 funds forever!
 :::
 
-![Transaction E](/img/protocol/nft/tx_E.png)
+![Transaction E - Burning an NFT](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_E.svg)
 
 ## NFT as a wallet
 
@@ -151,7 +151,7 @@ owner of the NFT to define what outputs to create in the transaction.
 Just like any other output, an _NFT Output_ supports holding up to _Max Native Token Count_ (defined in [TIP-22](https://github.com/Wollac/protocol-rfcs/blob/protocol-parameters/tips/TIP-0022/tip-0022.md#detailed-design) for IOTA and [TIP-32](https://github.com/iotaledger/tips/blob/shimmer-params/tips/TIP-0032/tip-0032.md#global-parameters) for Shimmer).
 In case you need to store more native tokens, distribute them in _Basic Outputs_ that are owned by the NFT.
 
-![Transaction F](/img/protocol/nft/tx_F.png)
+![Transaction F - Unlocking funds owned by the NFT](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_F.svg)
 
 ### Transferring NFT owned by the NFT
 
@@ -161,7 +161,7 @@ What happens when an NFT is owned by another NFT?
 Similarly to Transaction F, the NFT that owns the other one must be unlocked in the transaction to prove the ownership.
 Transaction G shows how the "owner NFT" can unlock the "owned NFT" and transfer it to a new recipient.
 
-![Transaction G](/img/protocol/nft/tx_G.png)
+![Transaction G - Transferring NFT owned by the NFT](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_G.svg)
 
 :::warning
 It is possible to introduce circular ownership with _NFT Addresses_ (and also with _Alias Addresses_). In such a case,
@@ -199,7 +199,7 @@ that the intended use of this NFT is to serve as a Collection NFT.
  - _name_ defines the name of the collection,
  - _uri_ points to a website with more information about the project. Note, that _type_ defines the resource type for _uri_.
 
-![Transaction H](/img/protocol/nft/tx_H.png)
+![Transaction H - Creation of a Collection NFT](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_H.svg)
 
 ### Minting NFTs within the collection
 
@@ -218,7 +218,7 @@ information about:
 Transaction J mints a very limited collection, there are only 3 items _NFT Output #12, #13 and #14_. The issuer must
 also provide the storage deposit for the newly minted NFTs, therefore _Basic Output #7_ is consumed in the transaction.
 
-![Transaction J](/img/protocol/nft/tx_J.png)
+![Transaction J - Minting NFTs within the collection](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_J.svg)
 
 :::note
 If you need to mint more than _Max Outputs Count_ ([TIP-22](https://github.com/Wollac/protocol-rfcs/blob/protocol-parameters/tips/TIP-0022/tip-0022.md#detailed-design) IOTA, [TIP-32](https://github.com/iotaledger/tips/blob/shimmer-params/tips/TIP-0032/tip-0032.md#global-parameters) Shimmer) NFTs, you must do it via chaining together more transactions.
@@ -240,4 +240,4 @@ Collection NFT in the ledger for some time via a _Timelock Unlock Condition_, or
 The zero address is an Ed25519 address where the hash of the Ed255129 public key is all zeroes, therefore there exists no
 private key that could successfully unlock it.
 
-![Transaction K](/img/protocol/nft/tx_K.png)
+![Transaction K - Locking Collection NFT](/img/stardust_explanations/stardust_ledger_anatomy/nft_transaction/tx_K.svg)

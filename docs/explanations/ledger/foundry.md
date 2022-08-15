@@ -37,7 +37,7 @@ Transaction A shows an example transaction that creates a foundry:
    By hosting token metadata on-chain in a foundry output, we make the data available on all network nodes 24/7. There is
    no need for additional, off-chain metadata servers.
 
-![Transaction A](/img/protocol/foundry/tx_A.png)
+![Transaction A - Creating a Foundry](/img/stardust_explanations/stardust_ledger_anatomy/native_tokens_foundries/tx_A.svg)
 
 ## Minting tokens
 
@@ -58,7 +58,7 @@ Transaction B mints all available tokens in the foundry.
  - 500 tokens are minted into _Basic Output #2_ and locked to _vestAddress_. Additionally, a timelock is specified on
    the output so that these token can only be unlocked after May 24 2023 18:00:00.
 
-![Transaction B](/img/protocol/foundry/tx_B.png)
+![Transaction B - Minting tokens](/img/stardust_explanations/stardust_ledger_anatomy/native_tokens_foundries/tx_B.svg)
 
 ## Melting tokens
 
@@ -73,7 +73,7 @@ Transaction C assumes that the token issuer is in control of _mintAddress_ where
  - Looking at _Foundry Output #3_ we can determine that the circulating supply of the token is _Minted Tokens_ - _Melted Tokens_ = 750.
  - In a subsequent transaction we could mint 250 tokens to reach _Maximum Supply_ again.
 
-![Transaction C](/img/protocol/foundry/tx_C.png)
+![Transaction C - Melting tokens](/img/stardust_explanations/stardust_ledger_anatomy/native_tokens_foundries/tx_C.svg)
 
 ## Burning tokens
 
@@ -92,7 +92,7 @@ without a storage deposit.
 Transaction D burns all tokens in _Basic Output #3_. Notice that _mintAddress_ doesn't have to have the approval of the
 foundry and the controlling alias account.
 
-![Transaction D](/img/protocol/foundry/tx_D.png)
+![Transaction D - Burning tokens](/img/stardust_explanations/stardust_ledger_anatomy/native_tokens_foundries/tx_D.svg)
 
 ## Transferring native tokens with storage deposit
 
@@ -103,7 +103,7 @@ however needs to have base tokens to cover for the storage deposit. Therefore, t
    the storage deposit of the sender. The sender doesn't lose the storage deposit.
 
 The former method is depicted in Transaction E. Due to claiming in the latter method, it is called a conditional transfer, depicted in Transaction F.
-![Transaction E](/img/protocol/foundry/tx_E.png)
+![Transaction E - Transferring native tokens with storage deposit](/img/stardust_explanations/stardust_ledger_anatomy/native_tokens_foundries/tx_E.svg)
 
 ## Conditional transfer of native tokens
 
@@ -115,11 +115,11 @@ _Basic Output #7_ in Transaction F:
  - The expiration time is compared to the timestamp of the confirming milestone to decide whether the unlock is valid or not.
 
 Transaction F shows the creation of a conditional transfer:
-![Transaction F](/img/protocol/foundry/tx_F.png)
+![Transaction F - Conditional transfer of native tokens](/img/stardust_explanations/stardust_ledger_anatomy/native_tokens_foundries/tx_F.svg)
 
 Once the "offer" is created, the recipient can claim the transfer until the expiration deadline. Transaction G shows
 a successful claiming.
  - Note that the recipient needs to sweep the native tokens into an output they already own to cover for the storage deposit, hence _Basic Output #8_ is unlocked in the transaction.
  - _Basic Output #9_ refunds the sender with the storage deposit used to create _Basic Output #7_.
 
-![Transaction G](/img/protocol/foundry/tx_G.png)
+![Transaction G - Claiming conditional transfer](/img/stardust_explanations/stardust_ledger_anatomy/native_tokens_foundries/tx_G.svg)
