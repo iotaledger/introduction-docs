@@ -203,7 +203,7 @@ that the intended use of this NFT is to serve as a Collection NFT.
 
 ### Minting NFTs within the collection
 
-NFTs withing the collection must be minted in a way that their _issuer_ is the Collection NFT. Therefore, we include
+NFTs within the collection must be minted in a way that their _issuer_ is the Collection NFT. Therefore, we include
 _NFT Output #10_, the freshly minted Collection NFT from Transaction H in Transaction J, and define the _Issuer Feature_
 of all minted NFTs to hold the _NFT Address_ of the Collection NFT.
 
