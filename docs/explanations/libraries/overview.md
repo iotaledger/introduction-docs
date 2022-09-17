@@ -29,7 +29,7 @@ The official IOTA libraries serve as `one-source-code-of-truth` to IOTA users an
 <iframe src="https://www.youtube.com/embed/N2VW3zJQmso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-![Libraries Overview](/img/guides/overview-libraries.svg)
+![Libraries Overview](/img/stardust_explanations/libraries/overview/libraries.svg)
 
 Currently, all of the libraries are in active development. The `develop` version of libraries target the Shimmer network and no longer work with the current IOTA Mainnet.
 

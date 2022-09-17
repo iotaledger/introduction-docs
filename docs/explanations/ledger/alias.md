@@ -62,7 +62,7 @@ constraints enforced by the protocol:
  - _Foundry Counter_ must be zero as the alias doesn't control any foundries yet.
  - _Issuer_ and _Sender_ addresses must be unlocked in the transaction if present.
 
-![Transaction A](/img/protocol/alias/tx_A.png)
+![Transaction A - Creating an Alias](/img/stardust_explanations/stardust_ledger_anatomy/alias_transaction/tx_A.svg)
 
 When _Alias Output #1_ from Transaction A is consumed in a subsequent transaction, the _Alias ID_ field in the
 transitioned alias must be set to the protocol generated unique identifier, which is the Blake2b-256 hash of the
@@ -82,7 +82,7 @@ state transition, the following constraints need to be met:
  - _Sender Feature_ may be updated,
  - _Metadata Feature_ must not be updated.
 
-![Transaction B](/img/protocol/alias/tx_B.png)
+![Transaction B - State transition of an alias](/img/stardust_explanations/stardust_ledger_anatomy/alias_transaction/tx_B.svg)
 
 Notice how the _Alias ID_ field has to be set in _Alias Output #2_ to the protocol generated value.
 
@@ -98,7 +98,7 @@ _Governor Address Unlock Condition_. The constraints for a valid governance tran
 No other fields are allowed to change in the next alias state, therefore a governance transition can't modify token
 balances or create foundries.
 
-![Transaction C](/img/protocol/alias/tx_C.png)
+![Transaction C - Governance transition of an alias](/img/stardust_explanations/stardust_ledger_anatomy/alias_transaction/tx_C.svg)
 
 ## Destroying an Alias
 
@@ -106,7 +106,7 @@ Transaction D shows a governance transition that destroys the alias. The storage
 defined address. Keep in mind that once the alias is destroyed, any funds locked in the ledger in other outputs to the
 address of the alias (derived from _Alias ID_) are essentially lost, as it is not possible to unlock them ever.
 
-![Transaction D](/img/protocol/alias/tx_D.png)
+![Transaction D - Destroying an alias](/img/stardust_explanations/stardust_ledger_anatomy/alias_transaction/tx_D.svg)
 
 ## Unlocking funds owned by an Alias
 
@@ -138,4 +138,4 @@ Important to note, that an _Alias Unlock_ may only reference an unlock at a lowe
 prevent circular unlocking without any signature. Due to this reason, it is possible to intentionally deadlock aliases
 by locking them to each other's alias address. Clients should implement safety mechanisms to prevent accidental user errors.
 
-![Transaction E](/img/protocol/alias/tx_E.png)
+![Transaction E - Consuming Alias owned funds](/img/stardust_explanations/stardust_ledger_anatomy/alias_transaction/tx_E.svg)

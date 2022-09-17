@@ -31,7 +31,7 @@ Transaction A simply:
    to the private key behind _ownerAddress_,
  - creates a new _Basic Output_ with _100i_ locked under the recipients address, namely _recipientAddress_.
 
-![Transaction A](/img/protocol/simple/tx_A.png)
+![Transaction A - Changing owner](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_A.svg)
 
 ## Transfer of Funds with Expiration
 
@@ -44,17 +44,17 @@ Transaction B defines an output that can only be unlocked by the recipient in a 
 milestone where _Milestone Unix Timestamp_ is less, than the _Unix Time_ defined in the _Expiration Unlock Condition_.
 
 
-![Transaction B](/img/protocol/simple/tx_B.png)
+![Transaction B - Sending funds with expiration](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_B.svg)
 
 Transaction C shows how the recipient can consume the output before the deadline and take the funds into full, unconditional
 custody.
 
-![Transaction C](/img/protocol/simple/tx_C.png)
+![Transaction C - Recipient claims non-expired funds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_C.svg)
 
 Transaction D depicts how the original sender claims an expired output. Note, that it is not necessary for the sender
 to sweep the funds into their own wallet, they can just treat it as funds they have full custody of.
 
-![Transaction D](/img/protocol/simple/tx_D.png)
+![Transaction D - Original sender claims expired funds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_D.svg)
 
 ## Timelocking Funds in Transfers
 
@@ -64,12 +64,12 @@ the notion of time in the ledger is determined by the timestamp of the milestone
 
 Transaction E creates an output owned by the recipient but timelocked until _May 24 2022 18:00:00_.
 
-![Transaction E](/img/protocol/simple/tx_E.png)
+![Transaction E - Sending funds with timelock](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_E.svg)
 
 The recipient has no way to unlock the output before the deadline. Once the timelock expired, the funds can be moved, as
 depicted on Transaction F.
 
-![Transaction F](/img/protocol/simple/tx_F.png)
+![Transaction F - Recipient unlocks timelocked funds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_F.svg)
 
 ## Storage Deposit Returns in Transfers
 
@@ -92,13 +92,13 @@ Transaction G show the creation of an output with _Storage Deposit Return Unlock
 holds 101i, and the unlock condition defines the _Return Amount_ of 100i to _ReturnAddress_ _ownerAddress_. All in all,
 the recipient can only freely use 1i when she consumes the output in Transaction H.
 
-![Transaction G](/img/protocol/simple/tx_G.png)
+![Transaction G - Sending microfunds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_G.svg)
 
 In order for the recipient to claim the 1i, she needs to sweep it into one of her own outputs. Therefore, she consumes
 _Basic Output #12_ in the transaction that holds her funds. On the output side, she has to have _Basic Output #13_ that
 refunds the original sender, plus she creates _Basic Output #14_ into which she sweeps the 1i.
 
-![Transaction H](/img/protocol/simple/tx_H.png)
+![Transaction H - Receiving microfunds](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_H.svg)
 
 What forces the recipient to post and execute Transaction H? Nothing. She can just keep the sender's 100i in limbo forever.
 That is why it is handy that you can combine unlock conditions. For example, the sender can add an expiration
@@ -120,7 +120,7 @@ if:
  - _Basic Output #15_ wouldn't be locked to _senderAddress_, or
  - _Basic Output #16_ would define _Sender_ as anything else than _senderAddress_ from _Basic Output #15_.
 
-![Transaction J](/img/protocol/simple/tx_J.png)
+![Transaction J - Sender Feature](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_J.svg)
 
 On-ledger (originating from L1) requests of IOTA Smart Contracts use this feature heavily, but it is also possible to
 fetch outputs created by a specific party with the _Sender Feature_ through the [INX UTXO indexer application](https://github.com/gohornet/inx-indexer)
@@ -135,7 +135,7 @@ that is 24/7 available on any network node.
 As soon as the output with metadata is consumed, it is pruned from nodes' databases and base tokens used as storage
 deposit are freed up.
 
-![Transaction K](/img/protocol/simple/tx_K.png)
+![Transaction K - Metadata Feature](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_K.svg)
 
 ## Tag Feature
 
@@ -145,4 +145,4 @@ the _Metadata Feature_, the actual _Tag_ is treated as binary data by the protoc
 Note, that by default nodes do not store and expose the indexation by tag, however the [Indexer API](https://github.com/iotaledger/tips/blob/indexer-api/tips/TIP-0026/tip-0026.md) does. In an "IOTA as a payment method" use case the _Tag_
 field could be used as a payment reference field, much like the payment reference option of a regular wire transfer.
 
-![Transaction L](/img/protocol/simple/tx_L.png)
+![Transaction L - Tag Feature](/img/stardust_explanations/stardust_ledger_anatomy/simple_transaction/tx_L.svg)
