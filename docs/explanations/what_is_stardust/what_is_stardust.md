@@ -46,11 +46,12 @@ Disadvantages:
 ISC can be deployed as multiple Layer 2 (L2) chains. This is different to many other projects which offer smart contracts at Layer 1 (aka L1, on the IOTA ledger). The positives of this approach are:
 - L1 is not congested with smart contracts.
 - L1 is not limited by the speed of the smart contract VM (which can reduce the tps significantly)
-- MEV resistance.
+- No MEV. No front-running or sandwich attacks, resulting in a “fairer” DeFi environment. There is a set fee and randomization of transactions that are included in blocks, making MEV impossible.
+- Native randomness beacon (random number generator, or RNG). This is freely available to all dApps, removing the need for expensive trusted third party RNGs.
 - L1 smart contracts are difficult on a DAG as the order of events is not as obvious as on a normal blockchain (where there is no parallel execution).
 - We have designed a system where L2 chains can interact using the IOTA L1. Assets can be transferred cross-chain via Layer 1 without collateralised bridges. This is a major advantage of ISC compared to other L2 solutions, and is comparable to the IBC system on Cosmos. 
 - ISC is horizontally scalable. When one SC chain becomes saturated you can easily spin up a second chain to handle the additional throughput.
-- Every L2 chain can behave as a sovereign ecosystem, which is very appealing to many projects. Recent examples include DyDx and Dogechain, both of whom are building sovereign chains on Cosmos. 
+- Every L2 chain can behave as a sovereign ecosystem and can be fully customised, which is very appealing to many projects. Recent examples include DyDx and Dogechain, both of whom are building sovereign chains on Cosmos. 
 - L2 chains can be both public or private while still being able to interact with L1 and each other. This is bringing the best of both open chains and corporate private chains together.
 
 The negatives of this approach are:
