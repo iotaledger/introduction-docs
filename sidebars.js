@@ -12,12 +12,11 @@ module.exports = {
           {
             type: 'category',
             label: 'What is Stardust',
+            link: {
+              type: 'doc',
+              id: 'explanations/what_is_stardust/what_is_stardust',
+            },
             items: [
-              {
-                type: 'doc',
-                id: 'explanations/what_is_stardust/what_is_stardust',
-                label: `Introduction`
-              },
               {
                 type: 'doc',
                 id: 'explanations/what_is_stardust/rethink_utxo',
