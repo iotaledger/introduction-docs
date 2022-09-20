@@ -36,7 +36,7 @@ The tokenization framework enables a lot of new functionality that builders want
 
 Disadvantages:
 - No programmability as there are no Layer 1 smart contracts currently.
-- Different to the standard ERC standards, especially as tokens like algorithmic stablecoins and vesting schemes need smart contracts. but we can have equivalent versions.
+- Different to the standard ERC standards, especially as tokens like algorithmic stablecoins and vesting schemes need smart contracts, but we can have equivalent versions.
 
 ## ISC
 ISC can be deployed as multiple Layer 2 (L2) chains. This is different to many other projects which offer smart contracts at Layer 1 (aka L1, on the IOTA ledger). The positives of this approach are:
