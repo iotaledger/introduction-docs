@@ -23,15 +23,15 @@ The tokenization framework enables a lot of new functionality that builders want
 - Tokenization has low energy requirements and no fees.
 - Minting is fast and easy and can even be done on Firefly!
 - Native tokens and NFTs are first class citizens of the core protocol
--- They benefit from the security of Layer 1.
--- It is simple to fetch all tokens belonging to an account (with Ethereum your ERC balance is stored in the contract state making it difficult to quickly get your balance).
--- Adding native tokens should be extremely easy for exchanges (easier than adding ERC20 tokens for Ethereum).
+  - They benefit from the security of Layer 1.
+  - It is simple to fetch all tokens belonging to an account (with Ethereum your ERC balance is stored in the contract state making it difficult to quickly get your balance).
+  - Adding native tokens should be extremely easy for exchanges (easier than adding ERC20 tokens for Ethereum).
 - Storage deposits are needed for tokenization, which gives significant utility to the IOTA / Shimmer token. The barrier for minting still remains low as you only need a small amount for the initial mint (with additional storage deposits needed for each subsequent wallet holding that token).
 - Storage deposits allow for permanent storage of data on the Tangle. If permanence of data is deemed sufficiently important for a given use case it is possible to store data indefinitely with a storage deposit that scales linearly with the amount of data being stored. If you are no longer using the storage, you get the deposit back.
 - The storage deposits allow on-chain storage of NFT metadata, so that you are not reliant on an IPFS cluster or a web2 solution being maintained. This is relatively unique for NFTs in the DLT space - you would not store a whole movie, but there is a lot of opportunity for novel use cases, especially about storing important metadata. Alternatively this could be useful for some rare high value NFTs (eg “Ferrari” NFTs) for which one may happily pay for the maximum 32kb storage limit. This would also lock up a larger amount of IOTA tokens, which may be seen as a good thing.
 - Unlock conditions - multiple use cases such as time locks. But an important use case is that no one can spam your address with tokens you don’t want. Eg taint your address with Tornado cash tokens (although in our case it would only taint the utxo it is on rather than the whole address).
--- Requirements for transaction claiming also apply to NFTs and ensure no one can spam you with unwanted NSFW content (as per https://decrypt.co/79406/budweiser-dick-pic-nft-ethereum-wallet)  
--- Transaction expiry times can reduce the risk of sending transactions to the wrong address, especially useful for larger amounts. If the funds are not claimed in a certain time frame, the sender can reclaim them. 
+  - Requirements for transaction claiming also apply to NFTs and ensure no one can spam you with unwanted NSFW content (as per https://decrypt.co/79406/budweiser-dick-pic-nft-ethereum-wallet)  
+  - Transaction expiry times can reduce the risk of sending transactions to the wrong address, especially useful for larger amounts. If the funds are not claimed in a certain time frame, the sender can reclaim them. 
 *Note: wallets typically block transactions to invalid addresses, but there is still a risk of sending to a valid address owned by the wrong person or that nobody currently owns.*
 
 Disadvantages:
@@ -52,11 +52,11 @@ ISC can be deployed as multiple Layer 2 (L2) chains. This is different to many o
 
 The negatives of this approach are:
 - Each L2 is relatively independent of IOTA and has flexibility in how they behave. They may leverage the IOTA L1 as little or as much as they want. The L2 chains will use IOTA tokens for:
--- A storage deposit to update data on the main chain. In the future also for mana to guarantee enough bandwidth for writing to the ledger.
--- A storage deposit (and in the future mana) to wrap tokens for transfer between chains.
--- By default the base token (IOTA or SMR depending on the chain) is used for paying for gas on L2 chains. However the chain owner can change this. Any chains spawned by the IOTA Foundation will use IOTA/SMR for gas.
+  - A storage deposit to update data on the main chain. In the future also for mana to guarantee enough bandwidth for writing to the ledger.
+  - A storage deposit (and in the future mana) to wrap tokens for transfer between chains.
+  - By default the base token (IOTA or SMR depending on the chain) is used for paying for gas on L2 chains. However the chain owner can change this. Any chains spawned by the IOTA Foundation will use IOTA/SMR for gas.
 - The security of each L2 chain is dependent on its own validator nodes (Wasp nodes), which are independent of the IOTA mainnet nodes. This means IOTA cannot guarantee their safety unless we find a way to leverage L1 nodes for shared security in the future.
--- There is no current solution for this however, and would require further work.
+  - There is no current solution for this however, and would require further work.
 - As with any interoperability solution, If the majority of economic activity moves to L2, then the value of L1 may be compromised. 
 
 In the following sections, we will go through the new concepts in detail.
