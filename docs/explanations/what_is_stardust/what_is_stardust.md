@@ -12,10 +12,6 @@ image: /img/logo/preview.png
 
 # What is Stardust?
 
-Stardust is a comprehensive utility upgrade of the IOTA Chrysalis protocol. The main goals of Stardust upgrade are to:
- - make IOTA an **infrastructure and settlement layer** for [second-layer smart contract chains](https://wiki.iota.org/smart-contracts/overview),
- - transform IOTA into a **multi-asset ledger** with custom, user defined tokens.
-
 The previous IOTA protocol, Chrysalis, was optimized for a single application: sending digital money from A to B.
 The upcoming Stardust upgrade introduces computation and utility to the ledger:
 - making IOTA an **infrastructure and settlement layer** for [second-layer smart contract chains](https://wiki.iota.org/smart-contracts/overview) using IOTA Smart Contracts (ISC)
