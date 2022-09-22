@@ -14,7 +14,7 @@ image: /img/logo/preview.png
 
 The previous IOTA protocol, Chrysalis, was optimized for a single application: sending digital money from A to B.
 The upcoming Stardust upgrade introduces computation and utility to the ledger:
-- making IOTA an **infrastructure and settlement layer** for [second-layer smart contract chains](https://wiki.iota.org/smart-contracts/overview) using IOTA Smart Contracts (ISC)
+- Making IOTA an **infrastructure and settlement layer** for [second-layer smart contract chains](https://wiki.iota.org/smart-contracts/overview) using [IOTA Smart Contracts (ISC)](#isc).
 - Transforming IOTA into a **multi-asset ledger** with custom, user-defined tokens using the new [tokenization framework](#tokenization-framework).
 Let’s examine each of these separately. 
 
@@ -34,7 +34,10 @@ The tokenization framework enables many new functionalities that builders want, 
 - Unlock conditions - multiple use cases such as time locks. But an important use case is that no one can spam your address with tokens you don’t want. E.g., taint your address with Tornado cash tokens (although in our case, it would only taint the utxo it is on rather than the whole address).
   - Requirements for transaction claiming also apply to NFTs and ensure no one can [spam you with unwanted NSFW content](https://decrypt.co/79406/budweiser-dick-pic-nft-ethereum-wallet)  
   - Transaction expiry times can reduce the risk of sending transactions to the wrong address, especially useful for larger amounts. If the funds are not claimed in a certain time frame, the sender can reclaim them. 
-*Note: wallets typically block transactions to invalid addresses, but there is still a risk of sending to a valid address owned by the wrong person or that nobody currently owns.*
+:::note Invalid Addresses
+
+Wallets typically block transactions to invalid addresses, but there is still a risk of sending to a valid address owned by the wrong person or that nobody currently owns.
+
 
 
 ### Disadvantages
