@@ -15,7 +15,7 @@ image: /img/logo/preview.png
 The previous IOTA protocol, Chrysalis, was optimized for a single application: sending digital money from A to B.
 The upcoming Stardust upgrade introduces computation and utility to the ledger:
 - making IOTA an **infrastructure and settlement layer** for [second-layer smart contract chains](https://wiki.iota.org/smart-contracts/overview) using IOTA Smart Contracts (ISC)
-- transforming IOTA into a **multi-asset ledger** with custom, user-defined tokens using the new tokenisation framework.
+- Transforming IOTA into a **multi-asset ledger** with custom, user-defined tokens using the new [tokenization framework](#tokenization-framework).
 Let’s examine each of these separately. 
 
 ## Tokenization Framework
