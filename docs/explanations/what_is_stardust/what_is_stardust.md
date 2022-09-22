@@ -26,7 +26,7 @@ The tokenization framework enables many new functionalities that builders want, 
 - Minting is fast and easy and can even be done on Firefly!
 - Native tokens and NFTs are first-class citizens of the core protocol:
   - They benefit from the security of Layer 1.
-  - It is simple to fetch all tokens belonging to an account (with Ethereum your ERC balance is stored in the contract state making it difficult to quickly get your balance).
+  - It is simple to fetch all tokens belonging to an account. With Ethereum, your ERC balance is stored in the contract state, making it difficult to get it quickly.
   - Adding native tokens should be extremely easy for exchanges (easier than adding ERC20 tokens for Ethereum).
 - Storage deposits are needed for tokenization, which gives significant utility to the IOTA / Shimmer token. The barrier for minting still remains low as you only need a small amount for the initial mint (with additional storage deposits needed for each subsequent wallet holding that token).
 - Storage deposits allow for permanent storage of data on the Tangle. If data permanence is deemed sufficiently necessary for a given use case, it is possible to store data indefinitely with a storage deposit that scales linearly with the amount of data being stored. You get the deposit back if you are no longer using the storage.
