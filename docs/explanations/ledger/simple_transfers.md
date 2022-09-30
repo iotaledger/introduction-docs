@@ -16,10 +16,10 @@ A simple transaction moves funds from one user account to another. On a high lev
  - **Unlock Blocks**: they hold the signatures authorizing the consumption of inputs,
  - **Outputs**: newly created outputs holding transferred funds.
 
-In Stardust a simple transfer may be realized with an output type called [Basic Output](https://github.com/lzpap/tips/blob/master/tips/TIP-0018/tip-0018.md#basic-output).
+In Stardust a simple transfer may be realized with an output type called [Basic Output](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#basic-output).
 Just like every other output type, Basic Outputs define the base token funds they hold in the _Amount_ field. They have
-to have at least one [Unlock Condition](https://github.com/lzpap/tips/blob/master/tips/TIP-0018/tip-0018.md#unlock-conditions)
-defined: the [Address Unlock Condition](https://github.com/lzpap/tips/blob/master/tips/TIP-0018/tip-0018.md#address-unlock-condition).
+to have at least one [Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#unlock-conditions)
+defined: the [Address Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#address-unlock-condition).
 
 It means that in order to unlock the output in a transaction, one has to present a valid signature for the given address.
 The signature signs the whole content of the transaction, thereby authorizing the consumption of inputs but also
@@ -35,7 +35,7 @@ Transaction A simply:
 
 ## Transfer of Funds with Expiration
 
-The first new _Unlock Condition_ we are going to look at is the [Expiration Unlock Condition](https://github.com/lzpap/tips/blob/master/tips/TIP-0018/tip-0018.md#expiration-unlock-condition).
+The first new _Unlock Condition_ we are going to look at is the [Expiration Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#expiration-unlock-condition).
 It lets the creator of the output define an _Expiration Deadline_. Before the deadline, the recipient can consume and
 unlock the output in a transaction, but once the deadline expired, only the _Return Address_ defined in the
 _Expiration Unlock Condition_ can unlock it.
@@ -58,7 +58,7 @@ to sweep the funds into their own wallet, they can just treat it as funds they h
 
 ## Timelocking Funds in Transfers
 
-With Stardust, it is possible to lock funds away based on time. When an output has a [Timelock Unlock Condition](https://github.com/lzpap/tips/blob/master/tips/TIP-0018/tip-0018.md#timelock-unlock-condition)
+With Stardust, it is possible to lock funds away based on time. When an output has a [Timelock Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#timelock-unlock-condition)
 defined, not even its rightful owner can unlock it before the timelock expires. Just like in the case of the Transaction C and D,
 the notion of time in the ledger is determined by the timestamp of the milestone that confirms the transaction.
 
@@ -74,7 +74,7 @@ depicted on Transaction F.
 ## Storage Deposit Returns in Transfers
 
 Stardust introduces a new system to protect the ledger size and hence node storage resources, called Byte-cost based
-Storage Deposit System. You can read more about it in [TIP-19](https://github.com/muXxer/protocol-rfcs/blob/master/tips/TIP-0019/tip-0019.md).
+Storage Deposit System. You can read more about it in [TIP-19](https://github.com/iotaledger/protocol-rfcs/blob/master/tips/TIP-0019/tip-0019.md).
 In short, every output in the ledger need to carry enough base tokens to cover for its network storage use.
 
 Implicitly this means that an output has to have a minimum amount of base tokens, otherwise it is considered invalid.
@@ -82,7 +82,7 @@ The exact minimum depends on the size of the output and the protocol parameter _
 this is that is no longer possible to store microfunds in an output. So suppose you wanted to send 1i (0.000001 MIOTA):
 is it still possible?
 
-The answer is yes. With the [Storage Deposit Return Unlock Condition](https://github.com/lzpap/tips/blob/master/tips/TIP-0018/tip-0018.md#storage-deposit-return-unlock-condition)
+The answer is yes. With the [Storage Deposit Return Unlock Condition](https://github.com/iotaledger/tips/blob/master/tips/TIP-0018/tip-0018.md#storage-deposit-return-unlock-condition)
 it is possible to define spending constraints on outputs that you create. Let's assume that the minimum amount of funds
 that need to be present in an output is 100i. If you wanted to send only 1i to the recipient, you would transfer
 101i to the recipient's address with the extra condition that she can only use the funds if she refunds you in the
