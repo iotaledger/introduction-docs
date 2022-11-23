@@ -13,16 +13,18 @@ keywords:
 
 ## Public Infrastructure
 
-IOTA currently provides two load-balanced public Shimmer endpoints:
+The IOTA Foundation currently provides these public load-balanced Shimmer endpoints:
 
-:::warning
-TODO: Add a list of public Shimmer endpoints.
-:::
+Node API: https://api.shimmer.network
+Example info endpoint: https://api.shimmer.network/api/core/v2/info
+Available routes: https://api.shimmer.network/api/routes
+Health endpoint: https://api.shimmer.network/health
+MQTT: wss://api.shimmer.network:443/api/mqtt/v1
+Chronicle API: https://chronicle.shimmer.network
 
-These endpoints have MQTT (via WebSockets) exposed and offer the HTTP REST API (according to this [specification](https://studio.asyncapi.com/?url=https://raw.githubusercontent.com/iotaledger/tips/stardust-event-api/tips/TIP-0028/event-api.yml))
-over TLS.
+These endpoints have MQTT (via WebSockets) exposed and offer the HTTP REST API (according to the specifications [TIP-25](https://github.com/iotaledger/tips/blob/main/tips/TIP-0025/tip-0025.md), [TIP-26](https://github.com/iotaledger/tips/blob/main/tips/TIP-0026/tip-0026.md) and [TIP-28](https://github.com/iotaledger/tips/blob/main/tips/TIP-0028/tip-0028.md)) over TLS
 
 ## Developer Tools
 
-- [Explorer](https://explorer.iota.org/shimmer).
+- [Explorer](https://explorer.shimmer.network).
 
