@@ -29,14 +29,15 @@ The tokenization framework enables many new functionalities that builders want, 
   - Adding native tokens should be extremely easy for exchanges (easier than adding ERC20 tokens for Ethereum).
 - Storage deposits are needed for tokenization, which gives significant utility to the IOTA / Shimmer token. The barrier for minting remains low as you only need a small amount for the initial mint (with additional storage deposits needed for each subsequent wallet holding that token).
 - Storage deposits allow for permanent storage of data on the Tangle. If data permanence is deemed sufficiently necessary for a given use case, it is possible to store data indefinitely with a storage deposit that scales linearly with the amount of data being stored. You get the deposit back if you are no longer using the storage.
-- The storage deposits allow on-chain storage of NFT metadata so that you are not reliant on an IPFS cluster or a web2 solution being maintained. This is relatively unique for NFTs in the DLT space - you would not store a whole movie. Still, there is a lot of opportunity for novel use cases, especially storing important metadata. Alternatively, this could be useful for some rare high-value NFTs (e.g., “Ferrari” NFTs) for which one may happily pay for the maximum 32kb storage limit. This would also lock up a larger amount of IOTA tokens, which may be seen as a good thing.
+- The storage deposits allow on-chain storage of NFT metadata so that you are not reliant on an IPFS cluster or a web2 solution being maintained. This is relatively unique for NFTs in the DLT space - you would not store a whole movie. Still, there is a lot of opportunity for novel use cases, especially storing important metadata. Alternatively, this could be useful for some rare high-value NFTs (e.g., “Ferrari” NFTs) for which one may happily pay for the maximum 16kb (8kB mutable and 8k immutable data. Although there are ways to associate more data with an NFT) storage limit. This would also lock up a larger amount of IOTA tokens, which may be seen as a good thing.
 - Unlock conditions - multiple use cases such as time locks. But an important use case is that no one can spam your address with tokens you don’t want. E.g., taint your address with Tornado cash tokens (although in our case, it would only taint the utxo it is on rather than the whole address).
-  - Requirements for transaction claiming also apply to NFTs and ensure no one can [spam you with unwanted NSFW content](https://decrypt.co/79406/budweiser-dick-pic-nft-ethereum-wallet)  
+  - Requirements for transaction claiming also apply to NFTs and although people can [spam you with unwanted NSFW content](https://decrypt.co/79406/budweiser-dick-pic-nft-ethereum-wallet)  you can easily burn those NFTs and extract the storage deposit
   - Transaction expiry times can reduce the risk of sending transactions to the wrong address, especially useful for more significant amounts. If the funds are not claimed in a specific time frame, the sender can reclaim them. 
 :::note Invalid Addresses
 
 Wallets typically block transactions to invalid addresses, but there is still a risk of sending to a valid address owned by the wrong person or that nobody currently owns.
 
+:::
 
 
 ### Disadvantages
