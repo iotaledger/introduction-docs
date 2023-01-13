@@ -33,6 +33,7 @@ The tokenization framework enables many new functionalities that builders want, 
 - Unlock conditions - multiple use cases such as time locks. But an important use case is that no one can spam your address with tokens you don’t want. E.g., taint your address with Tornado cash tokens (although in our case, it would only taint the utxo it is on rather than the whole address).
   - Requirements for transaction claiming also apply to NFTs and although people can [spam you with unwanted NSFW content](https://decrypt.co/79406/budweiser-dick-pic-nft-ethereum-wallet)  you can easily burn those NFTs and extract the storage deposit
   - Transaction expiry times can reduce the risk of sending transactions to the wrong address, especially useful for more significant amounts. If the funds are not claimed in a specific time frame, the sender can reclaim them. 
+
 :::note Invalid Addresses
 
 Wallets typically block transactions to invalid addresses, but there is still a risk of sending to a valid address owned by the wrong person or that nobody currently owns.
