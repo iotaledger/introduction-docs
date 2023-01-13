@@ -68,7 +68,6 @@ ISC can be deployed as multiple Layer 2 (L2) chains. This differs from other pro
   - A storage deposit (and in the future mana) to wrap tokens for transfer between chains.
   - By default, the base token (IOTA or SMR depending on the chain) is used for paying for gas on L2 chains. However, the chain owner can change this. Any chains spawned by the IOTA Foundation will use IOTA/SMR for gas.
 - The security of each L2 chain is dependent on its validator nodes (Wasp nodes), which are independent of the IOTA mainnet nodes. This means IOTA can only guarantee their safety if we find a way to leverage L1 nodes for shared security in the future.
-  - There is no current solution for this however, and it would require further work.
 - As with any interoperability solution, if most economic activity moves to L2, then the value of L1 may be compromised. 
 
 The following sections will explain the new concepts and features in detail.
