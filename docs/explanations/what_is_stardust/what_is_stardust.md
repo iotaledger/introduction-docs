@@ -16,14 +16,13 @@ The previous IOTA protocol, Chrysalis, was optimized for a single application: s
 The upcoming Stardust upgrade introduces computation and utility to the ledger:
 - Making IOTA an **infrastructure and settlement layer** for [second-layer smart contract chains](https://wiki.iota.org/smart-contracts/overview) using [IOTA Smart Contracts (ISC)](#isc).
 - Transforming IOTA into a **multi-asset ledger** with custom, user-defined tokens using the new [tokenization framework](#tokenization-framework).
-Let’s examine each of these separately. 
 
 ## Tokenization Framework
 The tokenization framework enables many new functionalities that builders want, most importantly, the ability to mint other tokens and NFTs. Our approach is different from the approach used in most other platforms. 
 
 ### Advantages
 - Tokenization has low energy requirements and no fees.
-- Minting is fast and easy and can even be done on Firefly!
+- Minting is fast and easy and can even be done on [Firefly](https://firefly.iota.org)!
 - Native tokens and NFTs are first-class citizens of the core protocol:
   - They benefit from the security of Layer 1.
   - It is simple to fetch all tokens belonging to an account. With Ethereum, your ERC balance is stored in the contract state, making it difficult to get it quickly.
