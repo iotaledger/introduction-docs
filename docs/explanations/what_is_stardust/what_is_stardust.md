@@ -18,7 +18,8 @@ The upcoming Stardust upgrade introduces computation and utility to the ledger:
 - Transforming IOTA into a **multi-asset ledger** with custom, user-defined tokens using the new [tokenization framework](#tokenization-framework).
 
 ## Tokenization Framework
-The [tokenization framework](tokenization.md) enables many new functionalities that builders want, most importantly, the ability to mint other tokens and NFTs. Our approach is different from the approach used in most other platforms. 
+
+The [tokenization framework](tokenization.md) enables many new functionalities that builders want, most importantly, the ability to mint other tokens and NFTs. Our approach is different from the approach used in most other platforms, which require full smart contracts to do so. It has its advantages and disadvantages.
 
 ### Advantages
 
@@ -47,7 +48,7 @@ Wallets typically block transactions to invalid addresses, but there is still a 
 
 ## ISC
 
-ISC can be deployed as multiple Layer 2 (L2) chains. This differs from other projects that offer smart contracts on Layer 1 (L1, on the IOTA ledger). 
+ISC can be deployed as multiple Layer 2 (L2) chains, unlike many other projects that offer smart contracts on Layer 1 (L1).
 
 ### Advantages
 
