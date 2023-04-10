@@ -84,7 +84,7 @@ Since all `wallet.rs` bindings are based on core principles provided by the `wal
 ### 1. Set up the Wallet Library
 First, you should install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the `NodeJs` binding, it is straightforward since it is distributed via the `npm` package manager. We also recommend you use `dotenv` for password management.
 
-You can read more about [backup and security in this guide](./backup_security).
+You can read more about [backup and security in this guide](./backup_security.md).
 
 ```bash
 npm install @iota/wallet dotenv
@@ -113,7 +113,7 @@ One of the key principles behind the `stronghold`-based storage is that no one c
 
 :::note
 
-Keep the `stronghold` password and the `stronghold` database on separate devices. See the [backup and security guide](./backup_security) for more information.
+Keep the `stronghold` password and the `stronghold` database on separate devices. See the [backup and security guide](./backup_security.md) for more information.
 
 :::
 
