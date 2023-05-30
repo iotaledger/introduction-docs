@@ -1,5 +1,5 @@
 ---
-description: Hornet is the officially supported nodes for IOTA.
+description: Hornet is the officially supported node software for IOTA.
 image: /img/logo/Chrysalis_logo_dark.png
 keywords:
 - Node
