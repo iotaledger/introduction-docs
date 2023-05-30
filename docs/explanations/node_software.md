@@ -14,7 +14,7 @@ We have been running the network exclusively on the Go powered Hornet node since
 
 ## Hornet
 
-Hornet is the officially supported nodes for IOTA.
+Hornet is the officially supported node software for IOTA.
 
 Hornet is an EDF-supported community node written in Go and has already proven itself to be a stable and performant implementation. 
 
