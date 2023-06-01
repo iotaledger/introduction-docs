@@ -7,7 +7,6 @@ keywords:
 - coordicide
 - transactions
 - hornet
-- bee
 - libraries
 - wallet.rs
 - iota.rs
@@ -42,10 +41,6 @@ The Chrysalis release still depends on the Coordinator/Compass to run and issue 
 ## When is a Transaction on the Network Considered Final/Irreversible?
 
 On average, confirmation times on the new network are around 10 seconds. Once a transaction is set to confirm its final transaction, you do not have block confirmations like with blockchain.
-
-## Hornet or Bee? Which Node Software Should I Use?
-
-You can either pick [Bee](https://wiki.iota.org/bee/getting_started/getting_started) (Rust based) or [Hornet](https://wiki.iota.org/hornet/welcome) (Go based). We currently recommend Hornet since it is the most complete version of the node software. Bee is still missing some optional features you might wish to use.
 
 ## What are Spent Addresses and Why are they Dangerous?
 
